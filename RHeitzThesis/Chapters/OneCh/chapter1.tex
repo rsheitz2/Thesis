@@ -1,0 +1,103 @@
+%Chapter 1 
+\chapter{Measurement of the Left Right Asymmetry in the Drell-Yan Process} 
+\label{Chap:setup}
+\ifpdf
+\graphicspath{{Chapters/OneCh/Figs/Raster/}{Chapters/OneCh/Figs/PDF/}{Chapters/OneCh/Figs/}}
+\else \graphicspath{{Chapters/OneCh/Figs/Vector/}{Chapters/OneCh/Figs/}} \fi
+
+Introduction about L/R asym.  In this Chapter....  Define AN
+\section{Event Selection}
+
+
+\section{Extraction of Asymmetries} 
+
+\subsection{Geometric Mean}
+The number of physics counts, N, detected from any particular target with any
+polarization can be written as
+\begin{equation}
+\mathrm{N} = \mathrm{L} * \sigma * \mathrm{a},
+\end{equation}
+
+\noindent
+where L is the luminosity, $\sigma$ is the cross-section to produce such an
+event and a is the acceptance.  In simple words, the number of counts detected
+is the number of chances for an event to occur times the probability for an
+event to occur and that the event will be detected.  To get spin-dependent
+counts for the left, right asymmetry, the target, polarization and left or right
+direction relative to the spin should be included in the counts formula.
+Generically this can be written
+\begin{equation}
+  \label{eqn:indexedCount}
+\mathrm{N}^{\uparrow(\downarrow)}_{\mathrm{target},\mathrm{Left(Right)}} =
+\mathrm{a}^{\uparrow(\downarrow)}_{\mathrm{target},\mathrm{spectrometer \;
+    direction}} * \mathrm{L}^{\uparrow(\downarrow)}_{\mathrm{target}} *
+\sigma_{\mathrm{Left(Right)}},
+\end{equation}
+
+\noindent
+where $^{\uparrow(\downarrow)}$ denotes the target polarization,
+$_{\mathrm{target}}$ is either the upstream or downstream target
+$_{\mathrm{Left(Right)}}$ is left or right of the spin direction and
+${_\mathrm{spectrometer \; direction}}$ denotes which side of the spectrometer
+the event was detected on.
+
+The previous definitions of the detected counts all depend on the spectrometer
+acceptance.  This is a problem because the spectrometer acceptance can change
+with time and space and therefore can be dependent on the physical kinematics
+which produced the event.  Such dependences can cause unphysical false
+asymmetries in the measurement of A$_{\mathrm{N}}$ and must therefore be removed
+or must included as systematic effects.
+
+The geometric mean asymmetry method is a way to determine the left, right
+asymmetry without acceptance effects from the spectrometer.  It is defined as
+\begin{equation}
+  \label{eqn:ANgeomean}
+\frac{1}{\mathrm{P}}\frac{\sqrt{N_{\mathrm{target,
+        Left}}^{\uparrow}N_{\mathrm{target, Left}}^{\downarrow}} -
+  \sqrt{N_{\mathrm{target, Right}}^{\uparrow}N_{\mathrm{target,
+        Right}}^{\downarrow}} }{\sqrt{N_{\mathrm{target,
+        Left}}^{\uparrow}N_{\mathrm{target, Left}}^{\downarrow}} +
+  \sqrt{N_{\mathrm{target, Right}}^{\uparrow}N_{\mathrm{target,
+        Right}}^{\downarrow}} },
+\end{equation}
+
+\noindent
+where P represents the fraction of polarized partons. Using
+Eq. \ref{eqn:indexedCount} for the definition of counts, the geometric mean
+asymmetry is
+\begin{equation}
+\frac{1}{\mathrm{P}}\frac{\kappa \sqrt{\sigma_{Left}\sigma_{Left}} -
+  \sqrt{\sigma_{Right}\sigma_{Right}}}{\kappa \sqrt{\sigma_{Left}\sigma_{Left}}
+  + \sqrt{\sigma_{Right}\sigma_{Right}}},
+\end{equation}
+
+\noindent
+where $\kappa$ is a ratio of acceptances defined as
+\begin{equation}
+  \label{eqn:ANgeomean_expand}
+\frac{\sqrt{\mathrm{a}^{\uparrow}_{\mathrm{target,Jura}}
+    \mathrm{a}^{\downarrow}_{\mathrm{target,Saleve}}}}
+     {\sqrt{\mathrm{a}^{\uparrow}_{\mathrm{target,Saleve}}
+         \mathrm{a}^{\downarrow}_{\mathrm{target,Jura}}}}.
+\end{equation}
+
+\noindent
+Here the detection side of spectrometer is specified by looking down the beam
+line as either Jura to mean left or Saleve to mean right.  These relations of
+Jura is left and Saleve is right are only strictly true if in the target frame
+the polarization is pointing straight up or straight down.  In particular if the
+beam particle and the target polarization do not make a right angle in the
+laboratory frame this relation will no longer be strictly true but is an
+approximation for ease of notation.
+
+Relation \ref{eqn:ANgeomean_expand} is equal to A$_{\mathrm{N}}$ if $\kappa$ is
+equal to one.  However time effects can vary $\kappa$ from unity. These effects
+are estimated through false asymmetry analysis and included in the systematics.
+Equation \ref{eqn:ANgeomean} is therefore to a good approximation an acceptance
+free method to determine A$_{\mathrm{N}}$.  It is also defined for the upstream
+and downstream targets independently and therefore can used as a consistency
+check between the two targets.
+
+\section{Systematic Studies}
+
+\section{Results} 
