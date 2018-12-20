@@ -1,22 +1,13 @@
 % ******************************* PhD Thesis Template **************************
 % Please have a look at the README.md file for info on how to use the template
 %\documentclass[a4paper,11pt,times,numbered,print,index,custommargin]{Classes/PhDThesisPSnPDF}
-\documentclass[edeposit,fullpage]{Classes/uiucthesis2009}
-\usepackage{booktabs}
-\usepackage{multirow}
-\usepackage{mathtools}
-\usepackage{tabularx}
+\documentclass[edeposit,fullpage]{Classes/uiucthesis2009} \usepackage{booktabs}
+\usepackage{multirow} \usepackage{mathtools} \usepackage{tabularx}
 %\usepackage{geometry}
-\usepackage{bm}
-\usepackage{setspace}
-\usepackage{amsmath}
-\usepackage{hyperref}
+\usepackage{bm} \usepackage{setspace} \usepackage{amsmath} \usepackage{hyperref}
 %A la Bakur's packages
-\usepackage{pbox,multirow}
-\usepackage[thinlines]{easytable}
-\usepackage{lineno}
-\usepackage{bigstrut}
-\usepackage{enumitem}
+\usepackage{pbox,multirow} \usepackage[thinlines]{easytable} \usepackage{lineno}
+\usepackage{bigstrut} \usepackage{enumitem}
 
 %\linenumbers
 %\newgeometry{
@@ -27,12 +18,9 @@
 %}
 \singlespacing
 %Newcommands --> define here your alias 
-\newcommand{\gvc}{GeV/$c$}
-\newcommand{\gvcs}{(GeV/$c$)$^2$}
-\newcommand{\gvcw}{GeV/$c^2$}
-\newcommand{\mvcw}{MeV/$c^2$}
-\newcommand{\mvc}{MeV/$c$}
-\newcommand{\diff}{\text{d}}
+\newcommand{\gvc}{GeV/$c$} \newcommand{\gvcs}{(GeV/$c$)$^2$}
+\newcommand{\gvcw}{GeV/$c^2$} \newcommand{\mvcw}{MeV/$c^2$}
+\newcommand{\mvc}{MeV/$c$} \newcommand{\diff}{\text{d}}
 \newcommand{\siv}{$f_{1,T}^{\, q\perp}(x,\mathbf{k_T})$ }
 
 % ******************************************************************************
@@ -145,8 +133,7 @@
   %\maketitle
 %\end{titlepage}
 
-\renewcommand{\thepage}{\roman{page}}
-\include{Dedication/dedication}
+\renewcommand{\thepage}{\roman{page}} \include{Dedication/dedication}
 %\include{Declaration/declaration}
 \include{Abstract/abstract}
 %%\include{Acknowledgement/acknowledgement}
@@ -160,8 +147,7 @@
 \clearpage
 \renewcommand{\thepage}{\arabic{page}}
 % ******************************** Main Matter *********************************
-\mainmatter
-\addcontentsline{toc}{chapter}{Introduction}  
+\mainmatter \addcontentsline{toc}{chapter}{Introduction}
 
 \include{Chapters/OneCh/chapter1}
 % includi qui gli altri capitoli che aggiungerai. il nome del file da usare è quello del .tex Ti consiglio di mantere la struttura un capitolo = una cartella. Rende molto + semplcie la gestione dei file 
@@ -185,8 +171,8 @@
 % Reference styles: http://sites.stat.psu.edu/~surajit/present/bib.htm
 
 %\bibliographystyle{apalike}
-\bibliographystyle{unsrt}
- %\bibliographystyle{plainnat} % use this to have URLs listed in References
+\bibliographystyle{unsrt} %\bibliographystyle{plainnat} % use this to have URLs
+listed in References
 \cleardoublepage
 \bibliography{References/references} % Path to your References.bib file
 

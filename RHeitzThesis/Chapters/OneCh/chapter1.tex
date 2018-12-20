@@ -7,7 +7,70 @@
 
 Introduction about L/R asym.  In this Chapter....  Define AN
 \section{Event Selection}
+The cuts in the event selection were chosen to ensure the final state consisted
+of dimuons resulting from a pion collision in the transversely polarized target.
+The event selection was initial filtered from miniDSTs to $\mu$DSTs using the
+criteria of at least two muons in the final state.  The following event
+selection is performed on these $\mu$DSTs where the events used come from the
+slot1 production.  A summary of the number of events remaining after each cut is
+shown in figure~\ref{fig::EventTable}.
+\begin{itemize}
+\item Two oppositely charged particles from a common best primary vertex.  The
+  criteria for a primary vertex is any vertex with an associated beam particle.
+  In case of multiple common vertices the best primary vertex was determined by
+  CORAL tagging the vertex as best primary (PHAST method
+  PaVertex::IsBestPrimary()).  If CORAL did not tag any of the common vertices
+  as the best primary the vertex with the smallest spatial chi$^2$ value was
+  used as the best primary vertex.
+\item A dimuon trigger fired.  A dimuon trigger firing means there are at least
+  two particles in coincidence in this event. The dimuon triggers used were a
+  coincidence between two particles in the large angle spectrometer, LAS-LAS
+  trigger, or a particle in the large angle spectrometer and a particle in the
+  Outer hodoscope in the small angle spectrometer, LAS-Outer trigger.  The
+  LAS-Middle trigger was used a veto on beam decay muons.  This is because the
+  LAS-Middle trigger was found to have many events resulting from a beam pion
+  decaying to a muon.
+\item Both particles are muons.  A muon was defined as having crossed 30
+  radiation lengths of material between the particles first and last measured
+  points.  This criteria has been previously determined to be effective at
+  distinguishing between muons and hadrons.  In the final production no
+  detectors were used from upstream of the hadron absorber so the absorber is
+  not included in the determination of material crossed.
+\item The first measured point for both particles is before 300 cm and the last
+  measured point is after 1500 cm.  This cut ensures both particles have
+  positions upstream of the first spectrometer magnet and downstream of the
+  first muon filter.
+\item The timing of both muons is defined.  This checks that the time relative
+  to the trigger time is determined for both muons so further timing cuts can be
+  performed.
+\item Both muons are in time within 5 nanoseconds.  This cut helps rejected
+  uncorrelated muons.
+\item The muon tracks reduced chi$^2$ are individually less than 10.  This cut
+  ensure track quality.
+\item A validation that each muon crossed the trigger it was associated as
+  having triggered.  This trigger validation cut was performed by extrapolating
+  (PHAST Method PaTrack::Extrapolate()) each muon track back to the hodoscopes
+  it fired and determining if the muon crossed the geometric acceptance of both
+  hodoscopes.
+\item The event does not occur in the bad spill or run list.
+\item The Drell-Yan kinematics are physical.  That is the beam and target
+  x-Bjorken are between 0 and 1 and x-Feynman is between -1 and 1.
+\item The transverse momentum of the virtual photon is between 0.4 and 5.0
+  GeV/c.  The lower limit ensures azimuthal angular resolution is sufficient and
+  the upper cut is minimal and ensure physical kinematics.
+\item The vertex originated within the z-positions of the transversely polarized
+  targets defined by the target group (-294.5$<$ Z$_{\mathrm{vertex}}$ $<$-239.3
+  or -219.5$<$ Z$_{\mathrm{vertex}}$ $<$-164.3 cm).
+\item The vertex is within the radius of the target defined as 1.9 cm.
+\end{itemize}
 
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=\textwidth]{EventTable}
+    \caption{Events}
+    \label{fig::EventTable}%
+  \end{center}
+\end{figure}
 
 \section{Extraction of Asymmetries} 
 

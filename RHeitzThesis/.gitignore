@@ -1,3 +1,9 @@
 *.make
 *.aux
 *.log
+*.toc
+*.out
+*.lof
+*.fls
+*.d
+*.temp
