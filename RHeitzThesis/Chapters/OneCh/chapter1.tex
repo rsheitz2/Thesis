@@ -6,7 +6,67 @@
 \else \graphicspath{{Chapters/OneCh/Figs/Vector/}{Chapters/OneCh/Figs/}} \fi
 
 Introduction about L/R asym.  In this Chapter....  Define AN
-\section{Event Selection}
+
+\section{Data Sample}
+The data sample comes from the 2015 COMPASS Drell-Yan measurement where a 190
+GeV/c $\pi^-$ beam impinged on a transversely polarized NH$_3$ target.  The
+stable data comes from July 8, through November 12 and is split into 9 periods
+lasting approximated 2 weeks each where each period consist of two sub-periods.
+To reduce systematics, the NH$_3$ was split into two oppositely polarized cells
+separated by 20 cm and the polarization of both cells was flipped between
+sub-periods.  A summary of the data taking from each period is shown in table
+~\ref{tab::datataking}.
+
+\begin{table}[h!]
+  \centering
+    \begin{tabular}{ |c|c|c|c|c|c| }
+      \hline
+      Period&  Sub-period&  Polarization&  First-Last run&  Begin date&  End date \\
+      \hline
+      
+      \multirow{2}{2em}{W07}&  one&  $\downarrow \uparrow$&  259363 - 259677&  July 9&  July 15 \\
+      & two&  $\uparrow \downarrow$&  259744 - 260016&  July 16&  July 22 \\
+      \hline
+
+      \multirow{2}{2em}{W08}&  one&  $\uparrow \downarrow$&  260074 - 260264&  July 23&  July 29 \\
+      & two&  $\downarrow \uparrow$&  260317 - 260565&  July 29&  August 5 \\
+      \hline
+
+      \multirow{2}{2em}{W09}&  one&  $\downarrow \uparrow$&  260627 - 260852&  August 5&  August 12 \\
+      & two&  $\uparrow \downarrow$&  260895 - 261496&  August 12&  August 26 \\
+      \hline
+
+      \multirow{2}{2em}{W10}&  one&  $\uparrow \downarrow$&  261515 - 261761&  August 26&  September 1 \\
+      & two&  $\downarrow \uparrow$&  261970 - 262221&  September 4&  September 9 \\
+      \hline
+
+      \multirow{2}{2em}{W11}&  one&  $\downarrow \uparrow$&  262370 - 262772&  September 11&  September 22 \\
+      & two&  $\uparrow \downarrow$&  262831 - 263090&  September 23&  September 30 \\
+      \hline
+
+      \multirow{2}{2em}{W12}&  one&  $\uparrow \downarrow$&  263143 - 263347&  September 30&  October 7 \\
+      & two&  $\downarrow \uparrow$&  263386 - 263603&  October 8&  October 14 \\
+      \hline
+
+      \multirow{2}{2em}{W13}&  one&  $\downarrow \uparrow$&  263655 - 263853&  October 15&  October 21 \\
+      & two&  $\uparrow \downarrow$&  263926 - 264134&  October 22&  October 28 \\
+      \hline
+
+      \multirow{2}{2em}{W14}&  one&  $\uparrow \downarrow$&  264170 - 264330&  October 28&  November 2 \\
+      & two&  $\downarrow \uparrow$&  264429 - 264562&  November 4&  November 8 \\
+      \hline
+
+      \multirow{2}{2em}{W15}&  one&  $\downarrow \uparrow$&  264619 - 264672&  November 9&  November 11 \\
+      & two&  $\uparrow \downarrow$&  264736 - 264857&  November 12&  November 16 \\
+      \hline
+      
+    \end{tabular}
+    \caption{COMPASS 2015 data taking periods}
+    \label{tab::datataking}
+  \end{table}
+
+
+\subsection{Event Selection}
 The cuts in the event selection were chosen to ensure the final state consisted
 of dimuons resulting from a pion collision in the transversely polarized target.
 The event selection was initial filtered from miniDSTs to $\mu$DSTs using the

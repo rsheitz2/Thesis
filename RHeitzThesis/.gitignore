@@ -7,3 +7,4 @@
 *.fls
 *.d
 *.temp
+.DS_Store
