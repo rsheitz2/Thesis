@@ -418,17 +418,18 @@ Fig.~\ref{fig::ANgeom} and the final results for the four target geometric mean
 and shown in Fig.~\ref{fig::AN4TargGeom}.  The systematic error bars are
 discussed in Sec.~\ref{sec::systematics}.
 
-\begin{figure}
+\begin{figure}[h!t]
   \begin{center}
-    \includegraphics[width=0.9\textwidth]{ANgeom}
+    \includegraphics[width=\textwidth, trim=1.5cm 5cm 1.5cm 5cm, clip]{AN4TargGeom}
+    %\includegraphics[width=0.9\textwidth]{ANgeom} %cleanup
     \caption{A$_N$ determined from the geometric mean method for each target}
     \label{fig::ANgeom}
   \end{center}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[h!]
   \begin{center}
-    \includegraphics[width=0.9\textwidth, trim=1cm 5cm 1cm 5cm, clip]{AN4TargGeom}
+    \includegraphics[width=\textwidth, trim=1.5cm 5cm 1.5cm 5cm, clip]{AN4TargGeom}
     \caption{A$_N$ determined by the geometric mean method using all targets
       simultaneously}
     \label{fig::AN4TargGeom}
@@ -437,4 +438,50 @@ discussed in Sec.~\ref{sec::systematics}.
 
 \subsection{Comparison of results}
 
+
 \section{Systematic Studies} \label{sec::systematics}
+Several tests were performed to estimate the systematic uncertainty.  The final
+systematic errors are determined by adding all non-zero systematic effects in
+quadrature.  The impact from each source of systematic error is summarized in
+Tab.~\ref{tab::sysError}.
+
+\subsection{Period Compatibility}
+The asymmetry calculated for each period in each kinematic bin is shown in
+Fig.~\ref{allPhysBinned4Targ}.  To check the compatibility of the asymmetry
+between each period, a pull distribution is formed from the data and it's
+discrepancy from a Gaussian distribution is used to determine systematic error.
+The pull value is defined as
+
+\begin{equation}
+  \Delta\mathrm{A}_i =
+  \frac{
+    \mathrm{A}_i - \langle \mathrm{A} \rangle
+  }{
+    \sqrt{
+      \sigma^2_{\mathrm{A}_i} - \sigma^2_{\langle \mathrm{A} \rangle}
+    }
+  },
+\end{equation}
+
+\noindent
+and is determined for each period and kinematic bin.  The 
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\textwidth, trim=0cm 5cm 0cm 5cm,
+      clip]{allPhysBinned4Targ}
+    \caption{A$_N$ determined for each period}
+    \label{fig::allPhysBinned4Targ}
+  \end{center}
+\end{figure}
+
+\begin{table}[h!t]
+  \centering
+  \begin{tabular}{|c|}
+    \hline
+    Table \\
+    \hline
+  \end{tabular}
+  \caption{Summary of systematic error impacts}
+  \label{tab::sysError}
+\end{table}
