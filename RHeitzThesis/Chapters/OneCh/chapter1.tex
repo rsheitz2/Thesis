@@ -161,7 +161,7 @@ physics bin.  In addition, the asymmetry is determined in integrated bin using
 all the final data.  The final binning limits are summarized in
 table~\ref{tab::binning}.
 
-\begin{table}[h!]
+\begin{table}[h!t]
   \centering
   \begin{tabular}{ |c|c|c|c|c| }
     \hline \textbf{Kinematics}& \textbf{Lowest limit}& \textbf{Upper limit bin
@@ -179,7 +179,7 @@ table~\ref{tab::binning}.
 
 \section{Extraction of Asymmetries} 
 
-\subsection{Geometric Mean}
+\subsection{Geometric Mean} \section{sec::GeoMean}
 The number of physics counts, N, detected from any particular target with any
 polarization can be written as
 \begin{equation}
@@ -232,7 +232,9 @@ asymmetry without acceptance effects from the spectrometer.  It is defined as
 \noindent
 where P represents the fraction of polarized partons.
 
-Equation~\ref{eqn::ANgeomean} can be thought of simply as the normalized difference of left minus right counts.  Left and right counts are determined relative to the target spin and are defined as
+Equation~\ref{eqn::ANgeomean} can be thought of simply as the normalized
+difference of left minus right counts.  Left and right counts are determined
+relative to the target spin and are defined as
 
 \begin{equation}
   \label{equ::Defleftright}
@@ -263,6 +265,7 @@ where $\kappa$ is a ratio of acceptances defined as
     \mathrm{a}^{\downarrow}_{\mathrm{target,Saleve}}}}
      {\sqrt{\mathrm{a}^{\uparrow}_{\mathrm{target,Saleve}}
          \mathrm{a}^{\downarrow}_{\mathrm{target,Jura}}}}.
+     \label{equ::accGeoMean}
 \end{equation}
 
 \noindent
@@ -306,7 +309,7 @@ The statistical uncertainty of the geometry mean is
 which reduces to $\frac{1}{\mathrm{P}}\frac{1}{\sqrt{\mathrm{N}}}$ in the case
 of equal statistics in each direction and polarization.
 
-\subsection{Four Target Geometric Mean}
+\subsection{Four Target Geometric Mean} \section{sec::FourTargGeoMean}
 The previous method determined an A$_N$ per target and as mentioned before
 COMPASS had two oppositely polarized targets in 2015.  It would therefore makes
 sense from a statistical point of view and for comparison purposes to determine
@@ -314,27 +317,27 @@ A$_N$ using all the information from the 2015 COMPASS setup.  This can be
 accomplished by modifying the geometric mean to add all four targets as follows
 
 \begin{equation}
-    \label{eqn::AN4TargGeomean}
-    \frac{1}{\mathrm{P}}
-    \frac{
-      \sqrt[4]{
-        N_{\mathrm{up,Left}}^{\uparrow}N_{\mathrm{up, Left}}^{\downarrow}
-        N_{\mathrm{down,Left}}^{\uparrow}N_{\mathrm{down, Left}}^{\downarrow}
-      } -
-      \sqrt[4]{
-        N_{\mathrm{up,Right}}^{\uparrow}N_{\mathrm{up, Right}}^{\downarrow}
-        N_{\mathrm{down,Right}}^{\uparrow}N_{\mathrm{down, Right}}^{\downarrow}
-      }
-    }{
-      \sqrt[4]{
-        N_{\mathrm{up,Left}}^{\uparrow}N_{\mathrm{up, Left}}^{\downarrow}
-        N_{\mathrm{down,Left}}^{\uparrow}N_{\mathrm{down, Left}}^{\downarrow}
-      } +
-      \sqrt[4]{
-        N_{\mathrm{up,Right}}^{\uparrow}N_{\mathrm{up, Right}}^{\downarrow}
-        N_{\mathrm{down,Right}}^{\uparrow}N_{\mathrm{down, Right}}^{\downarrow}
-      }
-    }.
+  \label{eqn::AN4TargGeomean}
+  \frac{1}{\mathrm{P}}
+  \frac{
+    \sqrt[4]{
+      N_{\mathrm{up,Left}}^{\uparrow}N_{\mathrm{up, Left}}^{\downarrow}
+      N_{\mathrm{down,Left}}^{\uparrow}N_{\mathrm{down, Left}}^{\downarrow}
+    } -
+    \sqrt[4]{
+      N_{\mathrm{up,Right}}^{\uparrow}N_{\mathrm{up, Right}}^{\downarrow}
+      N_{\mathrm{down,Right}}^{\uparrow}N_{\mathrm{down, Right}}^{\downarrow}
+    }
+  }{
+    \sqrt[4]{
+      N_{\mathrm{up,Left}}^{\uparrow}N_{\mathrm{up, Left}}^{\downarrow}
+      N_{\mathrm{down,Left}}^{\uparrow}N_{\mathrm{down, Left}}^{\downarrow}
+    } +
+    \sqrt[4]{
+      N_{\mathrm{up,Right}}^{\uparrow}N_{\mathrm{up, Right}}^{\downarrow}
+      N_{\mathrm{down,Right}}^{\uparrow}N_{\mathrm{down, Right}}^{\downarrow}
+    }
+  }.
 \end{equation}
 
 \noindent
@@ -356,8 +359,10 @@ geometric mean asymmetry, Eq.~\ref{eqn::AN4TargGeomean}, can be written as
 \end{equation},
 
 \noindent
-where now $\kappa$ is the ratio of acceptances from all targets and polarizations.  This all inclusive acceptance ratio is defined as
+where now $\kappa$ is the ratio of acceptances from all targets and
+polarizations.  This all inclusive acceptance ratio is defined as
 \begin{equation}
+  \label{equ::acc4TargGeoMean}
   \frac{
     \sqrt[4]{
       \mathrm{a}^{\uparrow}_{\mathrm{up,Jura}}
@@ -427,7 +432,7 @@ discussed in Sec.~\ref{sec::systematics}.
   \end{center}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[h!t]
   \begin{center}
     \includegraphics[width=\textwidth, trim=1.5cm 5cm 1.5cm 5cm, clip]{AN4TargGeom}
     \caption{A$_N$ determined by the geometric mean method using all targets
@@ -443,14 +448,25 @@ discussed in Sec.~\ref{sec::systematics}.
 Several tests were performed to estimate the systematic uncertainty.  The final
 systematic errors are determined by adding all non-zero systematic effects in
 quadrature.  The impact from each source of systematic error is summarized in
-Tab.~\ref{tab::sysError}.
+Tab.~\ref{tab::sysError}.  List all test/systematic performed.....
 
 \subsection{Period Compatibility}
 The asymmetry calculated for each period in each kinematic bin is shown in
-Fig.~\ref{allPhysBinned4Targ}.  To check the compatibility of the asymmetry
-between each period, a pull distribution is formed from the data and it's
-discrepancy from a Gaussian distribution is used to determine systematic error.
-The pull value is defined as
+Fig.~\ref{allPhysBinned4Targ}.
+
+\begin{figure}[h!t]
+  \begin{center}
+    \includegraphics[width=\textwidth, trim=0cm 5cm 0cm 5cm,
+      clip]{allPhysBinned4Targ}
+    \caption{A$_N$ determined for each period}
+    \label{fig::allPhysBinned4Targ}
+  \end{center}
+\end{figure}
+
+\noindent
+By eye the asymmetry fluctuations appear to be statistically compatible.  To
+quantify the compatibility of the asymmetries between the periods, a pull
+distribution is formed.  The pull value is defined as
 
 \begin{equation}
   \Delta\mathrm{A}_i =
@@ -464,24 +480,178 @@ The pull value is defined as
 \end{equation}
 
 \noindent
-and is determined for each period and kinematic bin.  The 
+and is determined for each period and kinematic bin.  There are therefore
+3(number of bins)x5(number of kinematics)x9(number of periods) = 135 entries in
+the pull distribution. This distribution is shown in Fig.~\ref{fig::pull4Targ}
+along with a Gaussian fit.  If the asymmetries all come from the same parent
+distribution then the pull distribution will be a Gaussian distribution with
+zero mean and unit variance.  The discrepancy of the pull distribution from a
+standard Gaussian distribution is used to determine systematic error as
 
-\begin{figure}[h!]
+\begin{equation}
+  \frac{\sigma_{\mathrm{systematic}}}{\sigma_{\mathrm{statistical}}} =
+  \sqrt{|\sigma^2_{\mathrm{pull}} - 1|} + \frac{\mu_{\mathrm{pull}}}{2}.
+\end{equation}
+
+\begin{figure}[h!t]
   \begin{center}
-    \includegraphics[width=\textwidth, trim=0cm 5cm 0cm 5cm,
-      clip]{allPhysBinned4Targ}
-    \caption{A$_N$ determined for each period}
-    \label{fig::allPhysBinned4Targ}
+    \includegraphics[width=0.8\textwidth, trim=0cm 0cm 0cm 2cm,clip]{pull4Targ}
+    \caption{Pull distributions}
+    \label{fig::pull4Targ}
   \end{center}
 \end{figure}
 
+\noindent
+As the asymmetries in different kinematic bins are formed using the same data
+set the asymmetries between kinematics are correlated.  For this reason an
+uncorrelated pull distribution is form for each physics kinematic bin and also
+compared with a standard Gaussian distribution.  These distributions are shown
+in Fig.~\ref{fig::allPhysPulls4Targ} where there are now only 3(number of
+bins)x9(number of periods) = 27 entries in each of the pull distributions.
+
+\begin{figure}[h!t]
+  \begin{center}
+    \includegraphics[width=\textwidth, trim=0cm 5cm 0cm 4cm,
+      clip]{allPhysPulls4Targ}
+    \caption{Pull distributions}
+    \label{fig::allPhysPulls4Targ}
+  \end{center}
+\end{figure}
+
+\noindent
+The final systematic error from compatibility is...
+
+\subsection{False Asymmetries}
+As was pointed out in Sec.~\ref{sec::GeoMean} and Sec.~\ref{FourTargGeoMean},
+the asymmetry measurement assumes the acceptance does not change with time and
+therefore the acceptance ratios Eq.~\ref{equ::accGeoMean} and
+Eq.~\ref{equ::acc4TargGeoMean} are unitary.  Any deviation from unitary
+acceptance ratios is estimated with a false asymmetry and the errors are
+included as systematic errors.  To determine if acceptance does change with
+time, a false asymmetry is calculated where the only way the false asymmetry
+could be non-zero is if acceptance changes with time.  This false asymmetry for
+the four target geometric mean is
+
+\begin{equation}
+  \label{eqn::falseAcc}
+  \begin{split}
+    A_{\mathrm{N,False}} &= 
+    \frac{1}{\mathrm{P}}
+    \frac{
+      \sqrt[4]{
+        N_{\mathrm{up,Right}}^{\uparrow}N_{\mathrm{up, Left}}^{\downarrow}
+        N_{\mathrm{down,Left}}^{\uparrow}N_{\mathrm{down, Right}}^{\downarrow}
+      } -
+      \sqrt[4]{
+        N_{\mathrm{up,Left}}^{\uparrow}N_{\mathrm{up, Right}}^{\downarrow}
+        N_{\mathrm{down,Right}}^{\uparrow}N_{\mathrm{down, Left}}^{\downarrow}
+      }
+    }{
+      \sqrt[4]{
+        N_{\mathrm{up,Right}}^{\uparrow}N_{\mathrm{up, Left}}^{\downarrow}
+        N_{\mathrm{down,Left}}^{\uparrow}N_{\mathrm{down, Right}}^{\downarrow}
+      } +
+      \sqrt[4]{
+        N_{\mathrm{up,Left}}^{\uparrow}N_{\mathrm{up, Right}}^{\downarrow}
+        N_{\mathrm{down,Right}}^{\uparrow}N_{\mathrm{down, Left}}^{\downarrow}
+      }
+    }\\
+    & =
+    \frac{1}{\mathrm{P}}
+    \frac{
+      \alpha \sqrt[4]{\sigma_{Right}\sigma_{Left}\sigma_{Left}\sigma_{Right}} -
+      \sqrt[4]{\sigma_{Left}\sigma_{Right}\sigma_{Right}\sigma_{Left}}
+    }{
+      \alpha \sqrt[4]{\sigma_{Right}\sigma_{Left}\sigma_{Left}\sigma_{Right}} +
+      \sqrt[4]{\sigma_{Left}\sigma_{Right}\sigma_{Right}\sigma_{Left}}
+    }\\
+    & =
+    \frac{1}{\mathrm{P}}
+    \frac{
+      \alpha - 1     
+    }{
+      \alpha + 1
+    },
+  \end{split}
+\end{equation}
+
+\noindent
+where $\alpha$ is an acceptance ratio and is defined as
+
+\begin{equation}
+  \frac{
+    \sqrt[4]{
+      \mathrm{a}^{\uparrow}_{\mathrm{up,Saleve}}
+      \mathrm{a}^{\downarrow}_{\mathrm{up,Saleve}}
+      \mathrm{a}^{\uparrow}_{\mathrm{down,Jura}}
+      \mathrm{a}^{\downarrow}_{\mathrm{down,Jura}}}
+  }{
+    \sqrt[4]{
+      \mathrm{a}^{\uparrow}_{\mathrm{up,Jura}}
+      \mathrm{a}^{\downarrow}_{\mathrm{up,Jura}}
+      \mathrm{a}^{\uparrow}_{\mathrm{down,Saleve}}
+      \mathrm{a}^{\downarrow}_{\mathrm{down,Saleve}}}
+  }.
+\end{equation}
+
+\noindent
+The kinematic dependencies of the false asymmetry are shown in
+Fig.~\ref{fig::falseAacc} and the kinematic dependencies of the acceptance
+ratio, $\alpha$, are shown in Fig.~\ref{fig::alpha}.
+
+\begin{figure}[h!t]
+  \begin{center}
+    \includegraphics[width=\textwidth, trim=1.5cm 5cm 1.5cm 5cm,
+      clip]{falseAacc}
+    \caption{False asymmetry to estimate fluctuations in acceptance in time}
+    \label{fig::falseAacc}
+  \end{center}
+\end{figure}
+
+\begin{figure}[h!t]
+  \begin{center}
+    \includegraphics[width=\textwidth, trim=1.5cm 5cm 1.5cm 5cm,
+      clip]{alpha4Targ}
+    \caption{Acceptance ratio used to determine the systematic effects from
+      acceptance changes in time}
+    \label{fig::alpha}
+  \end{center}
+\end{figure}
+
+\noindent
+While $\alpha$ is an acceptance ratio it is not the same as the acceptance ratio
+in the true asymmetry.  However $\alpha$ is similar to the true acceptance
+ratio, $\kappa$, in that $\alpha$ will only be different from unity as a result
+of time changes in the spectrometer.  Therefore it is assumed $\alpha$ can be
+used as a good estimate of the true acceptance ratio.  The systematic error due
+to acceptance fluctuations is determined as
+
+\begin{equation}
+  \delta\mathrm{A}_{\mathrm{N,systematic}} =
+  \frac{1}{P} \Big(\frac{|\alpha-1|}{2} + \delta_{\frac{|\alpha-1|}{2}} \Big).
+\end{equation}
+
+
+%\begin{equation}
+%\kappa = \frac{A_{\mathrm{N,False}}P + 1}{A_{\mathrm{N,False}}P - 1}
+%\end{equation}
+
+\subsection{Left/Right Event Migration}
+
 \begin{table}[h!t]
   \centering
-  \begin{tabular}{|c|}
+  \begin{tabular}{|c|c|}
     \hline
-    Table \\
-    \hline
+    Systematic error&
+    \multirow{2}{4em}{$\frac{\sigma_{\mathrm{systematic}}}{\sigma_{\mathrm{statistical}}}$}\\
+    & \\ \hline
+    
+    
+    Period compatibility& 0.0\\ \hline
+
+    Total& 0.0\\ \hline
+    
   \end{tabular}
-  \caption{Summary of systematic error impacts}
+  \caption{Summary of systematic error impacts to the integrated asymmetry}
   \label{tab::sysError}
 \end{table}
