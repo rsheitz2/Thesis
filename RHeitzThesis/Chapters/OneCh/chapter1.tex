@@ -179,7 +179,7 @@ table~\ref{tab::binning}.
 
 \section{Extraction of Asymmetries} 
 
-\subsection{Geometric Mean} \section{sec::GeoMean}
+\subsection{Geometric Mean} \label{sec::GeoMean}
 The number of physics counts, N, detected from any particular target with any
 polarization can be written as
 \begin{equation}
@@ -309,7 +309,7 @@ The statistical uncertainty of the geometry mean is
 which reduces to $\frac{1}{\mathrm{P}}\frac{1}{\sqrt{\mathrm{N}}}$ in the case
 of equal statistics in each direction and polarization.
 
-\subsection{Four Target Geometric Mean} \section{sec::FourTargGeoMean}
+\subsection{Four Target Geometric Mean} \label{sec::FourTargGeoMean}
 The previous method determined an A$_N$ per target and as mentioned before
 COMPASS had two oppositely polarized targets in 2015.  It would therefore makes
 sense from a statistical point of view and for comparison purposes to determine
@@ -425,7 +425,8 @@ discussed in Sec.~\ref{sec::systematics}.
 
 \begin{figure}[h!t]
   \begin{center}
-    \includegraphics[width=\textwidth, trim=1.5cm 5cm 1.5cm 5cm, clip]{AN4TargGeom}
+    \includegraphics[width=\textwidth, trim=1.5cm 5cm 1.5cm 5cm,
+      clip]{AN4TargGeom}
     %\includegraphics[width=0.9\textwidth]{ANgeom} %cleanup
     \caption{A$_N$ determined from the geometric mean method for each target}
     \label{fig::ANgeom}
@@ -434,7 +435,8 @@ discussed in Sec.~\ref{sec::systematics}.
 
 \begin{figure}[h!t]
   \begin{center}
-    \includegraphics[width=\textwidth, trim=1.5cm 5cm 1.5cm 5cm, clip]{AN4TargGeom}
+    \includegraphics[width=\textwidth, trim=1.5cm 5cm 1.5cm 5cm,
+      clip]{AN4TargGeom}
     \caption{A$_N$ determined by the geometric mean method using all targets
       simultaneously}
     \label{fig::AN4TargGeom}
@@ -469,6 +471,7 @@ quantify the compatibility of the asymmetries between the periods, a pull
 distribution is formed.  The pull value is defined as
 
 \begin{equation}
+  \label{eq::pull}
   \Delta\mathrm{A}_i =
   \frac{
     \mathrm{A}_i - \langle \mathrm{A} \rangle
@@ -522,15 +525,16 @@ bins)x9(number of periods) = 27 entries in each of the pull distributions.
 The final systematic error from compatibility is...
 
 \subsection{False Asymmetries}
-As was pointed out in Sec.~\ref{sec::GeoMean} and Sec.~\ref{FourTargGeoMean},
-the asymmetry measurement assumes the acceptance does not change with time and
-therefore the acceptance ratios Eq.~\ref{equ::accGeoMean} and
-Eq.~\ref{equ::acc4TargGeoMean} are unitary.  Any deviation from unitary
-acceptance ratios is estimated with a false asymmetry and the errors are
-included as systematic errors.  To determine if acceptance does change with
-time, a false asymmetry is calculated where the only way the false asymmetry
-could be non-zero is if acceptance changes with time.  This false asymmetry for
-the four target geometric mean is
+\subsubsection{Acceptance From False Asymmetries}
+As was pointed out in Sec.~\ref{sec::GeoMean} and
+Sec.~\ref{sec::FourTargGeoMean}, the asymmetry measurement assumes the
+acceptance does not change with time and therefore the acceptance ratios
+Eq.~\ref{equ::accGeoMean} and Eq.~\ref{equ::acc4TargGeoMean} are unitary.  Any
+deviation from unitary acceptance ratios is estimated with a false asymmetry and
+the errors are included as systematic errors.  To determine if acceptance does
+change with time, a false asymmetry is calculated where the only way the false
+asymmetry could be non-zero is if acceptance changes with time.  This false
+asymmetry for the four target geometric mean is
 
 \begin{equation}
   \label{eqn::falseAcc}
@@ -601,7 +605,7 @@ ratio, $\alpha$, are shown in Fig.~\ref{fig::alpha}.
 
 \begin{figure}[h!t]
   \begin{center}
-    \includegraphics[width=\textwidth, trim=1.5cm 5cm 1.5cm 5cm,
+    \includegraphics[width=\textwidth, trim=0cm 6.5cm 0cm 6.5cm,
       clip]{falseAacc}
     \caption{False asymmetry to estimate fluctuations in acceptance in time}
     \label{fig::falseAacc}
@@ -610,7 +614,7 @@ ratio, $\alpha$, are shown in Fig.~\ref{fig::alpha}.
 
 \begin{figure}[h!t]
   \begin{center}
-    \includegraphics[width=\textwidth, trim=1.5cm 5cm 1.5cm 5cm,
+    \includegraphics[width=\textwidth, trim=0cm 6cm 0cm 6cm,
       clip]{alpha4Targ}
     \caption{Acceptance ratio used to determine the systematic effects from
       acceptance changes in time}
@@ -631,25 +635,80 @@ to acceptance fluctuations is determined as
   \frac{1}{P} \Big(\frac{|\alpha-1|}{2} + \delta_{\frac{|\alpha-1|}{2}} \Big).
 \end{equation}
 
+\noindent
+The kinematic dependence of the systematic error normalized to the statistical
+error is show in Fig.~\ref{fig::accSysStat}.  The binned average systematic
+error due to acceptance is 20\% of the statistical error.
 
-%\begin{equation}
-%\kappa = \frac{A_{\mathrm{N,False}}P + 1}{A_{\mathrm{N,False}}P - 1}
-%\end{equation}
+\begin{figure}[h!t]
+  \begin{center}
+    \includegraphics[width=\textwidth, trim=0cm 5cm 0cm 5cm,
+      clip]{accSysStat}
+    \caption{Systematic error due to acceptance effects}
+    \label{fig::accSysStat}
+  \end{center}
+\end{figure}
+
+\subsection{Further False Asymmetry Effects}
+Although the list of systematic effects specifically studied is quite exhaustive
+there is always the potential for other systematic effects not considered.
+Studies of the changes in time from additional false asymmetries were performed
+in an attempt to taken into all these other systematic effects.  All false
+asymmetries considered must be constructed in such a way that the physical
+process of interest cancels out.  A false asymmetry could therefore only be
+non-zero from acceptance effects, luminosity or some other reason not
+considered.  The additional false asymmetries constructed made in a way that
+luminosity effects canceled out and acceptance effects were approximately
+constant.  With these assumptions pull values from Eq.~\ref{eq::pull} should
+from a standard Gaussian distribution.  Any deviation from a standard Gaussian
+is conservatively taken as a systematic effect from some unknown cause.  The
+additional studied false asymmetries are summarized in the following
+~\ref{tab::additionalFA}.
+
+\begin{enumerate}
+  \label{tab::additionalFA}
+\item A false asymmetry similar to Eq.~\ref{eqn::falseAcc} but with left and
+  right counts shifted defined in Eq.~\ref{eqn::additionalfalseAsym}.
+  
+  \begin{equation}
+    \label{eqn::additionalfalseAsym}
+    \frac{1}{\mathrm{P}}
+    \frac{
+      \sqrt[4]{
+        N_{\mathrm{up,Left}}^{\uparrow}N_{\mathrm{up,Right}}^{\downarrow}
+        N_{\mathrm{down,Left}}^{\uparrow}N_{\mathrm{down,Right}}^{\downarrow}
+      } -
+      \sqrt[4]{
+        N_{\mathrm{up,Right}}^{\uparrow}N_{\mathrm{up,Left}}^{\downarrow}
+        N_{\mathrm{down,Right}}^{\uparrow}N_{\mathrm{down, Left}}^{\downarrow}
+      }
+    }{
+      \sqrt[4]{
+        N_{\mathrm{up,Left}}^{\uparrow}N_{\mathrm{up,Right}}^{\downarrow}
+        N_{\mathrm{down,Left}}^{\uparrow}N_{\mathrm{down, Right}}^{\downarrow}
+      } +
+      \sqrt[4]{
+        N_{\mathrm{up,Right}}^{\uparrow}N_{\mathrm{up,Left}}^{\downarrow}
+        N_{\mathrm{down,Right}}^{\uparrow}N_{\mathrm{down, Left}}^{\downarrow}
+      }
+    }
+  \end{equation}
+\end{enumerate}
 
 \subsection{Left/Right Event Migration}
 
 \begin{table}[h!t]
   \centering
   \begin{tabular}{|c|c|}
-    \hline
-    Systematic error&
-    \multirow{2}{4em}{$\frac{\sigma_{\mathrm{systematic}}}{\sigma_{\mathrm{statistical}}}$}\\
-    & \\ \hline
-    
+    \hline Systematic error& \multirow{2}{9em}{$\langle
+      \sigma_{\mathrm{systematic}}/\sigma_{\mathrm{statistical}}
+      \rangle$}\\ & \\ \hline
     
     Period compatibility& 0.0\\ \hline
 
-    Total& 0.0\\ \hline
+    Acceptance fluctuation& 0.2\\ \hline
+
+    Total& 0.0\\\hline
     
   \end{tabular}
   \caption{Summary of systematic error impacts to the integrated asymmetry}

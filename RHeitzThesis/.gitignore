@@ -4,6 +4,7 @@
 *.toc
 *.out
 *.lof
+*.lot
 *.fls
 *.d
 *.temp
