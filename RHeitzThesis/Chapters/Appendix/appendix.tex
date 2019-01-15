@@ -1,0 +1,64 @@
+\chapter{}
+\ifpdf
+\graphicspath{{Chapters/Appendix/Figs/Raster/}{Chapters/Appendix/Figs/PDF/}{Chapters/Appendix/Figs/}}
+\else \graphicspath{{Chapters/Appendix/Figs/Vector/}{Chapters/Appendix/Figs/}}
+\fi
+
+\section{Systematic Error From Acceptance} \label{app::sysAcc}
+
+For an asymmetry defined as
+\begin{equation}
+  \mathrm{A}_{\alpha} =
+  \frac{1}{\mathrm{P}}
+  \frac{\alpha\sigma_L - \sigma_R}{\alpha\sigma_L + \sigma_R} 
+\end{equation}
+
+\noindent
+where $\alpha$ is an acceptance ratio.  $\alpha$ is assumed to be close to unity
+therefore let
+
+\begin{equation}
+  \alpha = 1 \pm 2*\epsilon,
+\end{equation}
+
+\noindent
+where $\epsilon$ is a small positive number.  The asymmetry can
+therefore be written
+
+\begin{equation}
+  \frac{1}{\mathrm{P}}
+  \frac{(1\pm2*\epsilon)\sigma_L -
+    \sigma_R}{(1\pm2*\epsilon)\sigma_L + \sigma_R} = \frac{1}{P} \frac{\sigma_L
+    + \sigma_R \pm 2*\epsilon * \sigma_L}{ (\sigma_L +
+    \sigma_R)(1\pm\frac{2*\epsilon *\sigma_L}{\sigma_L + \sigma_R}) }.
+\end{equation}
+
+\noindent
+From there we can Taylor expand to get
+\begin{equation}
+  \mathrm{A}_{\alpha} \approx \frac{1}{\mathrm{P}} \frac{\sigma_L + \sigma_R \pm
+    2*\epsilon * \sigma_L}{ (\sigma_L + \sigma_R)} *(1\mp\frac{2*\epsilon
+    *\sigma_L}{\sigma_L + \sigma_R})
+\end{equation}
+
+\begin{equation*}
+  = \frac{1}{\mathrm{P}}
+  \Big (
+  \mathrm{A}_{\mathrm{N}}
+  \pm \frac{2*\epsilon *\sigma_L}{\sigma_L + \sigma_R}
+  \mp \mathrm{A}_{\mathrm{N}}* \frac{2*\epsilon *\sigma_L}{\sigma_L + \sigma_R}
+  \mp \Big \{\frac{2*\epsilon *\sigma_L}{\sigma_L + \sigma_R} \Big \}^2
+  \Big )
+  \approx \frac{1}{P}
+  \Big (
+  \mathrm{A}_{\mathrm{N}} \pm \epsilon
+  \Big ).
+\end{equation*}
+
+\noindent
+Using standard error propagation the systematic error can be approximated as
+\begin{equation}
+  \delta \mathrm{A}_{\mathrm{N,systematic}} = \frac{ \mid\alpha - 1
+    \mid}{2}\frac{1}{\mathrm{P}} + \frac{\delta_{\frac{\mid \alpha -1
+        \mid}{2}}}{\mathrm{P}}.
+\end{equation}
