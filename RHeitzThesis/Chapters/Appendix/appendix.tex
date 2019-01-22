@@ -29,36 +29,99 @@ therefore be written
   \frac{1}{\mathrm{P}}
   \frac{(1\pm2*\epsilon)\sigma_L -
     \sigma_R}{(1\pm2*\epsilon)\sigma_L + \sigma_R} = \frac{1}{P} \frac{\sigma_L
-    + \sigma_R \pm 2*\epsilon * \sigma_L}{ (\sigma_L +
+    - \sigma_R \pm 2*\epsilon * \sigma_L}{ (\sigma_L +
     \sigma_R)(1\pm\frac{2*\epsilon *\sigma_L}{\sigma_L + \sigma_R}) }.
 \end{equation}
 
 \noindent
-From there we can Taylor expand to get
+From there Taylor expand the denominator to get
 \begin{equation}
-  \mathrm{A}_{\alpha} \approx \frac{1}{\mathrm{P}} \frac{\sigma_L + \sigma_R \pm
+  \mathrm{A}_{\alpha} \approx
+  \frac{1}{\mathrm{P}}
+  \frac{\sigma_L - \sigma_R \pm
     2*\epsilon * \sigma_L}{ (\sigma_L + \sigma_R)} *(1\mp\frac{2*\epsilon
     *\sigma_L}{\sigma_L + \sigma_R})
 \end{equation}
 
 \begin{equation*}
-  = \frac{1}{\mathrm{P}}
-  \Big (
+  = 
   \mathrm{A}_{\mathrm{N}}
-  \pm \frac{2*\epsilon *\sigma_L}{\sigma_L + \sigma_R}
+  \pm \frac{1}{\mathrm{P}} \frac{2*\epsilon *\sigma_L}{\sigma_L + \sigma_R}
   \mp \mathrm{A}_{\mathrm{N}}* \frac{2*\epsilon *\sigma_L}{\sigma_L + \sigma_R}
-  \mp \Big \{\frac{2*\epsilon *\sigma_L}{\sigma_L + \sigma_R} \Big \}^2
-  \Big )
-  \approx \frac{1}{P}
-  \Big (
-  \mathrm{A}_{\mathrm{N}} \pm \epsilon
-  \Big ).
+  \mp \frac{1}{\mathrm{P}}
+  \Big( \frac{2*\epsilon *\sigma_L}{\sigma_L + \sigma_R} \Big )^2.
 \end{equation*}
 
 \noindent
-Using standard error propagation the systematic error can be approximated as
+Assuming A$_{\mathrm{N}}$ is small and $\sigma_{\mathrm{L}} \approx
+\sigma_{\mathrm{R}}$
+
+\begin{equation}
+\mathrm{A}_{\alpha}\approx 
+\mathrm{A}_{\mathrm{N}} \pm \frac{\epsilon}{P}.
+\end{equation}
+
+\noindent
+The true asymmetry can now be written
+
+\begin{equation}
+  \mathrm{A}_{\mathrm{N,systematic}} \approx
+  \mathrm{A}_{\alpha} \mp \frac{\epsilon}{P}.
+\end{equation}
+
+\noindent
+Including the $\frac{\epsilon}{P}$ term as an additive error and using standard
+error propagation the systematic error can be approximated as
+
 \begin{equation}
   \delta \mathrm{A}_{\mathrm{N,systematic}} = \frac{ \mid\alpha - 1
     \mid}{2}\frac{1}{\mathrm{P}} + \frac{\delta_{\frac{\mid \alpha -1
         \mid}{2}}}{\mathrm{P}}.
 \end{equation}
+
+
+\section{Systematic Error From Left-Right Event Migration}
+\label{app::sysLRmiss}
+
+Assuming the fraction of events miss-identified is $\gamma$ and that the amount
+of miss-identified events reconstructed left equals the amount of outgoing
+events reconstructed right
+
+\begin{equation}
+  \mathrm{A}_{\mathrm{N,measure}} =
+  \frac{1}{\mathrm{P}} \frac{(\mathrm{L}+ \frac{\gamma}{2}
+    \mathrm{N}_{\mathrm{total}}) - (\mathrm{R} + \frac{\gamma}{2}
+    \mathrm{N}_{\mathrm{total}})} {(\mathrm{L}+ \frac{\gamma}{2}
+    \mathrm{N}_{\mathrm{total}})+(\mathrm{R}+ \frac{\gamma}{2}
+    \mathrm{N}_{\mathrm{total}})}
+  = \frac{1}{\mathrm{P}} \frac{\mathrm{L} - \mathrm{R}}
+         {(\mathrm{L}+\mathrm{R})*(1+ \gamma
+           *\frac{\mathrm{N}_{\mathrm{total}}}{\mathrm{L}+\mathrm{R}})},
+\end{equation}
+
+\noindent
+where N$_{\mathrm{total}}$ is the total events measure, L is the true events
+measured to the left that should be measured left and R is the number of events
+measure to the right that should be measured to the right.\par
+
+Assuming $\gamma$ is a small percentage, the denominator can be Taylor expanded
+to give
+
+\begin{equation}
+  \mathrm{A}_{\mathrm{N,measure}} \approx
+  \mathrm{A}_{\mathrm{N}}
+  \Big (1-\gamma*\frac{\mathrm{N}_{\mathrm{total}}}{\mathrm{L}+\mathrm{R}}\Big).
+\end{equation}
+
+\noindent
+Including $\gamma$A$_{\mathrm{N,measure}}$ as an additive error and using
+standard error propagation the systematic error can be approximated as
+
+\begin{equation}
+  \delta \mathrm{A}_{\mathrm{N,systematic}} =
+  \gamma *\mathrm{A}_{\mathrm{N,measure}} +
+  \gamma *\delta \mathrm{A}_{\mathrm{N,measure}}.
+\end{equation}
+
+
+

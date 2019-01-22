@@ -459,6 +459,7 @@ was kept stable within each period but had the options for detector changes and
 repairs between periods.  This final asymmetry for each method is determined
 from a weighted average as
 \begin{equation}
+  \label{equ::wAvg}
   \mathrm{A}_{\mathrm{N}} = \sum_{\mathrm{period}}
   \frac{\mathrm{A}_{\mathrm{N},\mathrm{period}}\sigma^{-2}_{\mathrm{period}}}{\sigma^{-2}_{\mathrm{period}}},
   \quad \sigma^2 = \sum_{\mathrm{period}}
@@ -473,9 +474,8 @@ discussed in Sec.~\ref{sec::systematics}.
 
 \begin{figure}[h!t]
   \begin{center}
-    \includegraphics[width=\textwidth, trim=1.5cm 5cm 1.5cm 5cm,
-      clip]{AN4TargGeom}
-    %\includegraphics[width=0.9\textwidth]{ANgeom} %cleanup
+    %\includegraphics[width=\textwidth, trim=1.5cm 5cm 1.5cm 5cm, clip]{AN4TargGeom}
+    \includegraphics[width=\textwidth, trim=0.3cm 0cm 0.25cm 0cm, clip]{ANgeom} 
     \caption{A$_{\mathrm{N}}$ determined from the geometric mean method for each
       target}
     \label{fig::ANgeom}
@@ -484,9 +484,8 @@ discussed in Sec.~\ref{sec::systematics}.
 
 \begin{figure}[h!t]
   \begin{center}
-    \includegraphics[width=\textwidth, trim=1.5cm 5cm 1.5cm 5cm,
-      clip]{AN4TargGeom}
-    \caption{A$_{\mathrm{N}}$ determined by the geometric mean method using all
+    \includegraphics[width=\textwidth]{AN4TargGeom}
+    \caption{A$_{\mathrm{N}}$ determined by the geometric mean method using both
       targets simultaneously}
     \label{fig::AN4TargGeom}
   \end{center}
@@ -542,6 +541,7 @@ the pull distribution from a standard Gaussian distribution is used to determine
 a systematic error as
 
 \begin{equation}
+  \label{equ::sysErrorPull}
   \frac{\sigma_{\mathrm{systematic}}}{\sigma_{\mathrm{statistical}}} =
   \sqrt{|\sigma^2_{\mathrm{pull}} - 1|} + \frac{\mu_{\mathrm{pull}}}{2}.
 \end{equation}
@@ -560,7 +560,7 @@ set the asymmetries between kinematics are correlated.  For this reason an
 uncorrelated pull distribution is also formed for each physics kinematic bin and
 also compared with a standard Gaussian distribution.  These distributions are
 shown in Fig.~\ref{fig::allPhysPulls4Targ} and the results of the Gaussian fit
-are shown in Fig.~\ref{fig::allphysPulls4Targ_fit}.  For these uncorrelated pull
+are shown in Fig.~\ref{fig::allPhysPulls4Targ_fit}.  For these uncorrelated pull
 distributions there are now only 3(number of bins)x9(number of periods) = 27
 entries in each kinetically binned pull distributions and only 9(number of
 periods) bins in the integrated pull distribution.
@@ -632,15 +632,18 @@ false asymmetry for the two target geometric mean is
     }{
       \alpha \sqrt[4]{\sigma_{Right}\sigma_{Left}\sigma_{Left}\sigma_{Right}} +
       \sqrt[4]{\sigma_{Left}\sigma_{Right}\sigma_{Right}\sigma_{Left}}
-    }\\
-    & =
-    \frac{1}{\mathrm{P}}
+    }
+  \end{split}
+\end{equation}
+
+\begin{equation}
+  \label{equ::alphaAsym}
+     = \frac{1}{\mathrm{P}}
     \frac{
       \alpha - 1     
     }{
       \alpha + 1
     },
-  \end{split}
 \end{equation}
 
 \noindent
@@ -763,8 +766,9 @@ enumerated list.
 
 \begin{enumerate}
   \label{tab::additionalFA}
+
 \item A false asymmetry similar to Eq.~\ref{eqn::falseAcc} but with the upstream
-  left and right counts flipped defined in Eq.~\ref{eqn::additionalfalseAsym}.
+  left and right counts flipped defined as
   
   \begin{equation}
     \label{eqn::additionalfalseAsym}
@@ -787,13 +791,197 @@ enumerated list.
         N_{\mathrm{up,Right}}^{\uparrow}N_{\mathrm{up,Left}}^{\downarrow}
         N_{\mathrm{down,Right}}^{\uparrow}N_{\mathrm{down, Left}}^{\downarrow}
       }
-    }
+    }.
   \end{equation}
+  This false asymmetry can be thought of as measuring the normalized counts on
+  the Jura side minus the Saleve side.  The period weighted average results of
+  this false asymmetry are shown in Fig.~\ref{fig::fa2TargJuraSaleve} and as can
+  be seen there is the asymmetry is systematically less than zero by more than a
+  standard deviation.  The uncorrelated pull distributions from this false
+  asymmetry are shown in Fig.~\ref{fig::fa2TargJSPulls} and the corresponding
+  Gaussian fit results are shown in Fig.~\ref{fig::fa2TargJSPulls_fit}.  Due to
+  the fact that there are less entries in these pull distributions the Gaussian
+  fit results are not necessarily that good.  In an attempt to correct for this
+  and to take into account the fit errors, a weighted average of the mean and
+  standard deviation are made, as in Eq.~\ref{equ::wAvg}, using weights as the
+  inverse fit variances.  The final systematic error is again determined as in
+  Eq.~\ref{equ::sysErrorPull} using the weighted mean and weighted standard
+  deviation.
+
+  %\begin{figure}[h!t]
+  %  \centering
+  %  \includegraphics[width=\textwidth]{fa2TargJuraSaleve}
+  %  \caption{}
+  %  \label{fig::fa2TargJuraSaleve}
+  %\end{figure}
+  
+  \begin{figure}[h!t]
+    \centering
+    \includegraphics[width=\textwidth]{fa2TargJSPulls}
+    \caption{}
+    \label{fig::fa2TargJSPulls}
+  \end{figure}
+  
+  \begin{figure}[h!t]
+    \centering
+    \includegraphics[width=\textwidth, trim=0cm 2.15cm 0cm 0cm, clip]
+                    {fa2TargJSPulls_fit}
+    \caption{}
+    \label{fig::fa2TargJSPulls_fit}
+  \end{figure}
+
+\item A false asymmetries using only the information from the upstream or the
+  downstream target defined as
+
+  \begin{equation}
+    \label{eqn::falseANgeomean}
+    \frac{1}{\mathrm{P}} \frac{\sqrt{N_{\mathrm{up(down)stream,
+            Left}}^{\uparrow}N_{\mathrm{up(down)stream, Right}}^{\downarrow}} -
+      \sqrt{N_{\mathrm{up(down)stream,
+            Right}}^{\uparrow}N_{\mathrm{up(down)stream, Left}}^{\downarrow}}
+    }{\sqrt{N_{\mathrm{up(down)stream,
+            Left}}^{\uparrow}N_{\mathrm{up(down)stream, Right}}^{\downarrow}} +
+      \sqrt{N_{\mathrm{up(down)stream,
+            Right}}^{\uparrow}N_{\mathrm{up(down)stream, Left}}^{\downarrow}} }.
+  \end{equation}
+  This false asymmetry can also be thought of as measuring the normalized counts
+  on the Jura side minus the Saleve side but for each target individually.  Both
+  this false asymmetry and the previous false asymmetry can be written as
+  Eq.~\ref{equ::alphaAsym} where $\alpha$ will be an acceptance ratio of
+  Jura/Saleve.  As the Jura/Saleve acceptance ratio is expected to be the same
+  for the upstream and downstream targets, any difference between the two false
+  asymmetries must be due to other reasons.  A by period comparison between the
+  upstream and downstream target is shown in Fig.~\ref{fig::alphaAsym} and as
+  can be seen there are difference by period between the upstream and downstream
+  asymmetries.  A combined pull distribution is made using the information from
+  both upstream and downstream asymmetries and is shown in
+  Fig.~\ref{fig::alphaAsymPull}.  As with the previous false asymmetry, lack of
+  data leads to the same problems with fit and therefore the same weighting
+  method is used to determine a systematic error.
+
+  %\begin{figure}[h!t]
+  %  \centering
+  %  \includegraphics[width=\textwidth]{alphaAsym}
+  %  \caption{}
+  %  \label{fig::alphaAsym}
+  %\end{figure}
+
+  \begin{figure}[h!t]
+    \centering
+    \includegraphics[width=\textwidth]{alphaAsymPull}
+    \caption{}
+    \label{fig::alphaAsymPull}
+  \end{figure}
+
+\item Finally the same false asymmetry used to determine the acceptance
+  fluctuations, Eq.~\ref{eqn::falseAcc}, is also checked for compatibility and a
+  systematic error is determined in the same way as the previous false
+  asymmetries.  The pulls are shown in Fig.~\ref{fig::fa2TargPulls} and the
+  corresponding fit parameters are shown in Fig.~\ref{fig::fa2TargPulls_fit}.
+
+  \begin{figure}[h!t]
+    \centering
+    \includegraphics[width=\textwidth]{fa2TargPulls}
+    \caption{}
+    \label{fig::fa2TargPulls}
+  \end{figure}
+  
+  \begin{figure}[h!t]
+    \centering
+    \includegraphics[width=\textwidth, trim=0cm 1.65cm 0cm 0cm, clip]
+                    {fa2TargPulls_fit}
+    \caption{}
+    \label{fig::fa2TargPulls_fit}
+  \end{figure}
+  
 \end{enumerate}
 
+A summary of the systematic error from each false asymmetry is shown in
+Tab.~\ref{tab::faSys}
+
+\begin{table}[h!t]
+  \centering
+  \begin{tabular}{|c|c|}
+    \hline Systematic error& \multirow{2}{9em}{$\langle
+      \sigma_{\mathrm{systematic}}/\sigma_{\mathrm{statistical}}
+      \rangle$}\\ & \\ \hline
+    
+    2 Target& 0.0\\ \hline
+
+    Acceptance fluctuation& 0.2\\ \hline
+
+    Total& 0.0\\\hline
+    
+  \end{tabular}
+  \caption{Summary of systematic error impacts from false asymmetries.  The
+    maximum systematic error is chosen as the final systematic error.}
+  \label{tab::faSys}
+\end{table}
 
 
 \subsection{Left/Right Event Migration}
+The spectrometer has finite resolution for any measured quantity and for this
+reason events measured as left outgoing could really be events that are right
+outgoing and vise versa for measured left outgoing events.  This left-right
+miss-identification has the result of diluting spin-dependent effects by
+effectively having a sample from an unpolarized target along with the sample
+from the polarized target.  Therefore the asymmetry A$_{\mathrm{N}}$ reduces
+from left-right miss-identification and this effect is included as a systematic
+effect. \par
+
+Miss-identification was estimated from a simulated Monte-Carlo data sample where
+the sample was made from the respond of the COMPASS spectrometer to input
+Drell-Yan events in a similar mass range.  The same analysis performed on real
+data was performed on this Monte-Carlo data to get the angles of interest.
+Fig.~\ref{fig::lrMigration} shows the rate of events identified correctly and
+incorrectly as a function of the $\phi_{\mathrm{S}}$.  This plot is made by
+determining which outgoing direction the generated events emerged with the
+outgoing direction the reconstructed events emerged.
+
+%\begin{figure}[h!t]
+%  \centering
+%  \includegraphics[width=0.6\textwidth]{lrMigration}
+%  \caption{The rate of identified correctly and incorrectly left-right events as
+%    a function of $\phi_{\mathrm{S}}$.  This is determined by comparing the
+%    generated outgoing direction with the reconstructed outgoing direction.  The
+%    left-right boundary is clearing visible at 0$^{\circ}$ and -$\pi^{\circ}$
+%    and $\pi^{\circ}$.
+%  \label{fig::lrMigration}
+%\end{figure}
+
+\noindent
+As is clearly visible there is a band of higher miss-identification rate at the
+border between left and right.  For this reason a cut in the $\phi_{\mathrm{S}}$
+variable symmetric about the left-right border was tested to determine the
+percent of miss-identification as a function of the amount of
+$\phi_{\mathrm{S}}$ cut.  These results are shown in
+Fig.~\ref{fig::percentLRmiss}.
+
+%\begin{figure}[h!t]
+%  \centering
+%  \includegraphics[width=0.6\textwidth]{percentLRmiss}
+%  \caption{}
+%  \label{fig::percentLRmiss}
+%\end{figure}
+
+The systematic error for left-right migration is calculated as
+
+\begin{equation}
+  \delta \mathrm{A}_{\mathrm{N,systematic}} = \gamma *\mathrm{A}_{\mathrm{N}} +
+  \gamma *\delta \mathrm{A}_{\mathrm{N}},
+\end{equation}
+
+\noindent
+where this expression is derived in Appendix~\ref{app::sysLRmiss}.\par
+
+The systematic error normalized to the statistical error as a function of the
+amount of $\phi_{\mathrm{S}}$ cut is shown in Fig.~\ref{fig::sysErrLRPhiScut}.
+No cut on $\phi_{\mathrm{S}}$ was used for the final asymmetry due to the fact
+that the systematic error is already small with no cut in $\phi_{\mathrm{S}}$
+and to avoid loss of statistics.  The final systematic error due to left-right
+event migration was determined to be 5\% of the statistical error and add in
+quadrature per physics bin.
+
 
 \begin{table}[h!t]
   \centering
