@@ -1,8 +1,10 @@
-\documentclass[edeposit,fullpage]{Classes/uiucthesis2009} \usepackage{booktabs}
+\documentclass[edeposit,fullpage]{Classes/uiucthesis2009}
+\usepackage{booktabs}
 \usepackage{multirow} \usepackage{mathtools} \usepackage{tabularx}
 \usepackage{bm} \usepackage{setspace} \usepackage{amsmath} \usepackage{hyperref}
 \usepackage{pbox,multirow} \usepackage[thinlines]{easytable} \usepackage{lineno}
 \usepackage{bigstrut} \usepackage{enumitem}
+\usepackage[titletoc]{appendix}
 
 \singlespacing
 %Newcommands --> define here your alias 
@@ -20,19 +22,45 @@
 \clearpage
 \renewcommand{\thepage}{\arabic{page}}
 % ******************************** Main Matter *********************************
-\include{Chapters/OneCh/chapter1}
+\include{Chapters/COMPASS/compass}
+%\include{Chapters/DC5/dc5}
+%\include{Chapters/Alignment/alignment}
+%\include{Chapters/LeftRight/leftright}
 
-\appendix
+\begin{appendices}
 \include{Chapters/Appendix/appendix} 
+\end{appendices}
 
 \listoffigures
 \listoftables
 
-% ********************************** Bibliography ******************************
-\begin{spacing}{0.9}
 
-  \cleardoublepage
+\let\oldaddcontentsline\addcontentsline% Store \addcontentsline
+\renewcommand{\addcontentsline}[3]{}%
+\include{References/bibliography} 
+\let\addcontentsline\oldaddcontentsline
 
-\end{spacing}
+%\begin{spacing}{0.9}
+
+% To use the conventional natbib style referencing
+% Bibliography style previews: http://nodonn.tipido.net/bibstyle.php
+% Reference styles: http://sites.stat.psu.edu/~surajit/present/bib.htm
+
+%\bibliographystyle{apalike}
+%\bibliographystyle{unsrt} %\bibliographystyle{plainnat} % use this to have URLs
+%listed in References
+\cleardoublepage
+%\bibliography{References/references} % Path to your References.bib file
+
+%\include{References/bibliography} % Path to your References.bib file
+% If you would like to use BibLaTeX for your references, pass `custombib' as
+% an option in the document class. The location of 'reference.bib' should be
+% specified in the preamble.tex file in the custombib section.
+% Comment out the lines related to natbib above and uncomment the following line.
+
+%\printbibliography[heading=bibintoc, title={References}]
+
+
+%\end{spacing}
 
 \end{document}

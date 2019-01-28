@@ -1,0 +1,454 @@
+\documentclass[a4paper,manyauthors,nocleardouble,COMPASS]{cernphprep}
+\pdfminorversion=4
+%\documentclass{../libraries/cernart}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{lineno}
+\usepackage{xspace}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{color}
+\usepackage{float}
+\usepackage{datetime}
+\usepackage{cite}
+\usepackage[numbers]{natbib}
+\usepackage{hyperref}
+%%
+%
+\usepackage{amsmath,amssymb,epsfig,fleqn,url,psboxit,color,here,graphics,graphicx,rotating,multirow,wrapfig}
+%
+\usepackage{pbox}
+\usepackage{dcolumn}
+\usepackage{bigstrut}
+\usepackage{soul,xcolor}
+%
+\usepackage{lineno, xcolor}
+%\usepackage{hyperref}
+%\usepackage{url}
+
+\usepackage[section]{placeins}
+
+\hypersetup{
+    colorlinks,
+    citecolor=blue,
+    filecolor=blue,
+    linkcolor=blue,
+    urlcolor=blue
+}
+
+%\linenumbers
+%\setlength\linenumbersep{5pt}
+%\renewcommand\linenumberfont{\normalfont\tiny\sffamily\color{red}}
+
+% etc
+\newcommand{\slim}{\mskip 1.5mu}              % small space in math
+\newcommand{\lf}{\left}
+\newcommand{\rg}{\right}
+\newcommand{\xbj}{x}                   % Bjorken variable
+\newcommand{\zh}{z}
+%\newcommand{\bm}{\boldsymbol}
+\newcommand{\h}{\hat{\bf \bm{h}}}
+\newcommand{\cdott}{{\mskip -1.5mu} \cdot {\mskip -1.5mu}}
+\newcommand{\kt}{\bm{k}_{\perp}}
+\newcommand{\pt}{\bm{p}_{\perp}}
+\newcommand{\phiCS}{\varphi _{CS}}
+\newcommand{\phiS}{\varphi _S}
+\newcommand{\thCS}{\theta _{CS}}
+\newcommand{\gvc}{GeV/$c$}
+\newcommand{\gvcs}{(GeV/$c$)$^2$}
+\newcommand{\gvcw}{GeV/$c^2$}
+\newcommand{\mvcw}{MeV/$c^2$}
+\newcommand{\mvc}{MeV/$c$}
+
+%
+\newcommand{\red}{\textcolor[rgb]{1.00,0.00,0.00}}
+\newcommand{\blue}{\textcolor[rgb]{0.00,0.00,1.00}}
+\newcommand{\green}{\textcolor[rgb]{0.00,0.59,0.00}}
+\newcommand{\magenta}{\textcolor[rgb]{0.50,0.00,0.50}}
+\setstcolor{red}
+%
+\bibliographystyle{ws-rv-van.bst}
+%
+\begin{document}
+%
+\begin{titlepage}
+\PHnumber{2017--xxx}
+\PHdate{31 March January 2017}
+
+\title{First measurement of transverse-spin-dependent azimuthal asymmetries\\ in the Drell-Yan process}
+
+
+\begin{abstract}
+The first measurement of transverse-spin-dependent azimuthal asymmetries in the pion-induced Drell-Yan (DY) process is reported. We use the CERN SPS 190 \gvc\, $\pi^{-}$ beam and a transversely polarized ammonia target. Three azimuthal asymmetries giving access to different transverse-momentum-dependent (TMD) parton distribution functions (PDFs) are extracted using dimuon events with invariant mass between 4.3~\gvcw\, and 8.5~\gvcw.
+The observed sign of the Sivers asymmetry is found to be consistent with the fundamental prediction of Quantum Chromodynamics (QCD) that the Sivers TMD PDFs extracted from DY have a sign opposite to the one extracted from semi-inclusive deep-inelastic scattering (SIDIS) data.
+We present two other asymmetries originating from the pion Boer-Mulders TMD PDFs convoluted with either the nucleon transversity or pretzelosity TMD PDFs.
+These DY results are obtained at a hard scale comparable to that of a recent COMPASS SIDIS measurement and hence allow unique tests of fundamental QCD universality predictions.
+
+%The provided data serves as important input for the studies of QCD universality.
+
+%Provided data serves as an important input for the QCD universality studies. and can be used to constrain various TMD evolution based theoretical models for Sivers and other Drell-Yan azimuthal asymmetries.
+\end{abstract}
+
+\vspace*{60pt}
+PACS: 13.60.-r; 13.60.Hb; 13.88.+e; 14.20.Dh; 14.65.-q
+
+\vfill
+\Submitted{(to be submitted to Phys.\ Rev. Lett.)}
+
+%\pacs{13.60.-r; 13.60.Hb; 13.88.+e; 14.20.Dh; 14.65.-q}
+%
+\input{Authors2017}
+
+\end{titlepage}
+
+%
+%
+%
+According to Quantum Chromodynamics (QCD), the modern theory of strong interactions, the internal structure of hadrons explored in hard (semi-)inclusive scattering is described by parton distribution functions (PDFs). For a polarized nucleon, within the twist-2 approximation there are eight transverse-momentum-dependent (TMD) PDFs describing the distributions of longitudinal and transverse momenta of partons and their correlations with nucleon and quark polarizations. Experimentally, these PDFs can be accessed in the Drell-Yan process, \textit{i.e.} massive lepton-pair production in hadron-nucleon collisions ($h \, N \rightarrow \ell\,\bar{\ell}\, X$), hereafter referred to as DY, and in semi-inclusive hadron measurements in deep-inelastic lepton-nucleon scattering ($\ell \,N \rightarrow \ell^\prime \,h \, X$), hereafter referred to as SIDIS. For recent reviews see \textit{e.g.} Refs.~\cite{Perdekamp:2015vwa,Peng:2014hta,Aidala:2012mv}.
+%
+For the DY and SIDIS cross sections, TMD factorization was proven to hold~\cite{Collins:2011zzd}, which allows one to express them as convolutions of hard-scale dependent TMD PDFs, perturbatively calculable parton hard-scattering cross sections and  (for SIDIS) parton fragmentation functions. The hard scale $Q$ in DY is given by the invariant mass of the lepton pair and in SIDIS by the square root of the virtuality of the photon exchanged in the DIS process.
+
+The Sivers function~\cite{Sivers:1989cc} plays an important role among the TMD PDFs. It describes the left-right asymmetry in the distribution of unpolarized partons in the nucleon with respect to the plane spanned by the momentum and spin vectors of the nucleon.
+One of the recent significant theoretical advances in the TMD framework of QCD is the prediction that the two naively time-reversal odd TMD PDFs, \textit{i.e.} the quark Sivers functions $f_{1T}^\perp$ and Boer-Mulders functions $h_{1}^\perp$, have opposite sign when measured in SIDIS or DY
+%, which is the consequence of different Wilson-line structures in the two processes
+~\cite{Collins:2002kn, Brodsky:2002cx, Brodsky:2002rv}.
+%non-pertutbative QCD object PDF gauge invraiance
+The experimental test of this fundamental prediction, which is a direct consequence of QCD gauge invariance, is a major challenge in hadron physics.
+
+Non-zero quark Sivers TMD PDFs have been extracted from SIDIS single-differential results of HERMES~\cite{Airapetian:2009ae}, COMPASS~\cite{Ageev:2006da,Alekseev:2008aa, Adolph:2012sp,Adolph:2014zba} and JLab~\cite{Qian:2011py} using both collinear~\cite{Anselmino:2005ea, Anselmino:2008sga} and TMD evolution approaches~\cite{Aybat:2011ta, Anselmino:2012aa, Anselmino:2016uie,Echevarria:2014xaa,Sun:2013hua}.
+%In the commonly accessible range of the Bjorken-$x$ variable, the Sivers TSA at HERMES was found to be somewhat larger compared to that measured at COMPASS. Taking into account that in this range the hard scale at COMPASS is as much as two to three times larger compared to that of HERMES, this observation may indicate the influence of TMD evolution effects.
+%
+The first measurement of the Sivers effect in $W$ and $Z$-boson production in collisions of transversely polarized protons at RHIC was reported by the STAR collaboration~\cite{Adamczyk:2015gyk};
+%Comparing the data with predictions from Ref.~\cite{Kang:2009bp} they conclude that the measured Sivers asymmetry appears to be better compatible with the sign-change scenario for the Sivers TMD PDF than with the one without sign change. Note that these predictions are not using TMD evolution effects and are based on parametrizations of Sivers and unpolarized TMD PDFs that were fitted to asymmetries measured at fixed-target energies, \textit{i.e.} at a corresponding hard scale~\cite{Anselmino:2008sga}.
+the hard scales of these measurements is $Q\approx 80$\;\gvc\; and $90$\;\gvc. It is quite different from the one explored in fixed-target experiments where $Q$ ranges approximately between $1$\;\gvc\; and $9$\;\gvc. Hence it is not excluded that TMD evolution effects may play a substantial role when describing the STAR results using Sivers TMD PDFs extracted from fixed-target SIDIS results.
+
+The COMPASS experiment at CERN~\cite{Abbon:2007pq, Gautheron:2010wva} has the unique capability to explore the transverse-spin structure of the nucleon in a similar kinematic region by two alternative experimental approaches, \textit{i.e.} SIDIS and DY, using mostly the same setup.
+This offers the opportunity of minimizing uncertainties of TMD evolution in the comparison of the Sivers TMD PDFs when extracted from these two measurements to test the opposite-sign prediction by QCD.
+
+Recently, COMPASS published the first multi-differential results of the Sivers asymmetry, which were extracted from SIDIS data at four different hard scales~\cite{Adolph:2016dvl}. In particular for the range 4 \gvc$\;<Q<$ 9 \gvc, the Sivers asymmetry for positive hadrons was found to be above zero by 3.2 standard deviations of the total experimental accuracy. This hard scale range is very similar to the one used in this Letter to analyze the DY process.
+%
+%
+
+When the polarizations of the produced leptons are summed over, the general expression for the cross section of pion-nucleon DY lepton-pair production off a transversely polarized nucleon comprises five transverse spin-dependent asymmetries (TSAs), including the Sivers TSA~\cite{Arnold:2008kf,Gautheron:2010wva}. Those three TSAs that can be described by contributions from only twist-2 TMD PDFs will be addressed in this Letter. The corresponding part of the differential cross section  can be written as follows:
+\vskip 0.5cm
+\begin{eqnarray}\label{eq:DY_xsecLO}\nonumber
+  \hspace*{-0.9cm}\frac{d\sigma}{dq^{4}d\Omega} &\propto& \hat{\sigma}_{U}
+  \bigg\{ 1 +  {S_T}\Big[ D_{1}A_T^{\sin\phiS}\sin\phiS\\ \nonumber
+   &&
+       +D_{2}\Big( A_T^{\sin(2\phiCS-\phiS)}\sin(2\phiCS-\phiS) \\
+    &&
+   \qquad+ A_T^{\sin(2\phiCS+\phiS)}\sin(2\phiCS+\phiS) \Big)
+   \Big] \bigg\}.
+\end{eqnarray}
+%
+%D^{[1+{{\cos}^2}\thCS]} D^{[{{\sin}^2}\thCS]}
+Here, $q$ is the four-momentum of the exchanged virtual photon and $\hat{\sigma}_{U} =  \lf({F^{1}_{U}}+{F^{2}_{U}}\rg)\lf(1 + \lambda{{\cos}^2}\thCS \rg)$, with $F^{1}_{U}$, $F^{2}_{U}$ being the polarization and azimuth-independent structure functions, and the polar asymmetry $\lambda$ is given as $\lambda=\lf({F^{1}_{U}}-{F^{2}_{U}}\rg)/\lf({F^{1}_{U}}+{F^{2}_{U}}\rg)$. At leading order of  perturbative QCD, within the twist-2 approximation, $F^{2}_{U}=0$ and therefore $\lambda=1$. The subscript ($U$)$T$ denotes transverse polarization (in)dependence. In analogy to SIDIS, the virtual-photon depolarization factors are defined as $D_{1}=(1+{{\cos}^2}\thCS)/\lf(1 + \lambda{{\cos }^2}\thCS \rg)$ and $D_{2}={{\sin}^2}\thCS/\lf(1 + \lambda{{\cos }^2}\thCS \rg)$. The angles $\phiCS$, $\thCS$ and $\Omega$, the solid angle of the lepton, are defined in the Collins-Soper frame as defined in Refs.~\cite{Arnold:2008kf,Gautheron:2010wva}, and $\phiS$ is the azimuthal angle of the direction of the nucleon polarization in the target rest frame, see Fig.~\ref{fig:DYframe}.
+%with the $\hat{\bf z}$ axis along the beam momentum and the $\hat{\bf x}$ axis along the direction of the transverse momentum of the produced dimuon.
+%
+%
+%
+%
+%
+\begin{figure}[bp]
+\centering
+\includegraphics[width=0.35\textwidth]{plots/DY_framework2.pdf}
+\caption{Top: target rest frame.
+%The $z$-axis is oriented along the direction of the beam momentum and the $x$-axis along the direction of the transverse momentum of the produced dimuon.
+Bottom: Collins-Soper frame.
+%
+%This dilepton rest frame is obtained from the target rest frame by boosting first along the $z$-axis and then along the $x$-axis so that both the longitudinal and the transverse momenta of the virtual photon vanish.
+}
+\label{fig:DYframe}
+\end{figure}
+%
+
+The TSAs $A_{T}^{w}$ in Eq.~(\ref{eq:DY_xsecLO}) are defined as amplitudes of a given azimuthal modulation $w=w(\phiS,\phiCS)$, divided by the spin and azimuth-independent part of the DY cross section and the corresponding depolarization factor.
+
+In this analysis, the sign convention for TSAs is given by Eq.~(\ref{eq:DY_xsecLO}) together with the definitions of azimuthal and polar angles in Fig.~\ref{fig:DYframe}.
+Note that the sign of the Sivers TSA is related to that of the Sivers TMD PDF only by convention, so that the above mentioned sign-change prediction for the Sivers TMD PDFs in our case results in the same sign of the measured Sivers TSAs in SIDIS and DY.
+
+
+In DY lepton-pair production with a transversely polarized nucleon in the initial state, the TSA $A_T^{\sin\phiS}$ is related to the nucleon Sivers TMD PDFs ($f_{1T}^\perp$) convoluted with the unpolarized pion TMD PDFs ($f_{1,\pi}$). The other two TSAs, $A_T^{\sin(2\phiCS-\phiS)}$ and $A_T^{\sin(2\phiCS+\phiS)}$, are related to convolutions of the Boer-Mulders TMD PDFs ($h_{1,\pi}^{\perp}$) of the pion with the nucleon TMD PDFs transversity ($h_1$) and pretzelosity ($h_{1T}^\perp$), respectively~\cite{Bacchetta:2006tn,Arnold:2008kf}.
+%
+All three aforementioned nucleon TMD PDFs induce analogous twist-2 TSAs in the general expression for the cross section of unpolarized-hadron production in SIDIS of leptons off transversely polarized nucleons~\cite{Kotzinian:1994dv,Bacchetta:2006tn,Arnold:2008kf}. These TSAs were studied by the HERMES and COMPASS experiments~\cite{Alekseev:2008aa,Airapetian:2009ae,Adolph:2012sp,Adolph:2014fjw,Adolph:2014zba,Adolph:2016dvl,Adolph:2012sn,Adolph:2012nw,Parsamyan:2013ug,Pappalardo:2010zz,Bradamante:2017yia}.
+%
+In contrast to the  Sivers function, transversity and pretzelosity are predicted to be genuinely universal, \textit{i.e.} they do not change sign between SIDIS and DY~\cite{Collins:2011zzd}, which is yet another fundamental QCD prediction to be explored.
+
+%Similarly to the case of the Sivers function, the present knowledge on $h_1$ and $h_{1}^\perp$ \st{TMD PDFs} is based on SIDIS measurements\green{, only}~\cite{Airapetian:2009ae,Alekseev:2008aa,Adolph:2014zba,Adolph:2012sn,Adolph:2012nw,Parsamyan:2013ug,Pappalardo:2010zz}\green{. }\st{ and }\green{The }COMPASS \st{is the first }experiment \green{is first} \st{which}\green{in } measur\st{ed}\green{ing the} corresponding TSAs in \green{the }Drell-Yan \green{ proces. [NOTE that this is not fully correct, as $h_1^\perp was also measured in pion nucleon DY !!!]
+
+
+%\section{Data analysis}
+%\label{sec:data_analysis}
+%
+The analysis presented in this Letter is based on Drell-Yan data collected by COMPASS in the year 2015 using essentially the same spectrometer as it was used during SIDIS data taking in previous years~\cite{Abbon:2007pq}. For this measurement, the 190 \gvc\; $\pi^{-}$ beam with an average intensity of $0.6\times10^{8}$ s$^{-1}$ from the CERN SPS was scattered off the COMPASS transversely polarized NH$_3$ target with proton polarization $\langle P_T\rangle\approx0.73$ and
+dilution factor $\langle f\rangle\approx 0.18$, where the latter accounts for the fraction of polarizable nucleons in the target and the migration of reconstructed events from one target cell to the other.
+The polarized target, placed in a 0.6~T dipole magnet, consisted of two longitudinally aligned cylindrical cells of 55 cm length and 4~cm in diameter, separated
+by a 20~cm gap.
+The two cells were polarized vertically in opposite directions, so that data with both spin orientations were recorded simultaneously. In order to compensate for acceptance effects, the polarization was reversed every two weeks.
+The entire data-taking time of 18 weeks was divided into nine periods, each consisting of two consecutive weeks with opposite target polarizations.
+The proton polarization had a relaxation time of about 1000 hours, which was measured for each target cell in each data taking period.
+A 240 cm long structure made mostly of alumina with a tungsten core, placed downstream of the target, acted as hadron absorber and beam dump.
+Outgoing charged particles were detected by a system of tracking detectors in the two-stage spectrometer. In each stage, muon identification was accomplished by a system of muon filters.
+
+The trigger required the hit pattern of
+several hodoscope planes to be consistent with at least two muon candidates originating from the target region. For any pair of candidates either both have to be detected in the first stage of the spectrometer ($25 < \theta_{\mu} < 160$~mrad), or one in the first and the other in the second stage ($8 < \theta_{\mu} < 45$~mrad).
+
+%The data were taken at a mean beam intensity of $7\times10^7 \; \pi^{-}$/s.
+%
+%In order to be selected for analysis, an event must have at least one ``primary vertex'', which is defined as the intersection of the trajectories of the beam  particle and two or more outgoing oppositely charged particles.
+%
+%
+
+In the data analysis, the selection of events requires a production vertex located within the polarized-target volume, with one incoming pion beam track and at least two oppositely charged outgoing particles that are consistent with the muon hypothesis, \textit{i.e.} they crossed at least 30 radiation lengths of material along the spectrometer.
+%
+%oppositely charged particles, compatible with the muon hypothesis ensured by the requirement of 30 radiation lengths to be crossed along the spectrometer.
+%
+The dimuon transverse momentum $q_T$ is required to be above $0.4$ \gvc\; in order to obtain sufficient resolution in angular variables.
+
+%
+\begin{figure}[tbp]
+ \begin{minipage}[t]{0.47\linewidth}
+ \center
+ \includegraphics[width=0.9\textwidth]{plots/DY_MassFit.pdf}
+ \caption{The dimuon invariant mass distribution.}
+ \label{fig:M}
+ \end{minipage}
+ \begin{minipage}[t]{0.53\linewidth}
+ \center
+ \includegraphics[width=0.9\textwidth]{plots/DY2015_Mr4_NH3_xbxN.pdf}
+ \caption{The two-dimensional $(x_{\pi},x_{N})$ distribution of the selected high mass dimuons. The distribution is normalized to have a maximum value equal to one.}
+ \label{fig:x1x2}
+ \end{minipage}
+\end{figure}
+
+%\begin{figure}[tbp]
+%\centering
+%%\includegraphics[width=0.45\textwidth]{plots/combinatorial_background_mass_dist_final.pdf}
+%\includegraphics[width=0.39\textwidth]{plots/DY_MassFit.pdf}
+%\caption{The dimuon invariant mass distribution.}
+%%\caption{The invariant mass distribution.\red{Plot is not final}}
+%\label{fig:M}
+%\end{figure}
+%%
+%\begin{figure}[tbp]
+%\centering
+%%\includegraphics[width=0.45\textwidth]{plots/combinatorial_background_mass_dist_final.pdf}
+%\includegraphics[width=0.39\textwidth]{plots/DY2015_Mr4_NH3_xbxN.pdf}
+%\caption{The two-dimensional $(x_{\pi},x_{N})$ distribution of the selected high mass dimuons. The distribution is normalized to have a maximum value equal to one.}
+%%\caption{The invariant mass distribution.\red{Plot is not final}}
+%\label{fig:x1x2}
+%\end{figure}
+%
+
+The reconstructed mass spectrum of events passing all analysis requirements is shown in Fig.~\ref{fig:M} (in black). The J/$\psi$ peak is clearly visible with a shoulder
+from the $\psi$(2S) resonance.  The contributions to the dimuon spectrum are evaluated with a Monte-Carlo (MC) simulation. The Drell-Yan process is shown in blue (long dashed) together with background processes: i) charmonia in red (dashed) and magenta (dot-dashed) and ii) semi-muonic open-charm decays shown in green (double dot dashed).
+%
+In addition, the combinatorial background originating from the decays of pions and kaons produced in the target is evaluated using like-sign dimuon events from real data and shown in grey (dotted).
+The sum of all contributions, shown in violet, describes the
+experimental data well. For the analysis we use the mass range 4.3~\gvcw\,$ < M_{\mu\mu} < $\,8.5~\gvcw\,, where the upper limit avoids the contribution of $\Upsilon$-resonances. In this range, the sum of all background contributions is estimated to be below 4\%.
+
+The two-dimensional distribution of the Bjorken scaling variables of pion and nucleon, $x_{\pi}$ and $x_{N}$, for this mass range is presented in Fig.~\ref{fig:x1x2}. The figure shows that the kinematic phase space explored by the COMPASS spectrometer matches the valence region in $x_{\pi}$ and $x_{N}$. In this region, the DY cross section for a proton target is dominated by the contribution of nucleon $u$-quark and pion $\bar{u}$-quark TMD PDFs.
+
+
+The distributions of the dimuon Feynman variable $x_{F}$ and the dimuon transverse momentum $q_{T}$ are presented in Fig.~\ref{fig:xF_qT}. The corresponding mean values of the kinematic variables are: $\langle x_{N} \rangle=0.17$,
+$\langle x_{\pi} \rangle=0.50$,
+$\langle x_{F} \rangle=0.33$,
+$\langle q_{T} \rangle=1.2$~\gvc\, and
+$\langle M_{\mu\mu} \rangle=5.3$~\gvcw.
+
+%
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=0.40\textwidth]{plots/DY2015_Mr4_NH3_xF.pdf}
+\hskip 1cm
+\includegraphics[width=0.40\textwidth]{plots/DY2015_Mr4_NH3_qT.pdf}
+\caption{The $x_{F}$ distribution (left) and $q_T$ distribution (right)
+of the selected high mass dimuons.}
+\label{fig:xF_qT}
+\end{figure}
+%%
+%\begin{table}[h!]
+%%\centering
+%\caption{Mean values of selected kinematic variables for events reconstructed in the dimuon mass range $4.3$~\gvcw$ < M_{\mu\mu} < 8.5$~\gvcw.}
+%\begin{center}
+%\end{center}
+%\label{tab:meanKV}
+%\begin{tabular}{@{}|c|c|c|c|c|@{}}
+% \hline
+%  $\langle x_{N} \rangle$& $\langle x_{\pi} \rangle$& $\langle x_{F} \rangle$& $\langle q_{T} \rangle $~(\gvc)& $\langle M_{\mu\mu} \rangle$~(\gvcw) \bigstrut \\ \hline
+%  0.17 & 0.5 & 0.33 & 1.2 & 5.3 \bigstrut\\
+%   \hline
+%\end{tabular}
+%\end{table}
+%%
+
+%
+%From a \red{full-chain} Monte-Carlo (MC) simulation using the same conditions as for real data, the dimuon mass resolution was estimated to be about $180$~\mvcw.
+
+%Monte-Carlo simulations have shown an average resolution of 100~\mvc\, in dimuon transverse momentum, angular resolutions of 110~mrad for $\phiCS$ and $\phiS$, and 20~mrad for $\thCS$.
+
+%{The dimuon transverse momentum, $q_{T}$, is required to be greater than 0.4 \gvc\; in order to achieve an angular resolution of 110 mrad for $\phiCS$ and $\phiS$, and 20~mrad for $\thCS$.}
+
+%
+%
+%The requirement $q_T<3$ \gvc is imposed to select the favorable region for validity of the TMD approach. \red{[AK/WDN propose to remove this sentence, as i) this cut is not really satisfactorily far below our hard scale, ii) it removes only very few events, iii) it was never used in SIDIS analysis and we should aim for maximum coherence between both analyses]}
+%
+%
+
+% $x_{\pi}=q^2/(2P_{\pi}\cdot q)$
+% $x_{N}=q^2/(2P_{N}\cdot q)$,
+% $x_{F}=x_{\pi}-x_{N}$
+
+%\st{ distributions for the selected sample are presented in Fig.~\ref{fig:xF_qT}}.
+%COMPASS $x_{F}$ acceptance-coverage corresponds to positive $x_{F}$ range. The dimuon transverse momentum is peaked around $1$\gvc.
+
+%
+%
+%
+
+About $35\times10^3$ dimuons remain for the analysis.
+The three TSAs presented in this Letter are extracted period by period from the number of dimuons produced in each cell for the two directions of the target polarization.
+The double-cell target configuration in conjunction with the periodic polarization reversal allows for the simultaneous measurement of azimuthal asymmetries for both target spin orientations, thereby compensating flux and acceptance-dependent systematic uncertainties.
+%
+Using an extended Unbinned Maximum Likelihood estimator as described in Ref.~\cite{Adolph:2012nw}, all five TSAs are fitted simultaneously together with their correlation matrices.
+The final asymmetries are obtained by averaging the results of the nine periods.
+The asymmetries are evaluated in kinematic bins of $x_{N}$, $x_{\pi}$, $x_{F}$ or $q_{T}$, while always integrating over
+all the other variables.
+
+%The average uncertainty in the reconstructed vertex position along the beam line is about $10$~cm, which leads to a marginal (below 1\%)  migration of reconstructed events from one target cell to the other. This is taken into account at the level of the dilution factor.
+
+The dilution factor $f$ and the depolarization factors $D_{1}$ and $D_{2}$ entering the definition of TSAs are calculated on an event-by-event basis and used to weight the asymmetries. For the magnitude of the target polarization $P_T$, an average value is used for each data taking period in order to avoid possible systematic bias. In the evaluation of the depolarization factors, the approximation $\lambda=1$ is used. Known deviations from this assumption with $\lambda$ ranging between 0.5 and 1~\cite{Guanziroli:1987rp,Conway:1989fs} lead to a normalization uncertainty of at most $-5\%$.
+
+%The numerical results are available on HepData~\cite{hepdata}.
+
+%%
+%The TSAs are determined in HM-region as functions of the variables $x_{N}$, $x_{F}$ and $q_{T}$, with the following bin limits:
+%%
+%%%\newpage
+%\begin{itemize}
+%%\setlength\itemsep{-0.5em}
+%  \item[$x_{N}$:] 0.0, 0.12, 0.18, 1.0
+%  \item[$x_{F}$:] -1.0, 0.2, 0.4, 1.0
+%  \item[$q_{T}$:] 0.4, 0.8, 1.4 , 5.0 (in units of \gvc)
+%\end{itemize}
+%%
+
+%The statistical consistency of the measurements between different periods is checked and the resulting TSAs are studied for possible systematic effects.
+The TSAs resulting from different periods are checked for possible systematic effects. The largest systematic uncertainty is due to possible residual variations of experimental conditions within a given period. They are quantified by evaluating various types of false asymmetries in a similar way as described in Refs.~\cite{Adolph:2012sp,Adolph:2012sn}. The systematic point-to-point uncertainties are found to be about 0.7 times the statistical uncertainties.
+The normalization uncertainties originating from the uncertainties on target polarization ($5\%$) and dilution factor ($8\%$) are not included in the quoted systematic uncertainties.
+%
+%
+%
+%\section{Results and Discussion}
+%\label{sec:results}
+%
+%
+%
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=0.48\textwidth]{plots/TSAs_3in1_15.pdf}
+\caption{Extracted Drell-Yan TSAs related to Sivers, transversity and pretzelosity TMD PDFs (top to bottom). Error bars represent statistical uncertainties. Systematic uncertainties (not shown) are 0.7 times the statistical ones.}
+\label{fig:TSAs}
+\end{figure}
+%
+
+The TSAs $A_T^{\sin\phiS}$, $A_T^{\sin(2\phiCS-\phiS)}$ and $A_T^{\sin(2\phiCS+\phiS)}$ are shown in Fig.~\ref{fig:TSAs} as a function of the variables $x_{N}$, $x_{\pi}$, $x_{F}$ and $q_{T}$.
+%The dependence of the TSAs on the dimuon mass $M_{\mu\mu}$ is not shown in the figure; it is very similar to their $x_{N}$-dependence since the two variables are highly correlated.
+Due to relatively large statistical uncertainties, no clear trend is observed for any of the TSAs.
+The full set of numerical values for all TSAs including correlation coefficients and mean kinematic values from this measurement is available on HepData~\cite{hepdata}.
+%Possible negative signal can be seen for the $A_T^{sin(\phiCS-\phiS)}$ asymmetry.
+%
+%\begin{table}[h!]
+%\centering
+%\caption{Mean values of selected kinematic variables for events reconstructed in the dimuon mass range $4.3 < M_{\mu\mu} < 8.5$~\gvcw.}
+%\label{tab:meanKV}
+%\begin{tabular}{@{}|c|c|c|c|c|@{}}
+% \hline
+%  $\langle x_{N} \rangle$& $\langle x_{\pi} \rangle$& $\langle x_{F} \rangle$& $\langle q_{T} \rangle $~(\gvc)& $\langle M_{\mu\mu} \rangle$~(\gvcw) \bigstrut \\ \hline
+%  0.16 & 0.46 & 0.31 & 1.13 & 5.03 \bigstrut\\
+%   \hline
+%\end{tabular}
+%\end{table}
+%
+The last column in Fig.~\ref{fig:TSAs} shows the results for the three extracted TSAs integrated over the entire kinematic range.
+The average Sivers asymmetry $A_T^{\sin\phiS}$ is found to be above zero at about one standard deviation of the total uncertainty. In Fig.~\ref{fig:Siv_theor}, it is compared with recent theoretical predictions from Refs.~\cite{Anselmino:2016uie,Echevarria:2014xaa,Sun:2013hua} that are based on different $Q^2$-evolution approaches. The positive sign of these theoretical predictions for the DY Sivers asymmetry was obtained by using the sign-change hypothesis for the Sivers TMD PDFs, and the numerical values are based on a fit of SIDIS data for the Sivers TSA~\cite{Airapetian:2009ae,Alekseev:2008aa, Adolph:2012sp}.
+The figure shows that this first measurement of the DY Sivers asymmetry is consistent with the predicted change of sign for the Sivers function.
+%
+
+
+%
+%Although a non-zero value of the DY Sivers TSA is statistically not yet conclusive, the present COMPASS result can already be used to better constrain theoretical models and $Q^2$-evolution schemes.
+%
+%
+%
+%\begin{figure}[]
+%\centering
+%\includegraphics[width=0.36\textwidth]{plots/DY2015_A4In1.pdf}
+%\caption{Mean TSAs. Systematic uncertainties are shown as error bands next to the vertical axis.}
+%\label{fig:A4in1}
+%\end{figure}
+%
+%
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=0.39\textwidth]{plots/Sivers_xF.pdf}
+\caption{The measured mean Sivers asymmetry and the
+theoretical  predictions for different $Q^2$ evolution schemes from Refs.~\cite{Anselmino:2016uie} (DGLAP),~\cite{Echevarria:2014xaa} (TMD1)
+and~\cite{Sun:2013hua} (TMD2).
+The dark-shaded (light-shaded) predictions are evaluated with (without) the sign-change hypothesis. The error bar represents the total experimental uncertainty.}
+\label{fig:Siv_theor}
+\end{figure}
+%
+
+
+The average value for the TSA  $A_T^{\sin(2\phiCS-\phiS)}$ is measured to be below zero with a significance of about two standard deviations. The obtained magnitude of the asymmetry is in agreement with the model calculations of Ref.~\cite{Sissakian:2010zza} and can be used to study the universality of the nucleon transversity function. The TSA $A_T^{\sin(2\phiCS+\phiS)}$, which is related to the nucleon pretzelosity TMD PDFs, is measured to be above zero with a significance of about one standard deviation. Since both $A_T^{\sin(2\phiCS-\phiS)}$ and $A_T^{\sin(2\phiCS+\phiS)}$ are related to the pion Boer-Mulders PDFs, the obtained results may be used to study this function further and to possibly determine its sign.
+%
+They may also be used to test the sign change of the nucleon Boer-Mulders TMD PDFs between SIDIS and DY as predicted by QCD~\cite{Collins:2002kn, Brodsky:2002cx, Brodsky:2002rv}, when combined with other past and future SIDIS and DY data related to target-spin-independent Boer-Mulders asymmetries~\cite{Falciano:1986wk,Airapetian:2012yg,Adolph:2014pwc}.
+%
+
+%
+%In 2018, COMPASS will continue the measurements of the polarized Drell-Yan process for another full year. This will considerably improve the statistical precision of the Sivers and other azimuthal asymmetries measured in the Drell-Yan process.
+
+%Provided data serves as an important input for the QCD universality studies. and can be used to constrain various TMD evolution based theoretical models for Sivers and other Drell-Yan azimuthal asymmetries.
+
+
+% Asymmetries which probe the TMD PDFs common between DY and SIDIS processes at COMPASS.
+
+%
+%
+
+%\label{sec:aknowledge}
+We gratefully acknowledge the support of the CERN management and staff and the skill and effort of the technicians of our collaborating institutes. Special thanks go to A. Dudarev, E. Feldbaumer, L. Gatignon, C. Theis, H. ten Kate and H. Vincke for invaluable help in the preparation of experiment.
+For fruitful discussions and essential input to the preparation of the proposal of this measurement we thank M. Anselmino, A. Bacchetta, A. Bianconi, S. Melis, M Radici, O. Teryaev, B. Pasquini and A. Prokudin.
+We are grateful to M.E.~Boglione, M.~Echevarria and F.~Yuan for providing us with numerical values of their model predictions.
+
+%This work was made possible by the financial support of our funding agencies:
+%MEYS (Czech Republic) Grant LG13031;
+%FP7 ``HadronPhysics3'' Grant 283286 (European Union);
+%CEA, P2I and ANR (France);
+%BMBF, DFG cluster of excellence ``Origin and Structure of the Universe'',
+%DFG Research Training Group Programmes 1102 and 2044 (Germany);
+%B.Sen fund (India);
+%Academy of Sciences and Humanities (Israel);
+%INFN (Italy);
+%MEXT and JSPS, Grants 8002006, 20540299 and 18540281, Daiko and Yamada Foundations (Japan);
+%NCN Grant 2015/18/M/ST2/00550 (Poland);
+%FCT COMPETE and QREN, Grants CERN/FP 116376/2010, 123600/2011 and CERN/FIS-NUC/0017/2015 (Portugal);
+%CERN-RFBR Grant 12-02-91500, Presidential Grant NSh-999.2014.2 (Russia);
+%MST (Taiwan) and
+%NSF (USA).
+
+
+%
+%
+%
+%\section*{References}
+
+\bibliography{DY_paper}{}
+
+\end{document}
+
+% 
