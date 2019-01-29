@@ -1,4 +1,3 @@
-%Chapter 1 
 \chapter{Measurement of the Left-Right Asymmetry in the Drell-Yan Process} 
 \label{Chap::leftright}
 \ifpdf
@@ -985,23 +984,48 @@ that the systematic error is already small with no cut in $\phi_{\mathrm{S}}$
 and to avoid loss of statistics.  The final integrated systematic error due to
 left-right event migration was determined to be 9\%.
 
+\subsection{Final Systematics}
+The final systematic error is determined by adding all non-zero systematic
+effects in quadrature as
+
+\begin{equation}
+  \Big \langle
+  \frac{
+    \sigma_{\mathrm{systematics}}}{\sigma_{\mathrm{statistical}}}
+  \Big \rangle =
+  \sqrt{
+    \sum_i^{\mathrm{all \; systematics}}
+    \Big \langle
+    \frac{\sigma^2_{\mathrm{systematics,
+          i}}}{\sigma^2_{\mathrm{statistical}}}
+    \Big \rangle
+  } \;,
+\end{equation}
+where all the systematic effects considered are summarized in
+Tab.~\ref{tab::sysError}.
 
 \begin{table}[h!t]
   \centering
-  \begin{tabular}{|c|c|}
-    \hline Systematic error& \multirow{2}{9em}{$\langle
-      \sigma_{\mathrm{systematic}}/\sigma_{\mathrm{statistical}}
-      \rangle$}\\ & \\ \hline
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    \multirow{2}{*}{Systematic error}&
+    \multirow{2}{*}{
+      $\langle \sigma_{\mathrm{systematic}}/\sigma_{\mathrm{statistical}}
+      \rangle$} &
+    \multirow{2}{*}{$\langle \sigma_{\mathrm{systematic}} \rangle$} &
+    \multirow{2}{*}{$\langle \sigma_{\mathrm{statistical}} \rangle$} \\
     
-    Period compatibility& 0.0\\ \hline
+    & & & \\ \hline
 
-    Acceptance fluctuation& 0.2\\ \hline
+    Period compatibility& 0.0 & 0.0 & 0.039\\ \hline
 
-    False asymmetry& 0.5\\ \hline
+    Acceptance fluctuation& 0.2 & 0.008 & 0.039\\ \hline
 
-    Left-Right migration& 0.09\\ \hline
+    False asymmetry& 0.5 & 0.020 & 0.039\\ \hline
 
-    Total& 0.55\\\hline
+    Left-Right migration& 0.09 & 0.004 & 0.039\\ \hline
+
+    Total& 0.55 & 0.021 & 0.039\\\hline
     
   \end{tabular}
   \caption{Summary of systematic error impacts to the integrated asymmetry}

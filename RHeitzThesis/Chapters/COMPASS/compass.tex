@@ -1,4 +1,3 @@
-%Chapter 1 
 \chapter{The COMPASS Experiment} 
 \label{Chap::compass}
 \ifpdf
@@ -27,6 +26,13 @@ scattering angle between roughly 8 mrad and 45 mrad.  This stage is centered
 around the SM2 magnetic which has an integrated field of 4.4~Tm.  A graphic of
 the 2015 setup is shown in Fig~\ref{fig::compassSpec}.\par
 
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=\textwidth, trim=0.5cm 5cm 0.7cm 7cm,clip]{compassSpec}
+  \caption{A schematic of the 2015 COMPASS setup}
+  \label{fig::compassSpec}
+\end{figure}
+
 This chapter gives an overview of the COMPASS data taking setup with specific
 interest on the 2015 setup from which the data in this thesis was produced from.
 For a more thorough review of the spectrometer see
@@ -34,6 +40,104 @@ reference~\cite{compassSpec}.  This chapter is roughly organized by how the
 data taking occurs.
 
 \section{The Beam}
+The COMPASS spectrometer receives beam from the Super Proton Synchrotron (SPS)
+along on the M2 beam line.  A schematic of the M2 beam line is shown in
+Fig.~\ref{fig::M2line}.  There are several different beam types and energies
+available to COMPASS.  The most common types used for physics analysis are a
+tertiary muon beam up to 190~{\gvc} and secondary hadron beam with an energy up
+to 280~{\gvc}.  Both of these beam types can have a positive or negative charge.
+As well it is possible to have a lower intensity tertiary electron beam which is
+manly used for calibrations. \par
+
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=\textwidth,trim=2cm 0cm 6cm 0cm,clip,angle=270]{M2line}
+  \caption{The M2 beam line at CERN}
+  \label{fig::M2line}
+\end{figure}
+
+The start of the M2 beam line is the T6 target which is made of beryllium and
+has an adjustable length.  The SPS accelerates primary protons up to 400~{\gvc}
+which impinges on the T6 target to produce a secondary beam.  The nominal proton
+intensity on the T6 target is 100x10$^{11}$ spill$^-1$.  The longer the T6
+target the higher the secondary intensity where 500mm is the longest and typical
+target length used for physics data taking.  The reaction of the proton beam
+with the T6 mainly produces secondary protons, pions and kaons.  Following this
+reaction a series of dipole and quadruple magnets are used to select the
+momentum and charge of interest. \par
+
+The SPS spill structure varies throughout the data taking year depending mainly
+on the needs of the Large Hadron Colider (LHC).  In 2015 the average intensity
+provided was 0.6x10$^8$ s$^{-1}$ and the typical spill structure was two
+4.8~second spills every 36~seconds.
+
+\subsection{Muon Beam}
+The muon beam is a tertiary beam which results from a weak decay of the
+secondary beam.  After the initial proton reaction on T6 the resulting secondary
+particles are momentum and charge selected and sent through a 600m tunnel with
+focusing and de-focusing (FODO) quadruple magnets.  In this tunnel the pion and
+kaons can decay as
+\begin{equation}
+  \pi^{-(+)} \rightarrow \mu^{-(+)} + \overline{\nu}_{\mu^-}(\nu_{\mu^+})
+  \label{eqn::pionDecay}
+\end{equation}
+\noindent
+and
+\begin{equation}
+  \kappa^{-(+)} \rightarrow \mu^{-(+)} + \overline{\nu}_{\mu^-}(\nu_{\mu^+}).
+  \label{eqn::kaonDecay}
+\end{equation}
+\noindent
+At the end of the tunnel a series of nine 1.1m long beryllium absorbers,
+referred to as the ABS in Fig.~\ref{fig::M2line}, remove the remaining hadron
+component of the beam which did not decay.  A 172~{\gvc} secondary beam is
+chosen to achieve a 160~{\gvc} tertiary $\mu$ beam.  Due to the fact that the
+neutrino in the reactions \ref{eqn::pionDecay} and \ref{eqn::kaonDecay} is
+always left handed, the muon will be natural longitudinally polarized.  For the
+muon momentum chosen the muon beam achieves a polarization of 80\%.
+
+\subsection{Hadron Beam}
+In the case of a hadron beam the ABS absorbers are not used and the decayed
+muons are removed due to their lower momentum.  In the case of a negative hadron
+beam the composition of the beam is approximately 97~\% $\pi^-$, 2.5\% kaons and
+0.5\% $\overline{\mathrm{p}}$. The 2015 Drell-Yan data taking used a 190~{\gvc}
+hadron beam. \par
+
+After the decay tunnel the beam is bent upwards along another FODO tunnel of
+length 250m before reaching the surface approximately 100m before the COMPASS
+target.  A series of three dipole magnets, called bend 6, then bend the beam to
+a horizontal position aimed at the COMPASS target.  Both upstream and downstream
+of bend 6 are three tracking detectors (BM01-BM06) that make up the Beam
+Momentum Station (BMS).  The BMS is the upstream most component of the COMPASS
+spectrometer and is able to determine the beam momentum to better than 1\% of
+the beam momentum with an efficiency of approximately 93\%.  Bend 6 and the BMS
+are shown schematically in Fig.~\ref{fig::BeamLine1}. \par
+
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.8\textwidth]{BeamLine1}
+  \caption{Bending the beam to a horizontal position.  The BMS detectors are
+    upstream and downstream of the bend 6 magnet.}
+  \label{fig::BeamLine1}
+\end{figure}
+
+For the 2015 Drell-Yan setup the $\pi^-$ beam intensity was too high for the BMS
+station to work properly.  For this reason special low intensity, approximately
+10$^6$ s$^{-1}$, $\pi^-$ beams were used in 2014 to determine the momentum
+distribution for Drell-Yan data taking.  The beam momentum distribution is shown
+in Fig.~\ref{fig::BeamMomBMS} where the average momentum is 190.9~{\gvc} with a
+spread of $\pm$ 3.2~{\gvc}.
+
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.6\textwidth]{BeamMomBMS}
+  \caption{The momentum distribution of the $\pi^-$ beam, determined during
+    dedicated low intensity beam times.}
+  \label{fig::BeamMomBMS}
+\end{figure}
+
+
+
 
 \section{The Target}
 
