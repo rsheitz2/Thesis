@@ -41,7 +41,11 @@ data taking occurs.
 
 \section{The Beam}
 The COMPASS spectrometer receives beam from the Super Proton Synchrotron (SPS)
-along on the M2 beam line.  A schematic of the M2 beam line is shown in
+along on the M2 beam line.  The Super Proton Synchrotron (SPS) is the second
+largest accelerator at CERN with a circumference of almost 7 km and it can
+accelerate protons up to an energy of 450~GeV.  The SPS extracts beam to the
+Large Hadron Collier and as well sends beam to various experiments in the North
+Area at CERN.  A schematic of the M2 beam line is shown in
 Fig.~\ref{fig::M2line}.  There are several different beam types and energies
 available to COMPASS.  The most common types used for physics analysis are a
 tertiary muon beam up to 190~{\gvc} and secondary hadron beam with an energy up
@@ -136,12 +140,224 @@ spread of $\pm$ 3.2~{\gvc}.
   \label{fig::BeamMomBMS}
 \end{figure}
 
+For years with a transversely polarized target, such as 2015, a chicane system
+of dipole magnets is setup in front of the target.  This is because a beam
+hitting the target without any angle would then be deflected inside the target
+to the left or right of the spectrometer.  For this reason the chicane gives the
+beam an angle before hitting the target such that the non-interacting beam exits
+the target traveling straight towards the spectrometer.
+
+
+\section{The Polarized Target}
+The polarized target at COMPASS is the most complicated and essential component
+of the spectrometer.  It is located upstream of the tracking detectors and
+spectrometer magnets and downstream of the beam telescope, described in
+section~\ref{sec::tracking}, detectors.  The target consists of 2 or 3
+cylindrical cells and the possible materials are either solid state ammonia
+(NH$_3$) or deuterated lithium ($^6$LiD) or liquid hydrogen. Fig.~\ref{fig::PT}
+shows a schematic of the target.  \par
+
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.8\textwidth]{PT}
+  \caption{The polarized target at COMPASS}
+  \label{fig::PT}
+\end{figure}
+
+Surrounding the cylindrical cells is a longitudinal super conducting magnet
+capable of reaching a magnetic field of 2.5T.  This longitudinal magnet
+polarizes the target in the direction of the beam momentum and the target
+polarization is maintained by keeping the target in a liquid helium bath of
+approximately 60mK.  This is called frozen spin mode where the temperature is
+maintained by a dilution refrigerator. \par
+
+The target is polarized through the dynamic nuclear polarization (DNP)
+method~\cite{DNPmethod}.  This process works by first polarizing electrons in
+the target with the longitudinal magnet in the same longitudinal direction for
+all target cells while sending electromagnetic radiation in the microwave
+spectrum into the target.  Due to their much lower mass, electrons have a larger
+magnetic moment and therefore can be polarized at a much faster rate than
+protons or neutrons.  For atoms which have a nuclear spin it is then possible
+for these atoms to absorb a microwave going to an excited state with the
+electron spin anti-parallel to the magnet and the nuclear spin either parallel
+or anti-parallel to the magnet depending on the microwave frequency.  The
+electron with the anti-aligned spin will then quickly have its spin realigned
+while the nucleon will take much longer to lose its polarization due to its
+smaller magnetic moment.  This process can continue in this way resulting in a
+net nuclear polarization.  Using the DNP method the target can achieve a
+polarization of approximately 90\% in three days. \par
+
+The target also includes a 0.63T transverse dipole magnet to change from
+longitudinal polarization to transversely polarized.  The target must first be
+longitudinally polarized before the transverse target magnet can change the
+polarization direction.  Once the target is transversely polarized, the target
+polarization can no longer be increased as microwaves can no longer shine on the
+target in the polarization direction.  Therefore the polarization will decrease
+exponentially.  In 2015 the target was polarized for about half a day between
+data taking sub-periods and achieved and average polarization of 0.73\% which
+includes the effect of exponential polarization lose with time.  The target
+transverse polarization relaxation time was about 1000 hours in 2015. \par
+
+The target polarization was measured with 10 NMR coils while in longitudinal
+magnet mode.  In the 2015, each target cell had the most upstream and downstream
+coils in the center of the target cell and the other three coils on the outside
+perimeter of the target cells.  Due to the fact that the polarization can only
+be measured with the longitudinal magnet on, the polarization is only measure at
+the start and finish of a transversely polarized data taking.  The intermediate
+polarization are then determined by exponential interpolating between these two
+times.
+
+In 2015 the setup was two transversely polarized target cells of 55~cm length
+and 2~cm in radius, separated by 20~cm and oppositely polarized.  The
+polarization of the target cells was flipped ever two weeks of data taking to
+reduce systematic effects.  Due to the fact that the beam needs to be precisely
+steered onto the target anytime a beam line magnet is changed and that the
+chicane magnets upstream of the target are setup for only one transverse target
+direction, the transverse target magnet only pointed downward in 2015.  To
+achieve a polarization flip the target polarization had to therefore be rotated
+back to the longitudinal direction and the input microwaves had to be changed to
+achieve the desired polarization direction. \par
+
+The target material in 2015 was NH$_3$ where the protons in the three hydrogen
+atoms were the only nucleons with nuclear spin.  Therefore only some fraction of
+the target was able to be polarized and one would expect that this fraction is
+3/17.  However to get a more accurate determination of the dilution factor the
+follow calculation was used
+\begin{equation}
+  f = \frac{n_H\sigma^{DY}_{\pi^-H}}
+  {n_h\sigma^{DY}_{\pi^-H} + \sum_A n_A\sigma^{DY}_{\pi^-A}},
+\end{equation}
+where $f$ is the dilution factor, $n_H$ is the number of hydrogen atoms in
+NH$_3$, $n_A$ is the number of other nucleons in NH$_3$, and
+$\sigma^{DY}_{\pi^-H}$ and $\sigma^{DY}_{\pi^-A}$ are the Drell-Yan
+cross-section for pion hydrogen scatter and pion nucleon scattering
+respectively.  The cross-section were determined using a parton-level
+Monte-Carlo program MCFM~\cite{MCFM}.  The dilution factor was also further
+scaled down by studies of reconstruction migration between target cells.  The
+average dilution factor in 2015 was 0.18.
+
+
+\section{Tracking Detectors} \label{sec::tracking}
+The goal of the tracking detectors is to determine a point in space where a
+particle traversed.  The COMPASS tracking detectors attempt to do this for a
+wide range of angles, momentums and at different rates.  For these reason there
+are several planar tracking technologies used at COMPASS which can be divided
+into three categories: very small angle tracker, small angle trackers and large
+area trackers.  As the name suggest very small angle trackers measure tracks
+with small angle deflections from the beam axis which are essentially beam
+particles.  The small area trackers measure particle tracks with low but
+non-zero angle have central dead zones.  The large area trackers are several
+meters in height and width and measures the largest deflection angles up to
+180~mrad. \par
+
+All of these trackers are split into stations where each station corresponds to
+several detectors at roughly the same z-position along the beam line.  Each
+station measures a track position in one or more orientation while most measure
+tracks in three or more orientations.  The coordinate orientations measured are
+the X and Y coordinates which are the horizontal and vertical directions
+respectfully and as well the U and V coordinates which are rotated at different
+angles with respect the X and Y coordinates. \par
+
+\subsection{Very Small Angle Trackers}
+The very small angle trackers extend up to 3~cm away from the beam axis.  This
+is the region with the highest number of tracking particles and therefore these
+detectors must be able to handle the highest rates up to 5x10$^7$~Hz.  The two
+detector types that make up the very small angle trackers are either
+scintillating fiber detectors (SciFi) or silicon microstrip detectors.  These
+two detector types are complementary to each other as the former have very good
+timing resolution while the latter have very good spacial resolution. \par
+
+There are three silicon stations possible at COMPASS with active detecting areas
+of 5x7~cm$^2$.  The spacial resolution of these detectors is nominally 10~$\mu$m
+and the timing resolution is nominally 2.5~ns.  For the 2015 setup, the beam
+intensity was too high for the silicon detectors to operate and therefore these
+detectors were not used in 2015. \par
+
+There are 10 SciFi stations available at COMPASS with sizes varying from
+3.9x3.9~cm$^2$ to 12.3x12.3~cm$^2$ planar areas.  The fiber diameters vary
+between detectors and are 0.5~nm, 0.75~nm and 1~nm.  Several fibers are bundled
+together to determine a strip hit position and the resulting nominal spacial
+resolutions are 130~$\mu$m, 170~$\mu$m and 210~$\mu$m.  The nominal timing
+resolution of these detectors about 400~ps.  In 2015 three SciFi stations made
+up the beam telescope and were placed upstream of the target to measure the beam
+trajectory and timing information.  A fourth SciFi station was place in the LAS
+section of the spectrometer. \par
+
+\subsection{Small Angle Trackers}
+The small angle trackers are small area detectors that detect particles with a
+non-zero defection angle.  They cover 5~cm to 40~cm from the beam axis where the
+rate drops two orders of magnitude relative to the very small angle trackers to
+approximate 10$^5$~Hz.  At COMPASS there are two types of small area tracking
+detectors: micromesh gaseous structure (micromegas) and gas electron multipliers
+(GEMs). \par
+
+There are three micromega stations at COMPASS all location sequentially after
+each other between the target and the first spectrometer magnet.  All three
+detectors measure four coordinate projections and have an active area of
+40x40~cm$^2$ with a 5~cm diameter dead zone.  The micromegas operate by having a
+conversion region and a smaller amplification region.  An ionized particle
+produced in the conversion region will drift through an electric field too small
+for amplifaction of around 3.2~kV/cm to the amplification region where the
+electric field is around 50~kV/cm and is high enough to amplify the sign which
+is then read out on strips.  The conversion and amplification regions are
+separated by a metallic micromesh material.  The electrons pass through the
+micromesh without resistance and are not rimmed out.  The micromegas have good
+spacial resolution because the thickness of the amplification region is only
+100~$\mu$m which is small enough to prevent the electron avalanche from
+spreading out much transversely between strips.  The separation of the larger
+conversion region from the smaller amplification region with the micromesh
+prevents electric field lines from being distorted in the conversion region and
+therefore prevents the primary electrons from drifting slower in the conversion
+region.  This allows micromegas to operate at a higher rate than would be
+possible otherwise.  This principle of operation is illustrated in
+Fig.~\ref{fig::MicroMega}.  The strips in the central part of the detector are
+360~$\mu$m corresponding to a resolution of about 100~$\mu$m and the strips in
+the outer region are 460~$\mu$m corresponding to a resolution of about
+120~$\mu$m.  The nominal timing resolution 9~ns.  In 2015 the micromegas were
+upgraded to include a pixelized section covering much of the dead zone
+area. \par
+
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.7\textwidth, trim=4cm 10cm 4cm 10cm, clip]{MicroMega}
+  \caption{Principle of operation for the micromesh gaseous structures
+    (micromegas)}
+  \label{fig::MicroMega}
+\end{figure}
+
+There are eleven GEM detectors located throughout the COMPASS spectrometer
+starting after the first spectrometer magnet down to the end of the
+spectrometer.  These detectors are close to the beam axis and are mounted on a
+large area tracker covering the dead zone region of the large area tracker.  All
+eleven detectors have an active area of 31x31~cm$^2$ and a 5~cm diameter dead
+zone.  In times of lower beam intensity the dead zones can be turned on as an
+active area.  The detector is split into four regions separated by a polymide
+foil (50~$\mu$m thick) clad with copper on both sides with around
+10$^4$~cm$^{-1}$ drifting holes of 70~$\mu$m diameter.  There in an electric
+potential of a few hundred volts between each foil layer.  The GEM detectors
+speed up the amplification process by splitting the amplification avalanche into
+three locations there by allowing for a higher rate of operation then would
+otherwise be possible.  The electron amplification occurs around the holes of
+each of the three foil dividers which therefore speeds up the overall drift time
+from the ionization location to the strip readout.  This principle of operation
+is shown in Fig.~\ref{fig::GEM}.  The nominal timing and spacial resolution of
+the GEM detectors is 10~ns and 110~$\mu$m respectively.  Two pixelized GEM
+detectors where also in operation but were not as crucial for the 2015 Drell-Yan
+measurement.
+
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.7\textwidth,trim=4cm 10cm 4cm 10cm, clip]{GEM}
+  \caption{The operation principle of the gas electron multiplier (GEM)
+    detectors}
+  \label{fig::GEM}
+\end{figure}
+
+\subsection{Large Area Trackers}
 
 
 
-\section{The Target}
 
-\section{Tracking Detectors}
 
 \section{Particle Identification}
 
@@ -176,71 +392,13 @@ in the polarized target a chicane magnet system was added in the beam line.
 This meant that the beam entered at a slight angle in the beam telescope but
 exited the target going straight. \par
 
-\section{The Beam old}
-The Super Proton Synchrotron (SPS) is the second largest accelerator
-at CERN.  It has a circumference of almost 7 km and it can accelerate
-protons up to an energy of 450~GeV.  The SPS extracts beam to the
-Large Hadron Collier and as well sends beam to various experiments in
-the North Area at CERN.  COMPASS is one of these North Area
-experiments, receiving beam tangent from the SPS on the M2 beam line.
-In 2015 the SPS was delivering to COMPASS around $100 \times 10^{11}$
-protons over a 4.9 second spill length and a spill was sent
-approximately twice every 32 seconds.  The proton beam extracted from
-the SPS then would collide with a primary 500~mm long, beryllium
-target and from there a secondary hadron beam consisting of 97\% $\pi
-^-$, 2\% $\bar{p}$ and 1\% $K^-$ was captured with magneto-optics into
-a beamline leading to the COMPASS spectrometer.  The flux of the
-secondary hadron beam averaged $0.6 \times 10^8
-\frac{\mathrm{hadrons}}{\mathrm{sec}}$ and its momentum was
-190~$\frac{\mathrm{GeV}}{\mathrm{c}}$~\cite{compassDYpaper}.
-
-
-
-\section{Experimental Setup}
-
-%\begin{figure}
-%  \centering \includegraphics[width=0.3\textwidth]{Absorber}
-%  \caption{The absorber at COMPASS was made of Alumina with a tungsten
-%    plug and it was placed just downstream of the target cells.}
-%  \label{fig::Absorber}
-%\end{figure}
-
-
-
-
-
-%\begin{figure}
-%  \centering
-%  %\includegraphics[width=\textwidth]{CompassSpectrometer}
-%  \includegraphics[width=0.85\textwidth]{CompassSpectrometer}
-%  \caption{The COMPASS spectrometer.}
-%  \label{fig::COMPASS_spec}
-%\end{figure}
-
-
-
-The target material used was ammonia ($\mathrm{NH}_3$), where the proton from
-the hydrogen nucleus was the polarizable nucleon.  The average polarization
-throughout the data taking was 0.73 and a 0.6~T dipole magnet was used to
-maintain target polarization.  With this dipole field and polarization, the spin
-relaxation time for the target was approximately 1000 hours.  The target was
-separated into two 55~cm cells of radius 2~cm which were in turn separated by
-20~cm and oppositely polarized, as shown in figure~\ref{fig::Absorber}.  In 2015,
-COMPASS took nine data periods labeled W07-W15.  Each data period lasted two
-weeks and the spin orientation of the targets was reversed after the first week
-of every period to reduce systematic effects arising from different geometric
-acceptances and luminosities of up and downstream target cells.
+In 2015, COMPASS took nine data periods labeled W07-W15.  Each data period
+lasted two weeks and the spin orientation of the targets was reversed after the
+first week of every period to reduce systematic effects arising from different
+geometric acceptances and luminosities of up and downstream target cells.
 %Most notably the spin
 %orientation was reversed to have equal luminosity and to force equal
 %geometrical acceptance between the two spin states. \par
-
-%\begin{figure}[h]
-%  \centering
-%  \includegraphics[width=0.45\textwidth]{Absorber}
-%  \caption{The absorber at COMPASS was made of Alumina with a tungsten
-%    plug and it was placed just downstream of the target cells.}
-%  \label{fig::Absorber}
-%\end{figure}
 
 For the 2015 Drell-Yan data taking a hadron absorber,
 see figure~\ref{fig::Absorber}, was placed just downstream of the target
