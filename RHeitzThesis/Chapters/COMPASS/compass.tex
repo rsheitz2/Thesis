@@ -107,6 +107,7 @@ beam the composition of the beam is approximately 97~\% $\pi^-$, 2.5\% kaons and
 0.5\% $\overline{\mathrm{p}}$. The 2015 Drell-Yan data taking used a 190~{\gvc}
 hadron beam. \par
 
+\subsection{Additional Beam Line Components} \label{sec::addBeam}
 After the decay tunnel the beam is bent upwards along another FODO tunnel of
 length 250m before reaching the surface approximately 100m before the COMPASS
 target.  A series of three dipole magnets, called bend 6, then bend the beam to
@@ -130,15 +131,39 @@ station to work properly.  For this reason special low intensity, approximately
 10$^6$ s$^{-1}$, $\pi^-$ beams were used in 2014 to determine the momentum
 distribution for Drell-Yan data taking.  The beam momentum distribution is shown
 in Fig.~\ref{fig::BeamMomBMS} where the average momentum is 190.9~{\gvc} with a
-spread of $\pm$ 3.2~{\gvc}.
+spread of $\pm$ 3.2~{\gvc}. \par
 
 \begin{figure}[h!t]
   \centering
-  \includegraphics[width=0.6\textwidth]{BeamMomBMS}
+  \includegraphics[width=0.5\textwidth]{BeamMomBMS}
   \caption{The momentum distribution of the $\pi^-$ beam, determined during
     dedicated low intensity beam times.}
   \label{fig::BeamMomBMS}
 \end{figure}
+
+Approximately 30~m upstream of the target are to two Cherenkov counters (CEDAR)
+detectors.  As the hadron beam has contamination from several components these
+CEDARs can be used to distinguish between these components.  The CEDARs at
+COMPASS are high pressure detectors and have been demonstrated to achieve fast
+particle identification for particle momentums up to 300~{\gvc}.  The general
+principle of operation for the CEDARs is that two particles with the same
+momentum but different mass will emit Cherenkov radiation at different angles
+relative to there momentum.  When a particle is traveling faster than the speed
+of light in a given medium it emits Cherenkov radiation in a cone centered along
+its momentum axis.  The faster the particle is traveling the narrower the angle
+of the Cherenkov light cone.  A schematic of the CEDAR operating principle is
+shown in Fig.~\ref{fig::cedars}.  In 2015 the CEDARs were measured to be largely
+inefficient due to the high beam intensity.
+
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.5\textwidth,trim=2cm 4cm 2cm 4cm,clip]{cedars}
+  \caption{General principles of operation for the CEDARs at COMPASS.  The
+    red(green) lines correspond to Cherenkov light emitted from a particle.}
+  \label{fig::cedars}
+\end{figure}
+
+
 
 For years with a transversely polarized target, such as 2015, a chicane system
 of dipole magnets is setup in front of the target.  This is because a beam
@@ -283,7 +308,7 @@ up the beam telescope and were placed upstream of the target to measure the beam
 trajectory and timing information.  A fourth SciFi station was place in the LAS
 section of the spectrometer. \par
 
-\subsection{Small Angle Trackers}
+\subsection{Small Angle Trackers} \label{sec::SAT}
 The small angle trackers are small area detectors that detect particles with a
 non-zero defection angle.  They cover 5~cm to 40~cm from the beam axis where the
 rate drops two orders of magnitude relative to the very small angle trackers to
@@ -354,12 +379,218 @@ measurement.
 \end{figure}
 
 \subsection{Large Area Trackers}
+The large area trackers measure the largest polar scattering angles at COMPASS.
+Their dead zones mostly coincide with a small area tracker, described in the
+previous section~\ref{sec::SAT}, which therefore means these detectors do not
+have to process the higher fluxes very close to the beam line.  The most
+important feature of these detectors is that they have a large planar area but
+as a consequence their position and timing resolution is not as good as the
+small and very small angle trackers.  The types of large area trackers used are
+COMPASS are all gaseous detectors and include drift chambers (DCs), straw tube
+detectors (straws) and multi-wire proportional chambers (MWPCs). \par
 
+The first four drift chambers downstream of the target are named DC00, DC01,
+DC04 and DC05.  The first two, DC00 and DC01, have smaller active areas of
+180x127~cm$^2$ and a circular dead zone of 30~cm diameter and are positioned
+upstream of the SM1 magnet.  The rates upstream of SM1 are higher due to low
+energy particles produce in the target, which are bent out of the acceptance of
+spectrometer by SM1.  Therefore DC00 and DC01 need to be able to process a
+higher particle flux.  The next two drift chambers, DC04 and DC05, are
+downstream of SM1 and both have larger active areas of 240x204~cm$^2$ and as
+well have dead zones of 30~cm diameter.  The active areas of all four of these
+DCs was roughly chosen to coincide with the acceptance of the SM1 yoke.  DC05
+was first installed for the 2015 Drell-Yan data taking and is further described
+in chapter~\ref{ch::DC05}.  All four of these DCs measure four projection views
+corresponding to eight detector layers.  A sketch of the principle of operation
+is shown in Fig.~\ref{fig::DCoperation}.  The nominal spacial resolution for
+these detectors is 250~$\mu$m. \par
 
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.6\textwidth,trim=4cm 8cm 4cm 10cm,
+    clip=true]{DCoperation}
+  \caption{Drift cell of a Drift chamber with the ionized drift electron lines
+    coming from the incident charged particle}
+  \label{fig::DCoperation}
+\end{figure}
 
+There are additional drift chambers downstream of the SM2 magnet, named W45.
+W45 consist of six detector stations which each have an active area of
+520x260~cm$^2$ and a circular dead zone of 50~cm or 100~cm diameter.  Each W45
+station measure two projection views corresponding to four detector layers.  The
+drift cells in W45 are 40x10~mm$^2$ and the spacial resolution is nominally
+1500~$\mu$m. \par
+
+In 2015 there were two straw stations in operation named ST03 and ST05.  ST03
+was in the large angle spectrometer after DC05 and consisted of two stations
+measuring six projection views.  ST05 was in the small angle spectrometer and
+measured three projection views.  The active areas of horizontal wire stations
+is 350x243~cm$^2$ and the active area of the rotated wires is 323x272~cm$^2$.
+The principle of operation for the straw detectors is very similar to that of a
+drift chamber however instead of having the detector made up of connected drift
+cells the straw detectors are made of circular tubes.  Each tube consist of a
+gold plated tungsten anode wire in the center and the walls of the tube make up
+a cathode.  Due to the fact that the cathode completely surrounds the anode wire
+there is no electrical interference between neighboring anode wires as there is
+for drift chambers.  For this reason the electric field in each tube is easier
+to control and the ionized electron drift speed is more linear than other
+detectors.  Each straw detector plane is divided into sections where the straw
+tubes in the outer most section from the beam line have a diameter of 9.6~mm and
+the tubes close to the beam line have a diameter of 6.1~mm.  In additional in
+the central part of the detector there is a physical hole dead zone of
+20x20~cm$^2$.  The nominal position resolution for these detectors is 400~$\mu$m
+and a frontal schematic is shown in Fig.~\ref{fig::frontalStraw}.  For the
+reason that most of the final state muon are reconstructed in the large angle
+spectrometer and the fact that many of the high voltage modules were not
+operation for ST05 in 2015, ST05 was not used for track reconstruction for
+Drell-Yan data. \par
+
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.8\textwidth,trim=2cm 4cm 3cm 4cm,clip]{frontalStraw}
+  \caption{Front on view of a the active area of a straw detector at COMPASS}
+  \label{fig::frontalStraw}
+\end{figure}
+
+Another large area tracker that operates similarly to the straw tube detectors
+is the richwall detector.  This detector is located before the SM2 magnet and
+after ST03 with an active area of 5.27x3.91~cm$^2$ and a central dead zone of
+1.02x0.51~cm$^2$.  The detector consist of eight layers of mini drift tubes
+(MDT) shown in Fig.~\ref{fig::richwallMDT}.  The central part of each MDT
+includes a gold plated tungsten sense wire.  The nominal position resolution of
+this detector is 600~$\mu$m. \par
+
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.45\textwidth, trim=5cm 12cm 5cm 10cm, clip]
+                  {richwallMDT}
+  \caption{The richwall mini drift tubes}
+  \label{fig::richwallMDT}
+\end{figure}
+
+The final type of large area tracking detector at COMPASS is the MWPC.  There
+are 14 of these stations located throughout the experiment.  These MWPCs are
+separated into three categories distinguished by the coordinates they measure.
+The first type is called type A and consists of three projection views measuring
+an x, u and v coordinate.  The second type is type A* and is the same as type A
+but measures the y coordinate in addition to the other three coordinates.  Both
+type A and A* have active areas of 178x120~cm$^2$.  The final type is type B
+which has a smaller active area of 178x90~cm$^2$ and measures the same
+projections at type A.  There are seven stations of type A, one station of type
+A* and six stations of type B.  All three types have circular dead zones of
+diameters 16~cm, 20~cm and 22~cm for types A, A* and B respectively. \par
+
+The MWPCs operate on similar principles to the drift chambers but without a
+calibration drift curve.  For this reason the MWPCs can be made to have one
+common gas volume between each station and their position resolution is
+determined as
+
+\begin{equation}
+\frac{\mathrm{sense \: wire \: separation}}{\sqrt{12}}.
+\end{equation}
+\noindent
+The separation between sense wires is approximately 2~mm which corresponds to a
+spacial resolution of these detectors around 600~$\mu$m.
 
 
 \section{Particle Identification}
+In the COMPASS spectrometer there are four types of detectors used to determine
+particle identification (PID): the ring image Cherenkov (RICH) detector,
+electromagnet calorimeters (ECAL), hadron calorimeters (HCAL) and muon walls
+(MW).  The RICH distinguishes between pions, kaons and protons; ECAL1 and ECAL2
+measure the energy from photons and electrons; HCAL1 and HCAL2 measure the
+energy from hadrons; and MW1 and MW2 distinguish muons from all other particles.
+The RICH, ECAL1, HCAL1 and MW1 are in the large angle spectrometer in that
+respective order along the beam line.  The small angle spectrometer includes
+ECAL2, HCAL2 and MW2 again in that respective order along the beam line. \par
+
+The RICH detector operates similarly to the CEDARS, section~\ref{sec::addBeam},
+in that Cherenkov radiation is emitted from particles traveling through the RICH
+at an angle dependent on their velocity.  The RICH is filled with a dielectric
+gas, C$_4$F$_{10}$ which as an index of refraction greater than air.  The
+momentum of particle going through the RICH is determine from bending angle
+around SM1 and therefore the mass of particles can be distinguish once the RICH
+determines the entering particles velocity.  A sketch of the RICH and its
+operating principle is shown in Fig.~\ref{fig::rich}.  To distinguish between
+particles the minimums momentums are: 2.5~{\gvc} for pions, 9~{\gvc} for kaons
+and 17~{\gvc} for protons.  The maximum momentum the RICH can distinguish
+between any of these particles is 50~{\gvc}. This detector is located in the
+large angle spectrometer before any calorimeters.\par
+
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.6\textwidth]{rich}
+  \caption{Side view demonstrating the principle of operation of the RICH
+    detector.}
+  \label{fig::rich}
+\end{figure}
+
+The ECALs and HCALs both stop specific particles of interest where the energy
+deposited in each respective calorimeter is proportional to the incoming
+particle's energy.  This energy knowledge along the momentum determined from the
+tracking detectors allows to determine particle identification.  The ECALs and
+HCALs can therefore measure the energy of incoming particles.  The ECALs are
+made of lead glass towers with photon multipliers attached to these towers on
+one side.  An incoming photon or electron interacts with the lead glass to
+produce a light signal which is readout with these photon multipliers.  Other
+particles also interact with the material in the ECALs however hadrons and muons
+are able to exit through the detector unlike photons and electrons.  A frontal
+view of ECAL1 is shown in Fig.~\ref{fig::ECAL1} and a frontal view of ECAL2 is
+shown in figure Fig.~\ref{fig::ECAL2}. \par
+
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.6\textwidth]{ECAL1}
+  \caption{Frontal view of the electromagnetic calorimeter 1}
+  \label{fig::ECAL1}
+\end{figure}
+
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.6\textwidth]{ECAL2}
+  \caption{Frontal view of the electromagnetic calorimeter 2}
+  \label{fig::ECAL2}
+\end{figure}
+
+
+The HCALs are sampling calorimeters which are made of alternating layers of iron
+and scintillating material.  An incoming hadron deposits all its energy in the
+HCAL by making a particle showers in the iron which are detected by photo
+multipliers connected to the scintillating material.  The HCALs are placed after
+the ECALs in each stage of the spectrometer because an electromagnetic shower
+happens faster than a hadronic shower.  The HCALs are affect at determining
+particles energy from particle with energies between 10~GeV and 100~GeV. \par
+
+The two MWs are located after an HCAL in their respective stages.  Due to their
+higher mass and absence of color charge, muons are able to pass through the most
+material budget of any of the particles detected at COMPASS.  For this reason
+both MWs consist of an absorber and tracking detectors downstream of this
+absorber.  Any particles that make it through the absorber are with a very high
+probability muons.  MW1 consists of eight tracking planes before a 60~cm iron
+absorber and same number of tracking planes after this absorber.  The tracking
+portions of MW1 are build similarly to the richwall, described in
+section~\ref{sec::SAT}, in that they are also made of MDT modules.  The active
+area of MW1 is 480x410~cm$^2$ and includes a dead zone of 140x80~cm$^2$.  Each
+plan of this detector has a spacial resolution of 3~mm.  A sketch of MW1 is
+shown in Fig.~\ref{fig::MW1}.  The second muon wall, MW2, is located downstream
+of a concrete absorber which 2.4~m thick.  MW2 consists of 12 planes with and
+active area of 450x450~cm$^2$ and a dead zone of 90x70~cm$^2$.  The detector
+operates similarly to the straw detectors, section~\ref{sec::SAT}, in that it is
+made of drift tubes with a wire in the center of these tubes.  The diameter
+these drift tubes is 29~mm and the position resolution is about 1.4~mm. \par
+
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.7\textwidth]{MW1}
+  \caption{A side view sketch of the muon wall 1 detector}
+  \label{fig::MW1}
+\end{figure}
+
+There is one last absorber in the COMPASS spectrometer located before the H5
+hodoscope at the end of the spectrometer hall.  This absorber is called muon
+filter 3 (MW3) and ensures that the inner trigger is only triggered by a
+muon. \par
+
 
 \section{Trigger}
 
