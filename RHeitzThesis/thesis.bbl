@@ -1,0 +1,31 @@
+\begin{thebibliography}{1}
+
+\bibitem{compassSpec}
+P.~Abbon et~al.
+\newblock {The COMPASS experiment at CERN}.
+\newblock {\em Nucl. Instrum. Meth.}, A577:455--518, 2007.
+
+\bibitem{DNPmethod}
+A.~Abragam and M.~Goldman.
+\newblock Principles of dynamic nuclear polarisation.
+\newblock {\em Reports on Progress in Physics}, 41:395--467, 1978.
+
+\bibitem{CORAL}
+V.~{\relax Yu}. Aleksakhin, Y.~Bedfer, S.~Gerasimov, and A.~{\relax Yu}.
+  Korzenev.
+\newblock {Geometrical event reconstruction in the COMPASS experiment}.
+\newblock {\em Phys. Part. Nucl. Lett.}, 4:350--362, 2007.
+\newblock [Pisma Fiz. Elem. Chast. Atom. Yadra2007,no.4,588(2007)].
+
+\bibitem{MCFM}
+Radja Boughezal, John~M. Campbell, R.~Keith Ellis, Christfried Focke, Walter
+  Giele, Xiaohui Liu, Frank Petriello, and Ciaran Williams.
+\newblock {Color singlet production at NNLO in MCFM}.
+\newblock {\em Eur. Phys. J.}, C77(1):7, 2017.
+
+\bibitem{KalmanFilter}
+R.~Fruhwirth.
+\newblock {Application of Kalman filtering to track and vertex fitting}.
+\newblock {\em Nucl. Instrum. Meth.}, A262:444--450, 1987.
+
+\end{thebibliography}

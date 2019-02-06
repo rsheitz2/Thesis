@@ -5,6 +5,7 @@
 \usepackage{pbox,multirow} \usepackage[thinlines]{easytable} \usepackage{lineno}
 \usepackage{bigstrut} \usepackage{enumitem}
 \usepackage[titletoc]{appendix}
+\usepackage{cite}
 
 \singlespacing
 %Newcommands --> define here your alias 
@@ -24,21 +25,22 @@
 % ******************************** Main Matter *********************************
 \include{Chapters/COMPASS/compass}
 %\include{Chapters/DC5/dc5}
-%\include{Chapters/Alignment/alignment}
+\include{Chapters/Alignment/alignment}
 %\include{Chapters/LeftRight/leftright}
 
-%\begin{appendices}
-%\include{Chapters/Appendix/appendix} 
-%\end{appendices}
+\listoffigures
+\listoftables
 
-%\listoffigures
-%\listoftables
+% ********************************** Appendices ********************************
+\begin{appendices}
+\include{Chapters/Appendix/appendix} 
+\end{appendices}
 
-
-%\let\oldaddcontentsline\addcontentsline% Store \addcontentsline
-%\renewcommand{\addcontentsline}[3]{}%
-%\include{References/bibliography} 
-%\let\addcontentsline\oldaddcontentsline
+% ********************************** Bibliography ******************************
+\renewcommand{\chaptername}{}
+\renewcommand{\thechapter}{} 
+\bibliographystyle{plain}
+\bibliography{References/bibliography}{}
 
 
 \end{document}

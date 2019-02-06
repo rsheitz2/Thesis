@@ -593,26 +593,153 @@ muon. \par
 
 
 \section{Trigger}
+The trigger system at COMPASS defines what is an event.  Whenever the trigger
+signal is given, all the detector information within a few nanosecond timing
+window is recorded.  Due to the fact that there are very many
+background events occurring as the beam impinges on the target, there is too
+much information going to the front end modules (FEMs) of the detectors for the
+FEMs to process and record all the information.  For this reason only a certain
+subset of all the information is stored to disk.  The trigger system must
+therefore have good timing resolution to make quick decisions on which data to
+record.  At COMPASS a system of scintillating hodoscopes attached to PMTs is use
+as the trigger.  The timing resolution of these detectors is approximately 1~ns.
+A top view schematic of COMPASS showing where the relative position hodoscopes
+for each trigger is shown in Fig.~\ref{fig::TriggerElements}.  \par
+
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.9\textwidth]{TriggerElements}
+  \caption{Top view of the spectrometer highlighting how different particles can
+    signal a trigger}
+  \label{fig::TriggerElements}
+\end{figure}
+
+At COMPASS there are five different triggers used to register physics events.
+Each trigger type includes at least two hodoscopes at different z-positions in
+the spectrometer.  The types of triggers are either target pointing, when the
+hodoscope slabs are horizontal; or energy loss, when the hodoscope slabs are
+vertical.  The target pointing trigger is setup used with higher polar
+scattering angles to signal an event if a particle is scattered from the target
+and the energy loss trigger is setup used with lower Q$^2$ interactions to
+signal an event if a particle is bent a specified amount.  This concept is
+illustrated in Fig.~\ref{fig::TrigPrinc}.  There are four triggers in SAS: the
+inner trigger (IT), the middle trigger (MT), the ladder trigger (LT) and the
+outer trigger (OT).  The IT is an energy loss trigger and includes the
+hodoscopes HI04X and HI05X.  The MT includes both energy loss and target
+pointing slabs.  The hodoscopes in the MT are HM04X, HM05X, HM04Y and HM05Y.
+The MT hodoscopes whose names end with an X have vertical slabs and those ending
+with a Y have horizontal slabs.  The LT is an energy loss trigger which consists
+of HL04X and HL05X.  The final trigger in SAS, the OT, is a target pointing
+trigger and consists of hodoscopes HO03Y and HO04Y.  The remaining trigger
+system is in LAS and is a target pointing trigger consisting of hodoscopes HG01Y
+and HG02Y. \par
+
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.9\textwidth]{TrigPrinc}
+  \caption{The two types of triggers (left is target pointing and right is
+    energy loss) at COMPASS and an illustration of the coincidence matrix used
+    to select events of interest}
+  \label{fig::TrigPrinc}
+\end{figure}
+
+There is also a veto system upstream of the target as shown in
+Fig.~\ref{fig::TriggerElements}.  This veto trigger consist of hodoscopes
+attached to PMTs as well.  It is centered on the beam axis but with not active
+area in the nominal beam line.  The veto trigger is used to reject halo muons.
+Halo muons occur from the beam decaying, as in Eq.~\ref{eqn::pionDecay} and
+Eq.~\ref{eqn::kaonDecay}, where this decay occurs upstream of the target but
+downstream of the ABS absorbers.  The muon halo surrounds the hadron beam due to
+its lower momentum which allows the veto hodoscopes outside of the beam line to
+reject these type of events.
+
+In addition to the five trigger systems based on hodoscopes is the calorimeter
+trigger (CT).  The CT can be used as a trigger when a particle deposits more
+than a certain energy threshold in one of the calorimeters.  In 2015 this
+trigger was only used as an independent study of the other triggers at
+COMPASS. \par
+
+In 2015 setup the Drell-Yan process of interest corresponds to two detected
+muons.  For this reason two triggers must signal a particle in coincidence for
+an event to be registered.  For physics analysis the coincidence triggers are
+either two muons in LAS (LASxLAS), one muon in LAS and one in the OT (LASxOT) or
+one muon in LAS and one muon in the MT (LASxMT).  The LASxLAS trigger system
+covers the high Q$^2$ and high x$_{\mathrm{beam}}$ phase space and the triggers
+including a SAS hodoscope cover lower Q$^2$ values.  In addition to these three
+dimuon triggers where three single muon triggers corresponding to a particle in
+LAS, MT or OT.  These three triggers however where pre-scaled down to only take
+every 500, 100 or 100 events respectively.  For further tests 2015 included a
+random trigger and a beam trigger which was scaled down by 35000.
+
 
 \section{Data Acquisition}
+The data acquisition (DAQ) collects data from the over 250,000 detector channels
+and transfers this data to storage on magnetic tape at CASTOR (CERN Advanced
+STORage).  Despite the triggering system used to reduce the data rate, the data
+rate ranges from 10~kHz to 100~kHz with a typical event size of 45~kB.  The DAQ
+is designed handle these rates and data size while minimizing the dead time
+associated with data collection and transfer. \par
 
-\section{Data Production}
+Data collection begins with the digitization of information from a detector
+channel eight by a time to digital converter (TDC) or an analogue to digital
+converter (ADC). These TDCs and ADCs are eight on the detector FEMs or on custom
+COMPASS readout electronics named: GANDOALF (Generic Advanced Numerical Device
+for Analog and Logic Functions), GeSiCA (Gem and Silicon Control and
+Acquisition) or CATCH (COMPASS Accumulate Transfer and Control Hardware).  After
+digitization the data is transferred by optical fibers to an FPGA multiplexer
+where the data is buffered by spill and arranged by event.  From there an FPGA
+switch sends the data to multiplexer slaves.  The slaves are online computers
+that oversee the final steps for raw data and transfer this data to CASTOR.
+This whole process is show schematically in Fig.~\ref{fig::DAQ}.
 
-\section{2015 Drell-Yan Setup}
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.6\textwidth]{DAQ}
+  \caption{The data acquisition steps at COMPASS}
+  \label{fig::DAQ}
+\end{figure}
 
 
-This section of the spectrometer covers high
-$Q^2$ and high $x_b$.  The target-pointing trigger system in LAS consists of two
-hodoscopes, one down stream of the last tracker in LAS and the other just after
-an iron muon filter in front of the second spectrometer magnet.
+\section{Data Reconstruction}
+The COMPASS Reconstruction and AnaLysis Program (CORAL) reconstructs the raw
+data into physical quantities such as particles with momentum and charged and
+possibly an originating vertex location~\cite{CORAL}.  The raw data from the DAQ
+is digitized timing information from tracking detectors or digitized energy
+information for calorimeters.  The process of reconstructing tracks takes the
+timing information and determines a position in space for a particular tracking
+detector based on a calibration.  CORAL then uses a Kalman Filter to determine
+straight tracks in regions with no or low magnetic field~\cite{KalmanFilter}.
+The tracks are then connected through the magnetic field using a fast lookup
+table for known possible bending radii.  At this point a track is determined to
+have a momentum, charge and a $\chi^2$ value associated with the track.  From
+there the tracks are extrapolated back to the target region and the intersect of
+two tracks is determined as a vertex.  If in addition to the two intersecting
+tracks a beam particle can be extrapolated forward to the same vertex location
+then the vertex is assigned to be a primary vertex otherwise the vertex is
+defined as a secondary vertex.  A diagram of the reconstruction data flow is
+shown in Fig.~\ref{fig::CORAL}.  \par
 
-The trigger in SAS is
-similar to the LAS trigger but for muons of a lower $Q^2$ value.  The tracking
-detectors used in both spectrometers are gaseous detectors (drift chambers,
-straws, multi-wire proportional detectors), micro-megas, and gas electron
-multiplier (GEM) detectors.  The two stages are separated by two spectrometer
-magnets: SM1, with a magnetic field integral of 1~Tm and SM2, with a magnetic
-field integral of 4.4~Tm~\cite{compassSpec}.
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.6\textwidth]{CORAL}
+  \caption{The schematic of the CORAL reconstruction process}
+  \label{fig::CORAL}
+\end{figure}
+
+Once reconstruction has been performed the data is stored in data structured
+trees (DSTs).  The usual procedure of reconstruction which gives physical values
+momentum and charge to tracks results in data called miniDSTs.  There is the
+possibility to save more information, for example detector hit location
+information, to make so called fatDSTs.  These DSTs are now in a format which
+can be processed by PHAST (PHysics Analysis Software Tool) which is COMPASS
+program written to further analyze physics data.  With PHAST there is the
+possibility to loop over all the miniDSTs and make certain cuts to produce so
+called $\mu$DSTs.  Both CORAL and PHAST are fully object-oriented C++
+programs. \par
+
+
+\section{2015 Drell-Yan Data Taking}
+
 
 Both SM1 and SM2 have magnetic
 fields in the vertical direction meaning charged particles are deflected in the
