@@ -8,15 +8,17 @@ Introduction about L/R asym.  In this Chapter....  Define AN
 
 
 \section{Data Sample}
-The data sample comes from the 2015 COMPASS Drell-Yan measurement where a 190
-GeV/c $\pi^-$ beam impinged on a transversely polarized NH$_3$ target.  The
-stable data comes from July 8, through November 12 and is split into 9 periods
-lasting approximated 2 weeks each where each period consist of two sub-periods.
-To reduce systematics, the NH$_3$ target was split into two oppositely polarized
-cells with one cell polarized up and one cell polarized down.  The cells were
-separated by 20 cm and the polarization of both cells was flipped between
-sub-periods.  A summary of the data taking from each period is shown in table
-~\ref{tab::datataking}.
+The data sample is from the 2015 COMPASS Drell-Yan measurement where a 190 GeV/c
+$\pi^-$ beam impinged on a transversely polarized NH$_3$ target.  The analysis
+data is from July 8, through November 12 which is after an initial spectrometer
+and beam commissioning phase.  The data is split into 9 periods lasting
+approximated 2 weeks each, where each period consist of two sub-periods.  To
+reduce systematic effects of acceptance and luminosity dependencies, the NH$_3$
+target was split into two oppositely polarized cells with one cell polarized
+vertically up and one cell polarized vertically down in the lab frame.  The
+cells were separated by 20 cm and the polarization of both cells was flipped
+between sub-periods.  A summary of the data taking from each period is shown in
+Table ~\ref{tab::datataking}.
 
 \begin{table}[h!t]
   \centering
@@ -65,15 +67,113 @@ sub-periods.  A summary of the data taking from each period is shown in table
   \label{tab::datataking}
 \end{table}
 
+\subsection{Stability Tests} \label{sec::stability}
+To ensure the data analyzed were recorded during stable beam and spectrometer
+conditions, stability of the analysis data was performed on a spill-by-spill and
+run-by-run basis.  The data was recorded in runs with a maximum of 200 spills
+per run and where one spill can have several thousand events.
+
+\subsubsection{Bad Spill Analysis} To determine if a given spill is deemed
+unstable several macro variables were averaged over the spill and compared to
+neighboring spills.  These macro variables were chosen specifically to be
+sensitive to the general stability conditions of the spectrometer and are listed
+in the follower enumerated list Table~\ref{tab::badspillmacros}.  The starting
+criteria for an event was two oppositely charged muons where a muon was defined
+as having crossed 15 radiation lengths of material.
+
+\begin{enumerate}
+  \label{tab::badspillmacros}
+\item number of beam particles divided by the number of events
+\item number of beam particles divided by the number of primary vertices
+\item number of hits per beam track divided by the number of beam particles
+\item number of primary vertices divided by the number of events
+\item number of outgoing tracks divided by the number of events
+\item number of outgoing particles from a primary vertex divided by the number
+  of primary vertices
+\item number of outgoing particle from primary vertex divided by the number of
+  events
+\item number of outgoing particles from primary vertex divided by the number of
+  events
+\item number of hits from outgoing particles divided by the number outgoing
+  particles
+\item number of $\mu^+$ tracks divided by the number of events
+\item number of $\mu^+$ tracks from primary vertex divided by the number of
+  events
+\item number of $\mu^-$ tracks divided by the number of events
+\item number of $\mu^-$ tracks from primary vertex divided by the number of
+  events
+\item $\sum \chi^2$ of outgoing particles divided by the number of outgoing
+  particles
+\item $\sum \chi^2$ of all vertices divided by the number of all vertices in an
+  event
+\item Trigger rates (LASxLAS, OTxLAS, LASxMT)
+\end{enumerate}
+
+If the spectrometer was stable during a spill the average values from the
+variables in Table~\ref{tab::badspilmacros} are expected to be constant from one
+spill to the next.  To determine if a spill was recorded in unstable conditions
+the spill of interest is compared with its neighboring 2500 spill occurring
+before and after in time.  If the spill of interest is a specified sigma away
+from any of the neighboring spills too many times, the spill of interest is mark
+as a bad spill.  If a spill fails this bad spill criteria for any of the macro
+variables in Table~\ref{tab::badspilmacros} the spill is deemed bad and not
+included in the analysis.  The criteria for the sigma distance and number
+times a spill crosses this distance to be deemed a bad are different for each
+data taking period.  In addition to checking the nearest spills for each spill,
+all the spills in a run are marked bad if the run it has less than 10 spills or
+greater than 70\% bad spills.  Table~\ref{tab::badspillpercent} describes to
+impact of the bad spill analysis on each period. \par
+
+\subsubsection{Bad Run Analysis}
+The stability of the spectrometer is also verified on run-by-run check in
+parallel to the spill-by-spill check.  The run-by-run analysis compares
+kinematic distributions and the average of these distributions per run to the
+same kinematic distributions and averages from the other runs in a given period.
+The kinematic distributions tested are: x$_{\mathrm{N}}$, x$_{\pi}$,
+x$_{\mathrm{F}}$, q$_{\mathrm{T}}$, M$_{\mu\mu}$, P$_{\mu^+}$, P$_{\mu^-}$,
+P$_{\gamma}$, P$_{\pi^-}$, and vertex x, y and z positions.  The quantities in
+the run-by-run analysis are expected to influence the asymmetries
+measured, however their distributions and averages are not expected to have
+spin-influenced effects from the limited statistics in just a single run.  An
+unbinned-Kolmogorov test (UKT) is performed to compare each distributions.  An
+UKT test is made between all the runs in a given period and a run is marked bad
+if it is incompatible with most of the runs in a period.  The comparison of mean
+for each distribution from each run is made with the average from a given
+period.  If one of the kinematical variables has an average more than five
+standard deviations from the average within a period, the run is rejected.  The
+results of the bad spill rejection after having already applied the bad spill
+rejection are shown in Table~\ref{tab::badspillpercent}.
+
+\begin{table}[h!t]
+  \centering
+  \label{tab::badspillpercent}
+  \caption{Stability analysis rejection percentages}
+  \begin{tabular}{ |c|c|c| }
+    \hline \textbf{Period}& \textbf{Bad spill rejection}&
+    \textbf{Bad spill and spill rejection} \\ \hline \hline
+    
+    W07& 11.79\%& 17.94\%\\ \hline
+    W08& 18.00\%& 21.19\%\\ \hline
+    W09& 14.76\%& 17.11\%\\ \hline
+    W10& 15.88\%& 17.80\%\\ \hline
+    W11& 22.49\%& 26.14\%\\ \hline
+    W12& 12.71\%& 13.79\%\\ \hline
+    W13& 22.32\%& 22.73\%\\ \hline
+    W14& 8.91\%& 10.70\%\\ \hline
+    W15& 3.94\%& 3.94\%\\ \hline
+
+  \end{tabular}
+\end{table}
+
 \subsection{Event Selection}
-The cuts in the event selection were chosen to ensure the final state consisted
-of dimuons resulting from a pion collision in the transversely polarized target.
-The event selection was initial filtered from miniDSTs to $\mu$DSTs using the
-criteria of at least two muons in the final state.  The final cuts are described
-in the following enumerated list where the event selection is performed on these
-$\mu$DSTs and the events used come from the slot1 production.  A summary of the
-number of events remaining after each cut is shown in
-table~\ref{tab::EventTable}.
+The cuts in the event selection were chosen to ensure the event consisted of two
+oppositely charged muons, so called dimuons, resulting from a pion collision in
+the transversely polarized target.  The event selection was initial filtered
+from miniDSTs to $\mu$DSTs using the criteria of at least two muons detected in
+the spectrometer.  The cuts used in this analysis are described in the following
+enumerated list where the event selection is performed on these $\mu$DSTs and
+the events used come from the slot1 production.  A summary of the number of
+events remaining after the last cuts is shown in Table~\ref{tab::EventTable}.
 
 \begin{enumerate}
   \label{tab::cutdescrip}
@@ -83,19 +183,22 @@ table~\ref{tab::EventTable}.
   determined by CORAL tagging the vertex as best primary (PHAST method
   PaVertex::IsBestPrimary()).  In the case that CORAL did not tag any of the
   common vertices as the best primary the vertex with the smallest spatial
-  chi$^2$ value was used as the best primary vertex.
+  $\chi^2$ value was used as the best primary vertex.
 \item A dimuon trigger fired.  A dimuon trigger firing means there are at least
   two particles in coincidence in this event. The dimuon triggers used were a
   coincidence between two particles in the large angle spectrometer, LAS-LAS
   trigger, or a particle in the large angle spectrometer and a particle in the
   Outer hodoscope in the small angle spectrometer, LAS-Outer trigger.  The
-  LAS-Middle trigger was used as a veto on beam decay muons.  This is because
-  the LAS-Middle trigger was found to have many events resulting from a beam
-  pion decaying to a muon.
+  LAS-Middle trigger was used as a veto on beam decay muons where beam decay
+  muons result from the decay of the beam pion, kaon or anti-proton into a muon.
+  This beam decay muon can then be in coincidence with a positive muon from
+  another decay or strong reaction in the target.  The LAS-Middle trigger was
+  used a veto because this trigger was found to have many events
+  resulting from a beam pion decaying to a muon.
 \item Both particles are muons.  A muon was defined as having crossed 30
   radiation lengths of material between the particles first and last measured
   points.  This criteria has been previously determined to be effective at
-  distinguishing between muons and hadrons.  In the final production no
+  distinguishing between muons and hadrons.  In the data production no
   detectors were used from upstream of the hadron absorber so the absorber is
   not included in the determination of material crossed.
 \item The first measured point for both particles is before 300 cm and the last
@@ -105,68 +208,70 @@ table~\ref{tab::EventTable}.
 \item The timing of both muons is defined.  This checks that the time relative
   to the trigger time is determined for both muons so further timing cuts can be
   performed.
-\item Both muons are in time within 5 nanoseconds.  This cut helps rejected
-  uncorrelated muons.
-\item The muon track's spacial reduced chi$^2$s are individually less than 10.
-  This cut ensure track quality.
+\item Both muons are in time within 5 nanoseconds.  This track time for each
+  muon is defined relative to the trigger time as in the previous cut.  The This
+  cut helps rejected uncorrelated muons.
+\item The muon track's spacial reduced $\chi^2$s are individually less than 10.
+  This cut ensures track quality.
 \item A validation that each muon crossed the trigger it was associated as
   having triggered.  This trigger validation cut was performed by extrapolating
   (PHAST Method PaTrack::Extrapolate()) each muon track back to the hodoscopes
   it fired and determining if the muon crossed the geometric acceptance of both
   hodoscopes.
 \item The event does not occur in the bad spill or run list.  Many tests were
-  performed to test the basic stability of the spectrometer and beam.  The
-  spills placed on the bad spill list were deemed to occur during unstable data
-  taking conditions.
-\item The Drell-Yan kinematics are physical.  That is the beam and target
-  x-Bjorken are between 0 and 1 and x-Feynman is between -1 and 1.
-\item The transverse momentum of the virtual photon is between 0.4 and 5.0
-  GeV/c.  The lower limit ensures azimuthal angular resolution is sufficient and
-  the upper cut is minimal and further ensures the kinematic distributions are
-  physical possible.
+  performed to test the basic stability of the spectrometer and beam as
+  described in section~\ref{sec::stability}.  The spills placed on the bad spill
+  list were deemed to occur during unstable data taking conditions.
+\item The Drell-Yan kinematics are physical.  That is x$_{\pi}$ and
+  x$_{\mathrm{N}}$ are between 0 and 1 and x$_{\mathrm{F}}$ is between -1 and 1.
+\item The transverse momentum of the virtual photon, q$_{\mathrm{T}}$ is between
+  0.4 and 5.0 GeV/c.  The lower limit ensures azimuthal angular resolution is
+  sufficient and the upper cut is minimal and further ensures the kinematic
+  distributions are physically possible.
 \item The vertex originated within the z-positions of the transversely polarized
-  targets defined by the target group (-294.5$<$ Z$_{\mathrm{vertex}}$ $<$-239.3
-  for the upstream target or -219.5$<$ Z$_{\mathrm{vertex}}$ $<$-164.3 cm for
-  the downstream target).
-\item The vertex is within the radius of the target defined as 1.9 cm.
+  target cells defined by the target group (-294.5$<$ Z$_{\mathrm{vertex}}$
+  $<$-239.3 for the upstream target or -219.5$<$ Z$_{\mathrm{vertex}}$ $<$-164.3
+  cm for the downstream target).
+\item The vertex is within the radius of the polarized target measured to be 1.9
+  cm.
 \end{enumerate}
 
 \begin{table}[h!t]
   \centering
-  \begin{tabular}{ |c|c|c|c|c|c|c|c|c|c|c| }
+  \begin{tabular}{ |c|c|c|c|c|c|c|c|c|c|c|c| }
     \hline \textbf{Cuts}& \textbf{W07}& \textbf{W08}& \textbf{W09}&
     \textbf{W10}& \textbf{W11}& \textbf{W12}& \textbf{W13}& \textbf{W14}&
-    \textbf{W15} & \textbf{WAll} \\ \hline
+    \textbf{W15} & \textbf{WAll} & \textbf{Data Remaining (\%)} \\ \hline
 
     All Data& 19410& 19184& 19654& 20707& 31371& 23563& 20561& 13154& 7697&
-    175301 \\ \hline
+    175301& 100.00 \\ \hline
     
     Good Spills& 15947& 14899& 16217& 16895& 23041& 20184& 16026& 11796& 7422&
-    142427 \\ \hline
+    142427& 81.70 \\ \hline
 
     0$<$ x$_{\pi}$, x$_N$ $<$1, -1$<$ x$_F$ $<$1& 15932& 14886& 16200& 16885&
-    23022& 20171& 16013& 11794& 7414& 142317 \\ \hline
+    23022& 20171& 16013& 11794& 7414& 142317& 81.70 \\ \hline
 
     0.4$<$ q$_T$ $<$5(GeV/c)& 14342& 13385& 14609& 15239& 20667& 18101& 14365&
-    10588& 6636& 127932 \\ \hline
+    10588& 6636& 127932& 60.75 \\ \hline
 
     Z Vertex within NH$_3$& 4256& 4024& 4330& 4552& 6369& 5503& 4411& 3130&
-    2028& 38603 \\ \hline
+    2028& 38603& 15.05 \\ \hline
 
     Vertex Radius $<$ 1.9cm& 4175& 3950& 4257& 4474& 6252& 5414& 4334& 3078&
-    1987& 37921 \\ \hline
+    1987& 37921& 12.21 \\ \hline
     
   \end{tabular}
-  \caption{Final event selection statistics}
+  \caption{Event selection statistics for this analysis}
   \label{tab::EventTable}
 \end{table}
 
 \subsection{Binning}
-The final asymmetries are measured in bins of x$_N$, x$_{\pi}$, x$_F$, q$_T$,
-and M$_{\mu\mu}$.  The binning was determine by requiring equal statistics per
-physics bin.  In addition, the asymmetry is determined in an integrated bin
-using all the final data.  The final binning limits are summarized in
-table~\ref{tab::binning}.
+The asymmetries are measured in bins of x$_N$, x$_{\pi}$, x$_F$, q$_T$, and
+M$_{\mu\mu}$.  The binning was determined by requiring equal statistical
+population in each kinematic bin.  In addition, the asymmetries are determined
+in an integrated bin using all the analysis data.  The analyzes binning limits
+are summarized in Table~\ref{tab::binning}.
 
 \begin{table}[h!t]
   \centering
@@ -179,7 +284,7 @@ table~\ref{tab::binning}.
     1.36& 5.0\\ \hline M$_{\mu\mu}$ (GeV/c$^2$)& 4.3& 4.73& 5.50& 8.5 \\ \hline
     
   \end{tabular}
-  \caption{Final binning limits}
+  \caption{Analysis binning limits}
   \label{tab::binning}
 \end{table}
 
@@ -187,7 +292,7 @@ table~\ref{tab::binning}.
 \section{Extraction of Asymmetries} 
 There are many ways to determine the left-right asymmetry denoted as
 A$_{\mathrm{N}}$.  The relevant techniques for the 2015 COMPASS setup are
-described and compared to ensure confidence in the final result.
+described and compared to ensure confidence in the end results.
 Sec.~\ref{sec::GeoMean} starts with a general introduction to the notations and
 ideas used for all the asymmetry methods.
 
@@ -199,7 +304,7 @@ written as
 \end{equation}
 
 \noindent
-where L is the luminosity, $\sigma$ is the cross-section to produce such an
+where L is the luminosity, $\sigma$ is the cross-section of such an
 event and a is the acceptance.  In simple words, the number of counts detected
 is the number of possible chances for an event to occur times the probability
 for an event to occur and that the event will be detected.  To get
@@ -450,53 +555,11 @@ geometric mean also reduces to $\frac{1}{\mathrm{P}}\frac{1}{\sqrt{\mathrm{N}}}$
 in the case of equal statistics in each direction and polarization.
 
 
-\section{Results}
-The final asymmetries are calculated from each of the separate nine periods and
-then combined as a weighted average.  This calculation method is used to
-minimize the effects of acceptance changes between periods as the spectrometer
-was kept stable within each period but had the options for detector changes and
-repairs between periods.  This final asymmetry for each method is determined
-from a weighted average as
-\begin{equation}
-  \label{equ::wAvg}
-  \mathrm{A}_{\mathrm{N}} = \sum_{\mathrm{period}}
-  \frac{\mathrm{A}_{\mathrm{N},\mathrm{period}}\sigma^{-2}_{\mathrm{period}}}{\sigma^{-2}_{\mathrm{period}}},
-  \quad \sigma^2 = \sum_{\mathrm{period}}
-  \frac{1}{\sigma^{-2}_{\mathrm{period}}}.
-\end{equation}
-
-\noindent
-The final results for the basic geometric mean are shown in
-Fig.~\ref{fig::ANgeom} and the final results for the two target geometric mean
-are shown in Fig.~\ref{fig::AN4TargGeom}.  The systematic error bars are
-discussed in Sec.~\ref{sec::systematics}.
-
-\begin{figure}[h!t]
-  \begin{center}
-    \includegraphics[width=\textwidth, trim=0.3cm 0cm 0.25cm 0cm, clip]{ANgeom} 
-    \caption{A$_{\mathrm{N}}$ determined from the geometric mean method for the
-      upstream target (red) and the downstream target (blue)}
-    \label{fig::ANgeom}
-  \end{center}
-\end{figure}
-
-\begin{figure}[h!t]
-  \begin{center}
-    \includegraphics[width=\textwidth]{AN4TargGeom}
-    \caption{A$_{\mathrm{N}}$ determined by the geometric mean method using both
-      targets simultaneously}
-    \label{fig::AN4TargGeom}
-  \end{center}
-\end{figure}
-
-\subsection{Comparison of results}
-
-
 \section{Systematic Studies} \label{sec::systematics}
-Several tests were performed to estimate the systematic uncertainty.  The final
+Several tests were performed to estimate the systematic uncertainty.  The
 systematic errors are determined by adding all non-zero systematic effects in
 quadrature.  The impact from each source of systematic error is summarized in
-Tab.~\ref{tab::sysError}.  
+Tab.~\ref{tab::sysError}.
 
 \subsection{Period Compatibility}
 The asymmetries calculated for each period in each kinematic bin are shown in
@@ -801,8 +864,8 @@ enumerated list.
   fit results are not necessarily that good.  In an attempt to correct for this
   and to take into account the fit errors, a weighted average of the mean and
   standard deviation are made, as in Eq.~\ref{equ::wAvg}, using weights as the
-  inverse fit variances.  The final systematic error is again determined as in
-  Eq.~\ref{equ::sysErrorPull} using the weighted mean and weighted standard
+  inverse fit variances.  The resulting systematic error is again determined as
+  in Eq.~\ref{equ::sysErrorPull} using the weighted mean and weighted standard
   deviation.
 
   \begin{figure}[h!t]
@@ -918,7 +981,7 @@ Tab.~\ref{tab::faSys}
     
   \end{tabular}
   \caption{Summary of systematic error impacts from false asymmetries.  The
-    maximum systematic error is chosen as the final systematic error.}
+    maximum systematic error is chosen as the systematic error.}
   \label{tab::faSys}
 \end{table}
 
@@ -933,14 +996,57 @@ from the polarized target.  Therefore the asymmetry A$_{\mathrm{N}}$ reduces
 from left-right miss-identification and this effect is included as a systematic
 effect. \par
 
-Miss-identification was estimated from a simulated Monte-Carlo data sample where
-the sample was made from the respond of the COMPASS spectrometer to input
-Drell-Yan events in a similar mass range.  The same analysis performed on real
-data was performed on this Monte-Carlo data to get the angles of interest.
-Fig.~\ref{fig::lrMigration} shows the rate of events identified correctly and
-incorrectly as a function of the $\phi_{\mathrm{S}}$.  This plot is made by
-determining which outgoing direction the generated events emerged with the
-outgoing direction the reconstructed events emerged.
+For this thesis five Monte-Carlo processes were generated corresponding to three
+background processes and a spin-independent signal process.  The generated used
+was PHTHYIA8 and the data was generated and reconstruction at Blue Waters.  The
+background processes simulated were JPsi production, Psi' production and open
+charm (OC) production.  Each of these backgrounds can decay into two muons which
+results in a background contamination to the Drell-Yan signal.
+Table~\ref{tab::MCproduction} gives the parameters used for the Monte-Carlo
+studied.
+
+\begin{table}[h!t]
+  \centering
+  \label{tab::MCproduction}
+  \caption{Monte-Carlo settings produced on Blue Waters}
+  \begin{tabular}{ |c|c| }
+    \hline
+    Event generator& PYTHIA8\\
+    \hline
+
+    Pion pdf& GRVPI1\\
+    \hline
+
+    Proton pdf& NNPDF23\\
+    \hline
+    
+    proton/neutron mixing ratio& 1.96\\
+    \hline
+
+    Initial state radiation& on\\
+    \hline
+    
+    Final state radiation& on\\
+    \hline
+    
+    Multiple parton interactions& on\\
+    \hline
+
+    Simulated detector efficiencies& uniform\\
+    \hline
+    
+  \end{tabular}
+\end{table}
+
+Miss-identification was estimated from the simulated Monte-Carlo data sample
+described in Table~\ref{tab::MCproduction} where the sample was made from the
+respond of the COMPASS spectrometer to input Drell-Yan events in a similar mass
+range.  The same analysis performed on real data was performed on this
+Monte-Carlo data to get the angles of interest.  Fig.~\ref{fig::lrMigration}
+shows the rate of events identified correctly and incorrectly as a function of
+the $\phi_{\mathrm{S}}$.  This plot is made by determining which outgoing
+direction the generated events emerged with the outgoing direction the
+reconstructed events emerged.
 
 \begin{figure}[h!t]
   \centering
@@ -979,13 +1085,13 @@ The systematic error for left-right migration is calculated as
 \noindent
 where this expression is derived in Appendix~\ref{app::sysLRmiss}.\par
 
-No cut on $\phi_{\mathrm{S}}$ was used for the final asymmetry due to the fact
+No cut on $\phi_{\mathrm{S}}$ was used for the asymmetry due to the fact
 that the systematic error is already small with no cut in $\phi_{\mathrm{S}}$
-and to avoid loss of statistics.  The final integrated systematic error due to
+and to avoid loss of statistics.  The integrated systematic error due to
 left-right event migration was determined to be 9\%.
 
-\subsection{Final Systematics}
-The final systematic error is determined by adding all non-zero systematic
+\subsection{Total Systematics}
+The total systematic error is determined by adding all non-zero systematic
 effects in quadrature as
 
 \begin{equation}
@@ -1031,3 +1137,45 @@ Tab.~\ref{tab::sysError}.
   \caption{Summary of systematic error impacts to the integrated asymmetry}
   \label{tab::sysError}
 \end{table}
+
+
+\section{Results}
+The asymmetries in this analysis are calculated from each of the separate nine
+periods and then combined as a weighted average.  This calculation method is
+used to minimize the effects of acceptance changes between periods as the
+spectrometer was kept stable within each period but had the options for detector
+changes and repairs between periods.  This resulting asymmetry for each method
+is determined from a weighted average as
+\begin{equation}
+  \label{equ::wAvg}
+  \mathrm{A}_{\mathrm{N}} = \sum_{\mathrm{period}}
+  \frac{\mathrm{A}_{\mathrm{N},\mathrm{period}}\sigma^{-2}_{\mathrm{period}}}{\sigma^{-2}_{\mathrm{period}}},
+  \quad \sigma^2 = \sum_{\mathrm{period}}
+  \frac{1}{\sigma^{-2}_{\mathrm{period}}}.
+\end{equation}
+
+\noindent
+The results for the basic geometric mean are shown in
+Fig.~\ref{fig::ANgeom} and the results for the two target geometric mean
+are shown in Fig.~\ref{fig::AN4TargGeom}.  The systematic error bars are
+discussed in Sec.~\ref{sec::systematics}.
+
+\begin{figure}[h!t]
+  \begin{center}
+    \includegraphics[width=\textwidth, trim=0.3cm 0cm 0.25cm 0cm, clip]{ANgeom} 
+    \caption{A$_{\mathrm{N}}$ determined from the geometric mean method for the
+      upstream target (red) and the downstream target (blue)}
+    \label{fig::ANgeom}
+  \end{center}
+\end{figure}
+
+\begin{figure}[h!t]
+  \begin{center}
+    \includegraphics[width=\textwidth]{AN4TargGeom}
+    \caption{A$_{\mathrm{N}}$ determined by the geometric mean method using both
+      targets simultaneously}
+    \label{fig::AN4TargGeom}
+  \end{center}
+\end{figure}
+
+\subsection{Comparison of results}

@@ -35,9 +35,9 @@ the 2015 setup is shown in Fig~\ref{fig::compassSpec}.\par
 
 This chapter gives an overview of the COMPASS data taking setup with specific
 interest on the 2015 setup from which the data in this thesis was produced from.
-For a more thorough review of the spectrometer see
-reference~\cite{compassSpec}.  This chapter is roughly organized by how the
-data taking occurs.
+For a more thorough review of the spectrometer see reference~\cite{compassSpec}.
+This chapter is roughly organized by how the data taking occurs with an extra
+section on the unique features of the 2015 Drell-Yan setup in the end.
 
 \section{The Beam}
 The COMPASS spectrometer receives beam from the Super Proton Synchrotron (SPS)
@@ -163,8 +163,6 @@ inefficient due to the high beam intensity.
   \label{fig::cedars}
 \end{figure}
 
-
-
 For years with a transversely polarized target, such as 2015, a chicane system
 of dipole magnets is setup in front of the target.  This is because a beam
 hitting the target without any angle would then be deflected inside the target
@@ -226,11 +224,19 @@ transverse polarization relaxation time was about 1000 hours in 2015. \par
 The target polarization was measured with 10 NMR coils while in longitudinal
 magnet mode.  In the 2015, each target cell had the most upstream and downstream
 coils in the center of the target cell and the other three coils on the outside
-perimeter of the target cells.  Due to the fact that the polarization can only
-be measured with the longitudinal magnet on, the polarization is only measure at
-the start and finish of a transversely polarized data taking.  The intermediate
-polarization are then determined by exponential interpolating between these two
-times.
+perimeter of the target cells as is show in Fig.~\ref{fig::targCells}.  Due to
+the fact that the polarization can only be measured with the longitudinal magnet
+on, the polarization is only measure at the start and finish of a transversely
+polarized data taking.  The intermediate polarization are then determined by
+exponential interpolating between these two times.
+
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.8\textwidth]{targCells}
+  \caption{The empty polarized target cells side by side along with their NMR
+    coil positions}
+  \label{fig::targCells}
+\end{figure}
 
 In 2015 the setup was two transversely polarized target cells of 55~cm length
 and 2~cm in radius, separated by 20~cm and oppositely polarized.  The
@@ -632,7 +638,8 @@ with a Y have horizontal slabs.  The LT is an energy loss trigger which consists
 of HL04X and HL05X.  The final trigger in SAS, the OT, is a target pointing
 trigger and consists of hodoscopes HO03Y and HO04Y.  The remaining trigger
 system is in LAS and is a target pointing trigger consisting of hodoscopes HG01Y
-and HG02Y. \par
+and HG02Y.  The kinematic coverage for the 2015 triggers is shown in
+Fig.~\ref{fig::TrigCov6}. \par
 
 \begin{figure}[h!t]
   \centering
@@ -642,6 +649,15 @@ and HG02Y. \par
     to select events of interest}
   \label{fig::TrigPrinc}
 \end{figure}
+
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.6\textwidth]{TrigCov6}
+  \caption{The kinematic coverage for the 2015 triggers determined from
+    Monte-Carlo studies}
+  \label{fig::TrigCov6}
+\end{figure}
+
 
 There is also a veto system upstream of the target as shown in
 Fig.~\ref{fig::TriggerElements}.  This veto trigger consist of hodoscopes
@@ -676,9 +692,11 @@ random trigger and a beam trigger which was scaled down by 35000.
 The data acquisition (DAQ) collects data from the over 250,000 detector channels
 and transfers this data to storage on magnetic tape at CASTOR (CERN Advanced
 STORage).  Despite the triggering system used to reduce the data rate, the data
-rate ranges from 10~kHz to 100~kHz with a typical event size of 45~kB.  The DAQ
-is designed handle these rates and data size while minimizing the dead time
-associated with data collection and transfer. \par
+rate still ranges from 10~kHz to 100~kHz with a typical event size of 45~kB.
+The DAQ is designed to handle these rates and data size while minimizing the
+dead time associated with data collection and transfer. In 2015 the dead time
+was approximately 10\% and the DAQ recorded approximately 750~terabytes of raw
+data after the spectrometer finished commissioning time. \par
 
 Data collection begins with the digitization of information from a detector
 channel eight by a time to digital converter (TDC) or an analogue to digital
@@ -716,8 +734,14 @@ there the tracks are extrapolated back to the target region and the intersect of
 two tracks is determined as a vertex.  If in addition to the two intersecting
 tracks a beam particle can be extrapolated forward to the same vertex location
 then the vertex is assigned to be a primary vertex otherwise the vertex is
-defined as a secondary vertex.  A diagram of the reconstruction data flow is
-shown in Fig.~\ref{fig::CORAL}.  \par
+defined as a secondary vertex.  This reconstruction stage reduces the data
+volume by approximately a factor of 10.  A diagram of the reconstruction data
+flow is shown in Fig.~\ref{fig::CORAL}.  In 2015 there were several data
+reconstructions performed.  Between each reconstruction improvements were made
+to detector calibrations, detector alignment, beam tracking and any other
+preprocessing improvements that could be made.  The final two productions are
+the t3 production and the slot1 production.  The results shown in this thesis
+are from either t3 or slot1.\par
 
 \begin{figure}[h!t]
   \centering
@@ -734,55 +758,66 @@ information, to make so called fatDSTs.  These DSTs are now in a format which
 can be processed by PHAST (PHysics Analysis Software Tool) which is COMPASS
 program written to further analyze physics data.  With PHAST there is the
 possibility to loop over all the miniDSTs and make certain cuts to produce so
-called $\mu$DSTs.  Both CORAL and PHAST are fully object-oriented C++
-programs. \par
+called $\mu$DSTs.  In 2015 $\mu$DSTs were made for all the analysis data where a
+cut was applied to the miniDSTs saving only events with at least two muons.
+Both CORAL and PHAST are fully object-oriented C++ programs. \par
+
+\subsection{Monte-Carlo Production}
+Monte-Carlo data is simulated data which is performed in three steps.  First a
+programs generates specific physics processes based on their theoretical
+probabilities.  The generators of Monte-Carlo used for this thesis are PYTHIA
+versions 6 and 8~\cite{pythia}.  Next a GEANT4 simulation of COMPASS determines
+if a detector will register a hit from these generated physics processes.  This
+saves the data in a raw data format which can be reconstructed by CORAL.
+Finally the simulated data is reconstructed by CORAL and analyzed in PHAST the
+same as if the data were real data. \par
 
 
 \section{2015 Drell-Yan Data Taking}
+The 2015 Drell-Yan data taking is one of the main programs for the COMPASS-II
+experiment.  The data taking began in April of 2015 and ended in November of
+that year.  The physics data used for analysis started in July and finished at
+the end of data taking while the data before July was used for calibrations and
+commissioning.  The total analysis data was split into nine data periods labeled
+W07-W15 where each data period corresponded to approximately two weeks of beam
+time. The spin orientation of each target cell was reversed after the first week
+of every period to reduce systematic effects arising from different geometric
+acceptances and luminosities of up and downstream target cells. \par
 
+\subsection{Hadron Absorber}
+The previous sections in this chapter described the spectrometer setup generally
+and mentioned the specifics for the 2015 setup.  The main unique hardware
+addition in 2015 is the hadron absorber.  The hadron absorber was installed
+because the beam intensity is high resulting in main strong interactions in the
+target and therefore the first tracking detectors upstream of SM1 have
+occupancies which are too high for tracking.  Therefore the hadron absorber was
+installed to prevent all particles except muons from entering the spectometer. \par
 
-Both SM1 and SM2 have magnetic
-fields in the vertical direction meaning charged particles are deflected in the
-x-z plane and can therefore have their momentum determined.  For beam
-reconstruction there is a beam telescope upstream of the target consisting of
-eight planes of scifi detectors.  To account for the transverse magnetic field
-in the polarized target a chicane magnet system was added in the beam line.
-This meant that the beam entered at a slight angle in the beam telescope but
-exited the target going straight. \par
+The hadron absorber was placed just downstream of the two target cells as can be
+seen in Fig.~\ref{fig::Habs}.  The absorber corresponded to approximately 7.5
+interactions lengths of material where the material was mostly alumina
+(Al$_2$O$_3$) and concrete.  Inside the absorber was an aluminum target followed
+by a tungsten plug, each of radius 2.5 cm.  The tungsten was used as a beam dump
+while the aluminum was present to prevent back scattering from the tungsten beam
+plug.  A side view showing the dimensions and materials used can be seen in
+Fig.~\ref{fig::Abside}.  Both the aluminum target and tungsten plug served the
+double purposes as absorbers and also as unpolarized nuclear targets.  In
+addition to the hadron absorber two thin $^6\mathrm{Li}$ absorbers were added
+just downstream of the primary absorber to absorb thermal neutrons produced in
+the primary absorber.  This $^6\mathrm{Li}$ absorber was proposed to improve the
+performance of the first tracking detector downstream of the target even with
+the hadron absorber installed. \par
 
-In 2015, COMPASS took nine data periods labeled W07-W15.  Each data period
-lasted two weeks and the spin orientation of the targets was reversed after the
-first week of every period to reduce systematic effects arising from different
-geometric acceptances and luminosities of up and downstream target cells.
-%Most notably the spin
-%orientation was reversed to have equal luminosity and to force equal
-%geometrical acceptance between the two spin states. \par
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.6\textwidth]{Habs}
+  \caption{The hadron absorber downstream of the polarized target in 2015}
+  \label{fig::Habs}
+\end{figure}
 
-For the 2015 Drell-Yan data taking a hadron absorber,
-see figure~\ref{fig::Absorber}, was placed just downstream of the target
-cells.  This was done to reduce the amount of hadrons and electrons
-detected in the spectrometer and therefore ensured a cleaner di-muon
-sample.  The absorber material was mostly alumina (Al$_2$O$_3$) and
-concrete and the absorber corresponded to approximately 7.5
-interactions lengths of material.  Inside the absorber was an aluminum
-target followed by a tungsten plug, each of radius 2.5 cm, which acted
-as a beam dump.  The aluminum target and tungsten plug served the
-double purposes as absorbers and also as unpolarized nuclear targets.
-In addition a thin $^6\mathrm{Li}$ absorber was added just downstream of the
-primary absorber to absorb thermal neutrons produced in the primary
-absorber.  This $^6\mathrm{Li}$ absorber was proposed to improve the
-performance of the first tracking detector downstream of the
-target. \par
-
-\subsection{DAQ and Reconstruction}
-The data acquisition system (DAQ) was recording events at a rate of
-approximately 30~kHz with a dead time of 10\%.  In 2015, COMPASS
-recorded approximately 750~terabytes of raw data from the nine,
-two-week periods.  Raw data refers solely to individual detector
-timing and wire or strip positions and does not correspond to physics
-observables of interest.  From this raw information the CORAL
-reconstruction software at COMPASS is able to determine the trajectory
-and momentum of charged particles going through the COMPASS
-spectrometer.
-
-%This reconstruction stage reduces the data volume by approximately a factor of 10.
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.6\textwidth]{Abside}
+  \caption{Side view of the hadron absorber used in 2015}
+  \label{fig::Abside}
+\end{figure}

@@ -28,4 +28,11 @@ R.~Fruhwirth.
 \newblock {Application of Kalman filtering to track and vertex fitting}.
 \newblock {\em Nucl. Instrum. Meth.}, A262:444--450, 1987.
 
+\bibitem{pythia}
+Torbjörn Sjöstrand, Stefan Ask, Jesper~R. Christiansen, Richard Corke,
+  Nishita Desai, Philip Ilten, Stephen Mrenna, Stefan Prestel, Christine~O.
+  Rasmussen, and Peter~Z. Skands.
+\newblock {An Introduction to PYTHIA 8.2}.
+\newblock {\em Comput. Phys. Commun.}, 191:159--177, 2015.
+
 \end{thebibliography}
