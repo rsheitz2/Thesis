@@ -7,7 +7,7 @@
 Introduction about L/R asym.  In this Chapter....  Define AN
 
 
-\section{Data Sample}
+\section{Data Sample} \label{sec::datasample}
 The data sample is from the 2015 COMPASS Drell-Yan measurement where a 190 GeV/c
 $\pi^-$ beam impinged on a transversely polarized NH$_3$ target.  The analysis
 data is from July 8, through November 12 which is after an initial spectrometer
@@ -236,42 +236,47 @@ events remaining after the last cuts is shown in Table~\ref{tab::EventTable}.
   cm.
 \end{enumerate}
 
-\begin{table}[h!t]
-  \centering
-  \begin{tabular}{ |c|c|c|c|c|c|c|c|c|c|c|c| }
-    \hline \textbf{Cuts}& \textbf{W07}& \textbf{W08}& \textbf{W09}&
-    \textbf{W10}& \textbf{W11}& \textbf{W12}& \textbf{W13}& \textbf{W14}&
-    \textbf{W15} & \textbf{WAll} & \textbf{Data Remaining (\%)} \\ \hline
+\begin{figure}[h!t]
+  \begin{adjustwidth}{-2cm}{}
+    \begin{tabular}{ |c|c|c|c|c|c|c|c|c|c|c|c| }
+      \hline \textbf{Cuts}& \textbf{W07}& \textbf{W08}& \textbf{W09}&
+      \textbf{W10}& \textbf{W11}& \textbf{W12}& \textbf{W13}& \textbf{W14}&
+      \textbf{W15} & \textbf{WAll} & \textbf{\% Remaining} \\ \hline
 
-    All Data& 19410& 19184& 19654& 20707& 31371& 23563& 20561& 13154& 7697&
-    175301& 100.00 \\ \hline
-    
-    Good Spills& 15947& 14899& 16217& 16895& 23041& 20184& 16026& 11796& 7422&
-    142427& 81.70 \\ \hline
+      All Data& 19410& 19184& 19654& 20707& 31371& 23563& 20561& 13154& 7697&
+      175301& 100.00 \% \\ \hline
+      
+      Good Spills& 15947& 14899& 16217& 16895& 23041& 20184& 16026& 11796& 7422&
+      142427& 81.70 \% \\ \hline
 
-    0$<$ x$_{\pi}$, x$_N$ $<$1, -1$<$ x$_F$ $<$1& 15932& 14886& 16200& 16885&
-    23022& 20171& 16013& 11794& 7414& 142317& 81.70 \\ \hline
+      0$<$ x$_{\pi}$, x$_N$ $<$1, -1$<$ x$_F$ $<$1& 15932& 14886& 16200& 16885&
+      23022& 20171& 16013& 11794& 7414& 142317& 81.70 \% \\ \hline
 
-    0.4$<$ q$_T$ $<$5(GeV/c)& 14342& 13385& 14609& 15239& 20667& 18101& 14365&
-    10588& 6636& 127932& 60.75 \\ \hline
+      0.4$<$ q$_T$ $<$5(GeV/c)& 14342& 13385& 14609& 15239& 20667& 18101& 14365&
+      10588& 6636& 127932& 60.75 \% \\ \hline
 
-    Z Vertex within NH$_3$& 4256& 4024& 4330& 4552& 6369& 5503& 4411& 3130&
-    2028& 38603& 15.05 \\ \hline
+      Z Vertex within NH$_3$& 4256& 4024& 4330& 4552& 6369& 5503& 4411& 3130&
+      2028& 38603& 15.05 \% \\ \hline
 
-    Vertex Radius $<$ 1.9cm& 4175& 3950& 4257& 4474& 6252& 5414& 4334& 3078&
-    1987& 37921& 12.21 \\ \hline
-    
-  \end{tabular}
-  \caption{Event selection statistics for this analysis}
-  \label{tab::EventTable}
-\end{table}
+      Vertex Radius $<$ 1.9cm& 4175& 3950& 4257& 4474& 6252& 5414& 4334& 3078&
+      1987& 37921& 12.21 \% \\ \hline
+      
+    \end{tabular}
+    \caption{Event selection statistics for this analysis}
+    \label{tab::EventTable}
+  \end{adjustwidth}
+\end{figure}
 
 \subsection{Binning}
-The asymmetries are measured in bins of x$_N$, x$_{\pi}$, x$_F$, q$_T$, and
-M$_{\mu\mu}$.  The binning was determined by requiring equal statistical
-population in each kinematic bin.  In addition, the asymmetries are determined
-in an integrated bin using all the analysis data.  The analyzes binning limits
-are summarized in Table~\ref{tab::binning}.
+The asymmetries are measured in bins of x$_N$, x$_{\pi}$, x$_{\mathrm{F}}$,
+q$_{\mathrm{T}}$, and M$_{\mu\mu}$.  Where x$_N$ and x$_{\pi}$ the momentum
+fractions of the target nucleon and beam pion respectively, x$_{\mathrm{F}}$ =
+x$_{\pi}$ - x$_N$, q$_{\mathrm{T}}$ is the transverse momentum of the virtual
+photon and M$_{\mu\mu}$ is the invariant mass of the di-muon.  The binning was
+determined by requiring equal statistical population in each kinematic bin.  In
+addition, the asymmetries are determined in an integrated bin using all the
+analysis data.  The analyzes binning limits are summarized in
+Table~\ref{tab::binning}.
 
 \begin{table}[h!t]
   \centering
@@ -300,58 +305,106 @@ ideas used for all the asymmetry methods.
 The number of physics counts, N, detected from any particular target can be
 written as
 \begin{equation}
+  \label{equ::xsection}
   \mathrm{N} = \mathrm{L} * \sigma * \mathrm{a},
 \end{equation}
 
 \noindent
-where L is the luminosity, $\sigma$ is the cross-section of such an
-event and a is the acceptance.  In simple words, the number of counts detected
-is the number of possible chances for an event to occur times the probability
-for an event to occur and that the event will be detected.  To get
-spin-dependent counts for the left-right asymmetry, the target, polarization
-and left or right direction relative to the spin should be included in the
-counts formula.  Generically this can be written
+where L is the luminosity, $\sigma$ is the cross-section of such an event and a
+is the acceptance.  In this formula the acceptance is a function of detector
+efficiencies and the spectrometer acceptance.  In simple words, the number of
+counts detected is the number of possible chances for an event to occur times
+the probability for an event to occur and that the event will be detected.  To
+get spin-dependent counts for the left-right asymmetry, the target, polarization
+and left or right direction relative to the spin have to be included in the
+counts.  Generically this can be written
+
 \begin{equation}
-  \label{eqn::indexedCount}
-  \mathrm{N}^{\uparrow(\downarrow)}_{\mathrm{target},\mathrm{Left(Right)}} =
-  \mathrm{a}^{\uparrow(\downarrow)}_{\mathrm{target},\mathrm{spectrometer \;
-      direction}} * \mathrm{L}^{\uparrow(\downarrow)}_{\mathrm{target}} *
-  \sigma_{\mathrm{Left(Right)}},
+  \label{equ::indexedCount}
+  \mathrm{N}^{\uparrow(\downarrow)}_{\mathrm{cell},\mathrm{L(R)}} =
+  \mathrm{a}^{\uparrow(\downarrow)}_{\mathrm{cell},\mathrm{spectrometer \;
+      direction}} * \mathrm{L}^{\uparrow(\downarrow)}_{\mathrm{cell}} *
+  \sigma_{\mathrm{L(R)}},
 \end{equation}
 
 \noindent
-where $^{\uparrow(\downarrow)}$ denotes the target polarization,
-$_{\mathrm{target}}$ is either the upstream or downstream target
-$_{\mathrm{Left(Right)}}$ is left or right of the spin direction and
-${_\mathrm{spectrometer \; direction}}$ denotes which side of the spectrometer
-the event was detected on and can be either the Jura or Saleve side.
+where $\uparrow(\downarrow)$ denotes the target polarization, cell is either
+cell 1 for the upstream target cell or cell 2 for the downstream target cell,
+L(R) is left(right) of the spin direction and spectrometer direction denotes
+either the spectrometer Jura side or the Saleve side corresponding to where the
+event was detected. \par
 
-The previous definitions of the detected counts all depend on the spectrometer
-acceptance.  This is a problem because the spectrometer acceptance can change
-with time and space and therefore can be dependent on the physical kinematics
-which produced the event.  Such dependences can cause unphysical false
-asymmetries in the measurement of A$_{\mathrm{N}}$ and must therefore be removed
-or must be included as systematic effects.
+The most basic method to determine A$_{\mathrm{N}}$ per target cell is
 
-The geometric mean asymmetry method is a way to determine the left-right
-asymmetry without acceptance effects from the spectrometer.  It is defined as
 \begin{equation}
-  \label{eqn::ANgeomean}
-  \frac{1}{\mathrm{P}}\frac{\sqrt{N_{\mathrm{up(down)stream,
-          Left}}^{\uparrow}N_{\mathrm{up(down)stream, Left}}^{\downarrow}} -
-    \sqrt{N_{\mathrm{up(down)stream, Right}}^{\uparrow}N_{\mathrm{up(down)stream,
-          Right}}^{\downarrow}} }{\sqrt{N_{\mathrm{up(down)stream,
-          Left}}^{\uparrow}N_{\mathrm{up(down)stream, Left}}^{\downarrow}} +
-    \sqrt{N_{\mathrm{up(down)stream, Right}}^{\uparrow}N_{\mathrm{up(down)stream,
-          Right}}^{\downarrow}} },
+  \label{equ::simpleAN}
+  \mathrm{A}_{\mathrm{N}} = \frac{1}{\mathrm{P}}
+  \frac{\mathrm{N}_{\mathrm{L}} -
+    \mathrm{N}_{\mathrm{R}}}{\mathrm{N}_{\mathrm{L}} + \mathrm{N}_{\mathrm{R}}},
 \end{equation}
 
 \noindent
-where P represents the fraction of polarized partons.
+where the counts, N, are defined as Eq.~\ref{equ::xsection}, and P denotes the
+fraction of polarized nucleons.  An intuitive picture of left and right defined
+in the target frame is shown in Fig.~\ref{fig::leftright}.
 
-Equation~\ref{eqn::ANgeomean} can be thought of simply as the normalized
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.6\textwidth, trim=7cm 6cm 7cm 7cm,clip]{leftright}
+  \caption{The definition of the left plane (red) and right plane (green)
+    defined from a target spin up configuration in the target frame}
+  \label{fig::leftright}
+\end{figure}
+
+The previous definitions of the detected counts, Eq.~\ref{equ::indexedCount}
+and Eq.~\ref{equ::xsection}, and therefore also Eq.~\ref{equ::simpleAN} all
+depend on the spectrometer acceptance.  This is a problem because the
+spectrometer acceptance can change with time and space and therefore can be
+dependent on the physical kinematics which produced the event.  Such
+dependencies can cause unphysical false asymmetries in the measurement of
+A$_{\mathrm{N}}$ and must therefore be removed or must be included as systematic
+effects. \par
+
+Forming the geometric mean asymmetry is, however, a way to determine the
+left-right asymmetry without acceptance effects from the spectrometer.  It is
+defined as
+\begin{equation}
+  \label{equ::ANgeomean}
+  \frac{1}{\mathrm{P}}\frac{\sqrt{N_{\mathrm{cell\;1(2),
+          L}}^{\uparrow}N_{\mathrm{cell\;1(2), L}}^{\downarrow}} -
+    \sqrt{N_{\mathrm{cell\;1(2), R}}^{\uparrow}N_{\mathrm{cell\;1(2),
+          R}}^{\downarrow}} }{\sqrt{N_{\mathrm{cell\;1(2),
+          L}}^{\uparrow}N_{\mathrm{cell\;1(2), L}}^{\downarrow}} +
+    \sqrt{N_{\mathrm{cell\;1(2), R}}^{\uparrow}N_{\mathrm{cell\;1(2),
+          R}}^{\downarrow}} },
+\end{equation}
+
+\noindent
+where P represents the fraction of polarized
+nucleons. Table~\ref{tab::ANnotations} summarizes the notations used throughout
+this chapter.
+
+\begin{table}[h!t]
+  \centering
+  \label{tab::ANnotations}
+  \caption{Notations used in defining the left/right asymmetry}
+  \begin{tabular}{ |c|c| }
+    \hline
+    \textbf{Notation}& \textbf{Description} \\
+    \hline
+
+    L(R) & virtual photon detected left(right) of spin \\ \hline
+    Jura(Saleve) & spectrometer west(east) side \\ \hline
+    cell 1(2)& up(down)stream target cell \\ \hline
+    $\uparrow(\downarrow)$ & target cell polarized up(down) \\ \hline
+    P& fraction of polarized target nucleons \\ \hline
+    
+  \end{tabular}
+\end{table}
+
+Equation~\ref{equ::ANgeomean} can be thought of simply as the normalized
 difference of left minus right counts.  Left and right counts are determined
-relative to the target spin and are defined as
+relative to the target spin directions and are defined as
 
 \begin{equation}
   \label{equ::Defleftright}
@@ -366,135 +419,137 @@ where $\hat{q}_T$, $\hat{S}_T$ and $\hat{P}_{\pi}$ are unit vectors in the
 target reference frame for the virtual photon transverse momentum, the target
 spin and the beam pion momentum respectively.
 
-Using Eq.~\ref{eqn::indexedCount} for the definition of counts, the geometric
+Using Eq.~\ref{equ::indexedCount} for the definition of counts, the geometric
 mean asymmetry is
 \begin{equation}
-  \label{eqn::ANgeomean_expand}
-  \frac{1}{\mathrm{P}}\frac{\kappa \sqrt{\sigma_{Left}\sigma_{Left}} -
-    \sqrt{\sigma_{Right}\sigma_{Right}}}{\kappa \sqrt{\sigma_{Left}\sigma_{Left}}
-    + \sqrt{\sigma_{Right}\sigma_{Right}}},
+  \label{equ::ANgeomean_expand}
+  \frac{1}{\mathrm{P}}\frac{\kappa_{\mathrm{geomean}}
+    \sqrt{\sigma_{L}\sigma_{L}} -
+    \sqrt{\sigma_{R}\sigma_{R}}}{\kappa_{\mathrm{geomean}}
+    \sqrt{\sigma_{L}\sigma_{L}} + \sqrt{\sigma_{R}\sigma_{R}}},
 \end{equation}
 
 \noindent
 where $\kappa$ is a ratio of acceptances defined as
 \begin{equation}
-  \kappa_{geomean} =
-  \frac{\sqrt{\mathrm{a}^{\uparrow}_{\mathrm{up(down)stream,Jura}}
-      \mathrm{a}^{\downarrow}_{\mathrm{up(down)stream,Saleve}}}}
-       {\sqrt{\mathrm{a}^{\uparrow}_{\mathrm{up(down)stream,Saleve}}
-           \mathrm{a}^{\downarrow}_{\mathrm{up(down)stream,Jura}}}}.
+  \kappa_{\mathrm{geomean}} =
+  \frac{\sqrt{\mathrm{a}^{\uparrow}_{\mathrm{cell\;1(2),Jura}}
+      \mathrm{a}^{\downarrow}_{\mathrm{cell\;1(2),Saleve}}}}
+       {\sqrt{\mathrm{a}^{\uparrow}_{\mathrm{cell\;1(2),Saleve}}
+           \mathrm{a}^{\downarrow}_{\mathrm{cell\;1(2),Jura}}}}.
        \label{equ::accGeoMean}
 \end{equation}
 
 \noindent
 Here the detection side of spectrometer is specified by looking down the beam
 line as either Jura to mean left or Saleve to mean right.  These relations of
-Jura is left and Saleve is right are only strictly true if the target
-polarization is pointing straight up or straight down in the target frame.  In
-particular if the beam particle and the target polarization do not make a right
-angle in the laboratory frame this relation will no longer be strictly true but
-is an approximation for ease of notation.
+\"Jura is left\" and \"Saleve is right\" are only strictly true if the target
+polarization is pointing straight up in the target frame.  In particular if the
+beam particle and the target polarization do not make a right angle in the
+laboratory frame this relation will no longer be strictly true but is an
+approximation for ease of notation.
 
-Relation~\ref{eqn::ANgeomean_expand} is equal to A$_{\mathrm{N}}$ if $\kappa$ is
+Relation~\ref{equ::ANgeomean_expand} is equal to A$_{\mathrm{N}}$ if $\kappa$ is
 equal to one.  However as stated previously, time effects can vary $\kappa$ from
 unity. These effects are estimated through false asymmetry analysis and included
-in the systematics.  Equation~\ref{eqn::ANgeomean} is therefore to a good
-approximation an acceptance free method to determine A$_{\mathrm{N}}$.  It is
-also defined for the upstream and downstream targets independently and therefore
-can be used as a consistency check between the two targets.
+in the systematic error bars described in section~\ref{sec::systematics}.
+Equation~\ref{equ::ANgeomean} is therefore to a good approximation an acceptance
+free method to determine A$_{\mathrm{N}}$.  It is also defined for the upstream
+and downstream cells independently and therefore can be used as a consistency
+check between the two target cells.
 
 The statistical uncertainty of the geometry mean is
 \begin{equation}
   \frac{1}{\mathrm{P}}
   \frac{
     \sqrt{
-      N_{\mathrm{Left}}^{\uparrow}N_{\mathrm{Left}}^{\downarrow}
-      N_{\mathrm{ Right}}^{\uparrow}N_{\mathrm{Right}}^{\downarrow}
+      N_{\mathrm{L}}^{\uparrow}N_{\mathrm{L}}^{\downarrow}
+      N_{\mathrm{ R}}^{\uparrow}N_{\mathrm{R}}^{\downarrow}
     }
   }{
-    \Big( \sqrt{N_{\mathrm{Left}}^{\uparrow}N_{\mathrm{Left}}^{\downarrow}} +
-    \sqrt{N_{\mathrm{Right}}^{\uparrow}N_{\mathrm{Right}}^{\downarrow}} \Big)^2
+    \Big( \sqrt{N_{\mathrm{L}}^{\uparrow}N_{\mathrm{L}}^{\downarrow}} +
+    \sqrt{N_{\mathrm{R}}^{\uparrow}N_{\mathrm{R}}^{\downarrow}} \Big)^2
   }
   \sqrt{
-    \frac{1}{N_{\mathrm{Left}}^{\uparrow}} +
-    \frac{1}{N_{\mathrm{Left}}^{\downarrow}} +
-    \frac{1}{N_{\mathrm{Right}}^{\uparrow}} +
-    \frac{1}{N_{\mathrm{Right}}^{\downarrow}}
+    \frac{1}{N_{\mathrm{L}}^{\uparrow}} +
+    \frac{1}{N_{\mathrm{L}}^{\downarrow}} +
+    \frac{1}{N_{\mathrm{R}}^{\uparrow}} +
+    \frac{1}{N_{\mathrm{R}}^{\downarrow}}
   } \quad,
 \end{equation}
 
 \noindent
 which reduces to $\frac{1}{\mathrm{P}}\frac{1}{\sqrt{\mathrm{N}}}$ in the case
-of equal statistics in each direction and polarization.
+of equal statistics in each direction from each target cell polarization.
 
-\subsection{Two Target Geometric Mean} \label{sec::TwoTargGeoMean}
-The previous method determined an A$_{\mathrm{N}}$ per target and as mentioned
-before COMPASS had two oppositely polarized targets in 2015.  It would therefore
-makes sense from a statistical point of view and for comparison purposes to
-determine A$_{\mathrm{N}}$ using all the information from the 2015 COMPASS
-setup.  This can be accomplished by modifying the geometric mean to add both
-targets as follows
+\subsection{Two-Target Geometric Mean} \label{sec::TwoTargGeoMean}
+As described in section~\ref{sec::datasample} COMPASS had two oppositely
+polarized target cells in 2015.  The previous geometric mean asymmetry, however,
+determined an A$_{\mathrm{N}}$ per target.  It is desirable from a statistical
+point of view, however, to determine one A$_{\mathrm{N}}$ from the 2015 COMPASS
+setup.  It is also desirable for comparison purposes to determine
+A$_{\mathrm{N}}$ using all the information from the 2015 COMPASS setup.  This
+can be accomplished by modifying the geometric mean to add both target cells as
+follows
 
 \begin{equation}
-  \label{eqn::AN4TargGeomean}
+  \label{equ::AN4TargGeomean}
   \frac{1}{\mathrm{P}}
   \frac{
     \sqrt[4]{
-      N_{\mathrm{up,Left}}^{\uparrow}N_{\mathrm{up, Left}}^{\downarrow}
-      N_{\mathrm{down,Left}}^{\uparrow}N_{\mathrm{down, Left}}^{\downarrow}
+      N_{\mathrm{cell\;1,L}}^{\uparrow}N_{\mathrm{cell\;1, L}}^{\downarrow}
+      N_{\mathrm{cell\;2,L}}^{\uparrow}N_{\mathrm{cell\;2, L}}^{\downarrow}
     } -
     \sqrt[4]{
-      N_{\mathrm{up,Right}}^{\uparrow}N_{\mathrm{up, Right}}^{\downarrow}
-      N_{\mathrm{down,Right}}^{\uparrow}N_{\mathrm{down, Right}}^{\downarrow}
+      N_{\mathrm{cell\;1,R}}^{\uparrow}N_{\mathrm{cell\;1, R}}^{\downarrow}
+      N_{\mathrm{cell\;2,R}}^{\uparrow}N_{\mathrm{cell\;2, R}}^{\downarrow}
     }
   }{
     \sqrt[4]{
-      N_{\mathrm{up,Left}}^{\uparrow}N_{\mathrm{up, Left}}^{\downarrow}
-      N_{\mathrm{down,Left}}^{\uparrow}N_{\mathrm{down, Left}}^{\downarrow}
+      N_{\mathrm{cell\;1,L}}^{\uparrow}N_{\mathrm{cell\;1, L}}^{\downarrow}
+      N_{\mathrm{cell\;2,L}}^{\uparrow}N_{\mathrm{cell\;2, L}}^{\downarrow}
     } +
     \sqrt[4]{
-      N_{\mathrm{up,Right}}^{\uparrow}N_{\mathrm{up, Right}}^{\downarrow}
-      N_{\mathrm{down,Right}}^{\uparrow}N_{\mathrm{down, Right}}^{\downarrow}
+      N_{\mathrm{cell\;1,R}}^{\uparrow}N_{\mathrm{cell\;1, R}}^{\downarrow}
+      N_{\mathrm{cell\;2,R}}^{\uparrow}N_{\mathrm{cell\;2, R}}^{\downarrow}
     }
-  },
+  }.
 \end{equation}
 
-\noindent
-where up and down stand for the upstream and downstream targets respectfully.
-
-As in the basic geometric mean, left and right are determined relative to
-the spin direction of the target as in Eq.~\ref{equ::Defleftright}.  Again using
-Eq.~\ref{eqn::indexedCount} for the definition of counts, the two target
-geometric mean asymmetry, Eq.~\ref{eqn::AN4TargGeomean}, can be written as
+As in the basic geometric mean asymmetry, section~\ref{sec::GeoMean}, left and
+right are determined relative to the spin direction of the target as in
+Eq.~\ref{equ::Defleftright}.  Again using Eq.~\ref{equ::indexedCount} for the
+definition of counts, the two target geometric mean asymmetry,
+Eq.~\ref{equ::AN4TargGeomean}, can be written as
 \begin{equation}
   \frac{1}{\mathrm{P}}
   \frac{
-    \kappa \sqrt[4]{\sigma_{Left}\sigma_{Left}\sigma_{Left}\sigma_{Left}} -
-    \sqrt[4]{\sigma_{Right}\sigma_{Right}\sigma_{Right}\sigma_{Right}}
+    \kappa_{\mathrm{two-target}} \sqrt[4]{\sigma_{L}\sigma_{L}\sigma_{L}\sigma_{L}} -
+    \sqrt[4]{\sigma_{R}\sigma_{R}\sigma_{R}\sigma_{R}}
   }{
-    \kappa \sqrt[4]{\sigma_{Left}\sigma_{Left}\sigma_{Left}\sigma_{Left}} +
-    \sqrt[4]{\sigma_{Right}\sigma_{Right}\sigma_{Right}\sigma_{Right}}
+    \kappa_{\mathrm{two-target}} \sqrt[4]{\sigma_{L}\sigma_{L}\sigma_{L}\sigma_{L}} +
+    \sqrt[4]{\sigma_{R}\sigma_{R}\sigma_{R}\sigma_{R}}
   },
 \end{equation},
 
 \noindent
-where now $\kappa$ is the ratio of acceptances from all targets and
-polarizations.  This all inclusive acceptance ratio is defined as
+where now $\kappa_{\mathrm{two-target}}$ is the ratio of acceptances from all
+targets and polarizations.  This inclusive acceptance ratio is defined as
 \begin{equation}
   \label{equ::acc4TargGeoMean}
-  \kappa_{two-target} =
+  \kappa_{\mathrm{two-target}} =
   \frac{
     \sqrt[4]{
-      \mathrm{a}^{\uparrow}_{\mathrm{up,Jura}}
-      \mathrm{a}^{\downarrow}_{\mathrm{up,Saleve}}
-      \mathrm{a}^{\uparrow}_{\mathrm{down,Jura}}
-      \mathrm{a}^{\downarrow}_{\mathrm{down,Saleve}}}
+      \mathrm{a}^{\uparrow}_{\mathrm{cell\;1,Jura}}
+      \mathrm{a}^{\downarrow}_{\mathrm{cell\;1,Saleve}}
+      \mathrm{a}^{\uparrow}_{\mathrm{cell\;2,Jura}}
+      \mathrm{a}^{\downarrow}_{\mathrm{cell\;2,Saleve}}}
   }{
     \sqrt[4]{
-      \mathrm{a}^{\uparrow}_{\mathrm{up,Saleve}}
-      \mathrm{a}^{\downarrow}_{\mathrm{up,Jura}}
-      \mathrm{a}^{\uparrow}_{\mathrm{down,Saleve}}
-      \mathrm{a}^{\downarrow}_{\mathrm{down,Jura}}}
+      \mathrm{a}^{\uparrow}_{\mathrm{cell\;1,Saleve}}
+      \mathrm{a}^{\downarrow}_{\mathrm{cell\;1,Jura}}
+      \mathrm{a}^{\uparrow}_{\mathrm{cell\;2,Saleve}}
+      \mathrm{a}^{\downarrow}_{\mathrm{cell\;2,Jura}}}
   }.
 \end{equation}
 
@@ -509,16 +564,16 @@ sub-period superscripts instead of target polarization superscripts
   \label{equ::acc4TargGeoMean_subperiod}
   \kappa_{two-target} = \frac{
     \sqrt[4]{
-      \mathrm{a}^{a}_{\mathrm{up,Jura}}
-      \mathrm{a}^{b}_{\mathrm{up,Saleve}}
-      \mathrm{a}^{b}_{\mathrm{down,Jura}}
-      \mathrm{a}^{a}_{\mathrm{down,Saleve}}}
+      \mathrm{a}^{a}_{\mathrm{cell\;1,Jura}}
+      \mathrm{a}^{b}_{\mathrm{cell\;1,Saleve}}
+      \mathrm{a}^{b}_{\mathrm{cell\;2,Jura}}
+      \mathrm{a}^{a}_{\mathrm{cell\;2,Saleve}}}
   }{
     \sqrt[4]{
-      \mathrm{a}^{a}_{\mathrm{up,Saleve}}
-      \mathrm{a}^{b}_{\mathrm{up,Jura}}
-      \mathrm{a}^{b}_{\mathrm{down,Saleve}}
-      \mathrm{a}^{a}_{\mathrm{down,Jura}}}
+      \mathrm{a}^{a}_{\mathrm{cell\;1,Saleve}}
+      \mathrm{a}^{b}_{\mathrm{cell\;1,Jura}}
+      \mathrm{a}^{b}_{\mathrm{cell\;2,Saleve}}
+      \mathrm{a}^{a}_{\mathrm{cell\;2,Jura}}}
   },
 \end{equation}
 
@@ -534,36 +589,37 @@ Finally the statistical uncertainty of the two target geometric mean is
   \frac{1}{\mathrm{P}}
   \frac{\text{LR}}{\Big( \text{L+R} \Big)^2}
   \sqrt{
-    \sum_{\mathrm{target}}\sum_{\mathrm{polarization}}
+    \sum_{\mathrm{cell}}\sum_{\mathrm{polarization}}
     \Big(
-    \frac{1}{N_{\mathrm{target,Left}}^{\mathrm{polarization}}}
+    \frac{1}{N_{\mathrm{cell,L}}^{\mathrm{polarization}}}
     +
-    \frac{1}{N_{\mathrm{target,Right}}^{\mathrm{polarization}}}
+    \frac{1}{N_{\mathrm{cell,R}}^{\mathrm{polarization}}}
     \Big)
   } \quad,
 \end{equation}
 
 \noindent
 where L can be thought of as the left counts and equals to
-$\sqrt[4]{N_{\mathrm{up,Left}}^{\uparrow}N_{\mathrm{up,
-      Left}}^{\downarrow}N_{\mathrm{down,Left}}^{\uparrow}N_{\mathrm{down,
-      Left}}^{\downarrow}}$ and R can be thought of as the right counts and
-equals $\sqrt[4]{N_{\mathrm{up,Right}}^{\uparrow}N_{\mathrm{up,
-      Right}}^{\downarrow}N_{\mathrm{down,Right}}^{\uparrow}N_{\mathrm{down,
-      Right}}^{\downarrow}}$.  The statistical uncertainty for the two target
+$\sqrt[4]{N_{\mathrm{cell\;1,L}}^{\uparrow}N_{\mathrm{cell\;1,
+      L}}^{\downarrow}N_{\mathrm{cell\;2,L}}^{\uparrow}N_{\mathrm{cell\;2,
+      L}}^{\downarrow}}$ and R can be thought of as the right counts and equals
+$\sqrt[4]{N_{\mathrm{cell\;1,R}}^{\uparrow}N_{\mathrm{cell\;1,
+      R}}^{\downarrow}N_{\mathrm{cell\;2,R}}^{\uparrow}N_{\mathrm{cell\;2,
+      R}}^{\downarrow}}$.  The statistical uncertainty for the two target
 geometric mean also reduces to $\frac{1}{\mathrm{P}}\frac{1}{\sqrt{\mathrm{N}}}$
-in the case of equal statistics in each direction and polarization.
+in the case of equal statistic populations in each direction and target
+polarization.
 
 
 \section{Systematic Studies} \label{sec::systematics}
-Several tests were performed to estimate the systematic uncertainty.  The
-systematic errors are determined by adding all non-zero systematic effects in
-quadrature.  The impact from each source of systematic error is summarized in
-Tab.~\ref{tab::sysError}.
+Several tests were performed to estimate the systematic uncertainty of the
+left-right asymmetry.  The systematic errors are determined by adding all
+non-zero systematic uncertainties in quadrature.  The impact from each source of
+systematic error is summarized in Tab.~\ref{tab::sysError}.
 
-\subsection{Period Compatibility}
-The asymmetries calculated for each period in each kinematic bin are shown in
-Fig.~\ref{fig::allPhysBinned4Targ}.
+\subsection{Period Compatibility (Time Dependence)}
+The asymmetries calculated for each time period in each kinematic bin are shown
+in Fig.~\ref{fig::allPhysBinned4Targ}.
 
 \begin{figure}[h!t]
   \begin{center}
@@ -591,14 +647,14 @@ distribution is formed.  The pull value is defined as
 \end{equation}
 
 \noindent
-and is determined for each period and kinematic bin.  There are therefore
-3(number of bins)x5(number of kinematics)x9(number of periods) = 135 entries in
-the pull distribution. This distribution is shown in Fig.~\ref{fig::pull4Targ}
-along with a Gaussian fit.  If the asymmetries all come from the same parent
-distribution then due to the central limit theorem the pull distribution will be
-a Gaussian distribution with zero mean and unit variance.  The discrepancy of
-the pull distribution from a standard Gaussian distribution is used to determine
-a systematic error as
+and is determined for each period and kinematic bin.  There are therefore 3
+(number of bins) x 5 (number of kinematics) x 9 (number of periods) = 135
+entries in the pull distribution. This distribution is shown in
+Fig.~\ref{fig::pull4Targ} along with a Gaussian fit.  If the asymmetries all
+come from the same parent distribution then due to the central limit theorem the
+pull distribution will be a Gaussian distribution with zero mean and unit
+variance.  The discrepancy of the pull distribution from a standard Gaussian
+distribution is used to determine a systematic error as
 
 \begin{equation}
   \label{equ::sysErrorPull}
@@ -616,13 +672,13 @@ a systematic error as
 
 \noindent
 As the asymmetries in different kinematic bins are formed using the same data
-set the asymmetries between kinematics are correlated.  For this reason an
-uncorrelated pull distribution is also formed for each physics kinematic bin and
-also compared with a standard Gaussian distribution.  These distributions are
-shown in Fig.~\ref{fig::allPhysPulls4Targ} and the results of the Gaussian fit
-are shown in Fig.~\ref{fig::allPhysPulls4Targ_fit}.  For these uncorrelated pull
-distributions there are now only 3(number of bins)x9(number of periods) = 27
-entries in each kinetically binned pull distributions and only 9(number of
+set the asymmetries between kinematic binning are correlated.  For this reason
+an uncorrelated pull distribution is also formed for each kinematic bin and also
+compared with a standard Gaussian distribution.  These distributions are shown
+in Fig.~\ref{fig::allPhysPulls4Targ} and the results of the Gaussian fit are
+shown in Fig.~\ref{fig::allPhysPulls4Targ_fit}.  For these uncorrelated pull
+distributions there are now only 3 (number of bins) x 9(number of periods) = 27
+entries in each kinetically binned pull distributions and only 9 (number of
 periods) bins in the integrated pull distribution.
 
 \begin{figure}[h!t]
@@ -643,8 +699,8 @@ periods) bins in the integrated pull distribution.
   \end{center}
 \end{figure}
 
-Even though the Gaussian fits did not give exactly as standard Gaussian, the fit
-parameters well compatible with a standard Gaussian within the errors of the
+Even though the Gaussian fits did not give exactly a standard Gaussian, the fit
+parameters are well compatible with a standard Gaussian within the errors of the
 fit.  Therefore no systematic error was assigned due to incompatibility of the
 periods.
 
@@ -655,50 +711,50 @@ Sec.~\ref{sec::TwoTargGeoMean}, the asymmetry measurement assumes the acceptance
 does not change with time and therefore the acceptance ratios
 Eq.~\ref{equ::accGeoMean} and Eq.~\ref{equ::acc4TargGeoMean} are unitary.  Any
 deviation from a unitary acceptance ratio is estimated with a false asymmetry
-and the errors are included as systematic errors.  To determine if acceptance
+and is taken as a systematic error.  To determine if acceptance
 does change with time, a false asymmetry is calculated where the only way the
 false asymmetry could be non-zero is if acceptance changes with time.  This
 false asymmetry for the two target geometric mean is
 
 \begin{equation}
-  \label{eqn::falseAcc}
+  \label{equ::falseAcc}
   \begin{split}
     A_{\mathrm{N,False}} &= 
     \frac{1}{\mathrm{P}}
     \frac{
       \sqrt[4]{
-        N_{\mathrm{up,Right}}^{\uparrow}N_{\mathrm{up, Left}}^{\downarrow}
-        N_{\mathrm{down,Left}}^{\uparrow}N_{\mathrm{down, Right}}^{\downarrow}
+        N_{\mathrm{cell\;1,R}}^{\uparrow}N_{\mathrm{cell\;1, L}}^{\downarrow}
+        N_{\mathrm{cell\;2,L}}^{\uparrow}N_{\mathrm{cell\;2, R}}^{\downarrow}
       } -
       \sqrt[4]{
-        N_{\mathrm{up,Left}}^{\uparrow}N_{\mathrm{up, Right}}^{\downarrow}
-        N_{\mathrm{down,Right}}^{\uparrow}N_{\mathrm{down, Left}}^{\downarrow}
+        N_{\mathrm{cell\;1,L}}^{\uparrow}N_{\mathrm{cell\;1, R}}^{\downarrow}
+        N_{\mathrm{cell\;2,R}}^{\uparrow}N_{\mathrm{cell\;2, L}}^{\downarrow}
       }
     }{
       \sqrt[4]{
-        N_{\mathrm{up,Right}}^{\uparrow}N_{\mathrm{up, Left}}^{\downarrow}
-        N_{\mathrm{down,Left}}^{\uparrow}N_{\mathrm{down, Right}}^{\downarrow}
+        N_{\mathrm{cell\;1,R}}^{\uparrow}N_{\mathrm{cell\;1, L}}^{\downarrow}
+        N_{\mathrm{cell\;2,L}}^{\uparrow}N_{\mathrm{cell\;2, R}}^{\downarrow}
       } +
       \sqrt[4]{
-        N_{\mathrm{up,Left}}^{\uparrow}N_{\mathrm{up, Right}}^{\downarrow}
-        N_{\mathrm{down,Right}}^{\uparrow}N_{\mathrm{down, Left}}^{\downarrow}
+        N_{\mathrm{cell\;1,L}}^{\uparrow}N_{\mathrm{cell\;1, R}}^{\downarrow}
+        N_{\mathrm{cell\;2,R}}^{\uparrow}N_{\mathrm{cell\;2, L}}^{\downarrow}
       }
     }\\
     & =
     \frac{1}{\mathrm{P}}
     \frac{
-      \alpha \sqrt[4]{\sigma_{Right}\sigma_{Left}\sigma_{Left}\sigma_{Right}} -
-      \sqrt[4]{\sigma_{Left}\sigma_{Right}\sigma_{Right}\sigma_{Left}}
+      \alpha \sqrt[4]{\sigma_{R}\sigma_{L}\sigma_{L}\sigma_{R}} -
+      \sqrt[4]{\sigma_{L}\sigma_{R}\sigma_{R}\sigma_{L}}
     }{
-      \alpha \sqrt[4]{\sigma_{Right}\sigma_{Left}\sigma_{Left}\sigma_{Right}} +
-      \sqrt[4]{\sigma_{Left}\sigma_{Right}\sigma_{Right}\sigma_{Left}}
+      \alpha \sqrt[4]{\sigma_{R}\sigma_{L}\sigma_{L}\sigma_{R}} +
+      \sqrt[4]{\sigma_{L}\sigma_{R}\sigma_{R}\sigma_{L}}
     }
   \end{split}
 \end{equation}
 
 \begin{equation}
   \label{equ::alphaAsym}
-  = \frac{1}{\mathrm{P}}
+ = \frac{1}{\mathrm{P}}
   \frac{
     \alpha - 1     
   }{
@@ -709,45 +765,40 @@ false asymmetry for the two target geometric mean is
 \noindent
 where $\alpha$ is an acceptance ratio and is defined as
 
-\begin{equation}
-  \frac{
-    \sqrt[4]{
-      \mathrm{a}^{\uparrow}_{\mathrm{up,Saleve}}
-      \mathrm{a}^{\downarrow}_{\mathrm{up,Saleve}}
-      \mathrm{a}^{\uparrow}_{\mathrm{down,Jura}}
-      \mathrm{a}^{\downarrow}_{\mathrm{down,Jura}}}
-  }{
-    \sqrt[4]{
-      \mathrm{a}^{\uparrow}_{\mathrm{up,Jura}}
-      \mathrm{a}^{\downarrow}_{\mathrm{up,Jura}}
-      \mathrm{a}^{\uparrow}_{\mathrm{down,Saleve}}
-      \mathrm{a}^{\downarrow}_{\mathrm{down,Saleve}}}
-  }.
+\begin{equation} \label{equ::alphaAcc}
+  \alpha = \frac{ \sqrt[4]{ \mathrm{a}^{\uparrow}_{\mathrm{cell\;1,Saleve}}
+      \mathrm{a}^{\downarrow}_{\mathrm{cell\;1,Saleve}}
+      \mathrm{a}^{\uparrow}_{\mathrm{cell\;2,Jura}}
+      \mathrm{a}^{\downarrow}_{\mathrm{cell\;2,Jura}}} }{ \sqrt[4]{
+      \mathrm{a}^{\uparrow}_{\mathrm{cell\;1,Jura}}
+      \mathrm{a}^{\downarrow}_{\mathrm{cell\;1,Jura}}
+      \mathrm{a}^{\uparrow}_{\mathrm{cell\;2,Saleve}}
+      \mathrm{a}^{\downarrow}_{\mathrm{cell\;2,Saleve}}} }.
 \end{equation}
 
 \noindent
-The false asymmetry, Eq.~\ref{eqn::falseAcc}, can be simplified as
+The false asymmetry, Eq.~\ref{equ::falseAcc}, can be simplified as
 
 \begin{equation}
   A_{\mathrm{N,False}} = 
   \frac{1}{\mathrm{P}}
   \frac{
     \sqrt[4]{
-      N_{\mathrm{up, Saleve}}
-      N_{\mathrm{down, Jura}}
+      N_{\mathrm{cell\;1, Saleve}}
+      N_{\mathrm{cell\;2, Jura}}
     } -
     \sqrt[4]{
-      N_{\mathrm{up, Jura}}
-      N_{\mathrm{down, Saleve}}
+      N_{\mathrm{cell\;1, Jura}}
+      N_{\mathrm{cell\;2, Saleve}}
     }
   }{
     \sqrt[4]{
-      N_{\mathrm{up, Saleve}}
-      N_{\mathrm{down, Jura}}
+      N_{\mathrm{cell\;1, Saleve}}
+      N_{\mathrm{cell\;2, Jura}}
     } +
     \sqrt[4]{
-      N_{\mathrm{up, Jura}}
-      N_{\mathrm{down, Saleve}}
+      N_{\mathrm{cell\;1, Jura}}
+      N_{\mathrm{cell\;2, Saleve}}
     }
   }.
 \end{equation}
@@ -775,8 +826,8 @@ Fig.~\ref{fig::alpha}.
   \begin{center}
     \includegraphics[width=\textwidth, trim=0cm 6cm 0cm 6cm,
       clip]{alpha4Targ}
-    \caption{Acceptance ratio used to determine the systematic effects from
-      acceptance changes in time}
+    \caption{Acceptance ratio, Eq.~\ref{equ::alphaAcc}, used to determine the
+      systematic effects from acceptance changes in time}
     \label{fig::alpha}
   \end{center}
 \end{figure}
@@ -816,40 +867,40 @@ in an attempt to taken into account all other systematic effects.  All false
 asymmetries considered must be constructed in such a way that the physical
 process of interest cancels out.  A false asymmetry could therefore only be
 non-zero from acceptance effects, luminosity or some other reason not
-considered.  The additional false asymmetries constructed are made in a way that
-luminosity effects canceled out and acceptance effects were approximately
-constant.  With these assumptions pull values from Eq.~\ref{eq::pull} should be
-distributed as a standard Gaussian distribution.  Any deviation from a standard
-Gaussian is conservatively taken as a systematic effect from some unknown cause.
-The additional studied false asymmetries are summarized in the following
-enumerated list.
+considered.  The additional false asymmetries are constructed in a way that
+luminosity effects cancel out and acceptance effects are approximately constant.
+With these assumptions, the pull values from Eq.~\ref{eq::pull} are expected to
+be distributed as a standard Gaussian distribution.  Any deviation from a
+standard Gaussian is conservatively taken as a systematic effect from some
+unknown cause.  The additional studied false asymmetries are summarized in the
+following enumerated list.
 
 \begin{enumerate}
   \label{tab::additionalFA}
 
-\item A false asymmetry similar to Eq.~\ref{eqn::falseAcc} but with the upstream
+\item A false asymmetry similar to Eq.~\ref{equ::falseAcc} but with the upstream
   left and right counts flipped defined as
   
   \begin{equation}
-    \label{eqn::additionalfalseAsym}
+    \label{equ::additionalfalseAsym}
     \frac{1}{\mathrm{P}}
     \frac{
       \sqrt[4]{
-        N_{\mathrm{up,Left}}^{\uparrow}N_{\mathrm{up,Right}}^{\downarrow}
-        N_{\mathrm{down,Left}}^{\uparrow}N_{\mathrm{down,Right}}^{\downarrow}
+        N_{\mathrm{cell\;1,L}}^{\uparrow}N_{\mathrm{cell\;1,R}}^{\downarrow}
+        N_{\mathrm{cell\;2,L}}^{\uparrow}N_{\mathrm{cell\;2,R}}^{\downarrow}
       } -
       \sqrt[4]{
-        N_{\mathrm{up,Right}}^{\uparrow}N_{\mathrm{up,Left}}^{\downarrow}
-        N_{\mathrm{down,Right}}^{\uparrow}N_{\mathrm{down, Left}}^{\downarrow}
+        N_{\mathrm{cell\;1,R}}^{\uparrow}N_{\mathrm{cell\;1,L}}^{\downarrow}
+        N_{\mathrm{cell\;2,R}}^{\uparrow}N_{\mathrm{cell\;2, L}}^{\downarrow}
       }
     }{
       \sqrt[4]{
-        N_{\mathrm{up,Left}}^{\uparrow}N_{\mathrm{up,Right}}^{\downarrow}
-        N_{\mathrm{down,Left}}^{\uparrow}N_{\mathrm{down, Right}}^{\downarrow}
+        N_{\mathrm{cell\;1,L}}^{\uparrow}N_{\mathrm{cell\;1,R}}^{\downarrow}
+        N_{\mathrm{cell\;2,L}}^{\uparrow}N_{\mathrm{cell\;2, R}}^{\downarrow}
       } +
       \sqrt[4]{
-        N_{\mathrm{up,Right}}^{\uparrow}N_{\mathrm{up,Left}}^{\downarrow}
-        N_{\mathrm{down,Right}}^{\uparrow}N_{\mathrm{down, Left}}^{\downarrow}
+        N_{\mathrm{cell\;1,R}}^{\uparrow}N_{\mathrm{cell\;1,L}}^{\downarrow}
+        N_{\mathrm{cell\;2,R}}^{\uparrow}N_{\mathrm{cell\;2, L}}^{\downarrow}
       }
     }.
   \end{equation}
@@ -896,15 +947,15 @@ enumerated list.
   downstream target defined as
 
   \begin{equation}
-    \label{eqn::falseANgeomean}
-    \frac{1}{\mathrm{P}} \frac{\sqrt{N_{\mathrm{up(down)stream,
-            Left}}^{\uparrow}N_{\mathrm{up(down)stream, Right}}^{\downarrow}} -
-      \sqrt{N_{\mathrm{up(down)stream,
-            Right}}^{\uparrow}N_{\mathrm{up(down)stream, Left}}^{\downarrow}}
-    }{\sqrt{N_{\mathrm{up(down)stream,
-            Left}}^{\uparrow}N_{\mathrm{up(down)stream, Right}}^{\downarrow}} +
-      \sqrt{N_{\mathrm{up(down)stream,
-            Right}}^{\uparrow}N_{\mathrm{up(down)stream, Left}}^{\downarrow}} }.
+    \label{equ::falseANgeomean}
+    \frac{1}{\mathrm{P}} \frac{\sqrt{N_{\mathrm{cell\;1(2),
+            L}}^{\uparrow}N_{\mathrm{cell\;1(2), R}}^{\downarrow}} -
+      \sqrt{N_{\mathrm{cell\;1(2),
+            R}}^{\uparrow}N_{\mathrm{cell\;1(2), L}}^{\downarrow}}
+    }{\sqrt{N_{\mathrm{cell\;1(2),
+            L}}^{\uparrow}N_{\mathrm{cell\;1(2), R}}^{\downarrow}} +
+      \sqrt{N_{\mathrm{cell\;1(2),
+            R}}^{\uparrow}N_{\mathrm{cell\;1(2), L}}^{\downarrow}} }.
   \end{equation}
   This false asymmetry can also be thought of as measuring the normalized counts
   on the Jura side minus the Saleve side but for each target individually.  Both
@@ -939,7 +990,7 @@ enumerated list.
   \end{figure}
 
 \item Finally the same false asymmetry used to determine the acceptance
-  fluctuations, Eq.~\ref{eqn::falseAcc}, is also checked for compatibility and a
+  fluctuations, Eq.~\ref{equ::falseAcc}, is also checked for compatibility and a
   systematic error is determined in the same way as the previous false
   asymmetries.  The pulls are shown in Fig.~\ref{fig::fa2TargPulls} and the
   corresponding fit parameters are shown in Fig.~\ref{fig::fa2TargPulls_fit}.
@@ -997,7 +1048,7 @@ from left-right miss-identification and this effect is included as a systematic
 effect. \par
 
 For this thesis five Monte-Carlo processes were generated corresponding to three
-background processes and a spin-independent signal process.  The generated used
+background processes and a spin-independent signal process.  The generator used
 was PHTHYIA8 and the data was generated and reconstruction at Blue Waters.  The
 background processes simulated were JPsi production, Psi' production and open
 charm (OC) production.  Each of these backgrounds can decay into two muons which
@@ -1054,8 +1105,9 @@ reconstructed events emerged.
   \caption{The rate of identified correctly and incorrectly left-right events as
     a function of $\phi_{\mathrm{S}}$.  This is determined by comparing the
     generated outgoing direction with the reconstructed outgoing direction.  The
-    left-right boundary is clearing visible at 0$^{\circ}$ and -$\pi^{\circ}$
-    and $\pi^{\circ}$}.
+    left-right boundary is clearing visible at $\phi_{\mathrm{S}}$ = 0$^{\circ}$
+    and $\phi_{\mathrm{S}}$ = -$\pi^{\circ}$ and $\phi_{\mathrm{S}}$ =
+    $\pi^{\circ}$}.
   \label{fig::lrMigration}
 \end{figure}
 
@@ -1140,31 +1192,40 @@ Tab.~\ref{tab::sysError}.
 
 
 \section{Results}
-The asymmetries in this analysis are calculated from each of the separate nine
-periods and then combined as a weighted average.  This calculation method is
-used to minimize the effects of acceptance changes between periods as the
-spectrometer was kept stable within each period but had the options for detector
-changes and repairs between periods.  This resulting asymmetry for each method
-is determined from a weighted average as
+The asymmetries in this analysis are extracted separately from each of the nine
+data periods, Table~\ref{tab::datataking}, and then combined as a weighted
+average.  This calculation method is used to minimize the effects of acceptance
+changes between periods as the spectrometer was kept stable within each period
+but had the options for detector changes and repairs between periods.  This
+resulting asymmetry, A$_{\mathrm{N}}$ for each method,
+section~\ref{sec::GeoMean} and section~\ref{sec::TwoTargGeoMean}, is determined
+from a weighted average as
 \begin{equation}
   \label{equ::wAvg}
-  \mathrm{A}_{\mathrm{N}} = \sum_{\mathrm{period}}
-  \frac{\mathrm{A}_{\mathrm{N},\mathrm{period}}\sigma^{-2}_{\mathrm{period}}}{\sigma^{-2}_{\mathrm{period}}},
-  \quad \sigma^2 = \sum_{\mathrm{period}}
-  \frac{1}{\sigma^{-2}_{\mathrm{period}}}.
+  \mathrm{A}_{\mathrm{N}} = \frac{
+    \sum_{\mathrm{period}}
+    \mathrm{A}_{\mathrm{N},\mathrm{period}}\sigma^{-2}_{\mathrm{period}}
+  }{
+    \sum_{\mathrm{period}} \sigma^{-2}_{\mathrm{period}}},
+  \quad \delta \mathrm{A}_{\mathrm{N}} = \sqrt{\sum_{\mathrm{period}}
+  \frac{1}{\sigma^{-2}_{\mathrm{period}}
+  }}.
 \end{equation}
 
 \noindent
-The results for the basic geometric mean are shown in
-Fig.~\ref{fig::ANgeom} and the results for the two target geometric mean
-are shown in Fig.~\ref{fig::AN4TargGeom}.  The systematic error bars are
-discussed in Sec.~\ref{sec::systematics}.
+The results for the basic geometric mean are shown in Fig.~\ref{fig::ANgeom} and
+the results for the two target geometric mean are shown in
+Fig.~\ref{fig::AN4TargGeom}.  The numerical values for the two-target geometric
+mean with statistical and systematic error bars are summarized in
+Table~\ref{tab::AN4TargGeom}.  The systematic error bars are discussed in
+Sec.~\ref{sec::systematics}.
 
 \begin{figure}[h!t]
   \begin{center}
     \includegraphics[width=\textwidth, trim=0.3cm 0cm 0.25cm 0cm, clip]{ANgeom} 
     \caption{A$_{\mathrm{N}}$ determined from the geometric mean method for the
-      upstream target (red) and the downstream target (blue)}
+      upstream target (red) and the downstream target (blue) for all kinematic
+      binnings}
     \label{fig::ANgeom}
   \end{center}
 \end{figure}
@@ -1172,10 +1233,26 @@ discussed in Sec.~\ref{sec::systematics}.
 \begin{figure}[h!t]
   \begin{center}
     \includegraphics[width=\textwidth]{AN4TargGeom}
-    \caption{A$_{\mathrm{N}}$ determined by the geometric mean method using both
-      targets simultaneously}
+    \caption{A$_{\mathrm{N}}$ determined by the two-target geometric mean method
+      for all kinematic binnings}
     \label{fig::AN4TargGeom}
   \end{center}
 \end{figure}
+
+\begin{table}[h!t]
+  \centering
+  \label{tab::AN4TargGeom}
+  \caption{Two-Target geometric mean numerical values and error bars for each
+    kinematic bin}
+  \begin{tabular}{ |c|c|c|c|c| }
+    \hline \textbf{Binning variable}& \textbf{Bin Range}&
+    \textbf{A}$_{\mathrm{\textbf{N}}}$&
+    \textbf{$\delta$}\textbf{A}$^{\mathrm{\textbf{stat}}}_{\mathrm{\textbf{N}}}$&
+    \textbf{$\delta$}\textbf{A}$^{\mathrm{\textbf{sys}}}_{\mathrm{\textbf{N}}}$
+    \\ \hline \hline
+
+    $\langle$ {\xn} $\rangle$& & & & \\
+  \end{tabular}
+\end{table}
 
 \subsection{Comparison of results}
