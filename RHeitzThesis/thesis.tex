@@ -8,6 +8,7 @@
 \usepackage{cite}
 \usepackage{changepage}
 
+
 \singlespacing
 %Newcommands --> define here your alias 
 \newcommand{\gvc}{GeV/$c$} \newcommand{\gvcs}{(GeV/$c$)$^2$}
@@ -17,6 +18,8 @@
 \newcommand{\xn}{x$_{\mathrm{N}}$} \newcommand{\xpi}{x$_{\pi}$}
 \newcommand{\xf}{x$_{\mathrm{F}}$}
 \newcommand{\qt}{q$_{\mathrm{T}}$} \newcommand{\Mmumu}{M$_{\mu\mu}$}
+\newcommand{\atrack}{$\alpha_{\mathrm{T}}$}
+\newcommand{\adet}{$\alpha_{\alpha}$}
 
 % ******************************** Front Matter ********************************
 \begin{document}
@@ -27,10 +30,10 @@
 \clearpage
 \renewcommand{\thepage}{\arabic{page}}
 % ******************************** Main Matter *********************************
-\include{Chapters/COMPASS/compass}
+%\include{Chapters/COMPASS/compass}
 %\include{Chapters/DC5/dc5}
-%\include{Chapters/Alignment/alignment}
-%\include{Chapters/TMD_Analysis/tmd_analysis}
+\include{Chapters/Alignment/alignment}
+%\include{Chapters/TMD_Analysis/tmd_analysis} %doubleRatio and pT_weighting
 %\include{Chapters/LeftRight/leftright}
 %\include{Chapters/JPsi/JPsi}
 %\include{Chapters/Conclusion/conclusion}
