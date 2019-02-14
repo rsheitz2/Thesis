@@ -3,29 +3,32 @@
 The alignment of the spectrometer is important for track reconstruction.
 Alignment is a part of pre-processing which ensures all the tracking detectors
 are centered relative to each other and therefore enables the track resolution
-to be as accurate as possible.  Without accurate alignment track reconstruction
+to be as accurate as possible.  Without accurate alignment, track reconstruction
 is not possible and it is therefore not possible to analyze any data.  The
 author of this thesis spent the summer of 2015 collecting alignment data and was
 responsible for performing the alignment of the COMPASS spectrometer in 2015.
 
 The objective of the alignment procedure is to produce a file called the
 detectors.dat.  This file describes the parameters for all detectors at COMPASS
-and in particular, gives their relative orientation from each other.  For a
-tracking detector plane, there are four parameters the alignment procedure
+and in particular, gives their relative orientation with respect to each other.
+For a tracking detector plane, there are four parameters the alignment procedure
 updates: the x central position, y central position, angle and the pitch.  These
 parameters are described in the COMPASS lab frame and the pitch refers to a
 sense wire distance for wire chambers or central strip distance for detectors
 with strip readouts.  One or two detectors.dat files was produced for each data
-taking period.  The goal of the alignment procedure is to have all four
-parameters aligned relative to each other for each tracking plane.
+taking period, depending on how many alignment runs were recorded that period.
+The goal of the alignment procedure is to have all four parameters aligned
+relative to each other for each tracking plane.
 
 The alignment procedure works by minimizing the distance between all the
-detector plane hit positions and a track position.  This task is difficult
-because there are over 300 detectors planes described in the detectors.dat.  To
-accomplish this minimization, a large amount of quality data is needed and
-several specific matrix manipulations are utilized in the minimization
+detector plane hit positions and a track position.  This distance will from here
+on be referred to as the residual distance.  The task of simultaneously
+minimizing all the detector residuals is difficult because there are over 300
+detectors planes described in the detectors.dat.  To accomplish this
+minimization, a large amount of quality data is needed and several specific
+matrix manipulations are utilized in the minimization
 procedure~\cite{matrix_inv}.  This chapters gives an overview of the alignment
-procedure and some results from 2015, for a more complete review see
+procedure and includes some results from 2015.  For a more complete review see
 reference~\cite{compassAlignmentNote}.
 
 
@@ -149,15 +152,15 @@ updates the starting detectors.dat file by the shifts
 \begin{align}
   \delta \mathrm{u} & \mathrm{: \; shift \; in \; u \; direction,}  \\
   \delta \theta & \mathrm{: \; shift \; in \; rotation \; angle,}  \\
-  \delta \textrm{z} & \mathrm{: \; shift \; in \; z \; direction,}  \\
-  \delta \textrm{p} & \mathrm{: \; shift \; in \; pitch.} 
+  \delta \mathrm{z} & \mathrm{: \; shift \; in \; z \; direction,}  \\
+  \delta \mathrm{p} & \mathrm{: \; shift \; in \; pitch.} 
 \end{align}
 \noindent
 The shift in z direction has never converged however.  As a result the z
 coordinate from the survey is used as the final z position and the shift in
 pitch is used as an effect shift in the z direction.
 
-\subsubsection{Minimization}
+\subsubsection{Residual Function}
 
 The goal of the alignment procedure is to minimize the distance of a track
 positions through a detector with respect to where the detector measures the
@@ -166,9 +169,9 @@ straight, each track can be defined by four parameters.  The track parameters,
 {\atrack}, are
 
 \begin{enumerate}[label=\roman*:]
-\item (x, y) the x and y coordinates at the main reference origin
-\item (t$_{\mathrm{x}}$, t$_{\mathrm{y}}$) the tangents of the track momentum in
-  the x and y directions at the origin of the main reference system
+\item (x$^0$, y$^0$) the x and y coordinates at the main reference origin
+\item (t$_{\mathrm{x}}^0$, t$_{\mathrm{y}}^0$) the tangents of the track
+  momentum in the x and y directions at the origin of the main reference system
 \end{enumerate}
 \noindent
 where the track parameters are defined for each track.  The alignment parameters
@@ -176,89 +179,194 @@ where the track parameters are defined for each track.  The alignment parameters
 all tracks.  The alignment procedure minimizes the $\chi^2$ function
 
 \begin{equation}
-  \chi^2 = \sum_{i=1}^{i=n_{\mathrm{tracks}}}\sum_{j=1}^{j=n_{\mathrm{detectors}}}
-  \frac{\mathrm{F}^2_j(\alpha_{\mathrm{T}, i}, \alpha_{\alpha, j})}{\sigma_j^2},
-  \label{equ:chi_align}%
+  \chi^2 =
+  \sum_{i=1}^{i=n_{\mathrm{tracks}}}\sum_{j=1}^{j=n_{\mathrm{detectors}}}
+  \frac{\mathrm{F}^2_{i,j}(\alpha_{\mathrm{T}, i}, \alpha_{\mathrm{D},
+      j})}{\sigma_j^2},
+  \label{equ::chi_align}%
 \end{equation}
 \noindent
-where $\sigma^2_j$ is the position resolution of detector j.  The function F is
-the residual distance of each detector which is the distance between where a
-detector measures a track position and the track position.
+where $\sigma^2_j$ is the position resolution of detector j, F is the residual
+distance of each detector.
+
+The residual distance, F, depends on the track parameters and the detector
+parameters.  For magnets off data the tracks are not bent at all and are
+therefore straight.  The parameters are first determined with the current
+detector parameters and then iteratively updated as the detector parameters are
+updated.  The track positions at position z are 
+
+\begin{align}
+  \label{equ::trackPosOff}
+  \mathrm{x} &= \mathrm{x}^0 +
+  \mathrm{t}_{\mathrm{x}}^0(\mathrm{z}-\mathrm{z}^0), \\
+  \mathrm{y} &=
+  \mathrm{y}^0 + \mathrm{t}_{\mathrm{y}}^0(\mathrm{z}-\mathrm{z}^0),
+\end{align}
+\noindent
+where x$^0$, y$^0$ and z$^0$ refer to positions at the origin in \textit{Oxyz}.
+Rotating these track positions from the main references system, \textit{Oxyz},
+to the detector reference system, \textit{O'uvz}, the residual distance is
+
+\begin{equation}
+\mathrm{F} = \cos(\theta)[\mathrm{x}^0 +
+  \mathrm{t}_{\mathrm{x}}^0(\mathrm{z}-\mathrm{z}^0)] +
+\sin(\theta)[\mathrm{y}^0 + \mathrm{t}_{\mathrm{y}}^0(\mathrm{z}-\mathrm{z}^0)]
+- \mathrm{u},
+\end{equation}
+\noindent
+where u is the measured hit position from the detector at position z.  To show
+the dependence on the alignment parameters
+
+\begin{dmath} \label{equ::Falign}
+  \mathrm{F}(\alpha_{\mathrm{T}}, \alpha_{\mathrm{D}}+\delta\alpha_{\mathrm{D}})
+  = (1+\delta \mathrm{p})
+  \Big \{ \cos(\theta + \delta \theta)
+       [\mathrm{x}^0 + \mathrm{t}^0_{\mathrm{x}}(\mathrm{z}-\mathrm{z}^0)] +
+       \sin(\theta + \delta \theta)[\mathrm{y}^0 + \mathrm{t}^0_{\mathrm{y}}
+         (\mathrm{z}-\mathrm{z}^0)] \Big \} -
+       (\mathrm{u} + \delta \mathrm{u}).
+\end{dmath}
+\noindent
+In Eq.~\ref{equ::Falign}, the change in pitch would intuitively affect the u
+position, however the change in pitch was moved to the track coordinates to make
+derivatives of F independent of u.  This has no effect on the minimization of F.
+
+In the case of magnets on data, the track positions need to have further
+modifications.  The magnetic field will bend the tracks so the track positions
+determined in Eq.~\ref{equ::trackPosOff} need to have further corrections.  The
+track positions with SM1 and SM2 on are
+\begin{align}
+  \label{equ::trackPosOn}
+  \mathrm{x} &= \mathrm{x}^0 + \delta\mathrm{x} +
+  (\mathrm{t}_{\mathrm{x}}^0 + \delta \mathrm{t}_{\mathrm{x}})
+  (\mathrm{z}-\mathrm{z}^0), \\
+  \mathrm{y} &= \mathrm{y}^0 + \delta\mathrm{y} +
+  (\mathrm{t}_{\mathrm{y}}^0 + \delta \mathrm{t}_{\mathrm{y}})
+  (\mathrm{z}-\mathrm{z}^0),
+\end{align}
+\noindent
+where the $\delta_{\mathrm{x}}$, $\delta \mathrm{t}_{\mathrm{x}}$,
+$\delta_{\mathrm{y}}$ and $\delta \mathrm{t}_{\mathrm{y}}$ changes are
+determined from CORAL during the reconstruction.  Even though the spectrometer
+magnets have nominally vertical magnetic fields, there are still fringe fields
+which are not vertical.  It is for this reason that the track position must also
+be updated in the y coordinate.
+
+The residual dependence on the alignment parameters defined for magnetic fields
+on is then
+\begin{dmath}
+  \mathrm{F}(\alpha_{\mathrm{T}},
+  \alpha_{\mathrm{D}}+\delta\alpha_{\mathrm{D}}) = 
+  (1+\delta \mathrm{p})\Big \{
+\cos(\theta + \delta \theta)[\mathrm{x}^0 + \delta\mathrm{x} +
+  (\mathrm{t}^0_{\mathrm{x}}+\delta \mathrm{t}_{\mathrm{x}})
+  (\mathrm{z}-\mathrm{z}^0)] +
+\sin(\theta + \delta\theta)[\mathrm{y}^0 + \delta\mathrm{y} +
+  (\mathrm{t}^0_{\mathrm{y}}+\delta \mathrm{t}_{\mathrm{y}})
+  (\mathrm{z}-\mathrm{z}^0)]
+\Big \}
+- (\mathrm{u} + \delta \mathrm{u}).
+\end{dmath}
+
+\subsubsection{$\chi^2$ Minimization}
+The $\chi^2$ function, Eq.~\ref{equ::chi_align}, is analytically minimized.
+That is, the derivatives of Eq.~\ref{equ::chi_align} with respect to all the
+track and alignment parameters are set to zero and these parameters are solved
+for.  This can be written
+
+\begin{equation}
+  \label{equ::chi2analytic}
+  \frac{1}{2}\frac{\partial \chi ^2}{\partial \alpha_k} =
+  \sum_{i}^{n_{\mathrm{tracks}}} \sum_j ^{n_{\mathrm{detectors}}}
+  \frac{1}{\sigma_j^2}\frac{\partial \mathrm{F}_{i,j}}{\partial \alpha_k}
+  \mathrm{F}_{i,j} = 0.
+\end{equation}
+
+\noindent
+To perform this calculation the residual function is Taylor expanded in the
+track and alignment parameters as
+\begin{equation}
+\mathrm{F} = \mathrm{F}^0 + \sum_k \frac{\partial \mathrm{F}}{\partial
+  \alpha_k}\alpha_k.
+\end{equation}
+
+\noindent
+Using this approximation for F, Eq.~\ref{equ::chi2analytic} can be written as a
+matrix equation where the dimensions of the matrix are
+(4n$_{\mathrm{detector}}$+4n$_{\mathrm{tracks}})\times$
+(4n$_{\mathrm{detector}}$ +4n$_{\mathrm{tracks}})$.  This matrix form is written
+as
+
+\begin{dmath}
+  \begin{bmatrix}
+    \sum_i^{n_{\mathrm{tracks}}} \sum_j^{n_{\mathrm{detectors}}}
+      \frac{1}{\sigma^2_j} \frac{\partial \mathrm{F}_{i,j}}{\partial
+        \alpha_{\mathrm{D_1}}}\frac{\partial \mathrm{F}_{i,j}}{\partial
+        \alpha_{\mathrm{D_1}}}
+      & \dots &
+      \sum_j^{n_{\mathrm{detectors}}}
+      \frac{1}{\sigma^2_j}\frac{\partial \mathrm{F}_{i,j}}{\partial
+        \alpha_{\mathrm{D_1}}}\frac{\partial \mathrm{F}_{i,j}}{\partial
+        \alpha_{\mathrm{T_{4\mathrm{n}_{\mathrm{tracks}}}}}} \\
+      \vdots & \ddots & \vdots \\
+      \sum_j^{n_{\mathrm{detectors}}}
+      \frac{1}{\sigma^2_j}\frac{\partial \mathrm{F}_{i,j}}{\partial
+        \alpha_{\mathrm{T_{4\mathrm{n}_{\mathrm{tracks}}}}}}\frac{\partial
+        \mathrm{F}_{i,j}}{\partial \alpha_{\mathrm{D_1}}} & \dots &
+      \sum_j^{n_{\mathrm{detectors}}} \frac{1}{\sigma^2_j}\frac{\partial
+        \mathrm{F}_{i,j}}{\partial
+        \alpha_{\mathrm{T_{4\mathrm{n}_{\mathrm{tracks}}}}}}\frac{\partial
+        \mathrm{F}_{i,j}}{\partial
+        \alpha_{\mathrm{T_{4\mathrm{n}_{\mathrm{tracks}}}}}}
+  \end{bmatrix}
+  \begin{bmatrix}
+    \alpha_{\mathrm{D_1}} \\
+    \vdots \\
+    \alpha_{\mathrm{T_{4\mathrm{n}_{\mathrm{tracks}}}}}
+  \end{bmatrix}
+  = -
+  \begin{bmatrix}
+    \sum_i^{n_{\mathrm{tracks}}} \sum_j^{n_{\mathrm{detectors}}}
+      \frac{1}{\sigma^2_j}\frac{\partial \mathrm{F}_{i,j}}{\partial
+        \alpha_{\mathrm{D_1}}} \mathrm{F}_{i,j}^0 \\
+      \vdots \\
+      \sum_j^{n_{\mathrm{detectors}}}
+    \frac{1}{\sigma^2_j}\frac{\partial \mathrm{F}_{i,j}}{\partial
+      \alpha_{\mathrm{T_{4\mathrm{n}_{\mathrm{tracks}}}}}} \mathrm{F}_{i,j}^0
+  \end{bmatrix}.
+  \label{equ::aliMatrix}
+\end{dmath}    
+
+\noindent
+To solve Eq.~\ref{equ::aliMatrix}, the matrix on the left side must be inverted.
+A normal alignment run however, results in over 200,000 tracks meaning this
+matrix is huge and infeasible to invert.  Fortunately many of the entries in the
+matrix are zero which allows that this matrix inversion can be reduced to
+the inversion of several smaller matrices.
+
+To perform the matrix inversion, note that Eq.~\ref{equ::aliMatrix} can be
+written
+
+\begin{equation}
+  \begin{bmatrix}
+    \sum_i^{n_{\mathrm{tracks}}} \mathrm{C}_i \vline \; \vline
+    & \dots &
+    \mathrm{G}_i & \dots \\
+    \hline \hline
+  \end{bmatrix}
+  \begin{bmatrix}
+    \alpha_{\mathrm{D_1}} \\ \vdots \\ \alpha_{\mathrm{T_{4\mathrm{n}_{\mathrm{tracks}}}}}
+  \end{bmatrix}
+  = -
+  \begin{bmatrix}
+    \sum_j^{n_{\mathrm{detectors}}} \frac{1}{\sigma^2_j}\frac{\partial \mathrm{F}_j}{\partial
+      \alpha_{\mathrm{D_1}}} \mathrm{F}_j^0 \\ \vdots \\ \sum_j^{n_{\mathrm{detectors}}}
+    \frac{1}{\sigma^2_j}\frac{\partial \mathrm{F}_j}{\partial
+      \alpha_{\mathrm{T_{4\mathrm{n}_{\mathrm{tracks}}}}}} \mathrm{F}_j^0
+  \end{bmatrix}.
+\end{equation}
 
 \section{Results}
-  The alignment procedure accomplishes this by minimizing a
-$\chi^2$ function of all the track and detector parameters:
-%
-%\begin{dmath}
-%  \chi^2 = \sum_{i=1}^{i=n_{tracks}}\sum_{j=1}^{j=n_{detectors}}
-%  \frac{F_j(\alpha_t, \alpha_j)^2}{\sigma_j^2},
-%  \label{equ:chi_align}%
-%\end{dmath}
-%
-where $F_j(\alpha_t, \alpha_j)$ is the residual of each detector plane
-and is a function of the track parameters, $\alpha_t$, and the
-detector parameters, $\alpha_j$, and $\sigma_j$ is the position
-resolution for detector $j$. The residual, $F_j(\alpha_t, \alpha_j)$,
-is the difference between a detector hit location and the expexted hit
-location based on a reconstructed track.  The track parameters,
-$\alpha_t$, are the track x and y position at a specified detector and
-the tangents $\frac{dx}{dz}$ and $\frac{dy}{dz}$ of the track momentum
-at the same location.  These track parameters are different for each
-track while the detector parameters, $\alpha_j$,
-are the same for every track.  \par
-
-
-
-
-
-To perform the $\chi^2$ minimization in the alignment procedure,
-$F_j(\alpha_t, \alpha_d)$ is Taylor expanded and the partial
-derivative of the $\chi^2$ function, equation~\ref{equ:chi_align}, is
-taken with the respect to each track and alignment parameter and set
-equal to zero.  The minimization process can be built into a matrix
-equation where the size of the matrix to invert is
-$(4n_{detector}+4n_{tracks})\times(4n_{detector}+4n_{tracks})$: \par
-%
-\begin{subequations}
-  \begin{align}
-    &F_j = F_j^0 + \sum_k \frac{\partial F_j}{\partial
-      \alpha_k}\alpha_k \quad \text{Taylor expanding the residual for
-      each detector plane.} \label{equ:F_taylor}\\ &\frac{1}{2}
-    \frac{\partial \chi ^2}{\partial \alpha_i} = \sum
-    _{t}^{n_{tracks}} \sum_j ^{n_{detectors}}\frac{1}{\sigma_j
-      ^2}\frac{\partial F_j}{\partial \alpha_i}\Big ( F_j^0 + \sum_k
-    \frac{\partial F_j}{\partial \alpha_k}\alpha_k \Big ) = 0 \quad
-    \text{Minimizing the overall $\chi^2$.}\\ & \begin{bmatrix} \sum_j
-      \frac{1}{\sigma^2_j}\frac{\partial F_j}{\partial
-        \alpha_1}\frac{\partial F_j}{\partial \alpha_1} & \dots &
-      \sum_j \frac{1}{\sigma^2_j}\frac{\partial F_j}{\partial
-        \alpha_1}\frac{\partial F_j}{\partial \alpha_{4n_{tracks}}}
-      \\ \vdots & \ddots & \vdots\\ \sum_j
-      \frac{1}{\sigma^2_j}\frac{\partial F_j}{\partial
-        \alpha_{4n_{tracks}}}\frac{\partial F_j}{\partial \alpha_1} &
-      \dots & \sum_j \frac{1}{\sigma^2_j}\frac{\partial F_j}{\partial
-        \alpha_{4n_{tracks}}}\frac{\partial F_j}{\partial
-        \alpha_{4n_{tracks}}}
-      \end{bmatrix}
-    \begin{bmatrix}
-      \alpha_1 \\ \vdots \\ \alpha_{4n_{tracks}}
-    \end{bmatrix}
-    = -
-    \begin{bmatrix}
-      \sum_j \frac{1}{\sigma^2_j}\frac{\partial F_j}{\partial
-        \alpha_1} F_j^0 \\ \vdots \\ \sum_j
-      \frac{1}{\sigma^2_j}\frac{\partial F_j}{\partial
-        \alpha_{4n_{tracks}}} F_j^0 \\
-    \end{bmatrix} \label{equ:aliMatrix}
-  \end{align}
-  \label{equ:Alignment}
-\end{subequations}
-%    %\text{Resulting equation to be solved.}
-A normal alignment run results in over 200,000 tracks meaning the
-matrix equation in equation~\ref{equ:aliMatrix} is huge and infeasible
-to solve.  Fortunately many of the entries in the matrix are zero and
-it can be shown that this matrix inversion can be reduced to the
-inversion of several smaller matrices~\cite{matrix_inv}.  \par
 
 %\begin{figure}[h]
 %  \centering
@@ -286,7 +394,7 @@ inversion of several smaller matrices~\cite{matrix_inv}.  \par
 %\end{figure}
 
 In each iteration of the alignment procedure the matrix inversion in
-equation~\ref{equ:aliMatrix} is performed.  All alignment tracks are
+equation~\ref{equ::aliMatrix} is performed.  All alignment tracks are
 reconstructed based off the starting positions of all the detectors
 and after each iteration the detector parameters are updated to reduce
 the overall $\chi^2$ value.  Several iterations of the alignment
