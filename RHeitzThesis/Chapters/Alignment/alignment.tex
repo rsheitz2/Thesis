@@ -1,67 +1,74 @@
 \chapter{Spectrometer Alignment} \label{ch::alignment}
+\ifpdf
+\graphicspath{{Chapters/Alignment/Figs/Raster/}{Chapters/Alignment/Figs/PDF/}{Chapters/Alignment/Figs/}}
+\else \graphicspath{{Chapters/Alignment/Figs/Vector/}{Chapters/Alignment/Figs/}}
+\fi
 
 The alignment of the spectrometer is important for track reconstruction.
 Alignment is a part of pre-processing which ensures all the tracking detectors
 are centered relative to each other and therefore enables the track resolution
 to be as accurate as possible.  Without accurate alignment, track reconstruction
 is not possible and it is therefore not possible to analyze any data.  The
-author of this thesis spent the summer of 2015 collecting alignment data and was
+author of this thesis oversaw collection of alignment data and was
 responsible for performing the alignment of the COMPASS spectrometer in 2015.
 
 The objective of the alignment procedure is to produce a file called the
 detectors.dat.  This file describes the parameters for all detectors at COMPASS
-and in particular, gives their relative orientation with respect to each other.
-For a tracking detector plane, there are four parameters the alignment procedure
-updates: the x central position, y central position, angle and the pitch.  These
-parameters are described in the COMPASS lab frame and the pitch refers to a
-sense wire distance for wire chambers or central strip distance for detectors
-with strip readouts.  One or two detectors.dat files was produced for each data
-taking period, depending on how many alignment runs were recorded that period.
-The goal of the alignment procedure is to have all four parameters aligned
-relative to each other for each tracking plane.
+and in particular, gives their orientation in space.  For a tracking detector
+plane, there are four parameters the alignment procedure updates: the x central
+position, y central position, angle and the pitch.  The pitch refers to a sense
+wire distance for wire chambers or central strip separation distance for
+detectors with strip readouts.  One or two detectors.dat files was produced for
+each data taking period, depending on how many alignment runs were recorded that
+period.  The goal of the alignment procedure is to have all four parameters
+aligned relative to a global reference frame in the COMPASS lab system.
 
 The alignment procedure works by minimizing the distance between all the
 detector plane hit positions and a track position.  This distance will from here
-on be referred to as the residual distance.  The task of simultaneously
-minimizing all the detector residuals is difficult because there are over 300
+on be referred to as the residual distance.  One residual is determined per
+track per detector associated with the track.  The task of simultaneously
+minimizing all the residuals is difficult because there are over 300
 detectors planes described in the detectors.dat.  To accomplish this
 minimization, a large amount of quality data is needed and several specific
 matrix manipulations are utilized in the minimization
-procedure~\cite{matrix_inv}.  This chapters gives an overview of the alignment
+procedure.  This chapters gives an overview of the alignment
 procedure and includes some results from 2015.  For a more complete review see
 reference~\cite{compassAlignmentNote}.
 
 
 \section{Alignment Data}
 
-The alignment data comes from dedicated low intensity muon beam, $\approx 10^5
-\frac{\mu ^-}{\mathrm{spill}}$, data.  A muon beam is desirable for alignment
-data because the beam muons interact less and therefore allow the alignment
-procedure to assume straight tracks in the minimization problem.  The lower
-intensity is chosen because this allows the assumption that only one track
-occurs per event and a low intensity beam ensures a reduction of detector pile
-up effects.  Reduction in pile up effects, makes reconstruction in the central
-detector areas possible, and therefore the beam killers on DC00, DC01, DC04 and
-DC05 can be set to nominal voltage and as well all the GEM detectors can
-have their central high voltages turn up to an amplification voltage.
+The alignment data comes from a dedicated low intensity muon beam.  The
+intensity in 2015 was approximately 10$^5 \mu^-$/spill.  A muon beam is
+desirable for alignment data because the beam muons interact less and therefore
+allow the alignment procedure to assume straight tracks in the minimization
+problem.  The lower intensity is chosen because this allows for the assumption
+that only one track occurs per event and also the low intensity beam ensures a
+reduction of detector pile up effects.  Reduction in pile up effects, makes
+reconstruction in the central detector areas possible, and therefore the beam
+killers on DC00, DC01, DC04 and DC05 can be set to nominal voltage and as well
+all the GEM detectors can have their central high voltages turned up to an
+amplification voltage.
 
 A dedicated trigger system is setup during alignment runs to maximize the
 illumination of the tracking detectors.  The triggers used are a beam trigger,
 veto trigger and a halo trigger.  The alignment runs used in 2015 are listed in
 Table~\ref{tab::alignmentRuns}. \par
 
-Two good quality alignment runs are recorded either at the beginning, middle or
-end of a data taking period.  The first alignment run is with the spectrometer
-magnets off and the second is with the spectrometer magnets on.  The
-spectrometer magnets off run is used as a first iteration for the alignment
+Two alignment runs of good quality are recorded either at the beginning, middle
+or end of a data taking period.  The first alignment run is with the
+spectrometer magnets off and the second is with the spectrometer magnets on.
+The spectrometer magnets off run is used as a first iteration for the alignment
 procedure to initialize the tracking detector positions.  The final alignment
 positions are then determined from the spectrometer magnets on data.
+
+One physics run was also used to align detectors far from the beam line.  Particularly, the outer region of the straw detectors did not receive enough statistics from the aligning runs.  Therefore the alignment of the outer straw regions was performed with normal physics data. 
 
 In 2015 the alignment runs were performed when the target solenoid was
 polarizing the target.  The chicane magnets upstream of the target were
 therefore turned off to ensure the beam momentum was traveling along the target
 axis.  Normally to achieve the reduced intensity, the T6 target is switch to an
-air target, however in 2015 the T6 target head was not able to switch between
+air target.  However in 2015, the T6 target head was not able to switch between
 the different target lengths and therefore the maximum 500~mm target head was
 always in use.  Therefore to achieve the desired intensity, a set of collimeters
 upstream of the target reduced the aperture of the beam line till the correct
@@ -114,8 +121,8 @@ intensity was achieved.
 
 \section{Procedure}
 
-The starting point for alignment is a detectors.dat file with tracking detector
-positions determined from a survey.  The surveys are performed with the
+The starting point for alignment is a detectors.dat file with the tracking
+detector positions determined from a survey.  The surveys are performed with the
 spectrometer magnets off and the precision from a survey is around 1~mm.  Almost
 all of the detectors at COMPASS have a position resolution better than the
 survey precision.  Furthermore, several detectors near SM1 can shift in position
@@ -128,18 +135,19 @@ improve on the survey precision and achieve the best possible track resolutions.
 To best describe each detector relative to every other detector there are two
 reference systems of interest.
 
-The first is the COMPASS main reference system labeled \textit{Oxyz}.  This
-reference system can also be referred to as the COMPASS lab system, where the
-z-axis is along the beam momentum direction, the y-axis points vertical and the
-x-axis is such that the coordinate system is right handed.  The origin of this
-reference system is at the center of the target from the original COMPASS setup.
+The first reference system is the COMPASS main reference system labeled
+\textit{Oxyz}.  This reference system can also be referred to as the COMPASS lab
+system, where the z-axis is along the beam momentum direction, the y-axis points
+vertically and the x-axis is such that the coordinate system is right handed.
+The origin of this reference system is at the center of the target from the
+original COMPASS setup.
 
 The second reference system is the local reference system, which is labeled as
 \textit{O'uvz}.  This reference system is different for each detector and has
 its origin at the center of each detector center.  The z-axis coincides with the
 z-axis in the COMPASS main reference system while the u-axis is in the direction
-along the measure coordinate of the detector, and the v-axis is perpendicular to
-the direction of the measure coordinate of the detector.  As an example, a drift
+along the measured coordinate of the detector, and the v-axis is perpendicular to
+the direction of the measured coordinate of this detector.  As an example, a drift
 chamber with vertical wires measures a coordinate along the horizontal direction
 and therefore it's u-axis is in the horizontal direction and it's v-axis is in
 the vertical direction.  A drift chamber with horizontal wires, however,
@@ -156,17 +164,16 @@ updates the starting detectors.dat file by the shifts
   \delta \mathrm{p} & \mathrm{: \; shift \; in \; pitch.} 
 \end{align}
 \noindent
-The shift in z direction has never converged however.  As a result the z
-coordinate from the survey is used as the final z position and the shift in
-pitch is used as an effect shift in the z direction.
+The shift in z direction has never converged however.  As a result the
+z-coordinate from the survey is used as the final z position and the shift in
+pitch is used as an effective shift in the z direction.
 
 \subsubsection{Residual Function}
 
-The goal of the alignment procedure is to minimize the distance of a track
-positions through a detector with respect to where the detector measures the
-track position.  Due to the fact that the alignment tracks are assumed to be
-straight, each track can be defined by four parameters.  The track parameters,
-{\atrack}, are
+The goal of the alignment procedure is to minimize the sum of all the residuals
+from each track and each detector associated with the track.  Due to the fact
+that the alignment tracks are assumed to be straight, each track can be defined
+by four parameters.  The track parameters, {\atrack}, are
 
 \begin{enumerate}[label=\roman*:]
 \item (x$^0$, y$^0$) the x and y coordinates at the main reference origin
@@ -175,7 +182,7 @@ straight, each track can be defined by four parameters.  The track parameters,
 \end{enumerate}
 \noindent
 where the track parameters are defined for each track.  The alignment parameters
-, {\adet}, on the other hand are defined for each detector but are the same for
+, {\adet}, on the other hand are defined for each detector and are the same for
 all tracks.  The alignment procedure minimizes the $\chi^2$ function
 
 \begin{equation}
@@ -186,14 +193,12 @@ all tracks.  The alignment procedure minimizes the $\chi^2$ function
   \label{equ::chi_align}%
 \end{equation}
 \noindent
-where $\sigma^2_j$ is the position resolution of detector j, F is the residual
-distance of each detector.
+where $\sigma^2_j$ is the position resolution of detector j, F$_{i,j}$ is the
+residual distance of each detector j for each track i it is associated with.
 
 The residual distance, F, depends on the track parameters and the detector
 parameters.  For magnets off data the tracks are not bent at all and are
-therefore straight.  The parameters are first determined with the current
-detector parameters and then iteratively updated as the detector parameters are
-updated.  The track positions at position z are 
+therefore straight tracks.  The track positions at position z are 
 
 \begin{align}
   \label{equ::trackPosOff}
@@ -203,7 +208,7 @@ updated.  The track positions at position z are
   \mathrm{y}^0 + \mathrm{t}_{\mathrm{y}}^0(\mathrm{z}-\mathrm{z}^0),
 \end{align}
 \noindent
-where x$^0$, y$^0$ and z$^0$ refer to positions at the origin in \textit{Oxyz}.
+where z$^0$ refers to the position at the origin in \textit{Oxyz}.
 Rotating these track positions from the main references system, \textit{Oxyz},
 to the detector reference system, \textit{O'uvz}, the residual distance is
 
@@ -247,10 +252,10 @@ track positions with SM1 and SM2 on are
 \noindent
 where the $\delta_{\mathrm{x}}$, $\delta \mathrm{t}_{\mathrm{x}}$,
 $\delta_{\mathrm{y}}$ and $\delta \mathrm{t}_{\mathrm{y}}$ changes are
-determined from CORAL during the reconstruction.  Even though the spectrometer
-magnets have nominally vertical magnetic fields, there are still fringe fields
-which are not vertical.  It is for this reason that the track position must also
-be updated in the y coordinate.
+determined from CORAL during the reconstruction process.  Even though the
+spectrometer magnets have nominally vertical magnetic fields, there are still
+fringe fields which are not vertical.  It is for this reason that CORAL also
+calculates an updated track position in the y-coordinate.
 
 The residual dependence on the alignment parameters defined for magnetic fields
 on is then
@@ -348,69 +353,165 @@ To perform the matrix inversion, note that Eq.~\ref{equ::aliMatrix} can be
 written
 
 \begin{equation}
+  \label{equ::matrixToInvert}
   \begin{bmatrix}
-    \sum_i^{n_{\mathrm{tracks}}} \mathrm{C}_i \vline \; \vline
-    & \dots &
+    \sum_{i} \mathrm{C}_i & \vline \; \vline \; & \dots &
     \mathrm{G}_i & \dots \\
     \hline \hline
+    \vdots & \vline \; \vline & \ddots & 0 & 0 \\
+    \mathrm{G}^{\mathrm{T}} & \vline \; \vline & 0 \; & \Gamma_i & 0 \\
+    \vdots & \vline \; \vline & 0 & 0 & \ddots
   \end{bmatrix}
   \begin{bmatrix}
-    \alpha_{\mathrm{D_1}} \\ \vdots \\ \alpha_{\mathrm{T_{4\mathrm{n}_{\mathrm{tracks}}}}}
+    \alpha_{\alpha} \\ \hline \hline \vdots \\ \alpha_{\mathrm{T}_i}
+    \\ \vdots
   \end{bmatrix}
-  = -
+  =
   \begin{bmatrix}
-    \sum_j^{n_{\mathrm{detectors}}} \frac{1}{\sigma^2_j}\frac{\partial \mathrm{F}_j}{\partial
-      \alpha_{\mathrm{D_1}}} \mathrm{F}_j^0 \\ \vdots \\ \sum_j^{n_{\mathrm{detectors}}}
-    \frac{1}{\sigma^2_j}\frac{\partial \mathrm{F}_j}{\partial
-      \alpha_{\mathrm{T_{4\mathrm{n}_{\mathrm{tracks}}}}}} \mathrm{F}_j^0
-  \end{bmatrix}.
+    \sum_i b_i \\ \hline \hline \vdots \\ \beta_i \\ \vdots
+  \end{bmatrix},
 \end{equation}
+
+\noindent
+where $\sum_i$C$_i$ and $\sum_i$b$_i$ include only derivatives of F$_{i,j}$ with
+respect to alignment parameters, $\Gamma_i$ and $\beta_i$ include only
+derivatives of F$_{i,j}$ with respect to track parameters and G$_i$ includes
+derivatives of F$_{i,j}$ with respect to both alignment and track parameters.
+Then reference~\cite{matrix_inv} shows that Eq.~\ref{equ::matrixToInvert} can be
+inverted to give the alignment parameters as
+
+\begin{equation}
+\alpha_{\alpha} = \mathrm{C'}^{-1}\mathrm{b}',
+\end{equation}
+\noindent
+where
+\begin{equation}
+\mathrm{C}' = \sum_i \mathrm{C}_i - \sum_i \mathrm{G}_i \Gamma_i^{-1}
+\mathrm{G}_i^{\mathrm{T}},
+\end{equation}
+\noindent
+and
+\begin{equation}
+\mathrm{b}' = \sum_i \mathrm{b}_i - \sum_i \mathrm{G}_i \Gamma_i^{-1}\beta_i.
+\end{equation}
+
 
 \section{Results}
 
-%\begin{figure}[h]
-%  \centering
-%  \begin{subfigure}[t]{0.3\textwidth}
-%    \includegraphics[width=\textwidth]{PositionResidual}
-%    \caption{This plot tells if the detector is shifted in position or
-%      not.}
-%    \label{fig:PosRes}%
-%  \end{subfigure}
-%  \begin{subfigure}[t]{0.3\textwidth}
-%    \includegraphics[width=\textwidth]{AngleResidual}
-%    \caption{This plot is used to determine if the detector has the
-%      correct angle.}
-%    \label{fig:AngRes}%
-%  \end{subfigure}
-%  \begin{subfigure}[t]{0.3\textwidth}
-%    \includegraphics[width=\textwidth]{PitchResidual} 
-%    \caption{This plot is used to determine if the detector wires have
-%      the correct pitch.}
-%    \label{fig:PitchRes}%
-%  \end{subfigure}
-%  \caption{Different residual distributions for a plane of a straw
-%    detector at COMPASS.}
-%  \label{fig:AlignRes}
-%\end{figure}
+The spectrometer alignment is performed in iterative steps.  In each iteration
+of the alignment procedure, the matrix inversion, Eq~\ref{equ::matrixToInvert},
+is performed.  All alignment tracks reconstructed in the first alignment
+iterations are based off of two pivot detectors.  That is straight track
+parameters were determined from these two pivot detectors and all detectors were
+aligned relative to these pivot detectors.  In 2015 the pivot detectors were
+GM05 in LAS and GM08 in SAS.  After each iteration the detector parameters are
+updated to reduce the overall $\chi^2$ value.  Each new iteration is performed
+using the same data set and the alignment parameters are better described with
+each iteration.
 
-In each iteration of the alignment procedure the matrix inversion in
-equation~\ref{equ::aliMatrix} is performed.  All alignment tracks are
-reconstructed based off the starting positions of all the detectors
-and after each iteration the detector parameters are updated to reduce
-the overall $\chi^2$ value.  Several iterations of the alignment
-procedure are therefore required and are performed to ensure the
-procedure converges.\par
+The procedure used in 2015 was as follows:
+\begin{enumerate}
+\item Align with magnets off data.  In this stage all the spectrometer detectors
+  except the outer regions of the straw detectors are aligned.  This includes
+  all the detectors downstream of the polarized target but does not include the
+  beam telescope detectors.  Magnets off data is used as a first iteration and
+  therefore only alignment in the u-coordinate is performed.
+\item Align the same spectrometer detectors with magnets on data.  In these
+  iterations the detectors are aligned for u-coordinate, angle and pitch.
+\item Align the beam telescope detectors with magnets on data.  In these
+  iterations the previous detectors are all used as pivots.  The beam telescope
+  is therefore aligned relative to the spectrometer detectors.
+\item Finally the outer region of the straws are aligned with physics data.  For
+  this alignment, the spectrometer detectors are again used as the pivot.
+\end{enumerate}
 
-The final product of the alignment procedure is an alignment file, for
-each data period, that describes the location of every detector and is
-used in all the data analysis.  For quality assurance several residual
-distributions are plotted after each iteration for all the detectors.
-The overall residual distribution is used to tell if a detector is
-shifted, the change in residual as a function of the distance parallel
-to the wires tells if a detector is rotated and the change in residual
-as a function of the distance perpendicular to the wires tells if a
-detector has been assigned the correct wire pitch in the alignment
-file.  Examples of these residuals, to check are shown in
-figure~\ref{fig:AlignRes}.
+The quality of the alignment was monitored after each iteration and checked that
+the procedure was converging.  In practice four iterations of each of the
+previous steps were found to be sufficient for convergence.  To ensure the
+alignment data was from quality tracks, only tracks with momentum reconstructed
+and having reduced $\chi^2$ less than 30 were considered.
 
+As detectors all but the pixal detector planes only measure a coordinate in one
+direction, the detector positions are only updated in their measured direction.
+This can lead to detectors being well miss-aligned in the direction orthogonal
+to their measured coordinate however.  To account for this, detector planes were
+updated to match the u-position from a detector plane measuring a different
+coordinate in the same detector station.  For example DC04X planes had their
+y-coordinate determined from the DC04Y planes and DC04Y planes had their
+x-coordinate determined from DC04X planes.
 
+After each alignment iteration the quality of the alignment is accessed for each
+individual detectors and for the spectrometer as a whole.  The quality
+distributions to check after each iteration are described in the following list.
+
+\begin{enumerate}[label=\roman*)]
+\item The residual distribution, $\Delta$u, of each detector.  That is a
+  distribution of
+  \begin{equation}
+    \Delta \mathrm{u} =
+    \mathrm{u}_{\mathrm{track}} - \mathrm{u}_{\mathrm{detector}},
+  \end{equation}
+  where this distribution indicates if the detector is shifted along the
+  direction of its measured coordinate.  This distribution is expected to be a
+  Gaussian with a zero mean and an RMS value comparable to the position
+  resolution of the detector.  Any deviation from a zero mean indicates the
+  detector is shifted and a large RMS value indicates the detector is not
+  performing as expected.  It the detector is not performing as expected the
+  most obvious reason is the calibrations used for that detector are not
+  accurate.  Fig.~\ref{fig::PositionResidual} shows an example of this
+  distribution to monitor.
+  \begin{figure}[h!t]
+  \centering \includegraphics[width=0.5\textwidth, trim=4.5cm 9.5cm 4.5cm 9cm,
+    clip]{PositionResidual}
+  \caption{The residual distribution for a straw detector plane}
+  \label{fig::PositionResidual}
+  
+\end{figure}
+\item The change in the residual as a function of the detector's v-coordinate.
+  In a wire detector for example, this is the change in the residual as a
+  function of the distance along the wire.  This distribution,
+  Fig.~\ref{fig::AngleResidual}, is expected to be uniformly zero.  A slope in
+  this distribution indicates that the detector's angle is miss-aligned.
+  \begin{figure}[h!t]
+    \centering \includegraphics[width=0.5\textwidth, trim=4.5cm 9.5cm 4.5cm 9cm,
+      clip]{AngleResidual}
+    \caption{The residual as a function of the detector v-coordinate for a straw
+      detector}
+    \label{fig::AngleResidual}
+  \end{figure}
+  
+\item The change in the residual as a function of the detector's u-coordinate.
+  For a wire detector, this is the change in the residual as a function of the
+  distance perpendicular to the wire.  This distribution,
+  Fig.~\ref{fig::PitchResidual}, is also expected to be uniformly zero.  A slope
+  in this distribution indicates that the detector is miss-aligned in it's
+  z-coordinate or that its pitch is not described well.  Due to the fact that
+  the alignment data is with straight tracks, the alignment in the z-coordinate
+  has never been able to converge.  For this reason the pitch of the sensors on
+  the detector is changed to account for this effective shifts in z-position.
+  The sensor pitch however, is never expected to be larger than the true
+  detector pitch distance.  If the detector pitch is determined to be too large
+  after the alignment, this indicates a problem.
+  \begin{figure}[h!t]
+    \centering \includegraphics[width=0.5\textwidth, trim=4.5cm 9.5cm 4.5cm 9cm,
+      clip]{PitchResidual}
+    \caption{The residual as a function of the detector u-coordinate for a straw
+      detector}
+    \label{fig::PitchResidual}
+  \end{figure}
+
+\item The reduced $\chi^2$, Fig.~\ref{fig::trackChi2ndf}, distribution of the
+  reconstructed tracks.  With better alignment the track reduced $\chi^2$
+  distribution will approach a theoretical distribution of a reduced $\chi^2$
+  distribution.
+  \begin{figure}[h!t]
+    \centering \includegraphics[width=0.5\textwidth, trim=5cm 4.5cm 5cm 4.5cm,
+      clip]{trackChi2ndf}
+    \caption{The reduced $\chi^2$ from alignment data tracks}
+    \label{fig::trackChi2ndf}
+  \end{figure}
+  
+\item The global number of tracks reconstructed.  Better alignment
+  implies that more detectors can be associated with a track and therefore more
+  tracks will be reconstructed.
+\end{enumerate}
