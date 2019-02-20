@@ -1,14 +1,21 @@
 \begin{thebibliography}{1}
 
-\bibitem{matrix_inv}
-Volker Blobel and Claus Kleinwort.
-\newblock {A New method for the high precision alignment of track detectors}.
-\newblock In {\em {Advanced Statistical Techniques in Particle Physics.
-  Proceedings, Conference, Durham, UK, March 18-22, 2002}}, pages URL--STR(9),
-  2002.
+\bibitem{proposal}
+F~Gautheron et~al.
+\newblock {COMPASS-II Proposal}.
+\newblock 2010.
 
-\bibitem{compassAlignmentNote}
-H.~Pereira and J.~M.~Le Goff.
-\newblock {Compass Spectrometer Alignment}.
+\bibitem{quintans_rec_march12}
+C.~Quintans.
+\newblock Las reconstruction efficiency - dc05/st03.
+\newblock COMPASS DY, March, 12 2014.
+
+\bibitem{quintans_rec_march28}
+C.~Quintans.
+\newblock Las reconstruction efficiency without dc05/st03.
+\newblock COMPASS DY, March, 28 2014.
+
+\bibitem{garfield}
+R.~Veenhof.
 
 \end{thebibliography}
