@@ -24,45 +24,54 @@ period.  The goal of the alignment procedure is to have all four parameters
 aligned relative to a global reference frame in the COMPASS lab system.
 
 The alignment procedure works by minimizing the distance between all the
-detector plane hit positions and a track position.  This distance will from here
-on be referred to as the residual distance.  One residual is determined per
-track per detector associated with the track.  The task of simultaneously
-minimizing all the residuals is difficult because there are over 300
-detectors planes described in the detectors.dat.  To accomplish this
-minimization, a large amount of quality data is needed and several specific
-matrix manipulations are utilized in the minimization
-procedure.  This chapters gives an overview of the alignment
-procedure and includes some results from 2015.  For a more complete review see
+detector plane hit positions and a track position.  The detector hit position is
+the location the detector believes a particle passed through the plane and the
+track position is the location the reconstruction believes the particle passed
+through the detector plane.  The distance between this detector plane hit
+position and the track position will from here on be referred to as the residual
+distance.  One residual is determined per track per detector associated with the
+track.  The task of simultaneously minimizing all the residuals is difficult
+because there are over 300 detectors planes described in the detectors.dat.  To
+accomplish this minimization, a large amount of quality data is needed and
+several specific matrix manipulations are utilized in the minimization
+procedure.  This chapters gives an overview of the alignment procedure and
+includes some results from 2015.  For a more complete review see
 reference~\cite{compassAlignmentNote}.
 
 
 \section{Alignment Data}
 
-The alignment data comes from a dedicated low intensity muon beam.  The
+The alignment data is produced from a dedicated low intensity muon beam.  The
 intensity in 2015 was approximately 10$^5 \mu^-$/spill.  A muon beam is
 desirable for alignment data because the beam muons interact less and therefore
-allow the alignment procedure to assume straight tracks in the minimization
+allows the alignment procedure to assume straight tracks in the minimization
 problem.  The lower intensity is chosen because this allows for the assumption
 that only one track occurs per event and also the low intensity beam ensures a
 reduction of detector pile up effects.  Reduction in pile up effects, makes
 reconstruction in the central detector areas possible, and therefore the beam
-killers on DC00, DC01, DC04 and DC05 can be set to nominal voltage and as well
-all the GEM detectors can have their central high voltages turned up to an
-amplification voltage.
+killers on DC00, DC01, DC04 and DC05 can be set to an amplification voltage and
+as well all the GEM detectors can have their central high voltages turned up to
+an amplification voltage.
 
 A dedicated trigger system is setup during alignment runs to maximize the
 illumination of the tracking detectors.  The triggers used are a beam trigger,
-veto trigger and a halo trigger.  The alignment runs used in 2015 are listed in
-Table~\ref{tab::alignmentRuns}. \par
+veto trigger and a halo trigger.  While this trigger was good for illuminating
+the detectors, there were some timing shifts relative to the normal Drell-Yan
+trigger in 2015.  For this reason some of the drift chambers used a different
+calibration curve shifted in time a few nanoseconds.
 
 Two alignment runs of good quality are recorded either at the beginning, middle
 or end of a data taking period.  The first alignment run is with the
 spectrometer magnets off and the second is with the spectrometer magnets on.
 The spectrometer magnets off run is used as a first iteration for the alignment
 procedure to initialize the tracking detector positions.  The final alignment
-positions are then determined from the spectrometer magnets on data.
+positions are then determined from the spectrometer magnets on data.  
 
-One physics run was also used to align detectors far from the beam line.  Particularly, the outer region of the straw detectors did not receive enough statistics from the aligning runs.  Therefore the alignment of the outer straw regions was performed with normal physics data. 
+One physics run was also used to align detectors far from the beam line.
+Particularly, the outer region of the straw detectors did not receive enough
+statistics from the aligning runs.  Therefore the alignment of the outer straw
+regions was performed with normal physics data.  The runs used for alignment
+analysis in 2015 are listed in Table~\ref{tab::alignmentRuns}.
 
 In 2015 the alignment runs were performed when the target solenoid was
 polarizing the target.  The chicane magnets upstream of the target were
@@ -70,9 +79,9 @@ therefore turned off to ensure the beam momentum was traveling along the target
 axis.  Normally to achieve the reduced intensity, the T6 target is switch to an
 air target.  However in 2015, the T6 target head was not able to switch between
 the different target lengths and therefore the maximum 500~mm target head was
-always in use.  Therefore to achieve the desired intensity, a set of collimeters
-upstream of the target reduced the aperture of the beam line till the correct
-intensity was achieved.
+always in use.  Therefore to achieve the desired lower intensity, a set of
+collimeters upstream of the target reduced the aperture of the beam line till
+the correct intensity was achieved.
 
 \begin{table}[h!t]
   \centering
@@ -125,10 +134,17 @@ The starting point for alignment is a detectors.dat file with the tracking
 detector positions determined from a survey.  The surveys are performed with the
 spectrometer magnets off and the precision from a survey is around 1~mm.  Almost
 all of the detectors at COMPASS have a position resolution better than the
-survey precision.  Furthermore, several detectors near SM1 can shift in position
-due to the magnetic field and therefore need a position determination with the
-spectrometer magnets on.  For these reasons the alignment procedure is needed to
-improve on the survey precision and achieve the best possible track resolutions.
+survey precision however.  Furthermore, several detectors near SM1 can shift in
+position due to the fringe field and therefore need a position determination
+with the spectrometer magnets on.  For these reasons the alignment procedure is
+needed to improve on the survey precision and achieve the best possible track
+resolutions.
+
+Between periods the starting detectors.dat file was the final detectors.dat from
+the previous week.  Only for the first period were the survey positions used as
+a starting position.  However, as long as the detector was not intentionally
+moved, it is expected that the shifts in detector position only change due to
+temperature effects and therefore do not change much.
 
 \subsubsection{Alignment Parameters}
 
@@ -198,7 +214,7 @@ residual distance of each detector j for each track i it is associated with.
 
 The residual distance, F, depends on the track parameters and the detector
 parameters.  For magnets off data the tracks are not bent at all and are
-therefore straight tracks.  The track positions at position z are 
+therefore straight tracks through out the whole spectrometer.  The x and y coordinates at position z are
 
 \begin{align}
   \label{equ::trackPosOff}
@@ -237,9 +253,9 @@ position, however the change in pitch was moved to the track coordinates to make
 derivatives of F independent of u.  This has no effect on the minimization of F.
 
 In the case of magnets on data, the track positions need to have further
-modifications.  The magnetic field will bend the tracks so the track positions
-determined in Eq.~\ref{equ::trackPosOff} need to have further corrections.  The
-track positions with SM1 and SM2 on are
+modifications from Eq.~\ref{equ::Falign}.  The magnetic field will bend the
+tracks so the track positions determined in Eq.~\ref{equ::trackPosOff} need to
+have further corrections.  The track positions with SM1 and SM2 on are
 \begin{align}
   \label{equ::trackPosOn}
   \mathrm{x} &= \mathrm{x}^0 + \delta\mathrm{x} +
@@ -276,8 +292,8 @@ on is then
 \subsubsection{$\chi^2$ Minimization}
 The $\chi^2$ function, Eq.~\ref{equ::chi_align}, is analytically minimized.
 That is, the derivatives of Eq.~\ref{equ::chi_align} with respect to all the
-track and alignment parameters are set to zero and these parameters are solved
-for.  This can be written
+track and alignment parameters are set to zero and these alignment parameters
+are solved for.  This can be written
 
 \begin{equation}
   \label{equ::chi2analytic}
@@ -400,14 +416,14 @@ and
 
 The spectrometer alignment is performed in iterative steps.  In each iteration
 of the alignment procedure, the matrix inversion, Eq~\ref{equ::matrixToInvert},
-is performed.  All alignment tracks reconstructed in the first alignment
-iterations are based off of two pivot detectors.  That is straight track
-parameters were determined from these two pivot detectors and all detectors were
-aligned relative to these pivot detectors.  In 2015 the pivot detectors were
-GM05 in LAS and GM08 in SAS.  After each iteration the detector parameters are
-updated to reduce the overall $\chi^2$ value.  Each new iteration is performed
-using the same data set and the alignment parameters are better described with
-each iteration.
+is performed and the alignment parameters are updated.  All alignment tracks
+reconstructed in the first alignment iterations are based off of two pivot
+detectors.  That is straight track parameters were determined from these two
+pivot detectors and all detectors were aligned relative to these pivot
+detectors.  In 2015 the pivot detectors were GM05 in LAS and GM08 in SAS.  After
+each iteration the detector parameters are updated to reduce the overall
+$\chi^2$ value.  Each new iteration is performed using the same data set and the
+alignment parameters are better described with each iteration.
 
 The procedure used in 2015 was as follows:
 \begin{enumerate}
@@ -431,13 +447,13 @@ previous steps were found to be sufficient for convergence.  To ensure the
 alignment data was from quality tracks, only tracks with momentum reconstructed
 and having reduced $\chi^2$ less than 30 were considered.
 
-As detectors all but the pixal detector planes only measure a coordinate in one
-direction, the detector positions are only updated in their measured direction.
-This can lead to detectors being well miss-aligned in the direction orthogonal
-to their measured coordinate however.  To account for this, detector planes were
-updated to match the u-position from a detector plane measuring a different
-coordinate in the same detector station.  For example DC04X planes had their
-y-coordinate determined from the DC04Y planes and DC04Y planes had their
+As all detectors but the pixal detector planes measure a coordinate in one
+direction only, the detector positions are only updated in their measured
+direction.  This can lead to detectors being well miss-aligned in the direction
+orthogonal to their measured coordinate however.  To account for this, detector
+planes were updated to match the u-position from a detector plane measuring a
+different coordinate in the same detector station.  For example DC04X planes had
+their y-coordinate determined from the DC04Y planes and DC04Y planes had their
 x-coordinate determined from DC04X planes.
 
 After each alignment iteration the quality of the alignment is accessed for each
@@ -488,7 +504,7 @@ distributions to check after each iteration are described in the following list.
   z-coordinate or that its pitch is not described well.  Due to the fact that
   the alignment data is with straight tracks, the alignment in the z-coordinate
   has never been able to converge.  For this reason the pitch of the sensors on
-  the detector is changed to account for this effective shifts in z-position.
+  the detector is changed to account for this effective shift in z-position.
   The sensor pitch however, is never expected to be larger than the true
   detector pitch distance.  If the detector pitch is determined to be too large
   after the alignment, this indicates a problem.

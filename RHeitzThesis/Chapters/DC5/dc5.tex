@@ -26,10 +26,10 @@ this corresponding COMPASS Drell-Yan trigger showed that the global
 reconstruction efficiency drops below 30\% without DC5 and half of another large
 area tracker in LAS~\cite{quintans_rec_march12}.  That is to say the
 spectrometer reconstruction efficiency is very poor without DC05 and half of an
-unstable detector.  Fig.~\ref{fig::specRecEff} shows the nominal global
-reconstruction efficiency and the worst case scenario for Drell-Yan
-measurements.  For these reasons it was very important to have DC05 installed
-and working reliably.
+unstable detector.  Fig.~\ref{fig::standardRec} and Fig.~\ref{fig::withLARec}
+show the nominal global reconstruction efficiency and the worst case scenario
+for Drell-Yan measurements respectively.  For these reasons it was very
+important to have DC05 installed and working reliably.
 
 \begin{figure}[h!t]
   \centering
@@ -48,36 +48,119 @@ and working reliably.
       from~\cite{quintans_rec_march28}}
     \label{fig::withLARec}
   \end{subfigure}
-  \label{fig::specRecEff}
 \end{figure}
 
+\section{Operating Principle}
+Drift chambers are tracking detectors which can detect the location of where a
+high energy charge particle passes through the chamber.  A drift chamber is
+built up of an array of drift cells where at the center of each drift cell is an
+anode signal wire (also called a sense wire).  Surrounding the signal wire are
+cathodes which close off the drift cell.  The cathodes are set at a higher high
+voltage than the anode and therefore there are electric field lines from the
+cathode to the anode.  Fig.~\ref{fig::dcCellFieldLines} shows an example of a
+drift chamber cell and the equipotential voltages within the cell.  In DC05 the
+there are two cathode planes on top and bottom of the drift cell and a cathode
+field wire adjacent to either side of the sense wire.
+
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.7\textwidth, trim=4.5cm 8cm 4.5cm 8cm, clip]
+                  {dcCellFieldLines}
+  \caption{A drift cell and the equal voltages for a drift cell configuration
+    similar to DC05.  This image is taken from~\cite{ran_bi}}
+  \label{fig::dcCellFieldLines}
+\end{figure}
+
+Between the anodes and cathodes of a drift cell is a gas mixture.  The high
+energy charged particles which enter the chamber ionize this gas mixture.  For
+each track passing through the chamber, multiple primary ionization electron are
+produced and these electrons drift to the signal wire.  The number of primary
+ionization produced however, is not enough to create a detectable signal on the
+sense wires.  For this reason the electric field increases as the inverse of the
+distance from the sense wire which therefore allows the primary ionization
+electrons to gain enough energy to further ionize the gas and ultimately produce
+an electron avalanche near the sense wire.  The signal created from this
+electron avalanche on the other hand, is strong enough to detect.  A typical
+detector is built so that an avalanche can occur before the sense wire but not
+before a cathode wire.  This is accomplished by constructing the chamber with
+sense wires having a much smaller diameter than the field wires, meaning the
+electric field near the sense wire can be much larger than the electric field
+near the field wire.
+
+An important factor for a drift chamber is that the location of the primary
+ionized electrons can be determined within a drift cell.  This therefore allows
+for a better position determination of the passing track.  Each sense wire
+records the time a signal was detected from a track.  For the same track, the
+trigger records the time the track enter the drift chamber and therefore the
+difference in time between the sense wire time and the trigger time is the drift
+time.  For a drift chamber it is possible to produce a calibration curve which
+determines the position within a drift cell for a given drift time.  This
+calibration curve is so-called the RT relation.
+
+Even with a properly calibrated RT relation the track location is ambiguous from
+only one drift cell.  This is because a single drift cell can only determine a
+track location as a distance from the sense wire.  Therefore it is ambiguous
+where along the sense wire the track passed and also if the track passed to the
+left or right of the sense wire.  For this reason drift chambers are built with
+several planes in series.  A drift cell with the same orientation but shifted
+with respect to the first drift cell is used to distinguish left and right
+ambiguity and another cell with an orientation at an angle with respect to the
+first is used to determined where along the wire the track passed.
+
+As an example of this gas mixture, DC05 is filled with a mixture 45\% argon,
+45\% ethane and 10\% Cf$_4$.  The noble gas, argon, is the gas that is ionized
+and amplified, while ethane is used as a quencher and CF$_4$ is used to reduce
+aging effects.  The quencher, ethane, absorbs photons from the electron
+avalanche which could pair produce and therefore make more electrons which would
+distort the electric field in a drift cell.  The quencher therefore is used to
+reduce the avalanche and ensure the drift cell electric field lines are closer
+to nominal.
+
 \section{Preparation for DC05}
-To prepare for constructing DC05, the detector response was simulated using
-Garfield~\cite{garfield}.
 
-In preparation for the construction of DC05 the detector was simulated and two
-prototypes were built.  The simulations were performed using
-Garfield~\cite{garfield} and the purpose of these simulations was to determine
-an operating threshold capable of achieving a 200 $\mu$m position resolution.
-With this position resolution goal in mind, Garfield simulated the electric
-potential field in each drift cell and as well the arrival times for ionized
-electrons as a function of the number of primary ionized electrons for
-detection.  The variance of the electron arrival times was then used to
-determine the position resolution as a function of the number of primary
-electrons detected.  The results of the simulation are shown in figure
-\ref{fig:PosRes}.  The conclusion from the simulations was that the threshold
-should be tuned to detect the amplification of the 5th primary electron
-corresponding to approximately a 4 fC threshold.  This was accordingly one of
-the main design goals for the front-end electronics. \par
+One of the first steps in preparation for constructing DC05 was to simulate the
+detector response using Garfield~\cite{garfield}.  The purpose of these
+simulations was to determine an operating threshold capable of achieving a
+200~$\mu$m position resolution.  With this position resolution goal in mind,
+Garfield simulated the electric potential field in each drift cell, as shown in
+Fig.~\ref{fig::dcCellFieldLines}, and was able to determine the arrival times
+for ionized electrons as a function of the number of primary ionized electrons
+for detection.  This is important because the timing distribution for electron
+arrival times gets wider and therefore worsens the position knowledge as the
+number of primary electrons required for a signal increases.  The variance of
+the electron arrival times was then used to determine the position resolution as
+a function of the number of primary electrons detected.  As is shown in
+Fig~\ref{fig::PosResVnumElec}, the threshold should be tuned to detect the
+amplification of the fifth primary electron.  As is shown in
+Fig.~\ref{fig::currentVtimeFifthElec} based on the simulation of the integrated
+induced current versus the drift arrival time, the threshold for detecting the
+signal should be no greater than 4~fC.  This threshold charge is determined by
+multiplying the induced current by the arrival time.  The threshold was
+accordingly one of the design goals for the front-end electronics.
 
-%\begin{figure}
-%  \centering
-%  \includegraphics[width=0.5\textwidth]{GarPosResolution.png}
-%  \caption{}{Primary electron number detected versus the position resolution.
-%    The detector should be sensitive to detect the fifth primary electron to
-%    achieve the desired position resolution. }
-%  \label{fig:PosRes}%
-%\end{figure}
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.55\textwidth, trim=3cm 8cm 3cm 8cm, clip]
+                  {PosResVnumElec}
+  \caption{A simulation of the position resolution as a function of the number
+    of primary electrons needed to record a signal.  This image is taken
+    from~\cite{ran_bi}}
+  \label{fig::PosResVnumElec}
+\end{figure}
+
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.55\textwidth, trim=3cm 6cm 3cm 6cm, clip]
+                  {currentVtimeFifthElec}
+  \caption{Garfield simulation the induced signal current versus the arrival
+    time.  The green line corresponds to the arrival time of the fifth election.
+    This image is taken from~\cite{ran_bi}}
+  \label{fig::currentVtimeFifthElec}
+\end{figure}
+
+In preparation for construction, two prototypes were built to gain hands on
+building expertise.
+
 
 In addition two prototypes were constructed for training and testing.  To start
 a clean room was built at the Nuclear Physics Lab (NPL) at UIUC and this is
