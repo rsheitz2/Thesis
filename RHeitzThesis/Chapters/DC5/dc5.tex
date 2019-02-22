@@ -42,7 +42,7 @@ important to have DC05 installed and working reliably.
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
-    \includegraphics[width=\linewidth, trim=5cm 8cm 5cm 8cm, clip]{withLARec}
+    \includegraphics[width=\linewidth, trim=5cm 8cm 5cm 7.5cm, clip]{withLARec}
     \caption{Global reconstruction efficiency without DC05 and half of another
       LAS large area tracker.  This image was taken
       from~\cite{quintans_rec_march28}}
@@ -64,7 +64,7 @@ field wire adjacent to either side of the sense wire.
 
 \begin{figure}[h!t]
   \centering
-  \includegraphics[width=0.7\textwidth, trim=4.5cm 8cm 4.5cm 8cm, clip]
+  \includegraphics[width=0.6\textwidth, trim=4.5cm 8cm 4.5cm 8cm, clip]
                   {dcCellFieldLines}
   \caption{A drift cell and the equal voltages for a drift cell configuration
     similar to DC05.  This image is taken from~\cite{ran_bi}}
@@ -107,14 +107,6 @@ with respect to the first drift cell is used to distinguish left and right
 ambiguity and another cell with an orientation at an angle with respect to the
 first is used to determined where along the wire the track passed.
 
-As an example of this gas mixture, DC05 is filled with a mixture 45\% argon,
-45\% ethane and 10\% Cf$_4$.  The noble gas, argon, is the gas that is ionized
-and amplified, while ethane is used as a quencher and CF$_4$ is used to reduce
-aging effects.  The quencher, ethane, absorbs photons from the electron
-avalanche which could pair produce and therefore make more electrons which would
-distort the electric field in a drift cell.  The quencher therefore is used to
-reduce the avalanche and ensure the drift cell electric field lines are closer
-to nominal.
 
 \section{Preparation for DC05}
 
@@ -158,130 +150,221 @@ accordingly one of the design goals for the front-end electronics.
   \label{fig::currentVtimeFifthElec}
 \end{figure}
 
-In preparation for construction, two prototypes were built to gain hands on
-building expertise.
-
-
-In addition two prototypes were constructed for training and testing.  To start
-a clean room was built at the Nuclear Physics Lab (NPL) at UIUC and this is
-where the two prototypes were built as well as where much of the actual detector
-was built.  The first prototype was named prototype A and consisted of 1 plane,
-eight sense wires, 9 field wires and was built to a length of 50 cm.  Protoype B
-was the second detector constructed and consisted of two planes with 16 sense
-wires per plane and a length of 163 cm.  Prototype A had the opportunity to be
+Two prototypes were built to gain hands on building expertise in preparation for
+construction.  Both of these prototypes were constructed in a clean room in the
+Nuclear Physics Lab (NPL) at UIUC.  Much of DC05 was built at the NPL as well.
+The two prototypes were called prototype A and prototype B.  Prototype A,
+Fig.~\ref{fig::protoTypeA}, consisted of 1 plane, eight sense wires, 9 field
+wires and was 50~cm in length.  Prototype B on the other hand consisted of two
+planes with 16 sense wires per plane and a length of 163~cm.  Prototype A was
 tested with beam at DESY and was shown to achieve 200 $\mu$m
 resolution~\cite{choi}.  Both of these prototypes were built using similar
 materials and construction techniques as the full size detector.  In particular
 these two prototypes were the needed experience for working with sense wires
-having a diameter of 20 $\mu$m.
+having a diameter of 20~$\mu$m.
+
+\begin{figure}[h!t]
+  \centering \includegraphics[width=0.6\textwidth, trim=2.5cm 8cm 2.5cm 8cm,
+    clip]{protoTypeA}
+  \caption{Inside view of prototype A.  This image was taken from~\cite{choi} }
+  \label{fig::protoTypeA}
+\end{figure}
+
+
 \section{Design}
 
-%\begin{figure}
-%  \centeringq \includegraphics[width=0.5\textwidth]{DC05_full.png}
-%  \caption{}{The completed DC05 being craned into the COMPASS large area
-%    spectrometer.}
-%  \label{fig:DC05}%
-%\end{figure}
+\begin{figure}
+  \centering \includegraphics[width=0.7\textwidth, trim=2.5cm 8cm 2.5cm 8cm,
+    clip]{DC05_full}
+  \caption{}{The completed DC05 being craned into the COMPASS large area
+    spectrometer.}
+  \label{fig:DC05}%
+\end{figure}
 
 The design of DC05, figure~\ref{fig:DC05}, was based off a previous large-area
 tracker at COMPASS.  DC05 has an active area of 249x209cm$^2$ and consists of
-eight planes with a total of 2304 sense wires and 2312 field wires.  The eight
-planes of DC05 correspond to four views, where each view measures a coordinate.
-The coordinates measured from DC05 are the horizontal, vertical and $\pm$
-10$^{\circ}$ with respect to the horizontal.  The horizontal and vertical
-coordinates consist of 2x256 sense wires and the offset to horizontal
-coordinates each consist of 2x320 wires for increased acceptance.  Each plane
-was made from a G-10 frame and five frames stacked together constituting a view.
+eight detector planes.  The eight planes of DC05 correspond to four views, where
+each view measures a coordinate.  The coordinates measured from DC05 are the
+horizontal, vertical and $\pm$ 10$^{\circ}$ with respect to the horizontal.  The
+horizontal and vertical coordinates consist of 2x256 sense wires and the offset
+to horizontal coordinates each consist of 2x320 wires for increased acceptance.
+In total DC05 includes 2304 sense wires and 2312 field wires.  Each plane was
+made from a G-10 frame and five frames stacked together constituting a view.
 The whole detector was closed in with two precision, stainless steel stiffening
-frames, which were assembled with aluminized mylar as a gas window. \par The
-views of DC05 consisted of three cathode layers and two anode layers.  The
-cathodes layers were made from carbon paint sprayed on a 25 $\mu$m thin mylar
+frames, which were assembled with aluminized mylar as a gas window.
+
+The views of DC05 consist of three cathode layers and two anode layers.  The
+cathodes layers were made from carbon paint sprayed on a 25~$\mu$m thin mylar
 layer.  There were two single-layer cathodes layers and one layer with carbon on
-two sides within each view.  Additionally a 30 cm circular so-called beam killer
+two sides within each view.  Additionally a 30~cm circular so-called beam killer
 was added to the cathodes to control the efficiency in the central part of the
-detector.  The cathodes were nominally set to -1675 V and the beam killer
-voltage was set to -900 V for zero efficiency in the high flux central region.
+detector.  The cathodes were nominally set to -1675~V and the beam killer
+voltage was set to -900~V for zero efficiency in the high flux central region.
 The voltage on the beam killer can however be raised above the amplification
 threshold if the beam flux is reduced and it is desirable to study the central
-region.  \par The anode layers were made from alternating 20 $\mu$m gold-plated
-tungsten sense wires and 100 $\mu$m gold-plated copper beryllium field wires, as
-shown in figure~\ref{fig:driftcell}.  The field wires were also placed at -1675
-V and the sense wires were at 0 V.  The gas used was made of: 45\% argon, for
-amplification; 45\% ethane, for quenching; and 10\% CF$_4$, to reduce aging
-effects.  All these properties corresponded to a gain of approximately 10$^4$.
+region.
 
-%\begin{figure}
-%  \centering
-%  \includegraphics[width=0.5\textwidth]{DriftCell.png}
-%  \caption{}{The drift cell dimensions of one view in DC05.}
-%  \label{fig:driftcell}%
-%\end{figure}
+The anode layers were made from alternating 20~$\mu$m gold-plated tungsten sense
+wires and 100~$\mu$m gold-plated copper beryllium field wires, as depicted in
+figure~\ref{fig:driftcell}.  The field wires were also placed at -1675~V and the
+sense wires were at 0~V.  The nominal gain of DC05 is approximately 10$^4$.
+
+\begin{figure}
+  \centering \includegraphics[width=0.5\textwidth, trim=2.5cm 10cm 3cm 10cm,
+    clip]{DriftCell}
+  \caption{}{The drift cell dimensions of one plane in DC05}
+  \label{fig:driftcell}%
+\end{figure}
+
+During data taking, DC05 is filled with a mixture 45\% argon, 45\% ethane and
+10\% Cf$_4$.  The noble gas, argon, is the gas that is ionized and amplified,
+while ethane is used as a quencher and CF$_4$ is used to reduce aging effects.
+The quencher, ethane, absorbs photons from the electron avalanche which could
+pair produce and therefore make more electrons which would distort the electric
+field in a drift cell.  The quencher therefore is used to reduce the avalanche
+and ensure the drift cell electric field lines are closer to nominal.  
+
 
 \section{Construction}
 The construction of DC05 was carried out as precisely as possible starting with
 the precision from the stainless steel stiffening frames.  The stiffening frames
 where cut with the highest relative accuracy by cutting the two frames on top of
-each other to a precision of 50 $\mu$m everywhere in their plane.  The precision
-from the stiffening frames was then transferred to the anode and cathode frames
+each other to a precision of 50~$\mu$m everywhere in their plane.  The precision
+from the stiffening frames was transferred to the anode and cathode frames
 through 40 positioning pins.  The G-10 frames were milled from strips at the NPL
 using a precision milling machine.  Each four strips were then epoxied together
-on top of one of the stiffening frames.  \par The cathodes had mylar stretched
-and epoxied to them using a custom built stretching machine at CERN.  An
-external company then spray painted carbon on them to make a resistance of
-approximately 30 $k\Omega /m$.  All the sense and field wires were hand soldered
-and sequently verified for position using a microscope.  It was estimated the
+on top of one of the stiffening frames.
+
+The cathodes had mylar stretched and epoxied to them using a custom built
+stretching machine at CERN.  Fig.~\ref{fig::mylarStretching} shows the process
+of stretching mylar on a cathode.  An external company then spray painted carbon
+on them to make a resistance of approximately 30~k$\Omega /m$.  All the sense
+and field wires were hand soldered as shown in Fig.~\ref{fig::wireSoldering},
+and sequentially verified for position using a microscope.  It was estimated the
 position placement of each sense wire was at least as good as half the diameter
-of a sense wire or precise to 10 $\mu$m.  The final assemble was done at CERN.
-This consisted of stacking each of the 21 G-10 frames on top of the stiffening
-frame and attaching copper electronic shielding all along the exterior of the
-detector to reduce electronic noise. \par There were various tests performed
-throughout the construction process for quality assurance before the final
-installation.  The starting tests were measuring thickness and position of
-important cuts on the G-10 strips using a micrometer.  G-10 strip thicknesses
-were iteratively milled until they reached better than 50 $\mu$m in thickness
-accuracy.  The thickness deviation of the whole detector including the stainless
-steel stiffening frames was better than 750 $\mu$m.  The mechanical tension of
-the sense wires was tested for stability by ensuring the voltage difference
-between sense and field wires could reach as high as 2400 V in air.  In addition
-the wire tension was cross-checked by determining the resonance frequency with
-which the wires vibrated.  The resonance frequency was determined by placing the
-wires in a constant magnetic field and varying a sinusoidal current across each
-wire till the wires vibrated maximally.  The leakage current between sense and
-field wires was verified to be less than 100 nA at nominal voltage in air.
-Finally amplification tests were first performed using a strontium-90 source and
-verifying the counts per electronics board increased below the radioactive
-source.
+of a sense wire or precise to 10~$\mu$m.  
+
+\begin{figure}[h!t]
+  \centering \includegraphics[width=0.6\textwidth, trim=5cm 12cm 5cm 10cm,
+    clip]{mylarStretching}
+  \caption{Stretching mylar on a cathode plane at CERN}
+  \label{fig::mylarStretching}
+\end{figure}
+
+\begin{figure}[h!t]
+  \centering \includegraphics[width=0.6\textwidth, trim=5cm 10cm 5cm 10cm,
+    clip]{wireSoldering}
+  \caption{Hand soldering DC05 wires in the clean room at the NPL}
+  \label{fig::wireSoldering}
+\end{figure}
+
+The final assemble was done at CERN.  This consisted of stacking each of the 21
+G-10 frames on top of the stiffening frame, Fig.~\ref{fig::cernFinalAssembly},
+and attaching copper electronic shielding all along the exterior of the detector
+to reduce electronic noise.
+
+\begin{figure}[h!t]
+  \centering \includegraphics[width=0.6\textwidth, trim=5cm 10cm 5cm 10cm,
+    clip]{cernFinalAssembly}
+  \caption{The process of stacking the G-10 frames at CERN}
+  \label{fig::cernFinalAssembly}
+\end{figure}
+
+
+There were various tests performed throughout the construction process for
+quality assurance before the final installation.  The starting tests were
+measuring thickness and position of important cuts on the G-10 strips using a
+micrometer.  G-10 strip thicknesses were iteratively milled until they reached
+better than 50~$\mu$m in thickness accuracy.  The thickness deviation of the
+whole detector including the stainless steel stiffening frames was better than
+750~$\mu$m.  The mechanical tension of the sense wires was tested for stability
+by ensuring the voltage difference between sense and field wires could reach as
+high as 2400~V in air.  In addition the wire tension was cross-checked by
+determining the resonance frequency with which the wires vibrated.  The
+resonance frequency was determined by placing the wires in a constant magnetic
+field and varying a sinusoidal current across each wire till the wires vibrated
+maximally.  The leakage current between sense and field wires was verified to be
+less than 100~nA at nominal voltage in air.  Finally amplification tests were
+first performed using a strontium-90 source and verifying the counts per
+electronics board increased below the radioactive source.
 
 \section{2015 Performance}
 The overall performance of DC05 was checked using the COMPASS reconstruction
 software CORAL.  In all cases the view of study was excluded from the
 reconstruction algorithm and the individual hit information for the view of
 interest was saved to get an unbiased measurement.  The efficiency was found to
-be between 85\% and 90\% depending on the plane.  Using the so called RT
-relation, figure~\ref{fig:RT}, the location of a track within a drift cell can
-be most accurately determined.  This RT relation needs to be tuned as a
-calibration to minimize the track residuals.  The RT relation also varies
-depending on the beam type, intensity and the trigger type.  \par The double
-layer residual was used to determine the position resolution.  The double layer
-residual is the radial difference between the expected x/y positions of the two
-planes in a view.  This double layer residual is independent of the track
-resolution and only depends on the variance addition of the two individual
-planes.  For the 2015 Drell-Yan physics taking the resolution achieved was
-approximately 430 $\mu$m. This was determined by fitting the double residual
+be between 85\% and 90\% depending on the plane.  Fig.~\ref{fig::DC05Yeff} shows
+the efficiency on one plane of DC05.  Using the so called RT relation,
+figure~\ref{fig:RT_DC05Y2}, the location of a track within a drift cell can be
+most accurately determined.  This RT relation is tuned as a calibration to
+minimize the track residuals.  The RT relation also varies depending on the beam
+type, intensity and the trigger type.
+
+\begin{figure}[h!t]
+  \centering \includegraphics[width=0.6\textwidth, trim=2cm 9cm 2cm 7cm,
+    clip]{DC05Yeff}
+  \caption{}{Two dimensional efficiency on the DC05Y1 plane}
+  \label{fig::DC05Yeff}%
+\end{figure}
+
+\begin{figure}[h!t]
+  \centering \includegraphics[width=0.6\textwidth, trim=3cm 9cm 3cm 8cm,
+    clip]{RT_DC05Y2}
+  \caption{}{Time versus position relation, or RT relation, after calibrating.
+    The red fit shows the calibration determined.}
+  \label{fig:RT_DC05Y2}%
+\end{figure}
+
+The double layer residual was used to determine the position resolution.  The
+double layer residual is the radial difference between the expected x/y
+positions of the two planes in a view.  The double residual is defined as
+
+\begin{equation}
+  \label{equ::doubleRes}
+  \Delta \mathrm{u}_{\mathrm{double \; residual}} = (\mathrm{u}_{\mathrm{plane
+      \; 1}} - \mathrm{u}_{\mathrm{track}}) - (\mathrm{u}_{\mathrm{plane \; 2}}
+  - \mathrm{u}_{\mathrm{track}}) = \mathrm{u}_{\mathrm{plane \; 1}} -
+  \mathrm{u}_{\mathrm{plane \; 2}},
+\end{equation}
+\noindent
+where u$_{\mathrm{plane \; 1(2)}}$ is the hit position on plane 1(2) and is
+u$_{\mathrm{track}}$.  As can be seen in Eq.~\ref{equ::doubleRes}, the double
+layer residual is independent of the track resolution and only depends on the
+difference between detector hit positions.  As the detector was construction
+with a known difference between these two cell hit positions, the double
+residual distribution is expected to be a constant value.  Therefore the
+variance of the double residual distribution is the addition of the variance of
+the two individual planes.  That is
+
+\begin{equation}
+\sigma_{\mathrm{double \; residual}}^2 = \sigma_{\mathrm{plane \; 1}}^2 +
+\sigma_{\mathrm{plane \; 2}}^2 = 2*\sigma_{\mathrm{plane \; 1}}^2,
+\end{equation}
+
+\noindent
+where $\sigma_{\mathrm{plane \; 1(2}}$ is the position resolution of plane 1(2).
+It is assumed that the position resolution is the same for each plane and
+therefore
+
+\begin{equation}
+\sigma_{\mathrm{plane \; 1}} = \sigma_{\mathrm{plane \; 2}} =
+\frac{\sigma_{\mathrm{double \; residual}}}{\sqrt{2}}
+\end{equation}
+
+\noindent
+For the 2015 Drell-Yan physics taking the resolution achieved was
+approximately 430~$\mu$m. This was determined by fitting the double residual
 with a Gaussian to extract the variance and assumed equal variance per plane in
-a view.
+a view as is shown in Fig.~\ref{fig::DC05doubleRes}.
+.
 
-%\begin{figure}
-%  \centering \includegraphics[width=0.5\textwidth]{RT_DC05Y2.png}
-%  \caption{}{Time versus position relation, or RT relation, after calibrating.
-%    The red fit shows the calibration determined.}
-%  \label{fig:RT}%
-%\end{figure}
+\begin{figure}[h!t]
+  \centering \includegraphics[width=0.6\textwidth, trim=2cm 9cm 2cm 8cm,
+    clip]{DC05doubleRes}
+  \caption{The double residual distribution for the V plane together with a
+    Gaussian fit in red to determine the variance of the distribution}
+  \label{fig::DC05doubleRes}
+\end{figure}
 
-\section{Conclusion}
-The large-area DC05 was constructed at Illinois, Old Dominion University and
-CERN.  It was built to upgrade the spectrometer performance at COMPASS and over
-its two year construction period, involved the colaboration from students,
-technicians and professors from five continents.  DC05 is a stable detector that
-has been in use for two years and will continue to collect useful data for
-future physics data taking at COMPASS.
+
+
