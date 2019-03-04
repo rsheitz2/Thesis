@@ -4,32 +4,35 @@
 \else \graphicspath{{Chapters/DC5/Figs/Vector/}{Chapters/DC5/Figs/}}
 \fi
 
-Drift Chamber 05 (DC05) is a large-area planar drift chamber 05.  It was
+Drift Chamber 05 (DC05) is a large-area planar drift chamber.  It was
 constructed in 2014 and 2015 at the University of Illinois and Old Dominion
 University and was then shipped to CERN for final assemble.  DC5 was installed
 to the large angle spectrometer of COMPASS during the spring of 2015.
 
-The DC5 detector was an import tracking detector, successfully collected data
-from 2015 through 2018 and will continue to be an important component for track
-reconstruction in future measurements.  The author of this thesis helped with
-the construction at Illinois and the assembly at CERN and as well for performing
-calibrations and maintaining DC5.
+The DC5 detector is an import tracking detector, which successfully collected
+data from 2015 through 2018 and will continue to be an important component for
+track reconstruction in future measurements.  The author of this thesis helped
+with the construction at Illinois and the assembly at CERN and as well for
+performing calibrations and maintaining DC5.
+
 
 \section{Motivation for Drift Chamber 05}
+
 Simulations of the COMPASS spectrometer for Drell-Yan measurements determined
 that 96\% of all events include a track in the large angle
 spectrometer~\cite{proposal}.  For this reason the Drell-Yan trigger system was
-setup only to record events with at least one track in LAS.  As DC5 was
+designed only to record events with at least one track in LAS.  As DC5 was
 installed in LAS it is therefore very important in track reconstruction for
 Drell-Yan measurements.  Additional simulations with the Drell-Yan setup and
 this corresponding COMPASS Drell-Yan trigger showed that the global
 reconstruction efficiency drops below 30\% without DC5 and half of another large
 area tracker in LAS~\cite{quintans_rec_march12}.  That is to say the
-spectrometer reconstruction efficiency is very poor without DC05 and half of an
-unstable detector.  Fig.~\ref{fig::standardRec} and Fig.~\ref{fig::withLARec}
-show the nominal global reconstruction efficiency and the worst case scenario
-for Drell-Yan measurements respectively.  For these reasons it was very
-important to have DC05 installed and working reliably.
+spectrometer reconstruction efficiency is very poor without DC05 and half of
+another LAS large area trackers which has unstable performance.
+Fig.~\ref{fig::standardRec} and Fig.~\ref{fig::withLARec} show the nominal
+global reconstruction efficiency and the worst case scenario for Drell-Yan
+measurements respectively.  For these reasons it was very important to have DC05
+installed and working reliably.
 
 \begin{figure}[h!t]
   \centering
@@ -50,9 +53,11 @@ important to have DC05 installed and working reliably.
   \end{subfigure}
 \end{figure}
 
+
 \section{Operating Principle}
+
 Drift chambers are tracking detectors which can detect the location of where a
-high energy charge particle passes through the chamber.  A drift chamber is
+high energy charge particle passes through them.  A drift chamber is
 built up of an array of drift cells where at the center of each drift cell is an
 anode signal wire (also called a sense wire).  Surrounding the signal wire are
 cathodes which close off the drift cell.  The cathodes are set at a higher high
@@ -66,21 +71,21 @@ field wire adjacent to either side of the sense wire.
   \centering
   \includegraphics[width=0.6\textwidth, trim=4.5cm 8cm 4.5cm 8cm, clip]
                   {dcCellFieldLines}
-  \caption{A drift cell and the equal voltages for a drift cell configuration
-    similar to DC05.  This image is taken from~\cite{ran_bi}}
+  \caption{View down the axis of a drift cell and the equal voltages for this
+    drift cell configuration.  This image is taken from~\cite{ran_bi}}
   \label{fig::dcCellFieldLines}
 \end{figure}
 
 Between the anodes and cathodes of a drift cell is a gas mixture.  The high
 energy charged particles which enter the chamber ionize this gas mixture.  For
-each track passing through the chamber, multiple primary ionization electron are
-produced and these electrons drift to the signal wire.  The number of primary
-ionization produced however, is not enough to create a detectable signal on the
-sense wires.  For this reason the electric field increases as the inverse of the
-distance from the sense wire which therefore allows the primary ionization
-electrons to gain enough energy to further ionize the gas and ultimately produce
-an electron avalanche near the sense wire.  The signal created from this
-electron avalanche on the other hand, is strong enough to detect.  A typical
+each track passing through the chamber, multiple primary ionization electrons
+are produced and these electrons drift to the signal wire.  The number of
+primary ionization electrons produced however, is not enough to create a
+detectable signal on the sense wires.  For this reason the electric field
+increases as the inverse of the distance from the sense wire which allows the
+primary ionization electrons to gain enough energy to further ionize the gas and
+ultimately produce an electron avalanche near the sense wire.  The signal
+created from this electron avalanche is strong enough to detect.  A typical
 detector is built so that an avalanche can occur before the sense wire but not
 before a cathode wire.  This is accomplished by constructing the chamber with
 sense wires having a much smaller diameter than the field wires, meaning the
@@ -88,14 +93,15 @@ electric field near the sense wire can be much larger than the electric field
 near the field wire.
 
 An important factor for a drift chamber is that the location of the primary
-ionized electrons can be determined within a drift cell.  This therefore allows
-for a better position determination of the passing track.  Each sense wire
-records the time a signal was detected from a track.  For the same track, the
-trigger records the time the track enter the drift chamber and therefore the
-difference in time between the sense wire time and the trigger time is the drift
-time.  For a drift chamber it is possible to produce a calibration curve which
-determines the position within a drift cell for a given drift time.  This
-calibration curve is so-called the RT relation.
+ionized electrons can be determined within a drift cell.  This knowledge allows
+for a better position determination of the passing track as compared to a
+multi-wire proportional chamber.  Each sense wire records the time a signal was
+detected from a track.  For the same track, the trigger records the time the
+track enter the drift chamber and therefore the difference in time between the
+sense wire time and the trigger time is the drift time.  For a drift chamber it
+is possible to produce a calibration curve which determines the position within
+a drift cell for a given drift time.  This calibration curve is so-called the RT
+relation.
 
 Even with a properly calibrated RT relation the track location is ambiguous from
 only one drift cell.  This is because a single drift cell can only determine a
@@ -121,14 +127,14 @@ for detection.  This is important because the timing distribution for electron
 arrival times gets wider and therefore worsens the position knowledge as the
 number of primary electrons required for a signal increases.  The variance of
 the electron arrival times was then used to determine the position resolution as
-a function of the number of primary electrons detected.  As is shown in
-Fig~\ref{fig::PosResVnumElec}, the threshold should be tuned to detect the
-amplification of the fifth primary electron.  As is shown in
+a function of the number of primary electrons needed for detection.  As is shown
+in Fig~\ref{fig::PosResVnumElec}, the threshold should be tuned to detect the
+amplification of the fifth primary electron~\cite{ran_bi}.  As is shown in
 Fig.~\ref{fig::currentVtimeFifthElec} based on the simulation of the integrated
 induced current versus the drift arrival time, the threshold for detecting the
-signal should be no greater than 4~fC.  This threshold charge is determined by
-multiplying the induced current by the arrival time.  The threshold was
-accordingly one of the design goals for the front-end electronics.
+signal should be no greater than 4~fC~\cite{ran_bi}.  This threshold charge is
+determined by multiplying the induced current by the arrival time.  The
+threshold was accordingly one of the design goals for the front-end electronics.
 
 \begin{figure}[h!t]
   \centering
@@ -144,7 +150,7 @@ accordingly one of the design goals for the front-end electronics.
   \centering
   \includegraphics[width=0.55\textwidth, trim=3cm 6cm 3cm 6cm, clip]
                   {currentVtimeFifthElec}
-  \caption{Garfield simulation the induced signal current versus the arrival
+  \caption{Garfield simulation of the induced signal current versus the arrival
     time.  The green line corresponds to the arrival time of the fifth election.
     This image is taken from~\cite{ran_bi}}
   \label{fig::currentVtimeFifthElec}
@@ -157,7 +163,7 @@ The two prototypes were called prototype A and prototype B.  Prototype A,
 Fig.~\ref{fig::protoTypeA}, consisted of 1 plane, eight sense wires, 9 field
 wires and was 50~cm in length.  Prototype B on the other hand consisted of two
 planes with 16 sense wires per plane and a length of 163~cm.  Prototype A was
-tested with beam at DESY and was shown to achieve 200 $\mu$m
+tested with beam at DESY and was shown to achieve 200~$\mu$m
 resolution~\cite{choi}.  Both of these prototypes were built using similar
 materials and construction techniques as the full size detector.  In particular
 these two prototypes were the needed experience for working with sense wires
@@ -196,18 +202,27 @@ frames, which were assembled with aluminized mylar as a gas window.
 The views of DC05 consist of three cathode layers and two anode layers.  The
 cathodes layers were made from carbon paint sprayed on a 25~$\mu$m thin mylar
 layer.  There were two single-layer cathodes layers and one layer with carbon on
-two sides within each view.  Additionally a 30~cm circular so-called beam killer
-was added to the cathodes to control the efficiency in the central part of the
+two sides within each view.  Fig.~\ref{fig::DC05_layers} shows a side view of
+the layers of DC05.  Additionally a 30~cm circular so-called beam killer was
+added to the cathodes to control the efficiency in the central part of the
 detector.  The cathodes were nominally set to -1675~V and the beam killer
 voltage was set to -900~V for zero efficiency in the high flux central region.
 The voltage on the beam killer can however be raised above the amplification
 threshold if the beam flux is reduced and it is desirable to study the central
 region.
 
+\begin{figure}[h!t]
+  \centering \includegraphics[width=0.7\textwidth, trim=0.2cm 7cm 0.2cm 2cm,
+    clip]{DC05_layers}
+  \caption{A side view sketch of the layers in DC05}
+  \label{fig::DC05_layers}
+\end{figure}
+
 The anode layers were made from alternating 20~$\mu$m gold-plated tungsten sense
 wires and 100~$\mu$m gold-plated copper beryllium field wires, as depicted in
-figure~\ref{fig:driftcell}.  The field wires were also placed at -1675~V and the
-sense wires were at 0~V.  The nominal gain of DC05 is approximately 10$^4$.
+figure~\ref{fig:driftcell}.  Gold plating was used for both sense and field
+wires to prevent aging effects.  The field wires were also placed at -1675~V and
+the sense wires were at 0~V.  The nominal gain of DC05 is approximately 10$^4$.
 
 \begin{figure}
   \centering \includegraphics[width=0.5\textwidth, trim=2.5cm 10cm 3cm 10cm,
@@ -222,10 +237,11 @@ while ethane is used as a quencher and CF$_4$ is used to reduce aging effects.
 The quencher, ethane, absorbs photons from the electron avalanche which could
 pair produce and therefore make more electrons which would distort the electric
 field in a drift cell.  The quencher therefore is used to reduce the avalanche
-and ensure the drift cell electric field lines are closer to nominal.  
+and ensure the drift cell electric field lines are closer to their design values.  
 
 
 \section{Construction}
+
 The construction of DC05 was carried out as precisely as possible starting with
 the precision from the stainless steel stiffening frames.  The stiffening frames
 where cut with the highest relative accuracy by cutting the two frames on top of
@@ -238,11 +254,11 @@ on top of one of the stiffening frames.
 The cathodes had mylar stretched and epoxied to them using a custom built
 stretching machine at CERN.  Fig.~\ref{fig::mylarStretching} shows the process
 of stretching mylar on a cathode.  An external company then spray painted carbon
-on them to make a resistance of approximately 30~k$\Omega /m$.  All the sense
-and field wires were hand soldered as shown in Fig.~\ref{fig::wireSoldering},
-and sequentially verified for position using a microscope.  It was estimated the
-position placement of each sense wire was at least as good as half the diameter
-of a sense wire or precise to 10~$\mu$m.  
+on them which was then polished till the resistance was approximately
+30~k$\Omega /m$.  All the sense and field wires were hand soldered as shown in
+Fig.~\ref{fig::wireSoldering}, and sequentially verified for position using a
+microscope.  It was estimated the position placement of each sense wire was at
+least as good as half the diameter of a sense wire or precise to 10~$\mu$m.
 
 \begin{figure}[h!t]
   \centering \includegraphics[width=0.6\textwidth, trim=5cm 12cm 5cm 10cm,
@@ -270,7 +286,6 @@ to reduce electronic noise.
   \label{fig::cernFinalAssembly}
 \end{figure}
 
-
 There were various tests performed throughout the construction process for
 quality assurance before the final installation.  The starting tests were
 measuring thickness and position of important cuts on the G-10 strips using a
@@ -288,22 +303,33 @@ less than 100~nA at nominal voltage in air.  Finally amplification tests were
 first performed using a strontium-90 source and verifying the counts per
 electronics board increased below the radioactive source.
 
+
 \section{2015 Performance}
+
 The overall performance of DC05 was checked using the COMPASS reconstruction
 software CORAL.  In all cases the view of study was excluded from the
 reconstruction algorithm and the individual hit information for the view of
-interest was saved to get an unbiased measurement.  The efficiency was found to
-be between 85\% and 90\% depending on the plane.  Fig.~\ref{fig::DC05Yeff} shows
-the efficiency on one plane of DC05.  Using the so called RT relation,
-figure~\ref{fig:RT_DC05Y2}, the location of a track within a drift cell can be
-most accurately determined.  This RT relation is tuned as a calibration to
-minimize the track residuals.  The RT relation also varies depending on the beam
-type, intensity and the trigger type.
+interest was saved to get an unbiased measurement.  The performance of DC05 is
+determined by judging its response to real tracks.  In other words tracks that
+are not falsely reconstructed, so-called ghost tracks.  To ensure these real
+tracks with higher quality for performance evaluation, only tracks with a
+primary vertex near the polarized target are considered.
+
+The efficiency was found to be between 85\% and 90\% depending on the plane.
+The efficiency was determined by searching for a hit in the DC05 plane of
+interest within a road of 1.2~mm from the reconstructed track location.  The
+road distance was chosen to be approximately six resolution deviations which is
+standard at COMPASS.  Fig.~\ref{fig::DC05Yeff} shows the efficiency of one plane
+of DC05.  Using the so called RT relation, figure~\ref{fig:RT_DC05Y2}, the
+location of a track within a drift cell can be most accurately determined.  This
+RT relation is tuned as a calibration to minimize the track residuals.  The RT
+relation also varies depending on the beam type, intensity and the trigger type.
 
 \begin{figure}[h!t]
   \centering \includegraphics[width=0.6\textwidth, trim=2cm 9cm 2cm 7cm,
     clip]{DC05Yeff}
-  \caption{}{Two dimensional efficiency on the DC05Y1 plane}
+  \caption{}{Two dimensional efficiency on the DC05Y1 plane.  The center region
+    with zero efficiency is a result of the beam killer.}
   \label{fig::DC05Yeff}%
 \end{figure}
 
@@ -316,8 +342,8 @@ type, intensity and the trigger type.
 \end{figure}
 
 The double layer residual was used to determine the position resolution.  The
-double layer residual is the radial difference between the expected x/y
-positions of the two planes in a view.  The double residual is defined as
+double layer residual is the difference between the expected positions of the
+two planes in a view.  The double residual is defined as
 
 \begin{equation}
   \label{equ::doubleRes}
@@ -327,10 +353,11 @@ positions of the two planes in a view.  The double residual is defined as
   \mathrm{u}_{\mathrm{plane \; 2}},
 \end{equation}
 \noindent
-where u$_{\mathrm{plane \; 1(2)}}$ is the hit position on plane 1(2) and is
-u$_{\mathrm{track}}$.  As can be seen in Eq.~\ref{equ::doubleRes}, the double
-layer residual is independent of the track resolution and only depends on the
-difference between detector hit positions.  As the detector was construction
+where u$_{\mathrm{plane \; 1(2)}}$ is the hit position on plane 1(2) determined
+from the detector of interested and u$_{\mathrm{track}}$ is the hit position
+determined from reconstruction.  As can be seen in Eq.~\ref{equ::doubleRes}, the
+double layer residual is independent of the track resolution and only depends on
+the difference between detector hit positions.  As the detector was construction
 with a known difference between these two cell hit positions, the double
 residual distribution is expected to be a constant value.  Therefore the
 variance of the double residual distribution is the addition of the variance of
@@ -354,9 +381,8 @@ therefore
 \noindent
 For the 2015 Drell-Yan physics taking the resolution achieved was
 approximately 430~$\mu$m. This was determined by fitting the double residual
-with a Gaussian to extract the variance and assumed equal variance per plane in
+with a Gaussian to extract the variance and assuming equal variance per plane in
 a view as is shown in Fig.~\ref{fig::DC05doubleRes}.
-.
 
 \begin{figure}[h!t]
   \centering \includegraphics[width=0.6\textwidth, trim=2cm 9cm 2cm 8cm,
@@ -365,6 +391,3 @@ a view as is shown in Fig.~\ref{fig::DC05doubleRes}.
     Gaussian fit in red to determine the variance of the distribution}
   \label{fig::DC05doubleRes}
 \end{figure}
-
-
-
