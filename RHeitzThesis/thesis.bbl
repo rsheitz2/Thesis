@@ -1,3 +1,133 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{10}
+
+\bibitem{Abt:2016vjh}
+I.~Abt, A.~M. Cooper-Sarkar, B.~Foster, V.~Myronenko, K.~Wichmann, and M.~Wing.
+\newblock {Study of HERA ep data at low Q$^2$ and low $x_{Bj}$ and the need for
+  higher-twist corrections to standard perturbative QCD fits}.
+\newblock {\em Phys. Rev.}, D94(3):034032, 2016.
+
+\bibitem{Adeva:1997is}
+B.~Adeva et~al.
+\newblock {The Spin dependent structure function g(1) (x) of the proton from
+  polarized deep inelastic muon scattering}.
+\newblock {\em Phys. Lett.}, B412:414--424, 1997.
+
+\bibitem{PhysRevLett.92.012005}
+A.~et~al. Airapetian.
+\newblock Flavor decomposition of the sea-quark helicity distributions in the
+  nucleon from semiinclusive deep inelastic scattering.
+\newblock {\em Phys. Rev. Lett.}, 92:012005, Jan 2004.
+
+\bibitem{Bacchetta:2006tn}
+Alessandro Bacchetta, Markus Diehl, Klaus Goeke, Andreas Metz, Piet~J. Mulders,
+  and Marc Schlegel.
+\newblock {Semi-inclusive deep inelastic scattering at small transverse
+  momentum}.
+\newblock {\em JHEP}, 02:093, 2007.
+
+\bibitem{Barone:2001sp}
+Vincenzo Barone, Alessandro Drago, and Philip~G. Ratcliffe.
+\newblock {Transverse polarisation of quarks in hadrons}.
+\newblock {\em Phys. Rept.}, 359:1--168, 2002.
+
+\bibitem{Bjorken:1969ja}
+J.~D. Bjorken and Emmanuel~A. Paschos.
+\newblock {Inelastic Electron Proton and gamma Proton Scattering, and the
+  Structure of the Nucleon}.
+\newblock {\em Phys. Rev.}, 185:1975--1982, 1969.
+
+\bibitem{Bloom:1969kc}
+Elliott~D. Bloom et~al.
+\newblock {High-Energy Inelastic e p Scattering at 6-Degrees and 10-Degrees}.
+\newblock {\em Phys. Rev. Lett.}, 23:930--934, 1969.
+
+\bibitem{Boer:1997nt}
+Daniel Boer and P.~J. Mulders.
+\newblock {Time reversal odd distribution functions in leptoproduction}.
+\newblock {\em Phys. Rev.}, D57:5780--5786, 1998.
+
+\bibitem{Breidenbach:1969kd}
+Martin Breidenbach, Jerome~I. Friedman, Henry~W. Kendall, Elliott~D. Bloom,
+  D.~H. Coward, H.~C. DeStaebler, J.~Drees, Luke~W. Mo, and Richard~E. Taylor.
+\newblock {Observed Behavior of Highly Inelastic electron-Proton Scattering}.
+\newblock {\em Phys. Rev. Lett.}, 23:935--939, 1969.
+
+\bibitem{Brodsky:2002cx}
+Stanley~J. Brodsky, Dae~Sung Hwang, and Ivan Schmidt.
+\newblock {Final state interactions and single spin asymmetries in
+  semiinclusive deep inelastic scattering}.
+\newblock {\em Phys. Lett.}, B530:99--107, 2002.
+
+\bibitem{Brodsky:2002rv}
+Stanley~J. Brodsky, Dae~Sung Hwang, and Ivan Schmidt.
+\newblock {Initial state interactions and single spin asymmetries in Drell-Yan
+  processes}.
+\newblock {\em Nucl. Phys.}, B642:344--356, 2002.
+
+\bibitem{PhysRevLett.22.156}
+C.~G. Callan and David~J. Gross.
+\newblock High-energy electroproduction and the constitution of the electric
+  current.
+\newblock {\em Phys. Rev. Lett.}, 22:156--159, Jan 1969.
+
+\bibitem{collins_2002}
+John~C. Collins.
+\newblock {Leading twist single transverse-spin asymmetries: Drell-Yan and deep
+  inelastic scattering}.
+\newblock {\em Phys. Lett.}, B536:43--48, 2002.
+
+\bibitem{Harland-Lang:2016yfn}
+L.~A. Harland-Lang, A.~D. Martin, P.~Motylinski, and R.~S. Thorne.
+\newblock {The impact of the final HERA combined data on PDFs obtained from a
+  global fit}.
+\newblock {\em Eur. Phys. J.}, C76(4):186, 2016.
+
+\bibitem{Hirai:2008aj}
+M.~Hirai and S.~Kumano.
+\newblock {Determination of gluon polarization from deep inelastic scattering
+  and collider data}.
+\newblock {\em Nucl. Phys.}, B813:106--122, 2009.
+
+\bibitem{Mulders:1995dh}
+P.~J. Mulders and R.~D. Tangerman.
+\newblock {The Complete tree level result up to order 1/Q for polarized deep
+  inelastic leptoproduction}.
+\newblock {\em Nucl. Phys.}, B461:197--237, 1996.
+\newblock [Erratum: Nucl. Phys.B484,538(1997)].
+
+\bibitem{Nocera:2014gqa}
+Emanuele~R. Nocera, Richard~D. Ball, Stefano Forte, Giovanni Ridolfi, and Juan
+  Rojo.
+\newblock {A first unbiased global determination of polarized PDFs and their
+  uncertainties}.
+\newblock {\em Nucl. Phys.}, B887:276--308, 2014.
+
+\bibitem{Rojo_2015}
+Juan Rojo, Alberto Accardi, Richard~D Ball, Amanda Cooper-Sarkar, Albert
+  de~Roeck, Stephen Farry, James Ferrando, Stefano Forte, Jun Gao, Lucian
+  Harland-Lang, Joey Huston, Alexander Glazov, Maxime Gouzevitch, Claire
+  Gwenlan, Katerina Lipka, Mykhailo Lisovyi, Michelangelo Mangano, Pavel
+  Nadolsky, Luca Perrozzi, Ringaile Pla{\v{c}}akyt{\.{e}}, Voica Radescu,
+  Gavin~P Salam, and Robert Thorne.
+\newblock The {PDF}4lhc report on {PDFs} and {LHC} data: results from run i and
+  preparation for run {II}.
+\newblock {\em Journal of Physics G: Nuclear and Particle Physics},
+  42(10):103103, sep 2015.
+
+\bibitem{Savin:2011zz}
+I.~A. Savin.
+\newblock {COMPASS results on the nucleon spin structure}.
+\newblock {\em Nucl. Phys. Proc. Suppl.}, 219-220:94--101, 2011.
+
+\bibitem{Sivers}
+Dennis~W. Sivers.
+\newblock {Single Spin Production Asymmetries from the Hard Scattering of
+  Point-Like Constituents}.
+\newblock {\em Phys. Rev.}, D41:83, 1990.
+
+\bibitem{Tanabashi:2018oca}
+M.~Tanabashi et~al.
+\newblock {Review of Particle Physics}.
+\newblock {\em Phys. Rev.}, D98(3):030001, 2018.
 
 \end{thebibliography}
