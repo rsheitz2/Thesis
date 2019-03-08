@@ -295,7 +295,8 @@ The transverse momentum of the partons is integrated over when measuring the DIS
 process.  This is because only the scattered lepton is measured and any
 transverse parton motion cannot be measured.  The Drell-Yan
 process~\ref{sec::DY} and the SIDIS process~\ref{sec::SIDIS} however are
-sensitive to the internal transverse momentum of the partons.  When including
+sensitive to the internal transverse momentum of the partons.  In the limit of
+small transverse momentum compared to the virtual photon momentum and including
 the transverse parton momentum, the most generic leading order quark-quark
 correlator can be written~\cite{Mulders:1995dh,Boer:1997nt,Bacchetta:2006tn}
 
@@ -350,23 +351,396 @@ then imply that the bound quarks carry orbital angular momentum.  As of yet
 however, there is no theoretical link between orbital angular momentum and the
 Sivers function.
 
-The Sivers function is odd under time reversal.  As a result of this it was
-originally believe to be a forbidden correlation.  However it was shown that the
-Sivers function could be non-zero from gluon exchange during the initial state
-in the Drell-Yan process and during the final state in
-SIDIS~\cite{Brodsky:2002cx,Brodsky:2002rv}.  Surprising it was shown that a
-non-zeron Sivers function is expected to have opposite sign in SIDIS and
-Drell-Yan~\cite{collins_2002}.  That is
+The Sivers function is changes sign from naive time reversal.  Naive time
+reversal is defined as reversing time but not swapping initial and final
+states~\cite{Bacchetta:2006tn}.  The Sivers function is therefore said to be a
+T-odd function, and as a result it was originally believe to be a forbidden
+correlation.  However it was shown that the Sivers function could be non-zero
+from gluon exchange during the initial state in the Drell-Yan process and during
+the final state in SIDIS~\cite{Brodsky:2002cx,Brodsky:2002rv}.  Surprising it
+was shown that a non-zeron Sivers function is expected to have opposite sign in
+SIDIS and Drell-Yan~\cite{collins_2002}.  That is
 
 \begin{equation}
   f_{1T}^{\bot} |_{Drell-Yan} = - f_{1T}^{\bot} |_{SIDIS}.
 \end{equation}
 
-give sivers SIDIS results from HERMES/COMPASS.  Give interpretation
 
-\section{Drell-Yan} \label{sec::DY}
+Include information on Bohr-Mulders, transversity and prezelosity (all TSAs
+determined in DY).
 
 \section{Semi-Inclusive Deep Inelastic Scattering} \label{sec::SIDIS}
+Semi-Inclusive Deep Inelastic Scattering (SIDIS) is the process where a lepton
+scatters electromagnetically off a nucleon and subsequently the scattered lepton
+and at least one scattered hadron are detected.  As the name implies, SIDIS is
+related to the DIS reaction only SIDIS includes the addition of a detected
+hadron.  SIDIS is denoted as
+
+\begin{equation}
+  l(\ell, \lambda_l) + N(P, S) \rightarrow l(\ell') + h(P_h) + X(P_X),
+\end{equation}
+\noindent
+where $\lambda_l$ is the helicity of the incoming lepton, $S$ is the spin of the
+nucleon, $h$ is the detected hadron and $P_h$ is the detected hadron's four
+momentum.  The leading order one photon exchange Feynman diagram for the SIDIS
+process is shown in Fig.~\ref{fig::SIDIS_LO}.
+
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.5\textwidth, trim=3cm 9cm 3cm 9cm, clip]{SIDIS_LO}
+  \caption{The semi-inclusive deep inelastic scattering leading order Feynman
+    diagram}
+  \label{fig::SIDIS_LO}
+\end{figure}
+
+In addition to the kinematic variables used to describe DIS,
+Eq.~[\ref{equ::DIS_Q2}-\ref{equ::DIS_W}], one more variable is needed to
+describe the SIDIS process,
+\begin{equation}
+  z = \frac{P \cdot P_h}{P \cdot q} \quad \substack{lab \\frame\\ =} \quad
+  \frac{E_h}{E-E'},
+\end{equation}
+\noindent
+which is interpreted as the fraction of possible energy the detected hadron
+can obtain.  The transverse spin-dependent SIDIS cross-section can be described
+in a model independent way using structure functions as~\cite{Bacchetta:2006tn}
+
+\begin{align}
+  \frac{d\sigma}{dx \, dy\, d\psi \,dz\, d\phi_h\, d P_{h\perp}^2} &=
+  \frac{\alpha^2}{x y Q^2}\,
+  \frac{y^2}{2\,(1-\varepsilon)}\,  \biggl( 1+\frac{\gamma^2}{2x} \biggr)\,
+  \Biggl\{
+  F_{UU ,T}
+  + 
+  \varepsilon
+  F_{UU ,L}
+  + \sqrt{2\,\varepsilon (1+\varepsilon)}\,\cos\phi_h\,
+  F_{UU}^{\cos\phi_h}
+  \nonumber \\  & 
+  + \varepsilon \cos(2\phi_h)\, 
+  F_{UU}^{\cos 2\phi_h}
+  + \lambda_l\, \sqrt{2\,\varepsilon (1-\varepsilon)}\, 
+  \sin\phi_h\, 
+  F_{LU}^{\sin\phi_h}
+  \phantom{\Bigg[ \Bigg] }
+  \nonumber \\  & 
+  + |S_\perp|\, \Bigg[
+    \sin(\phi_h-\phi_S)\,
+    \Bigl(F_{UT ,T}^{\sin\left(\phi_h -\phi_S\right)}
+    + \varepsilon\, F_{UT ,L}^{\sin\left(\phi_h -\phi_S\right)}\Bigr)
+    \nonumber \\  & \quad  \qquad \qquad
+    + \varepsilon\, \sin(\phi_h+\phi_S)\, 
+    F_{UT}^{\sin\left(\phi_h +\phi_S\right)}
+    + \varepsilon\, \sin(3\phi_h-\phi_S)\,
+    F_{UT}^{\sin\left(3\phi_h -\phi_S\right)}
+    \phantom{\Bigg[ \Bigg] }
+    \nonumber \\  & \quad \qquad \qquad
+    + \sqrt{2\,\varepsilon (1+\varepsilon)}\, 
+    \sin\phi_S\, 
+    F_{UT}^{\sin \phi_S }
+    + \sqrt{2\,\varepsilon (1+\varepsilon)}\, 
+    \sin(2\phi_h-\phi_S)\,  
+    F_{UT}^{\sin\left(2\phi_h -\phi_S\right)}
+    \Bigg]
+  \nonumber \\  &
+  + |S_\perp| \lambda_l\, \Bigg[
+    \sqrt{1-\varepsilon^2}\, \cos(\phi_h-\phi_S)\, 
+    F_{LT}^{\cos(\phi_h -\phi_S)}
+    +\sqrt{2\,\varepsilon (1-\varepsilon)}\, 
+    \cos\phi_S\, 
+    F_{LT}^{\cos \phi_S}
+    \nonumber \\  & \quad \qquad \qquad
+    +\sqrt{2\,\varepsilon (1-\varepsilon)}\, 
+    \cos(2\phi_h-\phi_S)\,  
+    F_{LT}^{\cos(2\phi_h - \phi_S)}
+    \Bigg] \Biggr\},
+  \label{equ::SIDISxsect}
+\end{align}
+\noindent
+where
+\begin{equation}
+  \varepsilon =
+  \frac{1-y-\frac{1}{4}\gamma^2y^2}{1-y+\frac{1}{2}y^2+\frac{1}{4}\gamma^2y^2},
+\end{equation}
+\noindent
+and $\gamma = \frac{2Mx}{Q}$ and $\psi$ is the azimuthal scattering angle of the
+lepton around the lepton beam with respect to the transverse spin direction of
+the target.  The SIDIS cross-section, Eq.~\ref{equ::SIDISxsect}, is defined in
+the $\gamma$-nucleon reference frame which is a target frame where the virtual
+photon is along the z-axis and the xz-plane is determined by the lepton plane.
+Fig.~\ref{fig::gammaNucleonFrame} shows the $\gamma$-nucleon lab frame and the
+relevant azimuthal angles.
+
+The 14 structure functions in Eq.~\ref{equ::SIDISxsect} are coefficients to the
+azimuthal angles.  The structure functions are label as $F$ where the
+superscript denotes which azimuthal angle coefficient they correspond to and the
+three subscripts represent the beam, target and virtual photon polarization from
+left to right respectively.  The subscript polarizations are $U$ for
+unpolarized, $L$ for longitudinally polarized and $T$ for transversely
+polarized.  The cross-section, Eq.~\ref{equ::SIDISxsect}, is determined
+similarly to the DIS cross-section,Eq.~\ref{equ::DIS_diffxsection}, in that
+structure functions are used to generically parameterize the hadronic tensor.
+
+\begin{figure}[h!t]
+  \centering \includegraphics[width=0.6\textwidth,trim=3cm 9cm 3cm 8cm,
+    clip]{gammaNucleonFrame}
+  \caption{The $\gamma$-nucleon lab frame where the target nucleon is at rest
+    and the virtual photon is along the z-axis.  The lepton scattering plane
+    defines the xz-plane where the outgoing lepton defines the positive
+    x-direction.  This image was taken from~\cite{Bacchetta:2006tn}.}
+  \label{fig::gammaNucleonFrame}
+\end{figure}
+
+In the TMD regime the structure functions are related to TMD function and
+fragmentation functions (FF).  That is to say where the detected hadron's
+transverse momentum is small compared to the virtual photon momentum ,$P_{hT} <<
+Q$, the model independent structure functions are related to TMD functions.  The
+structure functions are equal to a convolution of a TMD and a FF in this regime
+where the convolution is defined as
+
+\begin{equation}
+{\cal C}\bigl[ w f D \bigr]
+= x
+\sum_q e_q^2 \int d^2 p_T  d^2 k_T^{}
+ \delta^{(2)}\bigl(p_T - k_T^{} - P_{h \perp}/z \bigr)
+w(p_T,k_T^{})
+f^q(x,p_T^2)D^q(z,k_T^2),
+\end{equation}
+\noindent
+where $w$ is a weight $f$ is a TMD function and $D$ is a FF.  The relation
+between structure functions and TMDs at leading order for the structure
+functions related to transverse target polarization are~\cite{Bacchetta:2006tn}
+
+\begin{align}
+  \label{equ::F_UUTsinphihphis}
+  F_{UT ,T}^{\sin\left(\phi_h -\phi_S\right)} &=
+  {\cal C}\biggl[-\frac{\hat{h} \cdot p_T}{M} f_{1T}^{\perp } D_1\biggr]
+  &\propto f_{1T}^{\perp } \otimes D_1, \\
+  F_{UT ,L}^{\sin\left(\phi_h -\phi_S\right)} &= 0,\\
+  F_{UT}^{\sin(\phi_h +\phi_S)} &=
+  {\cal C}\biggl[-\frac{\hat{h}\cdot k_T^{}}{M_h} h_{1} H_1^{\perp }\biggr]
+  &\propto h_{1} \otimes H_1^{\perp },\\
+  F_{UT}^{\sin(3\phi_h -\phi_S)} &=
+  {\cal C}\biggl[ \frac{2 \bigl(\hat{h}\cdot
+      p_T \bigr) \bigl( \bm{p}_T\cdot k_T^{} \bigr) +\bm{p}_T^2
+      \bigl(\hat{h}\cdot k_T^{} \bigr) -4 (\hat{h}\cdot p_T)^2 (\hat{h}\cdot
+      k_T^{})}{2 M^2 M_h} h_{1T}^{\perp } H_1^{\perp }\biggr]
+  &\propto h_{1T}^{\perp } \otimes H_1^{\perp },\\
+  \label{equ::F_LTcosphihphis}
+  F_{LT}^{\cos(\phi_h -\phi_S)}
+  &={\cal C}\biggl[ \frac{\hat{h} \cdot p_T}{M} g_{1T}
+    D_1 \biggr]
+  &\propto g_{1T} \otimes D_1, 
+\end{align}
+
+\noindent
+and the leading order structure functions related to an unpolarized target are
+
+\begin{align}
+  F_{UU ,T} &= {\cal C}\bigl[ f_1 D_1 \bigr] &\propto f_1 \otimes D_1, \\
+  \label{equ::F_UUL}
+  F_{UU ,L} &= 0,
+\end{align}
+
+\noindent
+where the unit vector $\hat{h}=P_{h \perp}/|P_{h\perp}|$ and $D_1$ and
+$H_1^{\perp}$ are fragmentation functions.  The fragmentation functions are
+functions of $z$ and describe the probability for a quark to hadronize to a
+specific hadron.  These fragmentation functions depend on the quark spin, the
+hadron type and polarization and the quark $k_T$.  In
+Eq.~[\ref{equ::F_UUTsinphihphis}-~\ref{equ::F_UUL}] the fragmentation
+function $D_1$ refers to an unpolarized quark fragmenting to an unpolarized
+hadron and $H_1^{\perp}$ refers to a transversely polarized quark fragmenting to
+an unpolarized hadron.
+
+The SIDIS cross-section, Eq.~\ref{equ::SIDISxsect}, can be rewritten in terms of
+asymmetries.  These asymmetries are defined as
+
+\begin{equation}
+  A^{w_i(\phi_h, \phi_S)}_{BeamTarget} = \frac{F^{w_i(\phi_h,
+      \phi_S)}_{BeamTarget}}{F_{UU,T}+\varepsilon F_{UU,L}},
+  \label{equ::asymAmpSIDIS}
+\end{equation}
+\noindent
+where $w_i(\phi_h, \phi_S)$ is the azimuthal angle associated with this
+asymmetry and $Beam$ and $Target$ represent the polarization of the beam and
+target.  The asymmetry amplitude, Eq.~\ref{equ::asymAmpSIDIS}, is a structure
+function divide by the unpolarized structure functions.  This asymmetry
+amplitude definition is defined because it is easier to measure experimentally.
+In order to determine an asymmetry amplitude, the number of counts
+experimentally measures can be fit using a function in the form of
+Eq.~\ref{equ::SIDISxsect} with the coefficients to each azimuthal amplitude as
+parameters to the fit.  The result of the fit can determine the spin-dependent
+asymmetry amplitudes without needing to determine the luminosity.
+
+COMPASS and HERMES measurements the asymmetry $A_{UT ,T}^{\sin\left(\phi_h
+  -\phi_S\right)}$ from the SIDIS reaction from a proton
+target~\cite{Alekseev:2008aa,Airapetian:2009ae}.  The comparison of the result
+between these two collaboration is shown in Fig.~\ref{fig::SiversFromSIDIS}.
+The asymmetry amplitude $A_{UT ,T}^{\sin\left(\phi_h-\phi_S\right)}$ is related
+to the Sivers function and was measured to be non-zero at the level of 5\%.
+
+\begin{figure}[h!t]
+  \centering \includegraphics[width=0.6\textwidth, trim=2cm 2cm 2cm
+    3cm,clip]{SiversFromSIDIS}
+  \caption{The asymmetry amplitude related to the Sivers function measure by
+    COMPASS~\cite{Alekseev:2008aa} and HERMES~\cite{Airapetian:2009ae}}
+  \label{fig::SiversFromSIDIS}
+\end{figure}
+
+The top plots in Fig.~\ref{fig::SiversFromSIDIS} is the asymmetry for a positive
+detected hadron which is dominated by u-quark scattering and therefore by the
+u-quark Sivers function.  This is the case for three reasons.  Firstly because
+the SIDIS reaction is weighted by charge squared which therefore makes the
+u-quark scattering four times more likely.  Secondly the so-called favor FF,
+where the detected hadron is the same charge as the which quark fragmented, is
+larger than the unfavored FF.  Therefore a positively detected hadron most
+likely resulted from a positively fragmenting quark.  Thirdly the proton target
+is composed twice as many u-quarks as d-quarks in this scattering kinematic
+region.  For these three reasons the results in Fig.~\ref{fig::SiversFromSIDIS}
+imply that the u-quark Sivers function from the SIDIS reaction is positive.
+
+The bottom plots in Fig.~\ref{fig::SiversFromSIDIS} suggest that the d-quark
+Sivers function in the SIDIS reaction is negative.  The bottom results in
+Fig.~\ref{fig::SiversFromSIDIS} are from the combination of u-quark scattering
+then fragmenting unfavoredly and d-quark scattering and fragmenting favoredly.
+As was mentioned the charge weighting in the SIDIS reaction and the proton quark
+composition results in the u-quark scattering with a higher probability.  On the
+other hand the favor FF for d-quark fragmenting to a negatively charged hadron
+versus the unfavored FF for u-quark fragmenting to a negatively charged hadron
+cancel the previous effect out.  Therefore results in the bottom of
+Fig.~\ref{fig::SiversFromSIDIS} are for an equal combination from u-quark
+scattering and d-quark scattering.  As the u-quark asymmetry amplitude is
+positive, the d-quark asymmetry amplitude must therefore be negative and so also
+must the d-quark Sivers function.
+
+
+\section{Drell-Yan} \label{sec::DY}
+The Drell-Yan process is the reaction where a quark and an anti-quark annihilate
+and the end product results in two leptons.  The Drell-Yan process is denoted as
+
+\begin{equation}
+  H_a(P_a) + H_b(P_b, S) \rightarrow \gamma^* + X \rightarrow l(\ell) +
+  l'(\ell') + X
+\end{equation}
+\noindent
+where $H_a$ and $H_b$ are hadrons which carry the quark and anti-quarks and only
+the target hadron, $H_b$ is considered to polarized with spin $S$.  In this
+thesis the quark anti-quark pair annihilate to form a virtual photon, $\gamma^*$
+and in addition the final state leptons detected are a muon and an anti-muon.
+The leading order one photon exchange diagram is shown in Fig.~\ref{fig::DY_LO}.
+
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.45\textwidth, trim=7cm 12cm 7cm 12cm, clip]{DY_LO}
+  \caption{The Drell-Yan leading order diagram}
+  \label{fig::DY_LO}
+\end{figure}
+
+The angles used to define the general Drell-Yan cross-section are defined with
+the use of two reference frames.  The target frame (TF),
+Fig.~\ref{fig::DY_TargetFrame}, defines the $\phi_S$ angle and the Collins-Soper
+(CS), Fig.~\ref{fig::DY_CSFrame}, frame defines the additional $\phi$ and
+$\theta$ angles.  The $\phi_S$ angle is defined in TF as the angle between the
+transverse momentum of the virtual photon and the transverse spin of the target.
+The $\phi$ and $\theta$ angles, in the CS frame, are defined as the azimuthal
+and polar angle of the negatively charged muon.
+
+\begin{figure}[h!t]
+  \centering
+  \begin{subfigure}{.46\textwidth}
+    \centering
+    \includegraphics[width=\linewidth, trim=3cm 9cm 3cm 8cm,
+      clip]{DY_TargetFrame}
+    \caption{The target frame where the z-axis is along the beam and the x-axis
+      is in the direction of the transverse momentum of the virtual photon.}
+    \label{fig::DY_TargetFrame}%
+  \end{subfigure}
+  \begin{subfigure}{.02\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{tmp}
+    \label{fig::tmp1}%
+  \end{subfigure}
+  \begin{subfigure}{.46\textwidth}
+    \centering
+    \includegraphics[width=\linewidth, trim=3cm 9cm 3cm 8cm,
+      clip]{DY_CSFrame}
+    \caption{The Collins-Soper frame is defined in the rest frame of the virtual
+      photon where the z-axis bisects the beam and target momentum vectors.}
+    \label{fig::DY_CSFrame}%
+  \end{subfigure}
+\end{figure}
+
+The target frame is defined in the lab frame where the lab frame is rotated so
+the beam is along the z-axis and the transverse momentum of the virtual photon
+is along the x-axis.  The y-axis in the target frame is then chosen so the
+coordinate system is right handed.  The Collins-Soper frame is defined in the
+rest frame of the virtual photon where the xz-plane coincides with the hadron
+plane and the z-axis is chosen so it bisects the momentum vectors $P_a$ and
+$-P_b$.  The CS frame is defined from the target frame as a boost first along
+the along z-axis and then a boost along the x-axis so the rest frame of the
+virtual photon is reached.  In this way the x-axis of the CS frame is defined
+and then the y-axis is again chosen so the coordinate system is right handed.
+
+The leading order model independent Drell-Yan differential cross-section for a
+polarized target is~\cite{DYxSection,AKotzininaNote}
+
+\begin{align} \label{equ::DY_ang_dist}
+  \frac{d\sigma}{d^4 q \, d \Omega} &=
+  \frac{\alpha_{em}^2}{F \, q^2}
+  \Big \{ \Big(
+   (1 + \cos^2 \theta) \, F_{U}^{1} 
+ + (1 - \cos^2 \theta) \, F_{U}^{2} 
+ + \sin 2\theta \cos \phi \, F_{U}^{\cos \phi} 
+ + \sin^2 \theta \cos 2\phi \, F_{U}^{\cos 2\phi} \Big)
+ \nonumber \\
+ &+ S_{L} \Big( 
+   \sin 2\theta \sin \phi \, F_{L}^{\sin \phi} 
+   + \sin^2 \theta \sin 2\phi \, F_{L}^{\sin 2\phi} \Big)
+   \nonumber \\
+   &+ |S_{T}|
+   \Big[ \Big(
+     F_{T}^{\sin \phi_S} + \cos^2 \theta \, \tilde{F}_{T}^{\sin \phi_S}
+     \Big)\sin \phi_{S} 
+     + \Big( F_{T}^{\sin (\phi +\phi_S)} \, \sin(\phi+\phi_S) +
+     F_{T}^{(\sin \phi - \phi_S)}\, \sin(\phi-\phi_S) \Big)\sin 2\theta
+     \nonumber \\
+     & \quad\quad\quad +
+     \Big( F_{T}^{\sin (2\phi +\phi_S)}\, \sin(2\phi+\phi_S) +
+     F_{T}^{\sin (2\phi - \phi_S)}\, \sin(2\phi-\phi_S) \Big)\sin ^2\theta
+     \Big ]
+   \Big \},
+\end{align}
+\noindent
+where $F = 4\sqrt{(P_a \cdot P_b)^2 - M_a^2M_b^2}$ is the flux and $\Omega$ is
+the solid angle of the outgoing negatively charged muon.  The twelve model
+independent structure functions in Eq.~\ref{equ::DY_ang_dist} are labeled as
+$F_{Target \; polarization}^{azimuthal \;angle\;coefficient}$.  The differential
+cross-seciton, Eq.~\ref{equ::DY_ang_dist}, can be rewritten in terms of
+asymmetry amplitudes and depolarization factors.  The asymmetry amplitudes are
+defined similarly to the case in SIDIS, Eq.~\ref{equ::asymAmpSIDIS}, and again
+for the reason that asymmetries can be determined to a higher precision
+than structure functions.  For Drell-Yan these asymmetry amplitudes are
+
+\begin{equation}
+  A^{w_i(\phi, \phi_S)}_{Target} = \frac{F^{w_i(\phi,
+      \phi_S)}_{Target}}{F_{U}^1+F_{U}^2},
+  \label{equ::asymAmpDY}.
+\end{equation}
+\noindent
+The asymmetry amplitudes are the result of different virtual photon
+polarizations decaying to final state lepton pair.  The depolarization factor is
+defined as the ratio of the virtual photon polarization to produce such an
+asymmetry to that of a transversely polarized virtual photon.  The
+depolarization is defined for each asymmetry amplitude as
+
+\begin{equation}
+  D_{[f(\theta)]} = \frac{f(\theta)}{1+A_U^1\;\cos^2\theta},
+\end{equation}
+\noindent
+where the function $f(\theta)$ is the virtual photon polarization responsible
+for the given asymmetry.
+
 
 \begin{dmath}
   W_{\mu\nu} =

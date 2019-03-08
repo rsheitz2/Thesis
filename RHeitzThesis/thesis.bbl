@@ -12,11 +12,28 @@ B.~Adeva et~al.
   polarized deep inelastic muon scattering}.
 \newblock {\em Phys. Lett.}, B412:414--424, 1997.
 
+\bibitem{Airapetian:2009ae}
+A.~Airapetian et~al.
+\newblock {Observation of the Naive-T-odd Sivers Effect in Deep-Inelastic
+  Scattering}.
+\newblock {\em Phys. Rev. Lett.}, 103:152002, 2009.
+
 \bibitem{PhysRevLett.92.012005}
 A.~et~al. Airapetian.
 \newblock Flavor decomposition of the sea-quark helicity distributions in the
   nucleon from semiinclusive deep inelastic scattering.
 \newblock {\em Phys. Rev. Lett.}, 92:012005, Jan 2004.
+
+\bibitem{Alekseev:2008aa}
+M.~Alekseev et~al.
+\newblock {Collins and Sivers asymmetries for pions and kaons in muon-deuteron
+  DIS}.
+\newblock {\em Phys. Lett.}, B673:127--135, 2009.
+
+\bibitem{DYxSection}
+S.~Arnold, A.~Metz, and M.~Schlegel.
+\newblock {Dilepton production from polarized hadron hadron collisions}.
+\newblock {\em Phys. Rev.}, D79:034005, 2009.
 
 \bibitem{Bacchetta:2006tn}
 Alessandro Bacchetta, Markus Diehl, Klaus Goeke, Andreas Metz, Piet~J. Mulders,
@@ -76,6 +93,13 @@ John~C. Collins.
   inelastic scattering}.
 \newblock {\em Phys. Lett.}, B536:43--48, 2002.
 
+\bibitem{Rojo_2015}
+Juan~Rojo et. al.
+\newblock The {PDF}4lhc report on {PDFs} and {LHC} data: results from run i and
+  preparation for run {II}.
+\newblock {\em Journal of Physics G: Nuclear and Particle Physics},
+  42(10):103103, sep 2015.
+
 \bibitem{Harland-Lang:2016yfn}
 L.~A. Harland-Lang, A.~D. Martin, P.~Motylinski, and R.~S. Thorne.
 \newblock {The impact of the final HERA combined data on PDFs obtained from a
@@ -87,6 +111,10 @@ M.~Hirai and S.~Kumano.
 \newblock {Determination of gluon polarization from deep inelastic scattering
   and collider data}.
 \newblock {\em Nucl. Phys.}, B813:106--122, 2009.
+
+\bibitem{AKotzininaNote}
+A.~Kotzinian.
+\newblock {Description of polarized $\pi^-$ + N Drell-Yan processes}.
 
 \bibitem{Mulders:1995dh}
 P.~J. Mulders and R.~D. Tangerman.
@@ -101,18 +129,6 @@ Emanuele~R. Nocera, Richard~D. Ball, Stefano Forte, Giovanni Ridolfi, and Juan
 \newblock {A first unbiased global determination of polarized PDFs and their
   uncertainties}.
 \newblock {\em Nucl. Phys.}, B887:276--308, 2014.
-
-\bibitem{Rojo_2015}
-Juan Rojo, Alberto Accardi, Richard~D Ball, Amanda Cooper-Sarkar, Albert
-  de~Roeck, Stephen Farry, James Ferrando, Stefano Forte, Jun Gao, Lucian
-  Harland-Lang, Joey Huston, Alexander Glazov, Maxime Gouzevitch, Claire
-  Gwenlan, Katerina Lipka, Mykhailo Lisovyi, Michelangelo Mangano, Pavel
-  Nadolsky, Luca Perrozzi, Ringaile Pla{\v{c}}akyt{\.{e}}, Voica Radescu,
-  Gavin~P Salam, and Robert Thorne.
-\newblock The {PDF}4lhc report on {PDFs} and {LHC} data: results from run i and
-  preparation for run {II}.
-\newblock {\em Journal of Physics G: Nuclear and Particle Physics},
-  42(10):103103, sep 2015.
 
 \bibitem{Savin:2011zz}
 I.~A. Savin.
