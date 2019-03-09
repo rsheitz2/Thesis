@@ -367,7 +367,7 @@ SIDIS and Drell-Yan~\cite{collins_2002}.  That is
 
 
 Include information on Bohr-Mulders, transversity and prezelosity (all TSAs
-determined in DY).
+determined in DY).  Give Star Sivers result.
 
 \section{Semi-Inclusive Deep Inelastic Scattering} \label{sec::SIDIS}
 Semi-Inclusive Deep Inelastic Scattering (SIDIS) is the process where a lepton
@@ -493,17 +493,15 @@ structure functions are used to generically parameterize the hadronic tensor.
 
 In the TMD regime the structure functions are related to TMD function and
 fragmentation functions (FF).  That is to say where the detected hadron's
-transverse momentum is small compared to the virtual photon momentum ,$P_{hT} <<
+transverse momentum is small compared to the virtual photon momentum, $P_{hT} <<
 Q$, the model independent structure functions are related to TMD functions.  The
 structure functions are equal to a convolution of a TMD and a FF in this regime
 where the convolution is defined as
 
 \begin{equation}
-{\cal C}\bigl[ w f D \bigr]
-= x
-\sum_q e_q^2 \int d^2 p_T  d^2 k_T^{}
- \delta^{(2)}\bigl(p_T - k_T^{} - P_{h \perp}/z \bigr)
-w(p_T,k_T^{})
+  \label{equ::SIDIS_conv}
+{\cal C}\bigl[ w(p_T,k_T) f D \bigr] = x \sum_q e_q^2 \int d^2 p_T d^2 k_T
+\delta^{(2)}\bigl(p_T - k_T - P_{h \perp}/z \bigr) w(p_T,k_T)
 f^q(x,p_T^2)D^q(z,k_T^2),
 \end{equation}
 \noindent
@@ -715,12 +713,80 @@ polarized target is~\cite{DYxSection,AKotzininaNote}
 where $F = 4\sqrt{(P_a \cdot P_b)^2 - M_a^2M_b^2}$ is the flux and $\Omega$ is
 the solid angle of the outgoing negatively charged muon.  The twelve model
 independent structure functions in Eq.~\ref{equ::DY_ang_dist} are labeled as
-$F_{Target \; polarization}^{azimuthal \;angle\;coefficient}$.  The differential
-cross-seciton, Eq.~\ref{equ::DY_ang_dist}, can be rewritten in terms of
-asymmetry amplitudes and depolarization factors.  The asymmetry amplitudes are
-defined similarly to the case in SIDIS, Eq.~\ref{equ::asymAmpSIDIS}, and again
-for the reason that asymmetries can be determined to a higher precision
-than structure functions.  For Drell-Yan these asymmetry amplitudes are
+$F_{Target \; polarization}^{azimuthal \;angle\;coefficient}$.  The phase space
+when the TMD regime is valid in DY scattering is when $q_T << q$.  In this
+regime the structure functions are equal to a convolution of a beam and a target
+TMD function.  The convolution is defined similarly to the SIDIS case,
+Eq.~\ref{equ::SIDIS_conv}, as
+
+\begin{align}
+  \label{equ::DY_conv}
+  \nonumber
+      {\cal C}\bigl[ w(k_{aT}, k_{bT}) f_1 \bar{f}_2 \bigr] =
+      \frac{1}{N_c} \sum_q e_q^2 \int &d^2 k_{aT} d^2 k_{bT} 
+      \delta^{(2)}\bigl(q_T - k_{aT} - k_{bT} \bigr) \\
+      &\times w(k_{aT},k_{bT})
+        \Big[ f_1^q(x,k_{aT}^2)f_2^{\bar{q}}(x,k_{bT}^2) +
+          f_1^{\bar{q}}(x,k_{aT}^2)f_2^{q}(x,k_{bT}^2) \Big],
+\end{align}
+\noindent
+where $N_c = 3$ is the number of color charges and in this notation $f_1$ is a
+beam TMD function and $f_2$ is a target TMD function.  The leading order DY
+structure functions in the TMD phase space are related to TMD functions
+as~\cite{DYxSection}
+
+\begin{align}
+  F_{U}^{1} &  =  
+  {\cal C}  \big[ f_{1}  \bar{f}_{1} \big]
+  &\propto f^{\bar{u}}_{1,Beam} \otimes f^u_{1,Target}, \\
+  F_{U}^{\cos 2\phi} &  =  
+  {\cal C}  \Bigg[ \frac{2\big( \vec{h} \cdot \vec{k}_{aT} \big) 
+                          \big( \vec{h} \cdot \vec{k}_{bT} \big)
+                         - \vec{k}_{aT} \cdot \vec{k}_{bT}} {M_{a} M_{b}}  
+    h_{1}^{\perp}  \bar{h}_{1}^{\perp} \Bigg]
+  &\propto h^{\perp \, \bar{u}}_{1,Beam} \otimes h^{\perp \, u}_{1,Target}, \\
+F_{L}^{\sin 2\phi} &  =  
+-  {\cal C}  \Bigg[ \frac{2\big( \vec{h} \cdot \vec{k}_{aT} \big) 
+                          \big( \vec{h} \cdot \vec{k}_{bT} \big)
+                         - \vec{k}_{aT} \cdot \vec{k}_{bT}} {M_{a} M_{b}}  
+                  h_{1}^{\perp}  \bar{h}_{1L}^{\perp} \Bigg]
+&\propto h^{\perp \, \bar{u}}_{1,Beam} \otimes h^{\perp \, u}_{1L,Target}, \\
+F_{T}^{1} &  =   
+{\cal C}  \Bigg[ \frac{\vec{h} \cdot \vec{k}_{bT}} {M_{b}}  
+  f_{1}  \bar{f}_{1T}^{\perp} \Bigg]
+&\propto f^{\bar{u}}_{1,Beam} \otimes f^{\perp \, u}_{1T,Target}, \\
+F_{T}^{\sin (2\phi - \phi_S)} &  =  
+-  {\cal C}  \Bigg[ \frac{\vec{h} \cdot \vec{k}_{aT}} {M_{a}} 
+  h_{1}^{\perp}  \bar{h}_{1} \Bigg]
+&\propto h^{\perp \, \bar{u}}_{1,Beam} \otimes h^{u}_{1,Target}, \\
+F_{T}^{\sin (2\phi + \phi_S)} &  =  
+-  {\cal C}  \Bigg[ \frac{2\big( \vec{h} \cdot \vec{k}_{bT} \big)
+                    \big[2 \big( \vec{h} \cdot\vec{k}_{aT} \big)
+                         \big( \vec{h} \cdot \vec{k}_{bT} \big)
+                        -\vec{k}_{aT} \cdot \vec{k}_{bT} \big]
+                   - \vec{k}_{bT}^{2} \big( \vec{h} \cdot \vec{k}_{aT} \big)}
+                  {2 M_{a} M_{b}^{2}}  
+                  h_{1}^{\perp}  \bar{h}_{1T}^{\perp} \Bigg]
+&\propto h^{\perp \, \bar{u}}_{1,Beam} \otimes h^{\perp \, u}_{1T,Target},
+\end{align}
+
+\noindent
+where $\vec{h} = \vec{q}_T/q_T$ is a unit vector and furthermore the assumption
+is made that the beam $\bar{u}$-quark annihilates with the target u-quark.  The
+additional leading order structure functions are zero
+
+\begin{equation}
+  F_{U}^{2} \quad = \quad F_{U}^{\cos\phi} \quad = \quad F_{L}^{\sin\phi} \quad
+  = \quad F_{T}^{2} \quad = \quad F_{T}^{\sin(\phi - \phi_S)} \quad = \quad
+  F_{T}^{\sin(\phi + \phi_S)} \quad = 0.
+\end{equation}
+
+The differential cross-seciton, Eq.~\ref{equ::DY_ang_dist}, can be rewritten in
+terms of asymmetry amplitudes and depolarization factors.  The asymmetry
+amplitudes are defined similarly to the case in SIDIS,
+Eq.~\ref{equ::asymAmpSIDIS}, and again for the reason that asymmetries can be
+determined to a higher precision than structure functions.  For Drell-Yan these
+asymmetry amplitudes are
 
 \begin{equation}
   A^{w_i(\phi, \phi_S)}_{Target} = \frac{F^{w_i(\phi,
@@ -738,20 +804,27 @@ depolarization is defined for each asymmetry amplitude as
   D_{[f(\theta)]} = \frac{f(\theta)}{1+A_U^1\;\cos^2\theta},
 \end{equation}
 \noindent
-where the function $f(\theta)$ is the virtual photon polarization responsible
-for the given asymmetry.
+where the function $f(\theta)$ corresponds to virtual photon angular decay
+responsible for the given asymmetry.  The Drell-Yan differential cross-section,
+Eq.~\ref{equ::DY_ang_dist}, now simplifies to~\cite{AKotzininaNote}
 
-
-\begin{dmath}
-  W_{\mu\nu} =
-  \Big( \frac{q_{\mu}q_{\nu}}{q^2}-g_{\mu\nu} \Big) \frac{F_1(x, Q^2)}{M} +
-  \Big(P_{\mu} - \frac{P \cdot q}{q^2}q_{\mu} \Big)
-  \Big(P_{\nu} - \frac{P \cdot q}{q^2}q_{\nu} \Big) \frac{F_2(x, Q^2)}{M^2\nu} +
-  i\epsilon_{\mu\nu\rho\sigma}\frac{q^{\rho}}{P \cdot q}
-  \Big\{ S^{\sigma}g_1(x, Q^2) +
-  \Big( S^{\sigma} - \frac{S\cdot q}{P\cdot q}P^{\sigma}\Big)g_2(x,Q^2) \Big\},
-\end{dmath}
+\begin{align}
+  \frac{d\sigma}{d^4 q \, d \Omega} &=
+  \frac{\alpha_{em}^2}{F \, q^2}\hat{\sigma}_U
+  \Big \{ \Big(1 + D_{[\sin^2 \theta]} \cos 2\phi \, A_{U}^{\cos 2\phi} \Big)
+ \nonumber \\
+ &+ S_{L} D_{[\sin^2 \theta]} \sin 2\phi \, A_{L}^{\sin 2\phi}
+   \nonumber \\
+   &+ |S_{T}|
+   \Big[A_{T}^{\sin \phi_S}\;\sin \phi_{S} 
+     + \Big( A_{T}^{\sin (2\phi +\phi_S)}\, \sin(2\phi+\phi_S) +
+     A_{T}^{\sin (2\phi - \phi_S)}\, \sin(2\phi-\phi_S) \Big)D_{[\sin ^2\theta]}
+     \Big ]
+   \Big \},
+\end{align}
 \noindent
-where $F_1$, $F_2$, $g_1$ and $g_2$ are structure functions which are determined
-from experiments.
+where $\hat{\sigma}_U = F^1_U (1+\cos^2\theta)$ is the unpolarized DY
+cross-section.
 
+
+\section{Weighted Asymmetries}

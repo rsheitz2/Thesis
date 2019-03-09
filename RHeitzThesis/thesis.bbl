@@ -1,5 +1,15 @@
 \begin{thebibliography}{10}
 
+\bibitem{compassSpec}
+P.~Abbon et~al.
+\newblock {The COMPASS experiment at CERN}.
+\newblock {\em Nucl. Instrum. Meth.}, A577:455--518, 2007.
+
+\bibitem{DNPmethod}
+A.~Abragam and M.~Goldman.
+\newblock Principles of dynamic nuclear polarisation.
+\newblock {\em Reports on Progress in Physics}, 41:395--467, 1978.
+
 \bibitem{Abt:2016vjh}
 I.~Abt, A.~M. Cooper-Sarkar, B.~Foster, V.~Myronenko, K.~Wichmann, and M.~Wing.
 \newblock {Study of HERA ep data at low Q$^2$ and low $x_{Bj}$ and the need for
@@ -24,6 +34,13 @@ A.~et~al. Airapetian.
   nucleon from semiinclusive deep inelastic scattering.
 \newblock {\em Phys. Rev. Lett.}, 92:012005, Jan 2004.
 
+\bibitem{CORAL}
+V.~{\relax Yu}. Aleksakhin, Y.~Bedfer, S.~Gerasimov, and A.~{\relax Yu}.
+  Korzenev.
+\newblock {Geometrical event reconstruction in the COMPASS experiment}.
+\newblock {\em Phys. Part. Nucl. Lett.}, 4:350--362, 2007.
+\newblock [Pisma Fiz. Elem. Chast. Atom. Yadra2007,no.4,588(2007)].
+
 \bibitem{Alekseev:2008aa}
 M.~Alekseev et~al.
 \newblock {Collins and Sivers asymmetries for pions and kaons in muon-deuteron
@@ -47,11 +64,23 @@ Vincenzo Barone, Alessandro Drago, and Philip~G. Ratcliffe.
 \newblock {Transverse polarisation of quarks in hadrons}.
 \newblock {\em Phys. Rept.}, 359:1--168, 2002.
 
+\bibitem{ran_bi}
+Ran Bi.
+\newblock Simulation of properties of compass drift-chamber prototypes.
+\newblock DNP, 2013.
+
 \bibitem{Bjorken:1969ja}
 J.~D. Bjorken and Emmanuel~A. Paschos.
 \newblock {Inelastic Electron Proton and gamma Proton Scattering, and the
   Structure of the Nucleon}.
 \newblock {\em Phys. Rev.}, 185:1975--1982, 1969.
+
+\bibitem{matrix_inv}
+Volker Blobel and Claus Kleinwort.
+\newblock {A New method for the high precision alignment of track detectors}.
+\newblock In {\em {Advanced Statistical Techniques in Particle Physics.
+  Proceedings, Conference, Durham, UK, March 18-22, 2002}}, pages URL--STR(9),
+  2002.
 
 \bibitem{Bloom:1969kc}
 Elliott~D. Bloom et~al.
@@ -62,6 +91,12 @@ Elliott~D. Bloom et~al.
 Daniel Boer and P.~J. Mulders.
 \newblock {Time reversal odd distribution functions in leptoproduction}.
 \newblock {\em Phys. Rev.}, D57:5780--5786, 1998.
+
+\bibitem{MCFM}
+Radja Boughezal, John~M. Campbell, R.~Keith Ellis, Christfried Focke, Walter
+  Giele, Xiaohui Liu, Frank Petriello, and Ciaran Williams.
+\newblock {Color singlet production at NNLO in MCFM}.
+\newblock {\em Eur. Phys. J.}, C77(1):7, 2017.
 
 \bibitem{Breidenbach:1969kd}
 Martin Breidenbach, Jerome~I. Friedman, Henry~W. Kendall, Elliott~D. Bloom,
@@ -87,6 +122,11 @@ C.~G. Callan and David~J. Gross.
   current.
 \newblock {\em Phys. Rev. Lett.}, 22:156--159, Jan 1969.
 
+\bibitem{choi}
+IhnJea Choi.
+\newblock Desy test-beam measurment with compass drift chamber prototypes.
+\newblock DNP, 2013.
+
 \bibitem{collins_2002}
 John~C. Collins.
 \newblock {Leading twist single transverse-spin asymmetries: Drell-Yan and deep
@@ -99,6 +139,16 @@ Juan~Rojo et. al.
   preparation for run {II}.
 \newblock {\em Journal of Physics G: Nuclear and Particle Physics},
   42(10):103103, sep 2015.
+
+\bibitem{KalmanFilter}
+R.~Fruhwirth.
+\newblock {Application of Kalman filtering to track and vertex fitting}.
+\newblock {\em Nucl. Instrum. Meth.}, A262:444--450, 1987.
+
+\bibitem{proposal}
+F~Gautheron et~al.
+\newblock {COMPASS-II Proposal}.
+\newblock 2010.
 
 \bibitem{Harland-Lang:2016yfn}
 L.~A. Harland-Lang, A.~D. Martin, P.~Motylinski, and R.~S. Thorne.
@@ -130,6 +180,20 @@ Emanuele~R. Nocera, Richard~D. Ball, Stefano Forte, Giovanni Ridolfi, and Juan
   uncertainties}.
 \newblock {\em Nucl. Phys.}, B887:276--308, 2014.
 
+\bibitem{compassAlignmentNote}
+H.~Pereira and J.~M.~Le Goff.
+\newblock {Compass Spectrometer Alignment}.
+
+\bibitem{quintans_rec_march12}
+C.~Quintans.
+\newblock Las reconstruction efficiency - dc05/st03.
+\newblock COMPASS DY, March, 12 2014.
+
+\bibitem{quintans_rec_march28}
+C.~Quintans.
+\newblock Las reconstruction efficiency without dc05/st03.
+\newblock COMPASS DY, March, 28 2014.
+
 \bibitem{Savin:2011zz}
 I.~A. Savin.
 \newblock {COMPASS results on the nucleon spin structure}.
@@ -141,9 +205,21 @@ Dennis~W. Sivers.
   Point-Like Constituents}.
 \newblock {\em Phys. Rev.}, D41:83, 1990.
 
+\bibitem{pythia}
+Torbjörn Sjöstrand, Stefan Ask, Jesper~R. Christiansen, Richard Corke,
+  Nishita Desai, Philip Ilten, Stephen Mrenna, Stefan Prestel, Christine~O.
+  Rasmussen, and Peter~Z. Skands.
+\newblock {An Introduction to PYTHIA 8.2}.
+\newblock {\em Comput. Phys. Commun.}, 191:159--177, 2015.
+
 \bibitem{Tanabashi:2018oca}
 M.~Tanabashi et~al.
 \newblock {Review of Particle Physics}.
 \newblock {\em Phys. Rev.}, D98(3):030001, 2018.
+
+\bibitem{garfield}
+R.~Veenhof.
+\newblock Garfield - simulation of gaseous detectors.
+\newblock http://cern.ch/garfield.
 
 \end{thebibliography}
