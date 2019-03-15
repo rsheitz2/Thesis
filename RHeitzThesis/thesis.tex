@@ -14,13 +14,14 @@
 \usepackage{mathrsfs}
 \usepackage{multicol}
 \usepackage{slashed}
+\usepackage[numbers,sort&compress]{natbib}
 
 \singlespacing
 %Newcommands --> define here your alias 
 \newcommand{\gvc}{GeV/$c$} \newcommand{\gvcs}{(GeV/$c$)$^2$}
 \newcommand{\gvcw}{GeV/$c^2$} \newcommand{\mvcw}{MeV/$c^2$}
 \newcommand{\mvc}{MeV/$c$} \newcommand{\diff}{\text{d}}
-\newcommand{\siv}{$f_{1,T}^{\, q\perp}(x,\mathbf{k_T})$ }
+\newcommand{\siv}{$f_{1,T}^{\, q\perp}(x,\mathbf{k_T})$}
 \newcommand{\xn}{x$_{\mathrm{N}}$} \newcommand{\xpi}{x$_{\pi}$}
 \newcommand{\xf}{x$_{\mathrm{F}}$}
 \newcommand{\qt}{q$_{\mathrm{T}}$} \newcommand{\Mmumu}{M$_{\mu\mu}$}
@@ -57,7 +58,9 @@
 % ********************************** Bibliography ******************************
 \renewcommand{\chaptername}{}
 \renewcommand{\thechapter}{} 
-\bibliographystyle{plain}
+%\bibliographystyle{plain}
+\bibliographystyle{unsrtnat}
+%\bibliographystyle{ieeetr}
 \bibliography{References/bibliography}{}
 
 

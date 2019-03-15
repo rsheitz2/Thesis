@@ -1,225 +1,283 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{37}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem{compassSpec}
-P.~Abbon et~al.
-\newblock {The COMPASS experiment at CERN}.
-\newblock {\em Nucl. Instrum. Meth.}, A577:455--518, 2007.
+\bibitem[Barone et~al.(2002)Barone, Drago, and Ratcliffe]{Barone:2001sp}
+Vincenzo Barone, Alessandro Drago, and Philip~G. Ratcliffe.
+\newblock {Transverse polarisation of quarks in hadrons}.
+\newblock \emph{Phys. Rept.}, 359:\penalty0 1--168, 2002.
+\newblock \doi{10.1016/S0370-1573(01)00051-5}.
 
-\bibitem{DNPmethod}
-A.~Abragam and M.~Goldman.
-\newblock Principles of dynamic nuclear polarisation.
-\newblock {\em Reports on Progress in Physics}, 41:395--467, 1978.
+\bibitem[Bloom et~al.(1969)]{Bloom:1969kc}
+Elliott~D. Bloom et~al.
+\newblock {High-Energy Inelastic e p Scattering at 6-Degrees and 10-Degrees}.
+\newblock \emph{Phys. Rev. Lett.}, 23:\penalty0 930--934, 1969.
+\newblock \doi{10.1103/PhysRevLett.23.930}.
 
-\bibitem{Abt:2016vjh}
-I.~Abt, A.~M. Cooper-Sarkar, B.~Foster, V.~Myronenko, K.~Wichmann, and M.~Wing.
-\newblock {Study of HERA ep data at low Q$^2$ and low $x_{Bj}$ and the need for
-  higher-twist corrections to standard perturbative QCD fits}.
-\newblock {\em Phys. Rev.}, D94(3):034032, 2016.
+\bibitem[Breidenbach et~al.(1969)Breidenbach, Friedman, Kendall, Bloom, Coward,
+  DeStaebler, Drees, Mo, and Taylor]{Breidenbach:1969kd}
+Martin Breidenbach, Jerome~I. Friedman, Henry~W. Kendall, Elliott~D. Bloom,
+  D.~H. Coward, H.~C. DeStaebler, J.~Drees, Luke~W. Mo, and Richard~E. Taylor.
+\newblock {Observed Behavior of Highly Inelastic electron-Proton Scattering}.
+\newblock \emph{Phys. Rev. Lett.}, 23:\penalty0 935--939, 1969.
+\newblock \doi{10.1103/PhysRevLett.23.935}.
 
-\bibitem{Adeva:1997is}
-B.~Adeva et~al.
-\newblock {The Spin dependent structure function g(1) (x) of the proton from
-  polarized deep inelastic muon scattering}.
-\newblock {\em Phys. Lett.}, B412:414--424, 1997.
+\bibitem[Bjorken and Paschos(1969)]{Bjorken:1969ja}
+J.~D. Bjorken and Emmanuel~A. Paschos.
+\newblock {Inelastic Electron Proton and gamma Proton Scattering, and the
+  Structure of the Nucleon}.
+\newblock \emph{Phys. Rev.}, 185:\penalty0 1975--1982, 1969.
+\newblock \doi{10.1103/PhysRev.185.1975}.
 
-\bibitem{Airapetian:2009ae}
-A.~Airapetian et~al.
-\newblock {Observation of the Naive-T-odd Sivers Effect in Deep-Inelastic
-  Scattering}.
-\newblock {\em Phys. Rev. Lett.}, 103:152002, 2009.
+\bibitem[Tanabashi et~al.(2018)]{Tanabashi:2018oca}
+M.~Tanabashi et~al.
+\newblock {Review of Particle Physics}.
+\newblock \emph{Phys. Rev.}, D98\penalty0 (3):\penalty0 030001, 2018.
+\newblock \doi{10.1103/PhysRevD.98.030001}.
 
-\bibitem{PhysRevLett.92.012005}
-A.~et~al. Airapetian.
-\newblock Flavor decomposition of the sea-quark helicity distributions in the
-  nucleon from semiinclusive deep inelastic scattering.
-\newblock {\em Phys. Rev. Lett.}, 92:012005, Jan 2004.
+\bibitem[Mulders and Tangerman(1996)]{Mulders:1995dh}
+P.~J. Mulders and R.~D. Tangerman.
+\newblock {The Complete tree level result up to order 1/Q for polarized deep
+  inelastic leptoproduction}.
+\newblock \emph{Nucl. Phys.}, B461:\penalty0 197--237, 1996.
+\newblock \doi{10.1016/S0550-3213(96)00648-7, 10.1016/0550-3213(95)00632-X}.
+\newblock [Erratum: Nucl. Phys.B484,538(1997)].
 
-\bibitem{CORAL}
-V.~{\relax Yu}. Aleksakhin, Y.~Bedfer, S.~Gerasimov, and A.~{\relax Yu}.
-  Korzenev.
-\newblock {Geometrical event reconstruction in the COMPASS experiment}.
-\newblock {\em Phys. Part. Nucl. Lett.}, 4:350--362, 2007.
-\newblock [Pisma Fiz. Elem. Chast. Atom. Yadra2007,no.4,588(2007)].
+\bibitem[Boer and Mulders(1998)]{Boer:1997nt}
+Daniel Boer and P.~J. Mulders.
+\newblock {Time reversal odd distribution functions in leptoproduction}.
+\newblock \emph{Phys. Rev.}, D57:\penalty0 5780--5786, 1998.
+\newblock \doi{10.1103/PhysRevD.57.5780}.
 
-\bibitem{Alekseev:2008aa}
-M.~Alekseev et~al.
-\newblock {Collins and Sivers asymmetries for pions and kaons in muon-deuteron
-  DIS}.
-\newblock {\em Phys. Lett.}, B673:127--135, 2009.
-
-\bibitem{DYxSection}
-S.~Arnold, A.~Metz, and M.~Schlegel.
-\newblock {Dilepton production from polarized hadron hadron collisions}.
-\newblock {\em Phys. Rev.}, D79:034005, 2009.
-
-\bibitem{Bacchetta:2006tn}
+\bibitem[Bacchetta et~al.(2007)Bacchetta, Diehl, Goeke, Metz, Mulders, and
+  Schlegel]{Bacchetta:2006tn}
 Alessandro Bacchetta, Markus Diehl, Klaus Goeke, Andreas Metz, Piet~J. Mulders,
   and Marc Schlegel.
 \newblock {Semi-inclusive deep inelastic scattering at small transverse
   momentum}.
-\newblock {\em JHEP}, 02:093, 2007.
+\newblock \emph{JHEP}, 02:\penalty0 093, 2007.
+\newblock \doi{10.1088/1126-6708/2007/02/093}.
 
-\bibitem{Barone:2001sp}
-Vincenzo Barone, Alessandro Drago, and Philip~G. Ratcliffe.
-\newblock {Transverse polarisation of quarks in hadrons}.
-\newblock {\em Phys. Rept.}, 359:1--168, 2002.
-
-\bibitem{ran_bi}
-Ran Bi.
-\newblock Simulation of properties of compass drift-chamber prototypes.
-\newblock DNP, 2013.
-
-\bibitem{Bjorken:1969ja}
-J.~D. Bjorken and Emmanuel~A. Paschos.
-\newblock {Inelastic Electron Proton and gamma Proton Scattering, and the
-  Structure of the Nucleon}.
-\newblock {\em Phys. Rev.}, 185:1975--1982, 1969.
-
-\bibitem{matrix_inv}
-Volker Blobel and Claus Kleinwort.
-\newblock {A New method for the high precision alignment of track detectors}.
-\newblock In {\em {Advanced Statistical Techniques in Particle Physics.
-  Proceedings, Conference, Durham, UK, March 18-22, 2002}}, pages URL--STR(9),
-  2002.
-
-\bibitem{Bloom:1969kc}
-Elliott~D. Bloom et~al.
-\newblock {High-Energy Inelastic e p Scattering at 6-Degrees and 10-Degrees}.
-\newblock {\em Phys. Rev. Lett.}, 23:930--934, 1969.
-
-\bibitem{Boer:1997nt}
-Daniel Boer and P.~J. Mulders.
-\newblock {Time reversal odd distribution functions in leptoproduction}.
-\newblock {\em Phys. Rev.}, D57:5780--5786, 1998.
-
-\bibitem{MCFM}
-Radja Boughezal, John~M. Campbell, R.~Keith Ellis, Christfried Focke, Walter
-  Giele, Xiaohui Liu, Frank Petriello, and Ciaran Williams.
-\newblock {Color singlet production at NNLO in MCFM}.
-\newblock {\em Eur. Phys. J.}, C77(1):7, 2017.
-
-\bibitem{Breidenbach:1969kd}
-Martin Breidenbach, Jerome~I. Friedman, Henry~W. Kendall, Elliott~D. Bloom,
-  D.~H. Coward, H.~C. DeStaebler, J.~Drees, Luke~W. Mo, and Richard~E. Taylor.
-\newblock {Observed Behavior of Highly Inelastic electron-Proton Scattering}.
-\newblock {\em Phys. Rev. Lett.}, 23:935--939, 1969.
-
-\bibitem{Brodsky:2002cx}
-Stanley~J. Brodsky, Dae~Sung Hwang, and Ivan Schmidt.
-\newblock {Final state interactions and single spin asymmetries in
-  semiinclusive deep inelastic scattering}.
-\newblock {\em Phys. Lett.}, B530:99--107, 2002.
-
-\bibitem{Brodsky:2002rv}
-Stanley~J. Brodsky, Dae~Sung Hwang, and Ivan Schmidt.
-\newblock {Initial state interactions and single spin asymmetries in Drell-Yan
-  processes}.
-\newblock {\em Nucl. Phys.}, B642:344--356, 2002.
-
-\bibitem{PhysRevLett.22.156}
-C.~G. Callan and David~J. Gross.
-\newblock High-energy electroproduction and the constitution of the electric
-  current.
-\newblock {\em Phys. Rev. Lett.}, 22:156--159, Jan 1969.
-
-\bibitem{choi}
-IhnJea Choi.
-\newblock Desy test-beam measurment with compass drift chamber prototypes.
-\newblock DNP, 2013.
-
-\bibitem{collins_2002}
-John~C. Collins.
-\newblock {Leading twist single transverse-spin asymmetries: Drell-Yan and deep
-  inelastic scattering}.
-\newblock {\em Phys. Lett.}, B536:43--48, 2002.
-
-\bibitem{Rojo_2015}
+\bibitem[et. al.(2015)]{Rojo_2015}
 Juan~Rojo et. al.
 \newblock The {PDF}4lhc report on {PDFs} and {LHC} data: results from run i and
   preparation for run {II}.
-\newblock {\em Journal of Physics G: Nuclear and Particle Physics},
-  42(10):103103, sep 2015.
+\newblock \emph{Journal of Physics G: Nuclear and Particle Physics},
+  42\penalty0 (10):\penalty0 103103, sep 2015.
+\newblock \doi{10.1088/0954-3899/42/10/103103}.
+\newblock URL \url{https://doi.org/10.1088%2F0954-3899%2F42%2F10%2F103103}.
 
-\bibitem{KalmanFilter}
-R.~Fruhwirth.
-\newblock {Application of Kalman filtering to track and vertex fitting}.
-\newblock {\em Nucl. Instrum. Meth.}, A262:444--450, 1987.
+\bibitem[Adeva et~al.(1997)]{Adeva:1997is}
+B.~Adeva et~al.
+\newblock {The Spin dependent structure function g(1) (x) of the proton from
+  polarized deep inelastic muon scattering}.
+\newblock \emph{Phys. Lett.}, B412:\penalty0 414--424, 1997.
+\newblock \doi{10.1016/S0370-2693(97)01106-4}.
 
-\bibitem{proposal}
-F~Gautheron et~al.
-\newblock {COMPASS-II Proposal}.
-\newblock 2010.
+\bibitem[Airapetian(2004)]{PhysRevLett.92.012005}
+A.~et~al. Airapetian.
+\newblock Flavor decomposition of the sea-quark helicity distributions in the
+  nucleon from semiinclusive deep inelastic scattering.
+\newblock \emph{Phys. Rev. Lett.}, 92:\penalty0 012005, Jan 2004.
+\newblock \doi{10.1103/PhysRevLett.92.012005}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.92.012005}.
 
-\bibitem{Harland-Lang:2016yfn}
+\bibitem[Savin(2011)]{Savin:2011zz}
+I.~A. Savin.
+\newblock {COMPASS results on the nucleon spin structure}.
+\newblock \emph{Nucl. Phys. Proc. Suppl.}, 219-220:\penalty0 94--101, 2011.
+\newblock \doi{10.1016/j.nuclphysbps.2011.11.001}.
+
+\bibitem[Harland-Lang et~al.(2016)Harland-Lang, Martin, Motylinski, and
+  Thorne]{Harland-Lang:2016yfn}
 L.~A. Harland-Lang, A.~D. Martin, P.~Motylinski, and R.~S. Thorne.
 \newblock {The impact of the final HERA combined data on PDFs obtained from a
   global fit}.
-\newblock {\em Eur. Phys. J.}, C76(4):186, 2016.
+\newblock \emph{Eur. Phys. J.}, C76\penalty0 (4):\penalty0 186, 2016.
+\newblock \doi{10.1140/epjc/s10052-016-4020-1}.
 
-\bibitem{Hirai:2008aj}
-M.~Hirai and S.~Kumano.
-\newblock {Determination of gluon polarization from deep inelastic scattering
-  and collider data}.
-\newblock {\em Nucl. Phys.}, B813:106--122, 2009.
+\bibitem[Abt et~al.(2016)Abt, Cooper-Sarkar, Foster, Myronenko, Wichmann, and
+  Wing]{Abt:2016vjh}
+I.~Abt, A.~M. Cooper-Sarkar, B.~Foster, V.~Myronenko, K.~Wichmann, and M.~Wing.
+\newblock {Study of HERA ep data at low Q$^2$ and low $x_{Bj}$ and the need for
+  higher-twist corrections to standard perturbative QCD fits}.
+\newblock \emph{Phys. Rev.}, D94\penalty0 (3):\penalty0 034032, 2016.
+\newblock \doi{10.1103/PhysRevD.94.034032}.
 
-\bibitem{AKotzininaNote}
-A.~Kotzinian.
-\newblock {Description of polarized $\pi^-$ + N Drell-Yan processes}.
-
-\bibitem{Mulders:1995dh}
-P.~J. Mulders and R.~D. Tangerman.
-\newblock {The Complete tree level result up to order 1/Q for polarized deep
-  inelastic leptoproduction}.
-\newblock {\em Nucl. Phys.}, B461:197--237, 1996.
-\newblock [Erratum: Nucl. Phys.B484,538(1997)].
-
-\bibitem{Nocera:2014gqa}
+\bibitem[Nocera et~al.(2014)Nocera, Ball, Forte, Ridolfi, and
+  Rojo]{Nocera:2014gqa}
 Emanuele~R. Nocera, Richard~D. Ball, Stefano Forte, Giovanni Ridolfi, and Juan
   Rojo.
 \newblock {A first unbiased global determination of polarized PDFs and their
   uncertainties}.
-\newblock {\em Nucl. Phys.}, B887:276--308, 2014.
+\newblock \emph{Nucl. Phys.}, B887:\penalty0 276--308, 2014.
+\newblock \doi{10.1016/j.nuclphysb.2014.08.008}.
 
-\bibitem{compassAlignmentNote}
-H.~Pereira and J.~M.~Le Goff.
-\newblock {Compass Spectrometer Alignment}.
+\bibitem[Hirai and Kumano(2009)]{Hirai:2008aj}
+M.~Hirai and S.~Kumano.
+\newblock {Determination of gluon polarization from deep inelastic scattering
+  and collider data}.
+\newblock \emph{Nucl. Phys.}, B813:\penalty0 106--122, 2009.
+\newblock \doi{10.1016/j.nuclphysb.2008.12.026}.
 
-\bibitem{quintans_rec_march12}
-C.~Quintans.
-\newblock Las reconstruction efficiency - dc05/st03.
-\newblock COMPASS DY, March, 12 2014.
+\bibitem[Callan and Gross(1969)]{PhysRevLett.22.156}
+C.~G. Callan and David~J. Gross.
+\newblock High-energy electroproduction and the constitution of the electric
+  current.
+\newblock \emph{Phys. Rev. Lett.}, 22:\penalty0 156--159, Jan 1969.
+\newblock \doi{10.1103/PhysRevLett.22.156}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.22.156}.
 
-\bibitem{quintans_rec_march28}
-C.~Quintans.
-\newblock Las reconstruction efficiency without dc05/st03.
-\newblock COMPASS DY, March, 28 2014.
-
-\bibitem{Savin:2011zz}
-I.~A. Savin.
-\newblock {COMPASS results on the nucleon spin structure}.
-\newblock {\em Nucl. Phys. Proc. Suppl.}, 219-220:94--101, 2011.
-
-\bibitem{Sivers}
+\bibitem[Sivers(1990)]{Sivers}
 Dennis~W. Sivers.
 \newblock {Single Spin Production Asymmetries from the Hard Scattering of
   Point-Like Constituents}.
-\newblock {\em Phys. Rev.}, D41:83, 1990.
+\newblock \emph{Phys. Rev.}, D41:\penalty0 83, 1990.
+\newblock \doi{10.1103/PhysRevD.41.83}.
 
-\bibitem{pythia}
-Torbjörn Sjöstrand, Stefan Ask, Jesper~R. Christiansen, Richard Corke,
-  Nishita Desai, Philip Ilten, Stephen Mrenna, Stefan Prestel, Christine~O.
-  Rasmussen, and Peter~Z. Skands.
-\newblock {An Introduction to PYTHIA 8.2}.
-\newblock {\em Comput. Phys. Commun.}, 191:159--177, 2015.
+\bibitem[Brodsky et~al.(2002{\natexlab{a}})Brodsky, Hwang, and
+  Schmidt]{Brodsky:2002cx}
+Stanley~J. Brodsky, Dae~Sung Hwang, and Ivan Schmidt.
+\newblock {Final state interactions and single spin asymmetries in
+  semiinclusive deep inelastic scattering}.
+\newblock \emph{Phys. Lett.}, B530:\penalty0 99--107, 2002{\natexlab{a}}.
+\newblock \doi{10.1016/S0370-2693(02)01320-5}.
 
-\bibitem{Tanabashi:2018oca}
-M.~Tanabashi et~al.
-\newblock {Review of Particle Physics}.
-\newblock {\em Phys. Rev.}, D98(3):030001, 2018.
+\bibitem[Brodsky et~al.(2002{\natexlab{b}})Brodsky, Hwang, and
+  Schmidt]{Brodsky:2002rv}
+Stanley~J. Brodsky, Dae~Sung Hwang, and Ivan Schmidt.
+\newblock {Initial state interactions and single spin asymmetries in Drell-Yan
+  processes}.
+\newblock \emph{Nucl. Phys.}, B642:\penalty0 344--356, 2002{\natexlab{b}}.
+\newblock \doi{10.1016/S0550-3213(02)00617-X}.
 
-\bibitem{garfield}
-R.~Veenhof.
-\newblock Garfield - simulation of gaseous detectors.
-\newblock http://cern.ch/garfield.
+\bibitem[Collins(2002)]{collins_2002}
+John~C. Collins.
+\newblock {Leading twist single transverse-spin asymmetries: Drell-Yan and deep
+  inelastic scattering}.
+\newblock \emph{Phys. Lett.}, B536:\penalty0 43--48, 2002.
+\newblock \doi{10.1016/S0370-2693(02)01819-1}.
+
+\bibitem[Alekseev et~al.(2009)]{Alekseev:2008aa}
+M.~Alekseev et~al.
+\newblock {Collins and Sivers asymmetries for pions and kaons in muon-deuteron
+  DIS}.
+\newblock \emph{Phys. Lett.}, B673:\penalty0 127--135, 2009.
+\newblock \doi{10.1016/j.physletb.2009.01.060}.
+
+\bibitem[Airapetian et~al.(2009)]{Airapetian:2009ae}
+A.~Airapetian et~al.
+\newblock {Observation of the Naive-T-odd Sivers Effect in Deep-Inelastic
+  Scattering}.
+\newblock \emph{Phys. Rev. Lett.}, 103:\penalty0 152002, 2009.
+\newblock \doi{10.1103/PhysRevLett.103.152002}.
+
+\bibitem[Anselmino et~al.(2012)Anselmino, Boglione, and
+  Melis]{PhysRevD.86.014028}
+M.~Anselmino, M.~Boglione, and S.~Melis.
+\newblock Strategy towards the extraction of the sivers function with
+  transverse momentum dependent evolution.
+\newblock \emph{Phys. Rev. D}, 86:\penalty0 014028, Jul 2012.
+\newblock \doi{10.1103/PhysRevD.86.014028}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevD.86.014028}.
+
+\bibitem[Adolph et~al.(2014)]{Adolph:2014pwc}
+C.~Adolph et~al.
+\newblock {Measurement of azimuthal hadron asymmetries in semi-inclusive deep
+  inelastic scattering off unpolarised nucleons}.
+\newblock \emph{Nucl. Phys.}, B886:\penalty0 1046--1077, 2014.
+\newblock \doi{10.1016/j.nuclphysb.2014.07.019}.
+
+\bibitem[Anselmino et~al.(2013)Anselmino, Boglione, D'Alesio, Melis, Murgia,
+  and Prokudin]{PhysRevD.87.094019}
+M.~Anselmino, M.~Boglione, U.~D'Alesio, S.~Melis, F.~Murgia, and A.~Prokudin.
+\newblock Simultaneous extraction of transversity and collins functions from
+  new semi-inclusive deep inelastic scattering and
+  ${e}^{\mathbf{+}}{e}^{\mathbf{\ensuremath{-}}}$ data.
+\newblock \emph{Phys. Rev. D}, 87:\penalty0 094019, May 2013.
+\newblock \doi{10.1103/PhysRevD.87.094019}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevD.87.094019}.
+
+\bibitem[Arnold et~al.(2009)Arnold, Metz, and Schlegel]{DYxSection}
+S.~Arnold, A.~Metz, and M.~Schlegel.
+\newblock {Dilepton production from polarized hadron hadron collisions}.
+\newblock \emph{Phys. Rev.}, D79:\penalty0 034005, 2009.
+\newblock \doi{10.1103/PhysRevD.79.034005}.
+
+\bibitem[Kotzinian.(2010)]{AKotzininaNote}
+A.~Kotzinian.
+\newblock {Description of polarized $\pi^-$ + N Drell-Yan processes}, 2010.
+\newblock URL \url{http://wwwcompass.cern.ch/compass/notes_public/2010-2.pdf}.
+
+\bibitem[Echevarria et~al.(2014)Echevarria, Idilbi, Kang, and
+  Vitev]{PhysRevD.89.074013}
+Miguel~G. Echevarria, Ahmad Idilbi, Zhong-Bo Kang, and Ivan Vitev.
+\newblock Qcd evolution of the sivers asymmetry.
+\newblock \emph{Phys. Rev. D}, 89:\penalty0 074013, Apr 2014.
+\newblock \doi{10.1103/PhysRevD.89.074013}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevD.89.074013}.
+
+\bibitem[Kang and Qiu(2009)]{PhysRevLett.103.172001}
+Zhong-Bo Kang and Jian-Wei Qiu.
+\newblock Testing the time-reversal modified universality of the sivers
+  function.
+\newblock \emph{Phys. Rev. Lett.}, 103:\penalty0 172001, Oct 2009.
+\newblock \doi{10.1103/PhysRevLett.103.172001}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.103.172001}.
+
+\bibitem[Adamczyk(2016)]{PhysRevLett.116.132301}
+L.~et.~al. Adamczyk.
+\newblock Measurement of the transverse single-spin asymmetry in
+  ${p}^{\ensuremath{\uparrow}}+p\ensuremath{\rightarrow}{W}^{\ifmmode\pm\else\textpm\fi{}}/{Z}^{0}$
+  at rhic.
+\newblock \emph{Phys. Rev. Lett.}, 116:\penalty0 132301, Apr 2016.
+\newblock \doi{10.1103/PhysRevLett.116.132301}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.116.132301}.
+
+\bibitem[Kotzinian and Mulders(1996)]{Kotzinian:1995cz}
+A.~M. Kotzinian and P.~J. Mulders.
+\newblock {Longitudinal quark polarization in transversely polarized nucleons}.
+\newblock \emph{Phys. Rev.}, D54:\penalty0 1229--1232, 1996.
+\newblock \doi{10.1103/PhysRevD.54.1229}.
+
+\bibitem[Kotzinian and Mulders(1997)]{Kotzinian:1997wt}
+A.~M. Kotzinian and P.~J. Mulders.
+\newblock {Probing transverse quark polarization via azimuthal asymmetries in
+  leptoproduction}.
+\newblock \emph{Phys. Lett.}, B406:\penalty0 373--380, 1997.
+\newblock \doi{10.1016/S0370-2693(97)00708-9}.
+
+\bibitem[Efremov et~al.(2005)Efremov, Goeke, Menzel, Metz, and
+  Schweitzer]{Efremov:2004tp}
+A.~V. Efremov, K.~Goeke, S.~Menzel, A.~Metz, and P.~Schweitzer.
+\newblock {Sivers effect in semi-inclusive DIS and in the Drell-Yan process}.
+\newblock \emph{Phys. Lett.}, B612:\penalty0 233--244, 2005.
+\newblock \doi{10.1016/j.physletb.2005.03.010}.
+
+\bibitem[Sissakian et~al.(2005)Sissakian, Shevchenko, Nagaytsev, and
+  Ivanov]{Sissakian:2005vd}
+A.~N. Sissakian, O.~{\relax Yu}. Shevchenko, A.~P. Nagaytsev, and O.~N. Ivanov.
+\newblock {Direct extraction of transversity and its accompanying T-odd
+  distribution from the unpolarized and single-polarized Drell-Yan process}.
+\newblock \emph{Phys. Rev.}, D72:\penalty0 054027, 2005.
+\newblock \doi{10.1103/PhysRevD.72.054027}.
+
+\bibitem[Sissakian et~al.(2006)Sissakian, Shevchenko, Nagaytsev, Denisov, and
+  Ivanov]{Sissakian:2005yp}
+A.~Sissakian, O.~Shevchenko, A.~Nagaytsev, O.~Denisov, and O.~Ivanov.
+\newblock {Transversity and its accompanying T-odd distribution from Drell-Yan
+  processes with pion-proton collisions}.
+\newblock \emph{Eur. Phys. J.}, C46:\penalty0 147--150, 2006.
+\newblock \doi{10.1140/epjc/s2006-02490-1}.
+
+\bibitem[Wang et~al.(2017)Wang, Wang, and Lu]{Wang:2017onm}
+Zhengxian Wang, Xiaoyu Wang, and Zhun Lu.
+\newblock {Boer-Mulders function of pion meson and $q_T$-weighted $\cos2\phi$
+  asymmetry in the unpolarized $\pi^- p$ Drell-Yan at COMPASS}.
+\newblock \emph{Phys. Rev.}, D95\penalty0 (9):\penalty0 094004, 2017.
+\newblock \doi{10.1103/PhysRevD.95.094004}.
 
 \end{thebibliography}
