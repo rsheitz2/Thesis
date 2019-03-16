@@ -627,6 +627,7 @@ parameters to the fit.  The result of the fit can determine the spin-dependent
 asymmetry amplitudes without needing to determine the luminosity and therefore
 with reduced systematic errors.
 
+\subsection{SIDIS TMD Results}
 COMPASS and HERMES measurements the asymmetry $A_{UT ,T}^{\sin\left(\phi_h
   -\phi_S\right)}$ from the SIDIS reaction from a proton
 target~\cite{Alekseev:2008aa,Airapetian:2009ae}.  The comparison of the results
@@ -705,15 +706,26 @@ larger for d-quarks than for u-quarks.
   \label{fig::BMFromSIDIS}
 \end{figure}
 
-Give transversity function from SIDIS, get BM convolution and asymmetry...
+Three SIDIS experiments measured data related to the transversity distribution
+from the structure function $F_{UT}^{\sin(\phi_h +\phi_S)}$.  These three
+experiments were HERMES~\cite{Airapetian:2004tw,Airapetian:2010ds},
+COMPASS~\cite{Ageev:2006da,Alekseev:2008aa,Alekseev:2010rw,Adolph:2012sn,Adolph:2014zba},
+and JLab HALL A~\cite{PhysRevLett.107.072003}.  The FF data to determine
+$H_1^{\perp }$ from the structure function, $F_{UT}^{\sin(\phi_h +\phi_S)}$,
+comes from BELLE~\cite{Abe:2005zx,Seidl:2008xc} and
+BABAR~\cite{TheBABAR:2013yha} data in $e^+e^-$ annihilation data.  Anselmino
+et. al. extracted the transversity distribution~\cite{PhysRevD.87.094019} from
+all this data and their results are shown in
+Fig.~\ref{fig::transversityExtractedFromSIDIS}.
 
 \begin{figure}[h!t]
-  \centering \includegraphics[width=0.75\textwidth, trim=0cm 4cm 0cm 4cm,
+  \centering \includegraphics[width=0.4\textwidth, trim=4cm 7cm 4cm 6cm,
     clip]{transversityExtractedFromSIDIS}
-  \caption{Image taken from~\cite{PhysRevD.87.094019}.}
+  \caption{The transversity distribution for u-quarks (top) and d-quarks
+    (bottom) determined SIDIS data and $e^+e^-$ data.  Image taken
+    from~\cite{PhysRevD.87.094019}.}
   \label{fig::transversityExtractedFromSIDIS}
 \end{figure}
-
 
 
 \section{Drell-Yan} \label{sec::DY}
@@ -933,19 +945,69 @@ Eq.~\ref{equ::DY_ang_dist}, now simplifies to~\cite{AKotzininaNote}
 where $\hat{\sigma}_U = F^1_U (1+\cos^2\theta)$ is the unpolarized DY
 cross-section.
 
+\subsection{Drell-Yan Sivers Result}
+The first Drell-Yan results for the Sivers asymmetry amplitude, in an attempt to
+verify the sign change between Drell-Yan and SIDIS, came from hadron-hadron
+collisions at Star~\cite{PhysRevLett.116.132301}.  Their result measured the
+Sivers amplitude from $pp^{\uparrow} \rightarrow Z^0X$ and $pp^{\uparrow}
+\rightarrow W^{\pm}X$ and are shown in Fig.~\ref{fig::StarSivers}.  The
+statistical error bars too high and the $Q^2$ scale is very different from that
+used to measure a Sivers function in SIDIS however.  As a result as of the data
+of this thesis it is impossible to conclude on a sign change of the Sivers
+function between Drell-Yan and SIDIS.
 
-Give star results on generalized DY
 \begin{figure}[h!t]
   \centering
   \includegraphics[width=0.7\textwidth, trim=1cm 5cm 1cm 5cm]{StarSivers}
-  \caption{Evolution from EIKV~\cite{PhysRevD.89.074013} and
-    KQ~\cite{PhysRevLett.103.172001}.  Image taken
-    from~\cite{PhysRevLett.116.132301}.}
+  \caption{All plots show a left-right asymmetry which is related to the Sivers
+    function.  The top right plot is for $Z^0$ production while the other three
+    plots are for $W^\pm$ production.  $Q^2$ evolution and resulting error bars
+    from EIKV~\cite{PhysRevD.89.074013} and KQ~\cite{PhysRevLett.103.172001}.
+    Image taken from~\cite{PhysRevLett.116.132301}.}
   \label{fig::StarSivers}
 \end{figure}
 
+\subsection{Left-Right Asymmetry}
+The normalized left-right asymmetry, $A_N$, can be written as
 
-\subsection{Weighted Asymmetries}
+\begin{equation}
+  A_N = \frac{\sigma_{left} - \sigma_{right}}{\sigma_{left} + \sigma_{right}},
+\end{equation}
+\noindent
+where $\sigma_{left(right)}$ is the cross-section for producing a final state to
+the left(right).  The definition of left and right depend on the frame chosen
+and the process the asymmetry, $A_N$, is studied from.  This asymmetry is
+traditionally studied in the context of high energy spin related phenomena where
+the asymmetry is used to measure spin related effects.  In the context of an
+experiment where the polarization can never reach 100\%, the asymmetry is
+increased to represent only the spin related effects.  That is
+
+\begin{equation}
+  \label{equ::QN_fromExp}
+  A_N = \frac{1}{P}
+  \frac{\sigma_{left} - \sigma_{right}}{\sigma_{left} + \sigma_{right}},
+\end{equation},
+\noindent
+where $P$ is the polarization percentage of either a target or high energy beam.
+
+$A_N$ was measured to be larger than expected... explained by Sivers
+
+In the Drell-Yan reaction, $A_N$ is related to the Sivers function.  This can be
+seen by first writing the Drell-Yan differential cross-section under the TMD
+assumptions as~\cite{}
+\begin{equation}
+  \frac{d\sigma^{H_aH_b\rightarrow l^+l^- X}}{dydM^2d^2q_T} =
+  \hat{\sigma}_0 \sum_q e^2_q \int d^2k_{aT} d^2k_{bT}
+  \delta^{(2)}(k_{aT}+k_{bT}-q_T)
+  f_{\bar{q}/H_a(x_a, k_{aT})}f_{q/H_b(x_b, k_{bT})},
+\end{equation}
+\noindent
+where $\hat{\sigma}_0$ is the unpolarized Drell-Yan cross-section $y$ is
+rapidity and $f_{\bar{q}(q)/H_{a(b)}}$ is a TMD function.  Inserting this
+cross-section into the definition for $A_N$, Eq.~\ref{equ::AN_fromExp}, and
+using
+
+\subsection{Weighted Asymmetries from Drell-Yan}
 
 The proton TMD functions, determined from Drell-Yan in
 Eqs.~\ref{equ::DY_fU1}-\ref{equ::DY_fTsin2phiphiS}, are convoluted with a TMD
@@ -1101,3 +1163,51 @@ weighted asymmetry amplitude is as follows
   -2\frac{f_{1T,proton}^{(1)u\perp}(x_{proton})}{f_{1,proton}}.
 \end{equation}
 
+\subsection{J/$\Psi$ Production}
+The production of J/$\Psi$ hadrons potentially offers an alternative mechanism
+for studying TMD related effects.  There is currently no confirmation on the
+J/$\Psi$ production mechanism however.  Therefore it impossible to say if TMD
+effects are present from JPsi production.  Still there are many models which can
+be tested, some of which assume TMD functions contribute to produce JPsi
+hadrons.
+
+One of the most popular J/$\Psi$ production models, is the color evaporation
+model~\cite{VOGT1999197}.  In this model the J/$\Psi$ production results from
+gluon-gluon fusion and quark and ant-quark annihilation.  This is depicted as
+
+\begin{equation}
+  \sigma \Big |_{H_aH_b\rightarrow J/\Phi X \rightarrow l^+l^- X}
+  = \sigma_{q\bar{q}\rightarrow c\bar{c}} + \sigma{gg\rightarrow c\bar{c}},
+\end{equation}
+
+\noindent
+where $\sigma_{q\bar{q}(gg)\rightarrow c\bar{c}}$ is the cross-section for
+quark-quark annihilation (gluon-gluon fusion) to a $c\bar{c}$ final state.  In
+the case of quark-quark annihilation there is interest in a model duality
+between Drell-Yan and J/$\Psi$ production.
+
+The spin and parity J/$\Psi$ quantum numbers are the same as the spin and parity
+of a photon.  For this reason it is hypothesized that there is a duality between
+the Drell-Yan process and J/$\Psi$
+production~\cite{Anselmino:2004ki,Barone2007,Sissakian:2008th}.  This duality
+would then take the electromagnetic coupling and Drell-Yan invariant mass to a
+new JPsi coupling and JPsi mass given as
+
+\begin{align}
+  \nonumber
+  \mathrm{Drell-}\mathrm{Yan}\; \mathrm{Production} \quad &
+  \quad\quad\quad\quad \mathrm{J/}\Psi \;\mathrm{Production}
+  \\
+  16\pi^2\alpha^2e_q^2 \quad &\rightarrow
+  \quad \quad\quad (g_q^{J/\Psi})^2(g_l^{J/\Psi})^2
+  \\
+  \frac{1}{M^4} \quad \quad &\rightarrow \quad
+  \frac{1}{(M^2-M^2_{J/\Psi})^2 + M^2_{J/\Psi}\Gamma^2_{J/\Psi}},
+\end{align}
+
+\noindent
+where $M^2 = Q^2$, $M_{J\Psi}^2 \approx$ 9.59({\gvcw})$^2$ is the JPsi mass
+squared and $Gamma_{J\Psi}$ is the full JPsi width.
+
+This duality is only expected when quark-quark annihilation dominates over
+gluon-gluon fusion however.  Under this duality assumption, an interesting 

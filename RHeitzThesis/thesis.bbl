@@ -1,9 +1,54 @@
-\begin{thebibliography}{37}
+\begin{thebibliography}{70}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Rutherford(1911)]{Rutherford:1911zz}
+E.~Rutherford.
+\newblock {The scattering of alpha and beta particles by matter and the
+  structure of the atom}.
+\newblock \emph{Phil. Mag. Ser.6}, 21:\penalty0 669--688, 1911.
+\newblock \doi{10.1080/14786440508637080}.
+
+\bibitem[Gell-Mann(1964)]{GellMann:1964nj}
+Murray Gell-Mann.
+\newblock {A Schematic Model of Baryons and Mesons}.
+\newblock \emph{Phys. Lett.}, 8:\penalty0 214--215, 1964.
+\newblock \doi{10.1016/S0031-9163(64)92001-3}.
+
+\bibitem[Zweig(1964)]{Zweig:1964jf}
+G.~Zweig.
+\newblock {An SU(3) model for strong interaction symmetry and its breaking.
+  Version 2}.
+\newblock In D.B. Lichtenberg and Simon~Peter Rosen, editors,
+  \emph{DEVELOPMENTS IN THE QUARK THEORY OF HADRONS. VOL. 1. 1964 - 1978},
+  pages 22--101. 1964.
+
+\bibitem[Feynman(1969)]{PhysRevLett.23.1415}
+Richard~P. Feynman.
+\newblock Very high-energy collisions of hadrons.
+\newblock \emph{Phys. Rev. Lett.}, 23:\penalty0 1415--1417, Dec 1969.
+\newblock \doi{10.1103/PhysRevLett.23.1415}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.23.1415}.
+
+\bibitem[Sivers(1990)]{Sivers}
+Dennis~W. Sivers.
+\newblock {Single Spin Production Asymmetries from the Hard Scattering of
+  Point-Like Constituents}.
+\newblock \emph{Phys. Rev.}, D41:\penalty0 83, 1990.
+\newblock \doi{10.1103/PhysRevD.41.83}.
+
+\bibitem[Klem et~al.(1976)Klem, Bowers, Courant, Kagan, Marshak, Peterson,
+  Ruddick, Dragoset, and Roberts]{PhysRevLett.36.929}
+R.~D. Klem, J.~E. Bowers, H.~W. Courant, H.~Kagan, M.~L. Marshak, E.~A.
+  Peterson, K.~Ruddick, W.~H. Dragoset, and J.~B. Roberts.
+\newblock Measurement of asymmetries of inclusive pion production in
+  proton-proton interactions at 6 and 11.8 gev/c.
+\newblock \emph{Phys. Rev. Lett.}, 36:\penalty0 929--931, Apr 1976.
+\newblock \doi{10.1103/PhysRevLett.36.929}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.36.929}.
 
 \bibitem[Barone et~al.(2002)Barone, Drago, and Ratcliffe]{Barone:2001sp}
 Vincenzo Barone, Alessandro Drago, and Philip~G. Ratcliffe.
@@ -131,13 +176,6 @@ C.~G. Callan and David~J. Gross.
 \newblock \doi{10.1103/PhysRevLett.22.156}.
 \newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.22.156}.
 
-\bibitem[Sivers(1990)]{Sivers}
-Dennis~W. Sivers.
-\newblock {Single Spin Production Asymmetries from the Hard Scattering of
-  Point-Like Constituents}.
-\newblock \emph{Phys. Rev.}, D41:\penalty0 83, 1990.
-\newblock \doi{10.1103/PhysRevD.41.83}.
-
 \bibitem[Brodsky et~al.(2002{\natexlab{a}})Brodsky, Hwang, and
   Schmidt]{Brodsky:2002cx}
 Stanley~J. Brodsky, Dae~Sung Hwang, and Ivan Schmidt.
@@ -191,6 +229,80 @@ C.~Adolph et~al.
 \newblock \emph{Nucl. Phys.}, B886:\penalty0 1046--1077, 2014.
 \newblock \doi{10.1016/j.nuclphysb.2014.07.019}.
 
+\bibitem[Airapetian et~al.(2005)]{Airapetian:2004tw}
+A.~Airapetian et~al.
+\newblock {Single-spin asymmetries in semi-inclusive deep-inelastic scattering
+  on a transversely polarized hydrogen target}.
+\newblock \emph{Phys. Rev. Lett.}, 94:\penalty0 012002, 2005.
+\newblock \doi{10.1103/PhysRevLett.94.012002}.
+
+\bibitem[Airapetian et~al.(2010)]{Airapetian:2010ds}
+A.~Airapetian et~al.
+\newblock {Effects of transversity in deep-inelastic scattering by polarized
+  protons}.
+\newblock \emph{Phys. Lett.}, B693:\penalty0 11--16, 2010.
+\newblock \doi{10.1016/j.physletb.2010.08.012}.
+
+\bibitem[Ageev et~al.(2007)]{Ageev:2006da}
+E.~S. Ageev et~al.
+\newblock {A New measurement of the Collins and Sivers asymmetries on a
+  transversely polarised deuteron target}.
+\newblock \emph{Nucl. Phys.}, B765:\penalty0 31--70, 2007.
+\newblock \doi{10.1016/j.nuclphysb.2006.10.027}.
+
+\bibitem[Alekseev et~al.(2010)]{Alekseev:2010rw}
+M.~G. Alekseev et~al.
+\newblock {Measurement of the Collins and Sivers asymmetries on transversely
+  polarised protons}.
+\newblock \emph{Phys. Lett.}, B692:\penalty0 240--246, 2010.
+\newblock \doi{10.1016/j.physletb.2010.08.001}.
+
+\bibitem[Adolph et~al.(2012)]{Adolph:2012sn}
+C.~Adolph et~al.
+\newblock {Experimental investigation of transverse spin asymmetries in muon-p
+  SIDIS processes: Collins asymmetries}.
+\newblock \emph{Phys. Lett.}, B717:\penalty0 376--382, 2012.
+\newblock \doi{10.1016/j.physletb.2012.09.055}.
+
+\bibitem[Adolph et~al.(2015)]{Adolph:2014zba}
+C.~Adolph et~al.
+\newblock {Collins and Sivers asymmetries in muonproduction of pions and kaons
+  off transversely polarised protons}.
+\newblock \emph{Phys. Lett.}, B744:\penalty0 250--259, 2015.
+\newblock \doi{10.1016/j.physletb.2015.03.056}.
+
+\bibitem[Qian(2011)]{PhysRevLett.107.072003}
+X.~et.~al. Qian.
+\newblock Single spin asymmetries in charged pion production from
+  semi-inclusive deep inelastic scattering on a transversely polarized
+  $^{3}\mathrm{He}$ target at ${Q}^{2}=1.4--2.7\text{ }\text{
+  }{\mathrm{gev}}^{2}$.
+\newblock \emph{Phys. Rev. Lett.}, 107:\penalty0 072003, Aug 2011.
+\newblock \doi{10.1103/PhysRevLett.107.072003}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.107.072003}.
+
+\bibitem[Abe et~al.(2006)]{Abe:2005zx}
+Kazuo Abe et~al.
+\newblock {Measurement of azimuthal asymmetries in inclusive production of
+  hadron pairs in e+ e- annihilation at Belle}.
+\newblock \emph{Phys. Rev. Lett.}, 96:\penalty0 232002, 2006.
+\newblock \doi{10.1103/PhysRevLett.96.232002}.
+
+\bibitem[Seidl et~al.(2008)]{Seidl:2008xc}
+R.~Seidl et~al.
+\newblock {Measurement of Azimuthal Asymmetries in Inclusive Production of
+  Hadron Pairs in e+e- Annihilation at s**(1/2) = 10.58-GeV}.
+\newblock \emph{Phys. Rev.}, D78:\penalty0 032011, 2008.
+\newblock \doi{10.1103/PhysRevD.78.032011, 10.1103/PhysRevD.86.039905}.
+\newblock [Erratum: Phys. Rev.D86,039905(2012)].
+
+\bibitem[Lees et~al.(2014)]{TheBABAR:2013yha}
+J.~P. Lees et~al.
+\newblock {Measurement of Collins asymmetries in inclusive production of
+  charged pion pairs in e^+e^- annihilation at BABAR}.
+\newblock \emph{Phys. Rev.}, D90\penalty0 (5):\penalty0 052003, 2014.
+\newblock \doi{10.1103/PhysRevD.90.052003}.
+
 \bibitem[Anselmino et~al.(2013)Anselmino, Boglione, D'Alesio, Melis, Murgia,
   and Prokudin]{PhysRevD.87.094019}
 M.~Anselmino, M.~Boglione, U.~D'Alesio, S.~Melis, F.~Murgia, and A.~Prokudin.
@@ -212,6 +324,15 @@ A.~Kotzinian.
 \newblock {Description of polarized $\pi^-$ + N Drell-Yan processes}, 2010.
 \newblock URL \url{http://wwwcompass.cern.ch/compass/notes_public/2010-2.pdf}.
 
+\bibitem[Adamczyk(2016)]{PhysRevLett.116.132301}
+L.~et.~al. Adamczyk.
+\newblock Measurement of the transverse single-spin asymmetry in
+  ${p}^{\ensuremath{\uparrow}}+p\ensuremath{\rightarrow}{W}^{\ifmmode\pm\else\textpm\fi{}}/{Z}^{0}$
+  at rhic.
+\newblock \emph{Phys. Rev. Lett.}, 116:\penalty0 132301, Apr 2016.
+\newblock \doi{10.1103/PhysRevLett.116.132301}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.116.132301}.
+
 \bibitem[Echevarria et~al.(2014)Echevarria, Idilbi, Kang, and
   Vitev]{PhysRevD.89.074013}
 Miguel~G. Echevarria, Ahmad Idilbi, Zhong-Bo Kang, and Ivan Vitev.
@@ -227,15 +348,6 @@ Zhong-Bo Kang and Jian-Wei Qiu.
 \newblock \emph{Phys. Rev. Lett.}, 103:\penalty0 172001, Oct 2009.
 \newblock \doi{10.1103/PhysRevLett.103.172001}.
 \newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.103.172001}.
-
-\bibitem[Adamczyk(2016)]{PhysRevLett.116.132301}
-L.~et.~al. Adamczyk.
-\newblock Measurement of the transverse single-spin asymmetry in
-  ${p}^{\ensuremath{\uparrow}}+p\ensuremath{\rightarrow}{W}^{\ifmmode\pm\else\textpm\fi{}}/{Z}^{0}$
-  at rhic.
-\newblock \emph{Phys. Rev. Lett.}, 116:\penalty0 132301, Apr 2016.
-\newblock \doi{10.1103/PhysRevLett.116.132301}.
-\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.116.132301}.
 
 \bibitem[Kotzinian and Mulders(1996)]{Kotzinian:1995cz}
 A.~M. Kotzinian and P.~J. Mulders.
@@ -279,5 +391,127 @@ Zhengxian Wang, Xiaoyu Wang, and Zhun Lu.
   asymmetry in the unpolarized $\pi^- p$ Drell-Yan at COMPASS}.
 \newblock \emph{Phys. Rev.}, D95\penalty0 (9):\penalty0 094004, 2017.
 \newblock \doi{10.1103/PhysRevD.95.094004}.
+
+\bibitem[Vogt(1999)]{VOGT1999197}
+R.~Vogt.
+\newblock J/ψ production and suppression.
+\newblock \emph{Physics Reports}, 310\penalty0 (4):\penalty0 197 -- 260, 1999.
+\newblock ISSN 0370-1573.
+\newblock \doi{https://doi.org/10.1016/S0370-1573(98)00074-X}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S037015739800074X}.
+
+\bibitem[Anselmino et~al.(2004)Anselmino, Barone, Drago, and
+  Nikolaev]{Anselmino:2004ki}
+M.~Anselmino, V.~Barone, A.~Drago, and N.~N. Nikolaev.
+\newblock {Accessing transversity via J / psi production in polarized p vector
+  anti-p vector interactions}.
+\newblock \emph{Phys. Lett.}, B594:\penalty0 97--104, 2004.
+\newblock \doi{10.1016/j.physletb.2004.05.029}.
+
+\bibitem[Barone et~al.(2007)Barone, Lu, and Ma]{Barone2007}
+V.~Barone, Zhun Lu, and Bo-Qiang Ma.
+\newblock The cos2$\phi$ asymmetry of drell--yan and j/$\psi$ production in
+  unpolarized pp̄ scattering.
+\newblock \emph{The European Physical Journal C}, 49\penalty0 (4):\penalty0
+  967--971, Mar 2007.
+\newblock ISSN 1434-6052.
+\newblock \doi{10.1140/epjc/s10052-006-0174-6}.
+\newblock URL \url{https://doi.org/10.1140/epjc/s10052-006-0174-6}.
+
+\bibitem[Sissakian et~al.(2009)Sissakian, Shevchenko, Nagaytsev, and
+  Ivanov]{Sissakian:2008th}
+A.~Sissakian, O.~Shevchenko, A.~Nagaytsev, and O.~Ivanov.
+\newblock {Transversity and T-odd PDFs from Drell-Yan processes with p p, p D
+  and D D collisions}.
+\newblock \emph{Eur. Phys. J.}, C59:\penalty0 659--673, 2009.
+\newblock \doi{10.1140/epjc/s10052-008-0806-0}.
+
+\bibitem[Abbon et~al.(2007)]{compassSpec}
+P.~Abbon et~al.
+\newblock {The COMPASS experiment at CERN}.
+\newblock \emph{Nucl. Instrum. Meth.}, A577:\penalty0 455--518, 2007.
+\newblock \doi{10.1016/j.nima.2007.03.026}.
+
+\bibitem[Abragam and Goldman(1978)]{DNPmethod}
+A.~Abragam and M.~Goldman.
+\newblock Principles of dynamic nuclear polarisation.
+\newblock \emph{Reports on Progress in Physics}, 41:\penalty0 395--467, 1978.
+\newblock \doi{10.1103/PhysRevD.16.2219}.
+
+\bibitem[Boughezal et~al.(2017)Boughezal, Campbell, Ellis, Focke, Giele, Liu,
+  Petriello, and Williams]{MCFM}
+Radja Boughezal, John~M. Campbell, R.~Keith Ellis, Christfried Focke, Walter
+  Giele, Xiaohui Liu, Frank Petriello, and Ciaran Williams.
+\newblock {Color singlet production at NNLO in MCFM}.
+\newblock \emph{Eur. Phys. J.}, C77\penalty0 (1):\penalty0 7, 2017.
+\newblock \doi{10.1140/epjc/s10052-016-4558-y}.
+
+\bibitem[Aleksakhin et~al.(2007)Aleksakhin, Bedfer, Gerasimov, and
+  Korzenev]{CORAL}
+V.~{\relax Yu}. Aleksakhin, Y.~Bedfer, S.~Gerasimov, and A.~{\relax Yu}.
+  Korzenev.
+\newblock {Geometrical event reconstruction in the COMPASS experiment}.
+\newblock \emph{Phys. Part. Nucl. Lett.}, 4:\penalty0 350--362, 2007.
+\newblock \doi{10.1134/S1547477107040103}.
+\newblock [Pisma Fiz. Elem. Chast. Atom. Yadra2007,no.4,588(2007)].
+
+\bibitem[Fruhwirth(1987)]{KalmanFilter}
+R.~Fruhwirth.
+\newblock {Application of Kalman filtering to track and vertex fitting}.
+\newblock \emph{Nucl. Instrum. Meth.}, A262:\penalty0 444--450, 1987.
+\newblock \doi{10.1016/0168-9002(87)90887-4}.
+
+\bibitem[Sjöstrand et~al.(2015)Sjöstrand, Ask, Christiansen, Corke, Desai,
+  Ilten, Mrenna, Prestel, Rasmussen, and Skands]{pythia}
+Torbjörn Sjöstrand, Stefan Ask, Jesper~R. Christiansen, Richard Corke,
+  Nishita Desai, Philip Ilten, Stephen Mrenna, Stefan Prestel, Christine~O.
+  Rasmussen, and Peter~Z. Skands.
+\newblock {An Introduction to PYTHIA 8.2}.
+\newblock \emph{Comput. Phys. Commun.}, 191:\penalty0 159--177, 2015.
+\newblock \doi{10.1016/j.cpc.2015.01.024}.
+
+\bibitem[Gautheron et~al.(2010)]{proposal}
+F~Gautheron et~al.
+\newblock {COMPASS-II Proposal}.
+\newblock 2010.
+
+\bibitem[Quintans(2014{\natexlab{a}})]{quintans_rec_march12}
+C.~Quintans.
+\newblock {LAS Reconstruction Efficiency - DC05/ST03}.
+\newblock COMPASS DY, March, 12 2014{\natexlab{a}}.
+
+\bibitem[Quintans(2014{\natexlab{b}})]{quintans_rec_march28}
+C.~Quintans.
+\newblock {LAS Reconstruction Efficiency without DC05/ST03}.
+\newblock COMPASS DY, March, 28 2014{\natexlab{b}}.
+
+\bibitem[Bi(2013)]{ran_bi}
+Ran Bi.
+\newblock {Simulation of Properties of COMPASS Drift-Chamber Prototypes}.
+\newblock DNP, 2013.
+
+\bibitem[Veenhof()]{garfield}
+R.~Veenhof.
+\newblock {Garfield - simulation of gaseous detectors}.
+\newblock http://cern.ch/garfield.
+
+\bibitem[Choi(2013)]{choi}
+IhnJea Choi.
+\newblock {DESY Test-Beam Measurement with COMPASS Drift Chamber Prototypes}.
+\newblock DNP, 2013.
+
+\bibitem[Pereira and Goff()]{compassAlignmentNote}
+H.~Pereira and J.~M.~Le Goff.
+\newblock {Compass Spectrometer Alignment}.
+
+\bibitem[Blobel and Kleinwort(2002)]{matrix_inv}
+Volker Blobel and Claus Kleinwort.
+\newblock {A New method for the high precision alignment of track detectors}.
+\newblock In \emph{{Advanced Statistical Techniques in Particle Physics.
+  Proceedings, Conference, Durham, UK, March 18-22, 2002}}, pages URL--STR(9),
+  2002.
+\newblock URL
+  \url{http://www.ippp.dur.ac.uk/Workshops/02/statistics/proceedings//blobel1.pdf}.
 
 \end{thebibliography}
