@@ -1,10 +1,18 @@
 \chapter{Measurement of the Left-Right Asymmetry in the Drell-Yan Process} 
-\label{Chap::leftright}
+\label{ch::leftright}
 \ifpdf
-\graphicspath{{Chapters/LeftRight/Figs/Raster/}{Chapters/LeftRight/Figs/PDF/}{Chapters/LeftRight/Figs/}}
-\else \graphicspath{{Chapters/LeftRight/Figs/Vector/}{Chapters/LeftRight/Figs/}} \fi
+\graphicspath{{Chapters/LeftRight/Figs/}}
+\fi
 
-Introduction about L/R asym.  In this Chapter....  Define AN
+This chapter goes over the analysis details for measuring the left-right
+asymmetry from transversely polarized Drell-Yan data.  A theoretical
+introduction showing how the left-right asymmetry is related to TMD PDFs and
+related past result for this asymmetry are given in Sec~\ref{sec::lr_theory}.
+In short the measured asymmetry can be defined as
+\begin{equation}
+  A_{lr} = \frac{\sigma_{Left} - \sigma_{Right}}{\sigma_{Left} +
+    \sigma_{Right}}.
+\end{equation}
 
 
 \section{Data Sample} \label{sec::datasample}
@@ -165,7 +173,7 @@ rejection are shown in Table~\ref{tab::badspillpercent}.
   \end{tabular}
 \end{table}
 
-\subsection{Event Selection}
+\subsection{Event Selection} \label{sec::dy_eventselection}
 The cuts in the event selection were chosen to ensure the event consisted of two
 oppositely charged muons, so called dimuons, resulting from a pion collision in
 the transversely polarized target.  The event selection was initial filtered
@@ -249,7 +257,7 @@ events remaining after the last cuts is shown in Table~\ref{tab::EventTable}.
       Good Spills& 15947& 14899& 16217& 16895& 23041& 20184& 16026& 11796& 7422&
       142427& 81.70 \% \\ \hline
 
-      0$<$ x$_{\pi}$, x$_N$ $<$1, -1$<$ x$_F$ $<$1& 15932& 14886& 16200& 16885&
+      0$<$ x$_{\pi}$ x$_N$ $<$1, -1$<$ x$_F$ $<$1& 15932& 14886& 16200& 16885&
       23022& 20171& 16013& 11794& 7414& 142317& 81.70 \% \\ \hline
 
       0.4$<$ q$_T$ $<$5(GeV/c)& 14342& 13385& 14609& 15239& 20667& 18101& 14365&
@@ -1191,7 +1199,9 @@ Tab.~\ref{tab::sysError}.
 \end{table}
 
 
-\section{Results}
+\section{Results} \label{sec::lr_results}
+(need to explain way polarization is corrected by period)
+
 The asymmetries in this analysis are extracted separately from each of the nine
 data periods, Table~\ref{tab::datataking}, and then combined as a weighted
 average.  This calculation method is used to minimize the effects of acceptance
