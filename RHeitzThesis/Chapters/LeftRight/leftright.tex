@@ -4,16 +4,18 @@
 \graphicspath{{Chapters/LeftRight/Figs/}}
 \fi
 
-This chapter goes over the analysis details for measuring the left-right
-asymmetry from transversely polarized Drell-Yan data.  A theoretical
-introduction showing how the left-right asymmetry is related to TMD PDFs and
-related past result for this asymmetry are given in Sec~\ref{sec::lr_theory}.
-In short the measured asymmetry can be defined as
-\begin{equation}
-  A_{lr} = \frac{\sigma_{Left} - \sigma_{Right}}{\sigma_{Left} +
-    \sigma_{Right}}.
-\end{equation}
-
+This chapter goes over the analysis techniques and results from the 2015
+transversely polarized Drell-Yan data taking.  The chapter begins by describing
+the data collection setup and the event selection criteria followed by the
+analysis techniques used to determine asymmetry amplitudes.  The analysis
+techniques described are the standard transverse spin-dependent asymmetry
+amplitude (TSA) analysis, Sec~\ref{sec::standTSA}, the double ratio analysis,
+Sec~\ref{sec::doubleratio}, the $q_T$ weighted asymmetry analysis,
+Sec~\ref{sec::qtweighting}, and finally the left-right asymmetry analysis,
+Sec~\ref{sec::leftrighasym}.  All of these analyses are related in that they
+measure TMD effects from the Drell-Yan process.  For this reason the event
+selection and kinematical asymmetry binning will all be the same unless noted
+otherwise.
 
 \section{Data Sample} \label{sec::datasample}
 The data sample is from the 2015 COMPASS Drell-Yan measurement where a 190 GeV/c
@@ -301,8 +303,134 @@ Table~\ref{tab::binning}.
   \label{tab::binning}
 \end{table}
 
+\section{Transverse Spin-Dependent Asymmetries} \label{sec::standTSA}
+This section describes the standard TSA analysis for which the results are
+published in reference~\ref{compassDYpaper}.  The main motivation for this
+analysis was to measure the sign of the Sivers function flip between Drell-Yan
+and SIDIS using data from the same experimental setup for both processes.
 
-\section{Extraction of Asymmetries} 
+As was noted in the event selection~\ref{tab::cutdescrip}, the data considered
+are in the invariant mass range [4.3-8.5~{\gvcw}].
+Fig.~\ref{fig::DY_InvariantMass} shows the invariant mass range from the 2015
+COMPASS data with all cuts except the invariant mass range cut along with a fit
+to show the background processes.  The fit is determine by Monte-Carlo data and
+combinatorial background analysis.  The Monte-Carlo data simulated all hard
+processes which decay to two oppositely charged muons and can be reconstructed
+in the COMPASS spectrometer.  Combinatorial background analysis estimates the
+background as $N_{combinatorial} = 2\sqrt{N_{\mu^+\mu^+}N_{\mu^-\mu^-}}$.  As
+can be seen there are two background peaks.  The lower mass peak at about
+3~{\gvcw} corresponds to J/$\Psi$ production and the mass peak at around
+3.6~{\gvcw} corresponds to $\Psi$' production.  As can be seen, in the mass
+range for all the analyses in this chapter, [4.3-8.5~{\gvcw}], the Drell-Yan
+process dominates.  The background percentage was estimated to be below 4\% in
+this analysis mass range.
+
+\begin{figure}[h!t]
+  \centering \includegraphics[width=0.6\textwidth,trim=1cm 7cm 1cm 7cm,
+    clip]{DY_InvariantMass}
+  \caption{The 2015 COMPASS invariant dimuon mass distribution and data fit.
+    The data fit is from Monte-Carlo and combinatorial background analysis and
+    is provided to show the background processes.  This image is taken
+    from~\cite{compassDYpaper}.}
+  \label{fig::DY_InvariantMass}
+\end{figure}
+
+Fig.~\ref{fig::DY_qT} shows the transverse virtual photon momentum, $q_T$,
+distribution for this analysis.  The average $q_T$ for these analyses is
+1.2~{\gvc} while the average $M_{\mu\mu}$ is 5.3~{\gvcw}.  As stated in
+chapter~\ref{ch::theory}, the regime where TMD functions are the theoretical
+model for parton distributions is when $q_T << M_{\mu\mu}$.  While the average
+$q_T$ is less than the average $M_{\mu\mu}$, it is not excluded that the results
+in this chapter are outside of the TMD limit.  Nevertheless the result present
+are determined assuming the analyses are performed in the TMD regime.
+
+\begin{figure}[h!t]
+  \centering
+  \begin{subfigure}{0.45\textwidth}
+    \centering \includegraphics[width=\textwidth,trim=2cm 7.8cm 2cm 7cm,
+      clip]{DY_qT}
+    \caption{The $q_T$ distribution where the shaded regions shows the data used
+      in the high mass analysis and the unshaded region shows the full
+      distribution without a $q_T$ cut.  This image is taken
+      from~\cite{compassDYpaper}.}
+    \label{fig::DY_qT}
+  \end{subfigure}
+  \begin{subfigure}{.02\textwidth}
+    \includegraphics[width=\linewidth]{tmp3}
+    \label{fig::tmp2}%
+  \end{subfigure}
+    \begin{subfigure}{0.48\textwidth}
+    \centering \includegraphics[width=\textwidth,trim=3.1cm 3.8cm 3.1cm
+      3.8cm,clip]{DY_xPivxN}
+    \caption{The 2-dimensional distribution of $x_{\pi}$ vs. $x_{N}$.  Both
+      $x_{\pi}$ and $x_N$ are safely in their respective valence regions.  This
+      image is taken from~\cite{compassDYpaper}.}
+    \label{fig::DY_xPivxN}
+  \end{subfigure}
+\end{figure}
+
+The distribution of $x_{\pi}$ versus $x_N$ is shown in
+Fig.~\ref{fig::DY_xPivxN}.  The Bjorken-x of the proton, $x_N$, is almost
+exclusively above 0.1 and as well Bjorken-x for the pion, $x_{\pi}$ is in it's
+valence region.  For these reasons it is safe to say that the Drell-Yan reaction
+studied these analyses is the result of the pion's anti-u-quark annihilating
+with the proton's u-quark.
+
+The results in this section are determined from an extended unbinned maximum
+likelihood fit to the data.  The dilution and depolarization values are
+determined on an event by event basis unlike the other analyses in this chapter.
+The released integrated results for the leading order and sub-leading order TSAs
+are shown in Fig.~\ref{fig::DY_intAsymAmps}.  The leading order TSAs are
+non-zero with approximates significances of: 1 sigma for $A_T^{\sin(\phi_S)}$,
+1.2 sigma for $A_T^{\sin(2\phi_{CS}+\phi_S)}$ and 2 sigma for
+$A_T^{\sin(2\phi_{CS}-\phi_S)}$.
+
+\begin{figure}[h!t]
+  \centering \includegraphics[width=0.43\textwidth,trim=3cm 7cm 3cm 6cm,
+    clip]{DY_intAsymAmps}
+  \caption{The integrated TSAs with statistical and systematic error bars.
+    $A_T^{\sin(\phi_S)}$, $A_T^{\sin(2\phi_{CS}+\phi_S)}$, and
+    $A_T^{\sin(2\phi_{CS}-\phi_S)}$ are leading order TSAs and
+    $A_T^{\sin(\phi_{CS}+\phi_S)}$ and $A_T^{\sin(\phi_{CS}-\phi_S)}$ are
+    sub-leading order TSAs.}
+  \label{fig::DY_intAsymAmps}
+\end{figure}
+
+The comparison of the Sivers TSA, $A_T^{\sin(\phi_S)}$, with the expected sign
+flip is shown in Fig.~\ref{fig::DY_Siv_signFlip}.  The positive solid theory
+curves show the expected Sivers TSA assuming the Sivers function flips sign
+between Drell-Yan and SIDIS.  The main difference in these three theory curves
+is the $Q^2$ evolution technique used.  As can be seen the Sivers TSA is
+compatible with the expected sign change.  However, the error bars on the Sivers
+asymmetry amplitude are too large to conclusively distinguish between the three
+theory curves or even to conclusively conclude on the sign change between
+Drell-Yan and SIDIS.  That being said, the amplitude $A_T^{\sin(\phi_S)}$ is 2
+sigma away from being incompatible with the sign flip.
+
+\begin{figure}[h!t]
+  \centering \includegraphics[width=0.6\textwidth, trim=0.5cm 7cm 0.5cm 7cm,
+    clip]{DY_Siv_signFlip}
+  \caption{The Sivers TSA along with theory curves for the expected sign change
+    (sold curves) and without the sign change (opaque curves).  Theory curves
+    and uncertainties are calculated using $Q^2$ evolution from
+    DGLAP~\cite{Anselmino:2016uie}, TMD-1~\cite{Echevarria:2014xaa},
+    TMD-2~\cite{Sun:2013hua}.  This image is taken from~\cite{compassDYpaper}.}
+  \label{fig::DY_Siv_signFlip}
+\end{figure}
+
+
+\section{Extraction of Left-Right Asymmetries} \label{sec::leftrightasym}
+
+This section goes over the analysis details for measuring the left-right
+asymmetry from transversely polarized Drell-Yan data.  A theoretical
+introduction showing how the left-right asymmetry is related to TMD PDFs and
+related past result for this asymmetry are given in Sec~\ref{sec::lr_theory}.
+In short the measured asymmetry can be defined as
+\begin{equation}
+  A_{lr} = \frac{\sigma_{Left} - \sigma_{Right}}{\sigma_{Left} +
+    \sigma_{Right}}.
+\end{equation}
+
 There are many ways to determine the left-right asymmetry denoted as
 A$_{\mathrm{N}}$.  The relevant techniques for the 2015 COMPASS setup are
 described and compared to ensure confidence in the end results.

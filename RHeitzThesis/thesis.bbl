@@ -1,14 +1,37 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{4}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Matousek(2018)]{janthesis}
-Jan Matousek.
-\newblock \emph{Nucleon spin structure studies in Drell-Yan process at
-  COMPASS}.
-\newblock PhD thesis, University of Trieste, April 2018.
+\bibitem[Aghasyan et~al.(2017)]{compassDYpaper}
+M.~Aghasyan et~al.
+\newblock {First measurement of transverse-spin-dependent azimuthal asymmetries
+  in the Drell-Yan process}.
+\newblock \emph{Phys. Rev. Lett.}, 119\penalty0 (11):\penalty0 112002, 2017.
+\newblock \doi{10.1103/PhysRevLett.119.112002}.
+
+\bibitem[Anselmino et~al.(2017)Anselmino, Boglione, D'Alesio, Murgia, and
+  Prokudin]{Anselmino:2016uie}
+M.~Anselmino, M.~Boglione, U.~D'Alesio, F.~Murgia, and A.~Prokudin.
+\newblock {Study of the sign change of the Sivers function from STAR
+  Collaboration W/Z production data}.
+\newblock \emph{JHEP}, 04:\penalty0 046, 2017.
+\newblock \doi{10.1007/JHEP04(2017)046}.
+
+\bibitem[Echevarria et~al.(2014)Echevarria, Idilbi, Kang, and
+  Vitev]{Echevarria:2014xaa}
+Miguel~G. Echevarria, Ahmad Idilbi, Zhong-Bo Kang, and Ivan Vitev.
+\newblock {QCD Evolution of the Sivers Asymmetry}.
+\newblock \emph{Phys. Rev.}, D89:\penalty0 074013, 2014.
+\newblock \doi{10.1103/PhysRevD.89.074013}.
+
+\bibitem[Sun and Yuan(2013)]{Sun:2013hua}
+Peng Sun and Feng Yuan.
+\newblock {Transverse momentum dependent evolution: Matching semi-inclusive
+  deep inelastic scattering processes to Drell-Yan and W/Z boson production}.
+\newblock \emph{Phys. Rev.}, D88\penalty0 (11):\penalty0 114012, 2013.
+\newblock \doi{10.1103/PhysRevD.88.114012}.
 
 \end{thebibliography}
