@@ -8,7 +8,7 @@ This chapter goes over the analysis techniques and results from the 2015
 transversely polarized Drell-Yan data taking.  The chapter begins by describing
 the data collection setup and the event selection criteria followed by the
 analysis techniques used to determine asymmetry amplitudes.  The analysis
-techniques described are the standard transverse spin-dependent asymmetry (TSA)
+techniques described are: the standard transverse spin-dependent asymmetry (TSA)
 analysis, Sec~\ref{sec::standTSA}, the double ratio analysis,
 Sec~\ref{sec::doubleratio}, the $q_T$ weighted asymmetry analysis,
 Sec~\ref{sec::qtweighted}, and finally the left-right asymmetry analysis,
@@ -21,19 +21,33 @@ will be the same for all analyses in this chapter unless stated otherwise.
 
 \subsection{Data Collection} \label{sec::datacollection}
 
-The data sample is from the 2015 COMPASS Drell-Yan measurement where a 190 GeV/c
-$\pi^-$ beam impinged on a transversely polarized NH$_3$ target.  The COMPASS
-spectrometer began taking commissioning data in April of 2015.  The data
-collected for this analysis, after the commissioning phase, is from July 8
-through November 12.  The data is split into 9 periods lasting approximated 2
-weeks each.  During each data period the spectrometer conditions were frozen so
-no detector changes could effect the spectrometer acceptance.  Each period is
-split into two sub-periods.  To reduce systematic effects of acceptance and
-luminosity dependencies, the NH$_3$ target was split into two oppositely
-polarized cells with one cell polarized vertically up and one cell polarized
-vertically down in the lab frame.  The cells were separated by 20 cm and the
-polarization of both cells was flipped between sub-periods.  A summary of the
-analysis data taking from each period is shown in Table~\ref{tab::datataking}.
+The data sample is from the 2015 COMPASS Drell-Yan measurement.  In this
+measurement a 190 GeV/c $\pi^-$ beam impinged on a transversely polarized NH$_3$
+target and two oppositely charged muons were detected in the spectrometer.
+Fig.~\ref{fig::dy_2015_targ_setup} gives a visual of the basic setup and
+chapter~\ref{ch::compass} goes over the spectrometer setup and beam in more
+details.  The COMPASS spectrometer began taking commissioning data in April of
+2015.  The data collected for this analysis, after the commissioning phase, is
+from July 8 through November 12 of 2015.  The data is split into 9 periods
+lasting approximated 2 weeks each and labeled W07-W15.  During each data period
+the spectrometer conditions were frozen so no detector changes could effect the
+spectrometer acceptance.  Sec~\ref{sec::polTarget} describes the polarized
+target in more details but in short, the NH$_3$ target was split into two
+oppositely polarized cells separated by 20~cm with one cell polarized vertically
+up and one cell polarized vertically down in the lab frame.  Each data period is
+split into two sub-periods where to reduce systematic effects of acceptance and
+luminosity dependencies, the polarization of both cells was flipped between
+sub-periods.  A summary of the analysis data taking from each period is shown in
+Table~\ref{tab::datataking}.
+
+\begin{figure}[h!t]
+  \centering \includegraphics[width=0.6\textwidth, trim=4cm 7cm 4cm 7cm,
+    clip]{dy_2015_targ_setup}
+  \caption{Basic pictorial setup of the 2015 COMPASS Drell-Yan data
+    collection.}
+  \label{fig::dy_2015_targ_setup}
+\end{figure}
+
 
 \begin{table}[h!t]
   \centering
@@ -86,17 +100,17 @@ analysis data taking from each period is shown in Table~\ref{tab::datataking}.
 To ensure the data analyzed were recorded during stable beam and spectrometer
 conditions, stability of the analysis data was performed on a spill-by-spill and
 run-by-run basis.  The data was recorded in runs with a maximum of 200 spills
-per run and where one spill can have several thousand events.
+per run.  One spill can have several thousand events.
 
 \subsubsection{Bad Spill Analysis} To determine if a given spill is deemed
-unstable several macro variables were averaged over the spill and compared to
-neighboring spills.  These macro variables were chosen specifically to be
-sensitive to the general stability conditions of the spectrometer and are listed
-in the follower enumerated list Table~\ref{tab::badspillmacros}.  The starting
-criteria for an event was two oppositely charged muons where a muon was defined
-as having crossed 15 radiation lengths of material.
+unstable several macro variables were averaged over per spill and compared to
+neighboring spill averages.  These macro variables were chosen specifically to
+be sensitive to the general stability conditions of the data collection and are
+listed in Table~\ref{tab::badspillmacros}.  The analysis criteria for an bad
+spill events was two oppositely charged muons.  A muon is defined as having
+crossed 15 radiation lengths of material.
 
-\begin{enumerate}
+\begin{itemize}
   \label{tab::badspillmacros}
 \item number of beam particles divided by the number of events
 \item number of beam particles divided by the number of primary vertices
@@ -122,50 +136,50 @@ as having crossed 15 radiation lengths of material.
 \item $\sum \chi^2$ of all vertices divided by the number of all vertices in an
   event
 \item Trigger rates (LASxLAS, OTxLAS, LASxMT)
-\end{enumerate}
+\end{itemize}
 
-If the spectrometer was stable during a spill the average values from the
-variables in Table~\ref{tab::badspilmacros} are expected to be constant from one
-spill to the next.  To determine if a spill was recorded in unstable conditions
-the spill of interest is compared with its neighboring 2500 spill occurring
-before and after in time.  If the spill of interest is a specified sigma away
-from any of the neighboring spills too many times, the spill of interest is mark
-as a bad spill.  If a spill fails this bad spill criteria for any of the macro
-variables in Table~\ref{tab::badspilmacros} the spill is deemed bad and not
-included in the analysis.  The criteria for the sigma distance and number
-times a spill crosses this distance to be deemed a bad are different for each
-data taking period.  In addition to checking the nearest spills for each spill,
-all the spills in a run are marked bad if the run it has less than 10 spills or
-greater than 70\% bad spills.  Table~\ref{tab::badspillpercent} describes to
-impact of the bad spill analysis on each period. \par
+If the data collect was stable during a spill the average values from the macro
+variables in Table~\ref{tab::badspillmacros} are expected to be constant from
+one spill to the next.  To determine if a spill was recorded in unstable
+conditions the spill of interest is compared with its neighboring 2500 spills
+occurring before and after in time.  If the spill of interest is over a
+specified sigma deviation from any of the neighboring spills too many times, the
+spill is mark as a bad spill.  If a spill fails this bad spill criteria for any
+of the macro variables in Table~\ref{tab::badspillmacros} the spill is deemed
+bad and not included in the analysis.  The criteria for the sigma distance and
+number of times a spill crosses this distance to be deemed a bad are different
+for each data taking period.  In addition to checking the nearest neighbor
+spills, an entire run is marked bad if the run has less than 10
+spills or greater than 70\% bad spills.  Table~\ref{tab::badspillpercent}
+describes the bad spill impact on each period. \par
 
 \subsubsection{Bad Run Analysis}
-The stability of the spectrometer is also verified on run-by-run check in
-parallel to the spill-by-spill check.  The run-by-run analysis compares
+The stability of the spectrometer is also verified by a run-by-run check in
+parallel to the spill-by-spill checks.  The run-by-run analysis compares
 kinematic distributions and the average of these distributions per run to the
-same kinematic distributions and averages from the other runs in a given period.
-The kinematic distributions tested are: x$_{\mathrm{N}}$, x$_{\pi}$,
-x$_{\mathrm{F}}$, q$_{\mathrm{T}}$, M$_{\mu\mu}$, P$_{\mu^+}$, P$_{\mu^-}$,
-P$_{\gamma}$, P$_{\pi^-}$, and vertex x, y and z positions.  The quantities in
-the run-by-run analysis are expected to influence the asymmetries
-measured, however their distributions and averages are not expected to have
-spin-influenced effects from the limited statistics in just a single run.  An
-unbinned-Kolmogorov test (UKT) is performed to compare each distributions.  An
-UKT test is made between all the runs in a given period and a run is marked bad
-if it is incompatible with most of the runs in a period.  The comparison of mean
-for each distribution from each run is made with the average from a given
-period.  If one of the kinematical variables has an average more than five
-standard deviations from the average within a period, the run is rejected.  The
-results of the bad spill rejection after having already applied the bad spill
-rejection are shown in Table~\ref{tab::badspillpercent}.
+kinematic distributions and averages from the other runs in a given period.  The
+distributions tested are: x$_{\mathrm{N}}$, x$_{\pi}$, x$_{\mathrm{F}}$,
+q$_{\mathrm{T}}$, M$_{\mu\mu}$, P$_{\mu^+}$, P$_{\mu^-}$, P$_{\gamma}$,
+P$_{\pi^-}$, and vertex x, y and z positions.  The quantities in the run-by-run
+analysis are expected to influence the asymmetries measured, however their
+distributions and averages are not expected to have spin-influenced effects from
+the limited statistics in just a single run.
+
+The distributions are compared with an unbinned-Kolmogorov test (UKT) and the
+averages over a distribution are compared based on their deviations from each
+other.  The unbinned-Kolmogorov test is made between all the runs in a given
+period.  A run is marked bad if it is incompatible with most of the runs in
+a period.  Additionally, the mean for each distribution in a run is
+is compared with the average from a given period.  When an average kinematical variables from a run is more than five standard deviations from the average within a
+period, the run is rejected.  The results of the bad spill rejection after
+having already applied the bad spill rejection are shown in
+Table~\ref{tab::badspillpercent}.
 
 \begin{table}[h!t]
   \centering
-  \label{tab::badspillpercent}
-  \caption{Stability analysis rejection percentages}
   \begin{tabular}{ |c|c|c| }
-    \hline \textbf{Period}& \textbf{Bad spill rejection}&
-    \textbf{Bad spill and spill rejection} \\ \hline \hline
+    \hline \textbf{Period}& \textbf{Bad Spill Rejection}&
+    \textbf{Bad Spill and Bad Run Rejection} \\ \hline \hline
     
     W07& 11.79\%& 17.94\%\\ \hline
     W08& 18.00\%& 21.19\%\\ \hline
@@ -178,77 +192,87 @@ rejection are shown in Table~\ref{tab::badspillpercent}.
     W15& 3.94\%& 3.94\%\\ \hline
 
   \end{tabular}
+  \caption{Stability analysis rejection percentages}
+  \label{tab::badspillpercent}
 \end{table}
 
 \subsection{Event Selection} \label{sec::dy_eventselection}
 The cuts in the event selection were chosen to ensure the event consisted of two
-oppositely charged muons, so called dimuons, resulting from a pion collision in
-the transversely polarized target.  The event selection was initial filtered
-from miniDSTs to $\mu$DSTs using the criteria of at least two muons detected in
-the spectrometer.  The cuts used in this analysis are described in the following
-enumerated list where the event selection is performed on these $\mu$DSTs and
-the events used come from the slot1 production.  A summary of the number of
-events remaining after the last cuts is shown in Table~\ref{tab::EventTable}.
+oppositely charged muons resulting from a pion collision in the transversely
+polarized target.  The event selection was initial filtered from miniDSTs to
+$\mu$DSTs where only events with at least two muons detected were kept in the
+$\mu$DSTs.  The cuts used in this analysis are described in
+Table~\ref{tab::cutdescrip} where the event selection is performed on the
+$\mu$DSTs and the events used are from the slot1 reconstruction.  A summary of
+the number of events remaining after the last cuts is shown in
+Table~\ref{tab::EventTable}.
 
 \begin{enumerate}
   \label{tab::cutdescrip}
-\item Two oppositely charged particles from a common best primary vertex.  A
-  primary vertex is defined as any vertex with an associated beam particle.  In
-  case of multiple common primary vertices the best primary vertex was
-  determined by CORAL tagging the vertex as best primary (PHAST method
-  PaVertex::IsBestPrimary()).  In the case that CORAL did not tag any of the
-  common vertices as the best primary the vertex with the smallest spatial
-  $\chi^2$ value was used as the best primary vertex.
+\item Two oppositely charged particles from a common best primary vertex having
+  an invariant mass between 4.3~{\gvcw} and 8.5~{\gvcw}.  A primary vertex is
+  defined as any vertex with an associated beam particle.  In case of multiple
+  common primary vertices the best primary vertex was determined by CORAL
+  tagging the vertex as best primary (PHAST method PaVertex::IsBestPrimary()).
+  In the case that CORAL did not tag any of the common vertices as the best
+  primary the vertex with the smallest spatial $\chi^2$ value was used as the
+  best primary vertex.  The mass range of 4.3~{\gvcw} through 8.5~{\gvcw} is
+  deemed the high mass range.  As is shown in Fig.~\ref{fig::DY_InvariantMass}
+  this mass range corresponds over 96~\% Drell-Yan events.
+
 \item A dimuon trigger fired.  A dimuon trigger firing means there are at least
   two particles in coincidence in this event. The dimuon triggers used were a
   coincidence between two particles in the large angle spectrometer, LAS-LAS
   trigger, or a particle in the large angle spectrometer and a particle in the
-  Outer hodoscope in the small angle spectrometer, LAS-Outer trigger.  The
-  LAS-Middle trigger was used as a veto on beam decay muons where beam decay
-  muons result from the decay of the beam pion, kaon or anti-proton into a muon.
-  This beam decay muon can then be in coincidence with a positive muon from
-  another decay or strong reaction in the target.  The LAS-Middle trigger was
-  used a veto because this trigger was found to have many events
-  resulting from a beam pion decaying to a muon.
+  Outer hodoscope, LAS-Outer trigger.  The triggering process is further
+  described in Sec~\ref{sec::trigger}.  The LAS-Middle trigger was used as a
+  veto on beam decay muons.  A beam decay muon results from the decay of a beam
+  pion, kaon or anti-proton into a muon depicted as $\pi^- \rightarrow \mu^- +
+  \bar{\nu}_{\mu^-}$, $K^- \rightarrow \mu^- + \bar{\nu}_{\mu^-}$, or $\bar{p}
+  \rightarrow \mu^- + \bar{\nu}_{\mu^-}$ respectively.  A beam decay muon can
+  then be in coincidence with a positive muon from another decay or strong
+  reaction in the target resulting in an unwanted background process.  The
+  LAS-Middle trigger was used as a veto because this trigger was found to have
+  many events resulting from a beam pion decaying to a muon.
 \item Both particles are muons.  A muon was defined as having crossed 30
   radiation lengths of material between the particles first and last measured
-  points.  This criteria has been previously determined to be effective at
+  points.  This criteria has been previously been determined to be effective at
   distinguishing between muons and hadrons.  In the data production no
   detectors were used from upstream of the hadron absorber so the absorber is
   not included in the determination of material crossed.
-\item The first measured point for both particles is before 300 cm and the last
-  measured point is after 1500 cm.  This cut ensures both particles have
-  positions upstream of the first spectrometer magnet and downstream of the
+\item The first measured point for both particles occurs before 300~cm and the
+  last measured point occurs after 1500~cm.  This cut ensures both particles
+  have positions upstream of the first spectrometer magnet and downstream of the
   first muon filter.
 \item The timing of both muons is defined.  This checks that the time relative
   to the trigger time is determined for both muons so further timing cuts can be
   performed.
-\item Both muons are in time within 5 nanoseconds.  This track time for each
-  muon is defined relative to the trigger time as in the previous cut.  The This
-  cut helps rejected uncorrelated muons.
-\item The muon track's spacial reduced $\chi^2$s are individually less than 10.
+\item Both muons are in time within 5~nanoseconds.  This track time for each
+  muon is defined relative to the trigger time as in the previous cut.  This cut
+  rejects uncorrelated muons.
+\item The muon track's spacial reduced $\chi^2$ are individually less than 10.
   This cut ensures track quality.
 \item A validation that each muon crossed the trigger it was associated as
   having triggered.  This trigger validation cut was performed by extrapolating
-  (PHAST Method PaTrack::Extrapolate()) each muon track back to the hodoscopes
-  it fired and determining if the muon crossed the geometric acceptance of both
-  hodoscopes.
+  (PHAST Method PaTrack::Extrapolate()) each muon track back to the two
+  hodoscopes it fired and determining if the muon crossed the geometric
+  acceptance of both of these hodoscopes.
 \item The event does not occur in the bad spill or run list.  Many tests were
   performed to test the basic stability of the spectrometer and beam as
-  described in section~\ref{sec::stability}.  The spills placed on the bad spill
+  described in Sec~\ref{sec::stability}.  The spills placed on the bad spill
   list were deemed to occur during unstable data taking conditions.
-\item The Drell-Yan kinematics are physical.  That is x$_{\pi}$ and
-  x$_{\mathrm{N}}$ are between 0 and 1 and x$_{\mathrm{F}}$ is between -1 and 1.
-\item The transverse momentum of the virtual photon, q$_{\mathrm{T}}$ is between
-  0.4 and 5.0 GeV/c.  The lower limit ensures azimuthal angular resolution is
-  sufficient and the upper cut is minimal and further ensures the kinematic
-  distributions are physically possible.
+\item The Drell-Yan kinematics are physical.  That is $0 < x_{\pi} \;
+  x_{\mathrm{N}} < 1$ and $-1 < x_{\mathrm{F}} < 1$.
+\item The transverse momentum of the virtual photon, $q_T$, is between 0.4 and
+  5.0 GeV/c.  The lower limit ensures the azimuthal angular resolution is
+  sufficient and the upper cut further ensures the kinematic distributions are
+  physically possible and not badly reconstructed events.
 \item The vertex originated within the z-positions of the transversely polarized
-  target cells defined by the target group (-294.5$<$ Z$_{\mathrm{vertex}}$
-  $<$-239.3 for the upstream target or -219.5$<$ Z$_{\mathrm{vertex}}$ $<$-164.3
-  cm for the downstream target).
-\item The vertex is within the radius of the polarized target measured to be 1.9
-  cm.
+  target cells defined by the target group.  -294.5~cm$<$ Z$_{\mathrm{vertex}}$
+  $<$-239.3~cm for the upstream target and -219.5~cm$<$ Z$_{\mathrm{vertex}}$
+  $<$-164.3~cm for the downstream target.
+\item The vertex is within the radius of the polarized target measured to be
+  1.9~cm.
 \end{enumerate}
 
 \begin{figure}[h!t]
@@ -256,10 +280,11 @@ events remaining after the last cuts is shown in Table~\ref{tab::EventTable}.
     \begin{tabular}{ |c|c|c|c|c|c|c|c|c|c|c|c| }
       \hline \textbf{Cuts}& \textbf{W07}& \textbf{W08}& \textbf{W09}&
       \textbf{W10}& \textbf{W11}& \textbf{W12}& \textbf{W13}& \textbf{W14}&
-      \textbf{W15} & \textbf{WAll} & \textbf{\% Remaining} \\ \hline
+      \textbf{W15} & \textbf{WAll} & \textbf{Remaining} \\ \hline
 
-      All Data& 19410& 19184& 19654& 20707& 31371& 23563& 20561& 13154& 7697&
-      175301& 100.00 \% \\ \hline
+      \multirow{2}{13em}{High Mass $\mu^-\mu^+$ with a common best primary
+        vertex}& 19410& 19184& 19654& 20707& 31371& 23563& 20561& 13154& 7697&
+      175301& 100.00 \% \\ & & & & & & & & & & & \\ \hline
       
       Good Spills& 15947& 14899& 16217& 16895& 23041& 20184& 16026& 11796& 7422&
       142427& 81.70 \% \\ \hline
@@ -277,14 +302,15 @@ events remaining after the last cuts is shown in Table~\ref{tab::EventTable}.
       1987& 37921& 12.21 \% \\ \hline
       
     \end{tabular}
-    \caption{Event selection statistics for this analysis}
+    \caption{Numbers of selected di-muon events in this analysis of 2015 COMPASS
+      data}
     \label{tab::EventTable}
   \end{adjustwidth}
 \end{figure}
 
 \subsection{Binning}
 The asymmetries are measured in bins of x$_N$, x$_{\pi}$, x$_{\mathrm{F}}$,
-q$_{\mathrm{T}}$, and M$_{\mu\mu}$.  Where x$_N$ and x$_{\pi}$ the momentum
+q$_{\mathrm{T}}$, and M$_{\mu\mu}$. x$_N$ and x$_{\pi}$ are the momentum
 fractions of the target nucleon and beam pion respectively, x$_{\mathrm{F}}$ =
 x$_{\pi}$ - x$_N$, q$_{\mathrm{T}}$ is the transverse momentum of the virtual
 photon and M$_{\mu\mu}$ is the invariant mass of the di-muon.  The binning was
@@ -306,6 +332,30 @@ Table~\ref{tab::binning}.
   \end{tabular}
   \caption{Analysis binning limits}
   \label{tab::binning}
+\end{table}
+
+\subsection{Analysis Notation}
+Table~\ref{tab::ANnotations} summarizes the general notations used in the
+asymmetry analysis definitions and derivations used throughout this chapter.
+
+\begin{table}[h!t]
+  \centering
+  \caption{Notations used for defining the asymmetry analysis}
+  \label{tab::ANnotations}
+  \begin{tabular}{ |c|c| }
+    
+    \hline \textbf{Notation}& \textbf{Description}
+    \\ \hline 1(2)& target cell
+    number. 1=upstream, 2=downstream \\ \hline
+    $\uparrow(\downarrow)$ & target
+    cell vertical polarization direction, up(down) \\ \hline
+    $|S_T|$& fraction of
+    polarized target nucleons \\ \hline
+    $l(r)$ & virtual photon detected left(right) of spin \\ \hline
+    $J(S)$ & spectrometer Jura(Saleve) side meaning west(east) side
+    \\ \hline
+    
+  \end{tabular}
 \end{table}
 
 \section{Transverse Spin-Dependent Asymmetries} \label{sec::standTSA}
@@ -469,35 +519,43 @@ number of counts, $N(\Phi)$, is defined as
 
 \noindent
 where $L$ is the luminosity, $\sigma$ is the cross-section and $a$ is the
-acceptance.  In Eq.~\ref{equ::countsdef} the acceptance is a function of
-detector efficiencies and the spectrometer acceptance.  When assuming the
-spin-dependent Drell-Yan cross-section, Eq.~\ref{equ::DY_MostusefulXsect}, the
-number of counts, $N(\Phi)$, can be written
+spectrometer acceptance.  In Eq.~\ref{equ::countsdef} the acceptance is a
+function of detector efficiencies and the spectrometer acceptance.  When
+assuming the spin-dependent Drell-Yan cross-section,
+Eq.~\ref{equ::DY_MostusefulXsect}, the number of counts, $N(\Phi)$, can be
+written
 
 \begin{equation}
   \label{equ::spindependentCounts}
-  N(\Phi) = a(\Phi)L\sigma_U\Big(1 \pm D_{[\Phi]}|S_T|A^w_T\sin(\Phi)\Big).
+  N(\Phi) = a(\Phi)L\sigma_U\Big(1 \pm D_{[\theta]}|S_T|A^w_T\sin(\Phi)\Big).
 \end{equation}
 \noindent
-where +(-) is for target polarized up(down).  Therefore the double ratio can be
-written
+where +(-) is for target polarized up(down), $D_{[\theta]}$ is the
+depolarization factor and $|S_T|$ is the target polarization percentage.  The
+depolarization factor, $D_{[\theta]}$ is defined in
+Eq.~\ref{equ::DYDepolarizationFactorDef}.  It can be thought of as the
+probability for the virtual photon to decay and produce such an asymmetry
+amplitude to that for a transversely polarized photon decay.  The target
+polarization percentage, $|S_T|$ is defined as $fP$, where $f$ is the dilution
+factor, Eq.~\ref{equ::dilution_f}, and $P$ is the target polarization
+percentage.  Therefore the double ratio can be written
 \begin{align}
   R_D(\Phi) &= \frac{ a_1^{\uparrow}(\Phi)L_1^{\uparrow}\sigma_U\Big(1 +
-    D_{[\Phi]1}^{\uparrow}|S_{T1}^{\uparrow}|A^w_T\sin(\Phi)\Big)
+    D_{[\theta]1}^{\uparrow}|S_{T1}^{\uparrow}|A^w_T\sin(\Phi)\Big)
     a_2^{\uparrow}(\Phi)L_2^{\uparrow}\sigma_U\Big(1 +
-    D_{[\Phi]2}^{\uparrow}|S_{T2}^{\uparrow}|A^w_T\sin(\Phi)\Big) } {
+    D_{[\theta]2}^{\uparrow}|S_{T2}^{\uparrow}|A^w_T\sin(\Phi)\Big) } {
     a_1^{\downarrow}(\Phi)L_1^{\downarrow}\sigma_U\Big(1 -
-    D_{[\Phi]1}^{\downarrow}|S_{T1}^{\downarrow}|A^w_T\sin(\Phi)\Big)
+    D_{[\theta]1}^{\downarrow}|S_{T1}^{\downarrow}|A^w_T\sin(\Phi)\Big)
     a_2^{\downarrow}(\Phi)L_2^{\downarrow}\sigma_U\Big(1 -
-    D_{[\Phi]2}^{\downarrow}|S_{T2}^{\downarrow}|A^w_T\sin(\Phi)\Big) }
+    D_{[\theta]2}^{\downarrow}|S_{T2}^{\downarrow}|A^w_T\sin(\Phi)\Big) }
   \\ \nonumber &= \Big(\frac{a_1^{\uparrow}(\Phi)a_2^{\uparrow}(\Phi)}
      {a_1^{\downarrow}(\Phi)a_2^{\downarrow}(\Phi)} \Big)
      \Big(\frac{L_1^{\uparrow}L_2^{\uparrow}}
          {L_1^{\downarrow}L_2^{\downarrow}}\Big)
-         \frac{\Big(1+D_{[\Phi]1}^{\uparrow}|S_{T1}^{\uparrow}|A^w_T\sin(\Phi)\Big)
-           \Big(1+D_{[\Phi]2}^{\uparrow}|S_{T2}^{\uparrow}|A^w_T\sin(\Phi)\Big)}
-              {\Big(1-D_{[\Phi]1}^{\downarrow}|S_{T1}^{\downarrow}|A^w_T\sin(\Phi)\Big)
-                \Big(1-D_{[\Phi]2}^{\downarrow}|S_{T2}^{\downarrow}|A^w_T\sin(\Phi)\Big)
+         \frac{\Big(1+D_{[\theta]1}^{\uparrow}|S_{T1}^{\uparrow}|A^w_T\sin(\Phi)\Big)
+           \Big(1+D_{[\theta]2}^{\uparrow}|S_{T2}^{\uparrow}|A^w_T\sin(\Phi)\Big)}
+              {\Big(1-D_{[\theta]1}^{\downarrow}|S_{T1}^{\downarrow}|A^w_T\sin(\Phi)\Big)
+                \Big(1-D_{[\theta]2}^{\downarrow}|S_{T2}^{\downarrow}|A^w_T\sin(\Phi)\Big)
               }.
 \end{align}
 \noindent
@@ -526,19 +584,19 @@ small so the double ratio can be simplified to
 
 \begin{align}
   R_D(\Phi) &=
-  C\frac{\Big(1+D_{[\Phi]1}^{\uparrow}|S_{T1}^{\uparrow}|A^w_T\sin(\Phi)\Big)
-    \Big(1+D_{[\Phi]2}^{\uparrow}|S_{T2}^{\uparrow}|A^w_T\sin(\Phi)\Big)}
-  {\Big(1-D_{[\Phi]1}^{\downarrow}|S_{T1}^{\downarrow}|A^w_T\sin(\Phi)\Big)
-    \Big(1-D_{[\Phi]2}^{\downarrow}|S_{T2}^{\downarrow}|A^w_T\sin(\Phi)\Big)}
+  C\frac{\Big(1+D_{[\theta]1}^{\uparrow}|S_{T1}^{\uparrow}|A^w_T\sin(\Phi)\Big)
+    \Big(1+D_{[\theta]2}^{\uparrow}|S_{T2}^{\uparrow}|A^w_T\sin(\Phi)\Big)}
+  {\Big(1-D_{[\theta]1}^{\downarrow}|S_{T1}^{\downarrow}|A^w_T\sin(\Phi)\Big)
+    \Big(1-D_{[\theta]2}^{\downarrow}|S_{T2}^{\downarrow}|A^w_T\sin(\Phi)\Big)}
   \\ \nonumber &\approx
-  C\frac{1+\Big[D_{[\Phi]1}^{\uparrow}|S_{T1}^{\uparrow}|+D_{[\Phi]2}^{\uparrow}|S_{T2}^{\uparrow}|\Big]
+  C\frac{1+\Big[D_{[\theta]1}^{\uparrow}|S_{T1}^{\uparrow}|+D_{[\theta]2}^{\uparrow}|S_{T2}^{\uparrow}|\Big]
     A^w_T\sin(\Phi)}
-  {1-\Big[D_{[\Phi]1}^{\downarrow}|S_{T1}^{\downarrow}|+D_{[\Phi]2}^{\downarrow}|S_{T2}^{\downarrow}|\Big]
+  {1-\Big[D_{[\theta]1}^{\downarrow}|S_{T1}^{\downarrow}|+D_{[\theta]2}^{\downarrow}|S_{T2}^{\downarrow}|\Big]
     A^w_T\sin(\Phi)} \\ \nonumber &\approx
-  C\Big(1+\Big[D_{[\Phi]1}^{\uparrow}|S_{T1}^{\uparrow}|+D_{[\Phi]2}^{\uparrow}|S_{T2}^{\uparrow}|\Big]
-  A^w_T\sin(\Phi)\Big)\Big(1+\Big[D_{[\Phi]1}^{\downarrow}|S_{T1}^{\downarrow}|+D_{[\Phi]2}^{\downarrow}|S_{T2}^{\downarrow}|\Big]
+  C\Big(1+\Big[D_{[\theta]1}^{\uparrow}|S_{T1}^{\uparrow}|+D_{[\theta]2}^{\uparrow}|S_{T2}^{\uparrow}|\Big]
+  A^w_T\sin(\Phi)\Big)\Big(1+\Big[D_{[\theta]1}^{\downarrow}|S_{T1}^{\downarrow}|+D_{[\theta]2}^{\downarrow}|S_{T2}^{\downarrow}|\Big]
   A^w_T\sin(\Phi)\Big) \\ \nonumber &\approx C\Big(1 +
-  \Big[D_{[\Phi]1}^{\uparrow}|S_{T1}^{\uparrow}|+D_{[\Phi]2}^{\uparrow}|S_{T2}^{\uparrow}|+D_{[\Phi]1}^{\downarrow}|S_{T1}^{\downarrow}|+D_{[\Phi]2}^{\downarrow}|S_{T2}^{\downarrow}|\Big]A^w_T\sin(\Phi)\Big).
+  \Big[D_{[\theta]1}^{\uparrow}|S_{T1}^{\uparrow}|+D_{[\theta]2}^{\uparrow}|S_{T2}^{\uparrow}|+D_{[\theta]1}^{\downarrow}|S_{T1}^{\downarrow}|+D_{[\theta]2}^{\downarrow}|S_{T2}^{\downarrow}|\Big]A^w_T\sin(\Phi)\Big).
 \end{align}
 \noindent
 Then making the assumption that the polarizations, $S_T$, and depolarization
@@ -615,11 +673,14 @@ the double ratio and with Eq.~\ref{equ::dr_fit_formula}.  The results of the fit
 actually determines the quantity
 
 \begin{equation}
-  A^w_T \langle D_{[\Phi]} \rangle \langle |S_T|\rangle.
+  A^w_T \langle D_{[\theta]} \rangle \langle |S_T|\rangle.
 \end{equation}
 \noindent
-The asymmetry amplitude is finally determined by dividing the fit results by the
-average polarization and depolarization values per period.
+
+
+The asymmetry amplitude is finally
+determined by dividing the fit results by the average polarization and
+depolarization values per period.
 
 To determine the asymmetry amplitude, the double ratio is binned in eight bins
 in $\Phi$.  Eight bins are chosen due to the low statistics from Drell-Yan data.
@@ -889,115 +950,47 @@ was a requirement before the results could be release to the public.
 \section{Left-Right Asymmetries} \label{sec::leftrightasym}
 
 This section goes over the analysis details for measuring the left-right
-asymmetry from transversely polarized Drell-Yan data.  A theoretical
-introduction showing how the left-right asymmetry is related to TMD PDFs and
-related past result for this asymmetry are given in Sec~\ref{sec::lr_theory}.
-In short the measured asymmetry can be defined as
+asymmetry from the transversely polarized Drell-Yan data.  A theoretical
+introduction showing how the left-right asymmetry is related to the Sivers TMD
+PDF and related past results for this asymmetry are given in
+Sec~\ref{sec::lr_theory}.  In short the measured asymmetry can be defined as
 \begin{equation}
-  A_{lr} = \frac{\sigma_{Left} - \sigma_{Right}}{\sigma_{Left} +
-    \sigma_{Right}}.
+  A_{lr} = \frac{1}{|S_T|}
+  \frac{\sigma_l - \sigma_r}{\sigma_l +
+    \sigma_r},
 \end{equation}
-
-There are many ways to determine the left-right asymmetry denoted as
-A$_{\mathrm{N}}$.  The relevant techniques for the 2015 COMPASS setup are
-described and compared to ensure confidence in the end results.
-Sec.~\ref{sec::GeoMean} starts with a general introduction to the notations and
-ideas used for all the asymmetry methods.
-
-\subsubsection{Geometric Mean} \label{sec::GeoMean}
-In simple words, the number of
-counts detected is the number of possible chances for an event to occur times
-the probability for an event to occur and that the event will be detected.  To
-get spin-dependent counts for the left-right asymmetry, the target, polarization
-and left or right direction relative to the spin have to be included in the
-counts.  Generically this can be written
-
-\begin{equation}
-  \label{equ::indexedCount}
-  \mathrm{N}^{\uparrow(\downarrow)}_{\mathrm{cell},\mathrm{L(R)}} =
-  \mathrm{a}^{\uparrow(\downarrow)}_{\mathrm{cell},\mathrm{spectrometer \;
-      direction}} * \mathrm{L}^{\uparrow(\downarrow)}_{\mathrm{cell}} *
-  \sigma_{\mathrm{L(R)}},
-\end{equation}
-
 \noindent
-where $\uparrow(\downarrow)$ denotes the target polarization, cell is either
-cell 1 for the upstream target cell or cell 2 for the downstream target cell,
-L(R) is left(right) of the spin direction and spectrometer direction denotes
-either the spectrometer Jura side or the Saleve side corresponding to where the
-event was detected. \par
+which when assuming the leading order Drell-Yan cross-section,
+Eq.~\ref{equ::DY_MostusefulXsect}, is related to the Sivers asymmetry amplitude
+as
+\begin{equation}
+  A_{lr} = \frac{2A_T^{\sin(\phi_S)}}{\pi}.
+\end{equation}
 
-The most basic method to determine A$_{\mathrm{N}}$ per target cell is
+There are many ways to determine the left-right asymmetry.  The relevant
+techniques for the 2015 COMPASS setup are described and compared to ensure
+confidence of the end results.  
+
+\subsection{Asymmetry Extractions}
+\subsubsection{Geometric Mean} \label{sec::GeoMean}
+The most basic method to determine the left-right asymmetry is
 
 \begin{equation}
   \label{equ::simpleAN}
-  \mathrm{A}_{\mathrm{N}} = \frac{1}{\mathrm{P}}
-  \frac{\mathrm{N}_{\mathrm{L}} -
-    \mathrm{N}_{\mathrm{R}}}{\mathrm{N}_{\mathrm{L}} + \mathrm{N}_{\mathrm{R}}},
+  A_{lr,simple} = \frac{1}{|S_T|}
+    \frac{N_l - N_r}{N_l + N_r},
 \end{equation}
 
 \noindent
-where the counts, N, are defined as Eq.~\ref{equ::xsection}, and P denotes the
-fraction of polarized nucleons.  An intuitive picture of left and right defined
-in the target frame is shown in Fig.~\ref{fig::leftright}.
-
-\begin{figure}[h!t]
-  \centering
-  \includegraphics[width=0.6\textwidth, trim=7cm 6cm 7cm 7cm,clip]{leftright}
-  \caption{The definition of the left plane (red) and right plane (green)
-    defined from a target spin up configuration in the target frame}
-  \label{fig::leftright}
-\end{figure}
-
-The previous definitions of the detected counts, Eq.~\ref{equ::indexedCount}
-and Eq.~\ref{equ::xsection}, and therefore also Eq.~\ref{equ::simpleAN} all
-depend on the spectrometer acceptance.  This is a problem because the
-spectrometer acceptance can change with time and space and therefore can be
-dependent on the physical kinematics which produced the event.  Such
-dependencies can cause unphysical false asymmetries in the measurement of
-A$_{\mathrm{N}}$ and must therefore be removed or must be included as systematic
-effects. \par
-
-Forming the geometric mean asymmetry is, however, a way to determine the
-left-right asymmetry without acceptance effects from the spectrometer.  It is
-defined as
-\begin{equation}
-  \label{equ::ANgeomean}
-  \frac{1}{\mathrm{P}}\frac{\sqrt{N_{\mathrm{cell\;1(2),
-          L}}^{\uparrow}N_{\mathrm{cell\;1(2), L}}^{\downarrow}} -
-    \sqrt{N_{\mathrm{cell\;1(2), R}}^{\uparrow}N_{\mathrm{cell\;1(2),
-          R}}^{\downarrow}} }{\sqrt{N_{\mathrm{cell\;1(2),
-          L}}^{\uparrow}N_{\mathrm{cell\;1(2), L}}^{\downarrow}} +
-    \sqrt{N_{\mathrm{cell\;1(2), R}}^{\uparrow}N_{\mathrm{cell\;1(2),
-          R}}^{\downarrow}} },
-\end{equation}
-
-\noindent
-where P represents the fraction of polarized
-nucleons. Table~\ref{tab::ANnotations} summarizes the notations used throughout
-this chapter.
-
-\begin{table}[h!t]
-  \centering
-  \label{tab::ANnotations}
-  \caption{Notations used in defining the left/right asymmetry}
-  \begin{tabular}{ |c|c| }
-    \hline
-    \textbf{Notation}& \textbf{Description} \\
-    \hline
-
-    L(R) & virtual photon detected left(right) of spin \\ \hline
-    Jura(Saleve) & spectrometer west(east) side \\ \hline
-    cell 1(2)& up(down)stream target cell \\ \hline
-    $\uparrow(\downarrow)$ & target cell polarized up(down) \\ \hline
-    P& fraction of polarized target nucleons \\ \hline
-    
-  \end{tabular}
-\end{table}
-
-Equation~\ref{equ::ANgeomean} can be thought of simply as the normalized
-difference of left minus right counts.  Left and right counts are determined
-relative to the target spin directions and are defined as
+where $N_l = \int_{\phi_S=0}^{\phi_S=\pi}N(\phi_S)d\phi_S$ denotes the counts
+measure left and $N_r = \int_{\phi_S=\pi}^{\phi_S=2\pi}N(\phi_S)d\phi_S$ denotes
+the counts measured right.  Eq.~\ref{equ::simpleAN} can be used to determine the
+left-right asymmetry per target cell.  An intuitive picture of left and right
+defined in the target frame is shown in Fig.~\ref{fig::leftright}.  This simple
+method to determine the left-right asymmetry is intuitive and can be helpful for
+visualizing the forthcoming methods to determine $A_{lr}$.  Left and right in
+all definitions in this section are determined relative to the target spin
+direction as
 
 \begin{equation}
   \label{equ::Defleftright}
@@ -1012,137 +1005,172 @@ where $\hat{q}_T$, $\hat{S}_T$ and $\hat{P}_{\pi}$ are unit vectors in the
 target reference frame for the virtual photon transverse momentum, the target
 spin and the beam pion momentum respectively.
 
-Using Eq.~\ref{equ::indexedCount} for the definition of counts, the geometric
-mean asymmetry is
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.6\textwidth, trim=7cm 6cm 7cm 7cm,clip]{leftright}
+  \caption{The definition of the left plane (red) and right plane (green)
+    defined from a target spin up configuration in the target frame}
+  \label{fig::leftright}
+\end{figure}
+
+The simple definition of the left-right asymmetry, Eq.~\ref{equ::simpleAN}, is
+unfortunately dependent on the spectrometer acceptance.  This is can be realized
+from the fact that the definition of the detected counts,
+Eq.~\ref{equ::countsdef}, depends on the spectrometer acceptance $a(\phi_S)$
+which therefore means $A_{lr,simple}$ also depends on the spectrometer
+acceptance.  This is a problem because the spectrometer acceptance can change
+with time and space and therefore can be dependent on the physical kinematics
+which produced the event.  Such dependencies can cause unphysical false
+asymmetries in the measurement of $A_{lr}$ and must therefore be removed or must
+be included as systematic effects. \par
+
+Forming the geometric mean asymmetry is a way to determine the left-right
+asymmetry without acceptance effects from the spectrometer.  The geometric mean
+asymmetry is defined as
+\begin{equation}
+  \label{equ::ANgeomean}
+  A_{lr,geo} =
+  \frac{1}{|S_T|}
+  \frac{\sqrt{N_l^{\uparrow}N_r^{\downarrow}}
+    - \sqrt{N_r^{\uparrow}N_r^{\downarrow}}
+  }{
+    \sqrt{N_l^{\uparrow}N_l^{\downarrow}}
+    + \sqrt{N_r^{\uparrow}N_r^{\downarrow}} },
+\end{equation}
+
+\noindent
+which also defines a left-right asymmetry per target cell.  It is not difficult
+to simplify the geometric mean asymmetry as
 \begin{equation}
   \label{equ::ANgeomean_expand}
-  \frac{1}{\mathrm{P}}\frac{\kappa_{\mathrm{geomean}}
-    \sqrt{\sigma_{L}\sigma_{L}} -
-    \sqrt{\sigma_{R}\sigma_{R}}}{\kappa_{\mathrm{geomean}}
-    \sqrt{\sigma_{L}\sigma_{L}} + \sqrt{\sigma_{R}\sigma_{R}}},
+  A_{lr,geo} = \frac{1}{|S_T|}\frac{\kappa_{geo}
+    \sqrt{\sigma_l\sigma_l} -
+    \sqrt{\sigma_r\sigma_r}}{\kappa_{geo}
+    \sqrt{\sigma_l\sigma_l} + \sqrt{\sigma_r\sigma_r}}
+  = \frac{1}{|S_T|}\frac{\kappa_{geo}\sigma_l - \sigma_r}{
+    \kappa_{geo}\sigma_l + \sigma_r},
 \end{equation}
 
 \noindent
-where $\kappa$ is a ratio of acceptances defined as
+where $\kappa_{geo}$ is a ratio of acceptances defined for the geometric mean as
 \begin{equation}
-  \kappa_{\mathrm{geomean}} =
-  \frac{\sqrt{\mathrm{a}^{\uparrow}_{\mathrm{cell\;1(2),Jura}}
-      \mathrm{a}^{\downarrow}_{\mathrm{cell\;1(2),Saleve}}}}
-       {\sqrt{\mathrm{a}^{\uparrow}_{\mathrm{cell\;1(2),Saleve}}
-           \mathrm{a}^{\downarrow}_{\mathrm{cell\;1(2),Jura}}}}.
-       \label{equ::accGeoMean}
+  \kappa_{geo} =
+  \frac{
+    \sqrt{a^\uparrow_J a^\downarrow_S}
+    }{
+    \sqrt{a^\uparrow_S a^\downarrow_J}
+  },
+  \label{equ::accGeoMean}
 \end{equation}
 
 \noindent
-Here the detection side of spectrometer is specified by looking down the beam
-line as either Jura to mean left or Saleve to mean right.  These relations of
-\"Jura is left\" and \"Saleve is right\" are only strictly true if the target
-polarization is pointing straight up in the target frame.  In particular if the
+where $J$ stands for the Jura spectrometer side and $S$ stands for Saleve
+spectrometer side which are the west and east sides respectively.  The
+assumption made for the notation in Eq.~\ref{equ::accGeoMean}, which will be
+made throughout this section, is that the target is polarized exactly vertical
+in the target frame.  If this assumption violated, the Jura and Saleve
+acceptances blend into each other and Eq.~\ref{equ::accGeoMean} is no longer the
+correct notation for the acceptance ratio.  The assumption is violated when the
 beam particle and the target polarization do not make a right angle in the
-laboratory frame this relation will no longer be strictly true but is an
-approximation for ease of notation.
+laboratory frame, in which case the target will no longer be polarized
+vertically in the target frame.  However the target will be assumption to be
+vertically polarized in the target frame strictly for ease of notation.
 
-Relation~\ref{equ::ANgeomean_expand} is equal to A$_{\mathrm{N}}$ if $\kappa$ is
-equal to one.  However as stated previously, time effects can vary $\kappa$ from
+Relation~\ref{equ::ANgeomean_expand} is equal to $A_{lr}$ if $\kappa_{geo} = 1$.
+However as stated previously, time effects can vary $\kappa_{geo}$ from
 unity. These effects are estimated through false asymmetry analysis and included
-in the systematic error bars described in section~\ref{sec::systematics}.
+in the systematic error bars described in Sec~\ref{sec::systematics}.
 Equation~\ref{equ::ANgeomean} is therefore to a good approximation an acceptance
-free method to determine A$_{\mathrm{N}}$.  It is also defined for the upstream
-and downstream cells independently and therefore can be used as a consistency
-check between the two target cells.
+free method to determine $A_{lr}$.  It is also defined for the upstream and
+downstream cells independently and therefore can be used as a consistency check
+between the two target cells.
 
 The statistical uncertainty of the geometry mean is
 \begin{equation}
-  \frac{1}{\mathrm{P}}
+  \delta A_{lr,geo} = \frac{1}{|S_T|}
   \frac{
     \sqrt{
-      N_{\mathrm{L}}^{\uparrow}N_{\mathrm{L}}^{\downarrow}
-      N_{\mathrm{ R}}^{\uparrow}N_{\mathrm{R}}^{\downarrow}
+      N_{l}^{\uparrow}N_{l}^{\downarrow}
+      N_{\mathrm{ R}}^{\uparrow}N_{r}^{\downarrow}
     }
   }{
-    \Big( \sqrt{N_{\mathrm{L}}^{\uparrow}N_{\mathrm{L}}^{\downarrow}} +
-    \sqrt{N_{\mathrm{R}}^{\uparrow}N_{\mathrm{R}}^{\downarrow}} \Big)^2
+    \Big( \sqrt{N_{l}^{\uparrow}N_{l}^{\downarrow}} +
+    \sqrt{N_{r}^{\uparrow}N_{r}^{\downarrow}} \Big)^2
   }
   \sqrt{
-    \frac{1}{N_{\mathrm{L}}^{\uparrow}} +
-    \frac{1}{N_{\mathrm{L}}^{\downarrow}} +
-    \frac{1}{N_{\mathrm{R}}^{\uparrow}} +
-    \frac{1}{N_{\mathrm{R}}^{\downarrow}}
+    \frac{1}{N_{l}^{\uparrow}} +
+    \frac{1}{N_{l}^{\downarrow}} +
+    \frac{1}{N_{r}^{\uparrow}} +
+    \frac{1}{N_{r}^{\downarrow}}
   } \quad,
 \end{equation}
 
 \noindent
-which reduces to $\frac{1}{\mathrm{P}}\frac{1}{\sqrt{\mathrm{N}}}$ in the case
-of equal statistics in each direction from each target cell polarization.
+which reduces to $\frac{1}{|S_T|}\frac{1}{\sqrt{N}}$, where $N = N^\uparrow_l +
+N^\downarrow_l + N^\uparrow_r + N^\downarrow_r$, in the case of equal statistics
+per target cell meaning $N^\uparrow_l = N^\downarrow_l = N^\uparrow_r =
+N^\downarrow_r = N/4$
 
 \subsubsection{Two-Target Geometric Mean} \label{sec::TwoTargGeoMean}
-As described in section~\ref{sec::datasample} COMPASS had two oppositely
-polarized target cells in 2015.  The previous geometric mean asymmetry, however,
-determined an A$_{\mathrm{N}}$ per target.  It is desirable from a statistical
-point of view, however, to determine one A$_{\mathrm{N}}$ from the 2015 COMPASS
-setup.  It is also desirable for comparison purposes to determine
-A$_{\mathrm{N}}$ using all the information from the 2015 COMPASS setup.  This
-can be accomplished by modifying the geometric mean to add both target cells as
-follows
+The previous geometric mean asymmetry determined an $A_{lr}$ per target cell.
+As described in Sec~\ref{sec::datasample} however, COMPASS had two oppositely
+polarized target cells in 2015.  It is desirable from a statistical point of
+view and for comparison purposes to determine one $A_{lr}$ from the 2015 COMPASS
+setup.  This can be accomplished by modifying the geometric mean to add both
+target cells as follows
 
 \begin{equation}
   \label{equ::AN4TargGeomean}
-  \frac{1}{\mathrm{P}}
-  \frac{
-    \sqrt[4]{
-      N_{\mathrm{cell\;1,L}}^{\uparrow}N_{\mathrm{cell\;1, L}}^{\downarrow}
-      N_{\mathrm{cell\;2,L}}^{\uparrow}N_{\mathrm{cell\;2, L}}^{\downarrow}
-    } -
-    \sqrt[4]{
-      N_{\mathrm{cell\;1,R}}^{\uparrow}N_{\mathrm{cell\;1, R}}^{\downarrow}
-      N_{\mathrm{cell\;2,R}}^{\uparrow}N_{\mathrm{cell\;2, R}}^{\downarrow}
-    }
+  A_{lr,2Targ} =
+  \frac{1}{|S_T|}
+  \frac{ \sqrt[4]{ N_{1,l}^\uparrow N_{1, l}^\downarrow
+      N_{2,l}^\uparrow N_{2, l}^\downarrow }
+    - \sqrt[4]{ N_{1,r}^\uparrow N_{1,r}^\downarrow
+      N_{2,r}^\uparrow N_{2,r}^\downarrow }
   }{
-    \sqrt[4]{
-      N_{\mathrm{cell\;1,L}}^{\uparrow}N_{\mathrm{cell\;1, L}}^{\downarrow}
-      N_{\mathrm{cell\;2,L}}^{\uparrow}N_{\mathrm{cell\;2, L}}^{\downarrow}
-    } +
-    \sqrt[4]{
-      N_{\mathrm{cell\;1,R}}^{\uparrow}N_{\mathrm{cell\;1, R}}^{\downarrow}
-      N_{\mathrm{cell\;2,R}}^{\uparrow}N_{\mathrm{cell\;2, R}}^{\downarrow}
-    }
-  }.
+    \sqrt[4]{ N_{1,l}^\uparrow N_{1, l}^\downarrow
+      N_{2,l}^\uparrow N_{2, l}^\downarrow }
+    + \sqrt[4]{ N_{1,r}^\uparrow N_{1,r}^\downarrow
+      N_{2,r}^\uparrow N_{2,r}^\downarrow } }.
 \end{equation}
 
-As in the basic geometric mean asymmetry, section~\ref{sec::GeoMean}, left and
-right are determined relative to the spin direction of the target as in
-Eq.~\ref{equ::Defleftright}.  Again using Eq.~\ref{equ::indexedCount} for the
-definition of counts, the two target geometric mean asymmetry,
-Eq.~\ref{equ::AN4TargGeomean}, can be written as
+As in the basic geometric mean asymmetry, Sec~\ref{sec::GeoMean}, left and right
+are determined relative to the spin direction of the target as in
+Eq.~\ref{equ::Defleftright}.  Similarly to Eq.~\ref{equ::ANgeomean_expand}, the
+two target geometric mean asymmetry can be written as
 \begin{equation}
-  \frac{1}{\mathrm{P}}
+  A_{lr,2Targ}= \frac{1}{|S_T|}
   \frac{
-    \kappa_{\mathrm{two-target}} \sqrt[4]{\sigma_{L}\sigma_{L}\sigma_{L}\sigma_{L}} -
-    \sqrt[4]{\sigma_{R}\sigma_{R}\sigma_{R}\sigma_{R}}
+    \kappa_{2Targ} \sqrt[4]{\sigma_l\sigma_l\sigma_l\sigma_l} -
+    \sqrt[4]{\sigma_r\sigma_r\sigma_r\sigma_r}
   }{
-    \kappa_{\mathrm{two-target}} \sqrt[4]{\sigma_{L}\sigma_{L}\sigma_{L}\sigma_{L}} +
-    \sqrt[4]{\sigma_{R}\sigma_{R}\sigma_{R}\sigma_{R}}
-  },
+    \kappa_{2Targ} \sqrt[4]{\sigma_l\sigma_l\sigma_l\sigma_l} +
+    \sqrt[4]{\sigma_r\sigma_r\sigma_r\sigma_r}
+  }
+  =
+  \frac{1}{|S_T|}
+  \frac{\kappa_{2Targ}\sigma_l - \sigma_r}{
+    \kappa_{2Targ}\sigma_l + \sigma_r},
 \end{equation},
 
 \noindent
-where now $\kappa_{\mathrm{two-target}}$ is the ratio of acceptances from all
-targets and polarizations.  This inclusive acceptance ratio is defined as
+where now $\kappa_{2Targ}$ is the ratio of acceptances from all targets and
+polarizations.  This inclusive acceptance ratio is defined as
 \begin{equation}
   \label{equ::acc4TargGeoMean}
-  \kappa_{\mathrm{two-target}} =
+  \kappa_{2Targ} =
   \frac{
     \sqrt[4]{
-      \mathrm{a}^{\uparrow}_{\mathrm{cell\;1,Jura}}
-      \mathrm{a}^{\downarrow}_{\mathrm{cell\;1,Saleve}}
-      \mathrm{a}^{\uparrow}_{\mathrm{cell\;2,Jura}}
-      \mathrm{a}^{\downarrow}_{\mathrm{cell\;2,Saleve}}}
+      a^\uparrow_{1,J}
+      a^\downarrow_{1,S}
+      a^\uparrow_{2,J}
+      a^\downarrow_{2,S}}
   }{
     \sqrt[4]{
-      \mathrm{a}^{\uparrow}_{\mathrm{cell\;1,Saleve}}
-      \mathrm{a}^{\downarrow}_{\mathrm{cell\;1,Jura}}
-      \mathrm{a}^{\uparrow}_{\mathrm{cell\;2,Saleve}}
-      \mathrm{a}^{\downarrow}_{\mathrm{cell\;2,Jura}}}
+      a^\uparrow_{1,S}
+      a^\downarrow_{1,J}
+      a^\uparrow_{2,S}
+      a^\downarrow_{2,J}}
   }.
 \end{equation}
 
@@ -1151,57 +1179,48 @@ In this case the acceptance ratio is expected to vary less with time and
 therefore be closer to unity than the normal geometric mean acceptance ratio,
 Eq.~\ref{equ::accGeoMean}.  This is a consequence of having the different target
 cells oppositely polarized.  Rewriting Eq.~\ref{equ::acc4TargGeoMean} with
-sub-period superscripts instead of target polarization superscripts
+sub-period superscripts instead of target polarization superscripts results in
+the equation
 
 \begin{equation}
   \label{equ::acc4TargGeoMean_subperiod}
-  \kappa_{two-target} = \frac{
-    \sqrt[4]{
-      \mathrm{a}^{a}_{\mathrm{cell\;1,Jura}}
-      \mathrm{a}^{b}_{\mathrm{cell\;1,Saleve}}
-      \mathrm{a}^{b}_{\mathrm{cell\;2,Jura}}
-      \mathrm{a}^{a}_{\mathrm{cell\;2,Saleve}}}
+  \kappa_{2Targ} =
+  \frac{ \sqrt[4]{ a^{one}_{1,J} a^{two}_{1,S} a^{two}_{2,J} a^{one}_{2,S} }
   }{
-    \sqrt[4]{
-      \mathrm{a}^{a}_{\mathrm{cell\;1,Saleve}}
-      \mathrm{a}^{b}_{\mathrm{cell\;1,Jura}}
-      \mathrm{a}^{b}_{\mathrm{cell\;2,Saleve}}
-      \mathrm{a}^{a}_{\mathrm{cell\;2,Jura}}}
-  },
+    \sqrt[4]{ a^{one}_{1,S} a^{two}_{1,J} a^{two}_{2,S} a^{one}_{2,J} }
+  }
 \end{equation}
 
 \noindent
-where sub-period $a$ is with the upstream target polarized up and the downstream
-target polarized down and vise versa for sub-period $b$.  From
+where sub-period $one$ is with the upstream target polarized up and the
+downstream target polarized down and vise versa for sub-period $two$.  From
 Eq.~\ref{equ::acc4TargGeoMean_subperiod} it is more evident that the acceptance
-ratio terms for sub-period $b$ are reciprocal to the terms for sub-period $a$
-and therefore the acceptance ratio is expected to be more stably close to unity.
+ratio terms for sub-period $two$ are reciprocal to the terms for sub-period
+$one$ and therefore the acceptance ratio is expected to be more stably close to
+unity.
 
 Finally the statistical uncertainty of the two target geometric mean is
 \begin{equation}
-  \frac{1}{\mathrm{P}}
-  \frac{\text{LR}}{\Big( \text{L+R} \Big)^2}
+  \delta A_{lr,2Targ} = \frac{1}{|S_T|}
+  \frac{LR}{\Big( L+R \Big)^2}
   \sqrt{
-    \sum_{\mathrm{cell}}\sum_{\mathrm{polarization}}
+    \sum_{c,p}
     \Big(
-    \frac{1}{N_{\mathrm{cell,L}}^{\mathrm{polarization}}}
-    +
-    \frac{1}{N_{\mathrm{cell,R}}^{\mathrm{polarization}}}
+    \frac{1}{N_L^{p}}
+    + \frac{1}{N_R^p}
     \Big)
   } \quad,
 \end{equation}
 
 \noindent
-where L can be thought of as the left counts and equals to
-$\sqrt[4]{N_{\mathrm{cell\;1,L}}^{\uparrow}N_{\mathrm{cell\;1,
-      L}}^{\downarrow}N_{\mathrm{cell\;2,L}}^{\uparrow}N_{\mathrm{cell\;2,
-      L}}^{\downarrow}}$ and R can be thought of as the right counts and equals
-$\sqrt[4]{N_{\mathrm{cell\;1,R}}^{\uparrow}N_{\mathrm{cell\;1,
-      R}}^{\downarrow}N_{\mathrm{cell\;2,R}}^{\uparrow}N_{\mathrm{cell\;2,
-      R}}^{\downarrow}}$.  The statistical uncertainty for the two target
-geometric mean also reduces to $\frac{1}{\mathrm{P}}\frac{1}{\sqrt{\mathrm{N}}}$
-in the case of equal statistic populations in each direction and target
-polarization.
+where $L$ can be thought of as the left counts and equals to
+$\sqrt[4]{N_{1,L}^\uparrow N_{1,L}^\downarrow N_{2,L}^\uparrow
+  N_{2,L}^\downarrow}$ and $R$ can be thought of as the right counts and equals
+$\sqrt[4]{N_{1,R}^\uparrow N_{1,R}^\downarrow N_{2,R}^\uparrow
+  N_{2,R}^\downarrow}$.  As with the geometric mean asymmetry, in the case of
+equal statistic populations in each direction and target polarization, the
+statistical uncertainty for the two-target geometric mean also reduces to
+$\frac{1}{|S_T|}\frac{1}{\sqrt{N}}$, where $N$ is the sum of all counts.
 
 
 \subsection{Systematic Studies} \label{sec::systematics}
@@ -1217,7 +1236,7 @@ in Fig.~\ref{fig::allPhysBinned4Targ}.
 \begin{figure}[h!t]
   \begin{center}
     \includegraphics[width=\textwidth]{allPhysBinned4Targ}
-    \caption{A$_{\mathrm{N}}$ determined for each period}
+    \caption{$A_{lr}$ determined for each period}
     \label{fig::allPhysBinned4Targ}
   \end{center}
 \end{figure}
@@ -1313,41 +1332,41 @@ false asymmetry for the two target geometric mean is
   \label{equ::falseAcc}
   \begin{split}
     A_{\mathrm{N,False}} &= 
-    \frac{1}{\mathrm{P}}
+    \frac{1}{|S_T|}
     \frac{
       \sqrt[4]{
-        N_{\mathrm{cell\;1,R}}^{\uparrow}N_{\mathrm{cell\;1, L}}^{\downarrow}
-        N_{\mathrm{cell\;2,L}}^{\uparrow}N_{\mathrm{cell\;2, R}}^{\downarrow}
+        N_{\mathrm{1,R}}^{\uparrow}N_{\mathrm{1, L}}^{\downarrow}
+        N_{\mathrm{2,L}}^{\uparrow}N_{\mathrm{2, R}}^{\downarrow}
       } -
       \sqrt[4]{
-        N_{\mathrm{cell\;1,L}}^{\uparrow}N_{\mathrm{cell\;1, R}}^{\downarrow}
-        N_{\mathrm{cell\;2,R}}^{\uparrow}N_{\mathrm{cell\;2, L}}^{\downarrow}
+        N_{\mathrm{1,L}}^{\uparrow}N_{\mathrm{1, R}}^{\downarrow}
+        N_{\mathrm{2,R}}^{\uparrow}N_{\mathrm{2, L}}^{\downarrow}
       }
     }{
       \sqrt[4]{
-        N_{\mathrm{cell\;1,R}}^{\uparrow}N_{\mathrm{cell\;1, L}}^{\downarrow}
-        N_{\mathrm{cell\;2,L}}^{\uparrow}N_{\mathrm{cell\;2, R}}^{\downarrow}
+        N_{\mathrm{1,R}}^{\uparrow}N_{\mathrm{1, L}}^{\downarrow}
+        N_{\mathrm{2,L}}^{\uparrow}N_{\mathrm{2, R}}^{\downarrow}
       } +
       \sqrt[4]{
-        N_{\mathrm{cell\;1,L}}^{\uparrow}N_{\mathrm{cell\;1, R}}^{\downarrow}
-        N_{\mathrm{cell\;2,R}}^{\uparrow}N_{\mathrm{cell\;2, L}}^{\downarrow}
+        N_{\mathrm{1,L}}^{\uparrow}N_{\mathrm{1, R}}^{\downarrow}
+        N_{\mathrm{2,R}}^{\uparrow}N_{\mathrm{2, L}}^{\downarrow}
       }
     }\\
     & =
-    \frac{1}{\mathrm{P}}
+    \frac{1}{|S_T|}
     \frac{
-      \alpha \sqrt[4]{\sigma_{R}\sigma_{L}\sigma_{L}\sigma_{R}} -
-      \sqrt[4]{\sigma_{L}\sigma_{R}\sigma_{R}\sigma_{L}}
+      \alpha \sqrt[4]{\sigma_r\sigma_l\sigma_l\sigma_r} -
+      \sqrt[4]{\sigma_l\sigma_r\sigma_r\sigma_l}
     }{
-      \alpha \sqrt[4]{\sigma_{R}\sigma_{L}\sigma_{L}\sigma_{R}} +
-      \sqrt[4]{\sigma_{L}\sigma_{R}\sigma_{R}\sigma_{L}}
+      \alpha \sqrt[4]{\sigma_r\sigma_l\sigma_l\sigma_r} +
+      \sqrt[4]{\sigma_l\sigma_r\sigma_r\sigma_l}
     }
   \end{split}
 \end{equation}
 
 \begin{equation}
   \label{equ::alphaAsym}
- = \frac{1}{\mathrm{P}}
+ = \frac{1}{|S_T|}
   \frac{
     \alpha - 1     
   }{
@@ -1359,14 +1378,14 @@ false asymmetry for the two target geometric mean is
 where $\alpha$ is an acceptance ratio and is defined as
 
 \begin{equation} \label{equ::alphaAcc}
-  \alpha = \frac{ \sqrt[4]{ \mathrm{a}^{\uparrow}_{\mathrm{cell\;1,Saleve}}
-      \mathrm{a}^{\downarrow}_{\mathrm{cell\;1,Saleve}}
-      \mathrm{a}^{\uparrow}_{\mathrm{cell\;2,Jura}}
-      \mathrm{a}^{\downarrow}_{\mathrm{cell\;2,Jura}}} }{ \sqrt[4]{
-      \mathrm{a}^{\uparrow}_{\mathrm{cell\;1,Jura}}
-      \mathrm{a}^{\downarrow}_{\mathrm{cell\;1,Jura}}
-      \mathrm{a}^{\uparrow}_{\mathrm{cell\;2,Saleve}}
-      \mathrm{a}^{\downarrow}_{\mathrm{cell\;2,Saleve}}} }.
+  \alpha = \frac{ \sqrt[4]{ \mathrm{a}^{\uparrow}_{\mathrm{1,Saleve}}
+      \mathrm{a}^{\downarrow}_{\mathrm{1,Saleve}}
+      \mathrm{a}^{\uparrow}_{\mathrm{2,Jura}}
+      \mathrm{a}^{\downarrow}_{\mathrm{2,Jura}}} }{ \sqrt[4]{
+      \mathrm{a}^{\uparrow}_{\mathrm{1,Jura}}
+      \mathrm{a}^{\downarrow}_{\mathrm{1,Jura}}
+      \mathrm{a}^{\uparrow}_{\mathrm{2,Saleve}}
+      \mathrm{a}^{\downarrow}_{\mathrm{2,Saleve}}} }.
 \end{equation}
 
 \noindent
@@ -1374,24 +1393,24 @@ The false asymmetry, Eq.~\ref{equ::falseAcc}, can be simplified as
 
 \begin{equation}
   A_{\mathrm{N,False}} = 
-  \frac{1}{\mathrm{P}}
+  \frac{1}{|S_T|}
   \frac{
     \sqrt[4]{
-      N_{\mathrm{cell\;1, Saleve}}
-      N_{\mathrm{cell\;2, Jura}}
+      N_{\mathrm{1, Saleve}}
+      N_{\mathrm{2, Jura}}
     } -
     \sqrt[4]{
-      N_{\mathrm{cell\;1, Jura}}
-      N_{\mathrm{cell\;2, Saleve}}
+      N_{\mathrm{1, Jura}}
+      N_{\mathrm{2, Saleve}}
     }
   }{
     \sqrt[4]{
-      N_{\mathrm{cell\;1, Saleve}}
-      N_{\mathrm{cell\;2, Jura}}
+      N_{\mathrm{1, Saleve}}
+      N_{\mathrm{2, Jura}}
     } +
     \sqrt[4]{
-      N_{\mathrm{cell\;1, Jura}}
-      N_{\mathrm{cell\;2, Saleve}}
+      N_{\mathrm{1, Jura}}
+      N_{\mathrm{2, Saleve}}
     }
   }.
 \end{equation}
@@ -1476,24 +1495,24 @@ following enumerated list.
   
   \begin{equation}
     \label{equ::additionalfalseAsym}
-    \frac{1}{\mathrm{P}}
+    \frac{1}{|S_T|}
     \frac{
       \sqrt[4]{
-        N_{\mathrm{cell\;1,L}}^{\uparrow}N_{\mathrm{cell\;1,R}}^{\downarrow}
-        N_{\mathrm{cell\;2,L}}^{\uparrow}N_{\mathrm{cell\;2,R}}^{\downarrow}
+        N_{\mathrm{1,L}}^{\uparrow}N_{\mathrm{1,R}}^{\downarrow}
+        N_{\mathrm{2,L}}^{\uparrow}N_{\mathrm{2,R}}^{\downarrow}
       } -
       \sqrt[4]{
-        N_{\mathrm{cell\;1,R}}^{\uparrow}N_{\mathrm{cell\;1,L}}^{\downarrow}
-        N_{\mathrm{cell\;2,R}}^{\uparrow}N_{\mathrm{cell\;2, L}}^{\downarrow}
+        N_{\mathrm{1,R}}^{\uparrow}N_{\mathrm{1,L}}^{\downarrow}
+        N_{\mathrm{2,R}}^{\uparrow}N_{\mathrm{2, L}}^{\downarrow}
       }
     }{
       \sqrt[4]{
-        N_{\mathrm{cell\;1,L}}^{\uparrow}N_{\mathrm{cell\;1,R}}^{\downarrow}
-        N_{\mathrm{cell\;2,L}}^{\uparrow}N_{\mathrm{cell\;2, R}}^{\downarrow}
+        N_{\mathrm{1,L}}^{\uparrow}N_{\mathrm{1,R}}^{\downarrow}
+        N_{\mathrm{2,L}}^{\uparrow}N_{\mathrm{2, R}}^{\downarrow}
       } +
       \sqrt[4]{
-        N_{\mathrm{cell\;1,R}}^{\uparrow}N_{\mathrm{cell\;1,L}}^{\downarrow}
-        N_{\mathrm{cell\;2,R}}^{\uparrow}N_{\mathrm{cell\;2, L}}^{\downarrow}
+        N_{\mathrm{1,R}}^{\uparrow}N_{\mathrm{1,L}}^{\downarrow}
+        N_{\mathrm{2,R}}^{\uparrow}N_{\mathrm{2, L}}^{\downarrow}
       }
     }.
   \end{equation}
@@ -1541,14 +1560,14 @@ following enumerated list.
 
   \begin{equation}
     \label{equ::falseANgeomean}
-    \frac{1}{\mathrm{P}} \frac{\sqrt{N_{\mathrm{cell\;1(2),
-            L}}^{\uparrow}N_{\mathrm{cell\;1(2), R}}^{\downarrow}} -
-      \sqrt{N_{\mathrm{cell\;1(2),
-            R}}^{\uparrow}N_{\mathrm{cell\;1(2), L}}^{\downarrow}}
-    }{\sqrt{N_{\mathrm{cell\;1(2),
-            L}}^{\uparrow}N_{\mathrm{cell\;1(2), R}}^{\downarrow}} +
-      \sqrt{N_{\mathrm{cell\;1(2),
-            R}}^{\uparrow}N_{\mathrm{cell\;1(2), L}}^{\downarrow}} }.
+    \frac{1}{|S_T|} \frac{\sqrt{N_{\mathrm{1(2),
+            L}}^{\uparrow}N_{\mathrm{1(2), R}}^{\downarrow}} -
+      \sqrt{N_{\mathrm{1(2),
+            R}}^{\uparrow}N_{\mathrm{1(2), L}}^{\downarrow}}
+    }{\sqrt{N_{\mathrm{1(2),
+            L}}^{\uparrow}N_{\mathrm{1(2), R}}^{\downarrow}} +
+      \sqrt{N_{\mathrm{1(2),
+            R}}^{\uparrow}N_{\mathrm{1(2), L}}^{\downarrow}} }.
   \end{equation}
   This false asymmetry can also be thought of as measuring the normalized counts
   on the Jura side minus the Saleve side but for each target individually.  Both
@@ -1636,7 +1655,7 @@ reason events measured as left outgoing could really be events that are right
 outgoing and vise versa for measured left outgoing events.  This left-right
 miss-identification has the result of diluting spin-dependent effects by
 effectively having a sample from an unpolarized target along with the sample
-from the polarized target.  Therefore the asymmetry A$_{\mathrm{N}}$ reduces
+from the polarized target.  Therefore the asymmetry $A_{lr}$ reduces
 from left-right miss-identification and this effect is included as a systematic
 effect. \par
 
@@ -1799,7 +1818,7 @@ Sec.~\ref{sec::systematics}.
 \begin{figure}[h!t]
   \begin{center}
     \includegraphics[width=\textwidth, trim=0.3cm 0cm 0.25cm 0cm, clip]{ANgeom} 
-    \caption{A$_{\mathrm{N}}$ determined from the geometric mean method for the
+    \caption{$A_{lr}$ determined from the geometric mean method for the
       upstream target (red) and the downstream target (blue) for all kinematic
       binnings}
     \label{fig::ANgeom}
@@ -1809,7 +1828,7 @@ Sec.~\ref{sec::systematics}.
 \begin{figure}[h!t]
   \begin{center}
     \includegraphics[width=\textwidth]{AN4TargGeom}
-    \caption{A$_{\mathrm{N}}$ determined by the two-target geometric mean method
+    \caption{$A_{lr}$ determined by the two-target geometric mean method
       for all kinematic binnings}
     \label{fig::AN4TargGeom}
   \end{center}
@@ -1818,7 +1837,7 @@ Sec.~\ref{sec::systematics}.
 \begin{table}[h!t]
   \centering
   \label{tab::AN4TargGeom}
-  \caption{Two-Target geometric mean numerical values and error bars for each
+  \caption{Two-target geometric mean numerical values and error bars for each
     kinematic bin}
   \begin{tabular}{ |c|c|c|c|c| }
     \hline \textbf{Binning variable}& \textbf{Bin Range}&

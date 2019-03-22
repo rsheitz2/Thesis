@@ -1,53 +1,9 @@
-\begin{thebibliography}{11}
+\begin{thebibliography}{5}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
-
-\bibitem[Abbon et~al.(2007)]{compassSpec}
-P.~Abbon et~al.
-\newblock {The COMPASS experiment at CERN}.
-\newblock \emph{Nucl. Instrum. Meth.}, A577:\penalty0 455--518, 2007.
-\newblock \doi{10.1016/j.nima.2007.03.026}.
-
-\bibitem[Abragam and Goldman(1978)]{DNPmethod}
-A.~Abragam and M.~Goldman.
-\newblock Principles of dynamic nuclear polarisation.
-\newblock \emph{Reports on Progress in Physics}, 41:\penalty0 395--467, 1978.
-\newblock \doi{10.1103/PhysRevD.16.2219}.
-
-\bibitem[Boughezal et~al.(2017)Boughezal, Campbell, Ellis, Focke, Giele, Liu,
-  Petriello, and Williams]{MCFM}
-Radja Boughezal, John~M. Campbell, R.~Keith Ellis, Christfried Focke, Walter
-  Giele, Xiaohui Liu, Frank Petriello, and Ciaran Williams.
-\newblock {Color singlet production at NNLO in MCFM}.
-\newblock \emph{Eur. Phys. J.}, C77\penalty0 (1):\penalty0 7, 2017.
-\newblock \doi{10.1140/epjc/s10052-016-4558-y}.
-
-\bibitem[Aleksakhin et~al.(2007)Aleksakhin, Bedfer, Gerasimov, and
-  Korzenev]{CORAL}
-V.~{\relax Yu}. Aleksakhin, Y.~Bedfer, S.~Gerasimov, and A.~{\relax Yu}.
-  Korzenev.
-\newblock {Geometrical event reconstruction in the COMPASS experiment}.
-\newblock \emph{Phys. Part. Nucl. Lett.}, 4:\penalty0 350--362, 2007.
-\newblock \doi{10.1134/S1547477107040103}.
-\newblock [Pisma Fiz. Elem. Chast. Atom. Yadra2007,no.4,588(2007)].
-
-\bibitem[Fruhwirth(1987)]{KalmanFilter}
-R.~Fruhwirth.
-\newblock {Application of Kalman filtering to track and vertex fitting}.
-\newblock \emph{Nucl. Instrum. Meth.}, A262:\penalty0 444--450, 1987.
-\newblock \doi{10.1016/0168-9002(87)90887-4}.
-
-\bibitem[Sjöstrand et~al.(2015)Sjöstrand, Ask, Christiansen, Corke, Desai,
-  Ilten, Mrenna, Prestel, Rasmussen, and Skands]{pythia}
-Torbjörn Sjöstrand, Stefan Ask, Jesper~R. Christiansen, Richard Corke,
-  Nishita Desai, Philip Ilten, Stephen Mrenna, Stefan Prestel, Christine~O.
-  Rasmussen, and Peter~Z. Skands.
-\newblock {An Introduction to PYTHIA 8.2}.
-\newblock \emph{Comput. Phys. Commun.}, 191:\penalty0 159--177, 2015.
-\newblock \doi{10.1016/j.cpc.2015.01.024}.
 
 \bibitem[Aghasyan et~al.(2017)]{compassDYpaper}
 M.~Aghasyan et~al.

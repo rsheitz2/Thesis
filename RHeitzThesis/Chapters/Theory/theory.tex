@@ -917,6 +917,7 @@ depolarization is defined for each asymmetry amplitude as
 
 \begin{equation}
   D_{[f(\theta)]} = \frac{f(\theta)}{1+A_U^1\;\cos^2\theta},
+  \label{equ::DYDepolarizationFactorDef}
 \end{equation}
 \noindent
 where the function $f(\theta)$ corresponds to virtual photon angular decay
@@ -1017,11 +1018,11 @@ the Sivers asymmetry amplitude, $A_{T}^{\sin \phi_S}$, for Drell-Yan scattering.
 An analysis technique for measuring $A_N$ is by making a left-right asymmetry.
 The left-right asymmetry is defined as 
 \begin{equation}
-  A_{lr} = \frac{1}{P}\frac{\sigma_{left} -
-    \sigma_{right}}{\sigma_{left} + \sigma_{right}},
+  A_{lr} = \frac{1}{|S_T|}\frac{\sigma_l -
+    \sigma_r{\sigma_l + \sigma_r,
 \end{equation}
 \noindent
-where $\sigma_{left(right)}$ is the cross-section for producing a final state to
+where $\sigma_{l(r)}$ is the cross-section for producing a final state to
 the left(right).  In the target frame the definition of left scattering is
 $\int_{\phi_S=0}^{\phi_S=\pi}\frac{d\sigma}{d^4 q \, d \phi_S} d\phi_S$ and
 definition of right scattering is
@@ -1037,9 +1038,9 @@ is straight forward to show the relationship between $A_{lr}$ and $A_N$ as
        \\ \nonumber
        &= \frac{1}{|S_T|}
        \frac{\phi_S -|S_T|A_N\cos\phi_S \Big|_0^{\pi}
-       - \Big(\phi_S -|S_T|A_N\cos\phi_S \Big|_{\pi}^{2\pi}\Big)}
+       - \Big(\phi_S -|S_T|A_N\cos\phi_S \Big)\Big|_{\pi}^{2\pi}}
             {\phi_S -|S_T|A_N\cos\phi_S \Big|_0^{\pi}
-              + \Big(\phi_S -|S_T|A_N\cos\phi_S \Big|_{\pi}^{2\pi}\Big)}
+              + \Big(\phi_S -|S_T|A_N\cos\phi_S \Big)\Big|_{\pi}^{2\pi}}
             \\ \nonumber
             &= \frac{1}{|S_T|}
             \frac{4|S_T|A_N}{2\pi}
