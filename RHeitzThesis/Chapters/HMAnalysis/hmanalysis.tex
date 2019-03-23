@@ -1137,7 +1137,7 @@ target cells as follows
 As in the basic geometric mean asymmetry, Sec~\ref{sec::GeoMean}, left and right
 are determined relative to the spin direction of the target as in
 Eq.~\ref{equ::Defleftright}.  Similarly to Eq.~\ref{equ::ANgeomean_expand}, the
-two target geometric mean asymmetry can be written as
+two-target geometric mean asymmetry can be written as
 \begin{equation}
   A_{lr,2Targ}= \frac{1}{|S_T|}
   \frac{
@@ -1235,7 +1235,8 @@ in Fig.~\ref{fig::allPhysBinned4Targ}.
 
 \begin{figure}[h!t]
   \begin{center}
-    \includegraphics[width=\textwidth]{allPhysBinned4Targ}
+    \includegraphics[width=\textwidth,trim=0cm 5cm 0cm
+      5cm,clip]{allPhysBinned4Targ}
     \caption{$A_{lr}$ determined for each period}
     \label{fig::allPhysBinned4Targ}
   \end{center}
@@ -1244,7 +1245,7 @@ in Fig.~\ref{fig::allPhysBinned4Targ}.
 \noindent
 By eye the asymmetry fluctuations appear to be statistically compatible.  To
 quantify the compatibility of the asymmetries between the periods, a pull
-distribution is formed.  The pull value is defined as
+distribution is formed where the pull value is defined as
 
 \begin{equation}
   \label{eq::pull}
@@ -1261,12 +1262,13 @@ distribution is formed.  The pull value is defined as
 \noindent
 and is determined for each period and kinematic bin.  There are therefore 3
 (number of bins) x 5 (number of kinematics) x 9 (number of periods) = 135
-entries in the pull distribution. This distribution is shown in
-Fig.~\ref{fig::pull4Targ} along with a Gaussian fit.  If the asymmetries all
-come from the same parent distribution then due to the central limit theorem the
-pull distribution will be a Gaussian distribution with zero mean and unit
-variance.  The discrepancy of the pull distribution from a standard Gaussian
-distribution is used to determine a systematic error as
+entries in the pull distribution. The pull distribution is shown in
+Fig.~\ref{fig::pull4Targ} along with a Gaussian fit to determine the
+distributions width and average.  If the asymmetries all come from the same
+parent distribution then, due to the central limit theorem, the pull
+distribution will be a Gaussian distribution with zero mean and unit variance.
+The discrepancy of the pull distribution from a standard Gaussian distribution
+is used to determine a systematic error as
 
 \begin{equation}
   \label{equ::sysErrorPull}
@@ -1276,37 +1278,29 @@ distribution is used to determine a systematic error as
 
 \begin{figure}[h!t]
   \begin{center}
-    \includegraphics[width=0.8\textwidth, trim=0cm 0cm 0cm 2cm,clip]{pull4Targ}
-    \caption{Pull distribution from the two target geometric mean}
+    \includegraphics[width=0.6\textwidth, trim=2cm 2cm 2cm 2cm,clip]{pull4Targ}
+    \caption{Pull distribution from the two-target geometric mean}
     \label{fig::pull4Targ}
   \end{center}
 \end{figure}
 
 \noindent
 As the asymmetries in different kinematic bins are formed using the same data
-set the asymmetries between kinematic binning are correlated.  For this reason
+set, the asymmetries between kinematic binnings are correlated.  For this reason
 an uncorrelated pull distribution is also formed for each kinematic bin and also
 compared with a standard Gaussian distribution.  These distributions are shown
-in Fig.~\ref{fig::allPhysPulls4Targ} and the results of the Gaussian fit are
-shown in Fig.~\ref{fig::allPhysPulls4Targ_fit}.  For these uncorrelated pull
-distributions there are now only 3 (number of bins) x 9(number of periods) = 27
-entries in each kinetically binned pull distributions and only 9 (number of
-periods) bins in the integrated pull distribution.
+in Fig.~\ref{fig::allPhysPulls4Targ_fit} along with the results of their
+respective Gaussian fits.  For these uncorrelated pull distributions there are
+now only 3 (number of bins) x 9(number of periods) = 27 entries in each
+kinetically binned pull distributions and only 9 (number of periods) bins in the
+integrated pull distribution.
 
 \begin{figure}[h!t]
   \begin{center}
-    \includegraphics[width=\textwidth, trim=0cm 5cm 0cm 4cm,
-      clip]{allPhysPulls4Targ}
-    \caption{Uncorrelated pull distributions}
-    \label{fig::allPhysPulls4Targ}
-  \end{center}
-\end{figure}
-
-\begin{figure}[h!t]
-  \begin{center}
-    \includegraphics[width=\textwidth, trim=0.2cm 9cm 0.2cm 10cm,
+    \includegraphics[width=\textwidth, trim=2.5cm 2.5cm 2.5cm 2.5cm,
       clip]{allPhysPulls4Targ_fit}
-    \caption{Results of Gaussian fit for the uncorrelated pull distributions}
+    \caption{Uncorrelated pull distributions and Results of the Gaussian fit for
+      the pull distributions}
     \label{fig::allPhysPulls4Targ_fit}
   \end{center}
 \end{figure}
@@ -1316,120 +1310,217 @@ parameters are well compatible with a standard Gaussian within the errors of the
 fit.  Therefore no systematic error was assigned due to incompatibility of the
 periods.
 
+\subsubsection{Left/Right Event Migration}
+The spectrometer has finite resolution for any measured quantity.  For this
+reason events measured as left outgoing could really be events that are right
+outgoing and vise versa.  This left-right misidentification has the result of
+diluting spin-dependent effects by effectively having a sample from an
+unpolarized target along with the sample from the polarized target.  Therefore
+the asymmetry $A_{lr}$ reduces from left-right misidentification and this
+effect is included as a systematic effect. 
+
+A Monte-Carlo data set was analyzed to determine the left-right
+misidentification percentage.  Four Monte-Carlo processes were generated
+corresponding to three background processes and a spin-independent signal
+process.  The generator used was PHTHYIA8 and the data was generated and
+reconstruction at Blue Waters.  The background processes simulated were JPsi
+production, Psi' production and open charm (OC) production.  Each of these
+backgrounds can decay into two muons which results in a background contamination
+to the Drell-Yan signal.  Table~\ref{tab::MCproduction} gives the parameters
+used for the Monte-Carlo generated.
+
+\begin{table}[h!t]
+  \centering
+  \caption{Monte-Carlo settings produced on Blue Waters}
+  \label{tab::MCproduction}
+  \begin{tabular}{ |c|c| }
+    \hline
+    \textbf{Description}& \textbf{Monte-Carlo Setting Setting} \\ \hline
+    \hline
+    Event generator& PYTHIA8\\
+    \hline
+
+    Pion PDF& GRVPI1\\
+    \hline
+
+    Proton PDF& NNPDF23\\
+    \hline
+    
+    Proton/Neutron mixing ratio& 1.96\\
+    \hline
+
+    Initial tate radiation& on\\
+    \hline
+    
+    Final state radiation& on\\
+    \hline
+    
+    Multiple parton interactions& on\\
+    \hline
+
+    GEANT4 detector simulation& TGEANT \\
+    \hline
+
+    Simulated detector efficiency distributions& uniform\\
+    \hline
+    
+  \end{tabular}
+\end{table}
+
+The generated Monte-Carlo data corresponds to a 4$\pi$ spectrometer acceptance.
+The COMPASS spectrometer on the other hand, does not have a full 4$\pi$
+acceptance.  Therefore to produce simulated data that corresponds to the actual
+data taking conditions, a GEANT4~\cite{AGOSTINELLI2003250} based detector
+simulation, called TGEANT~\cite{TGEANTthesis}, simulated the COMPASS
+spectrometer response to the generated data.  The data from TGEANT was then
+reconstructed with the same reconstruction software as real data.
+
+Misidentification was estimated by comparing the data input to TGEANT with the
+output reconstructed data.  The same analysis and cuts were performed on the
+simulated and then reconstructed data as were performed on the real data set.
+Fig.~\ref{fig::lrMigration} shows the rate of events identified correctly and
+incorrectly as a function of $\phi_S$.  Fig.~\ref{fig::lrMigration} is made by
+comparing which outgoing direction the generated events emerged with the
+outgoing direction the reconstructed events emerged.
+
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.6\textwidth,trim=3cm 4cm 3cm 6cm, clip]{lrMigration}
+  \caption{The rate of identified correctly and incorrectly left-right events as
+    a function of $\phi_{S}$.  This is determined by comparing the generated
+    outgoing direction with the reconstructed outgoing direction.  The
+    left-right boundary is clearing visible at $\phi_{S}$ = 0~rad and $\phi_{S}$
+    = -$\pi$~rad and $\phi_{S}$ = $\pi$~rad}.
+  \label{fig::lrMigration}
+\end{figure}
+
+\noindent
+As is clearly visible in Fig.~\ref{fig::lrMigration}, there is a band of higher
+misidentification rate at the border between left and right.  For this reason a
+cut on the $\phi_{S}$ variable symmetric about the left-right border was tested
+to determine the percent of misidentification as a function of the amount of
+$\phi_{S}$ cut.  These results are shown in Fig.~\ref{fig::percentLRmiss}.
+
+\begin{figure}[h!t]
+  \centering \includegraphics[width=0.5\textwidth, trim=4cm 10cm 4cm 10cm,
+    clip]{percentLRmiss}
+  \caption{Percent left-right migration as a function of the amount of
+    $\phi_{S}$ cut.}
+    \label{fig::percentLRmiss}
+\end{figure}
+
+The systematic error for left-right migration is calculated as
+
+\begin{equation}
+  \delta \mathrm{A}_{\mathrm{N,systematic}} = \gamma *\mathrm{A}_{\mathrm{N}} +
+  \gamma *\delta \mathrm{A}_{\mathrm{N}},
+\end{equation}
+
+\noindent
+where this expression is derived in Appendix~\ref{app::sysLRmiss}.  No cut on
+$\phi_{S}$ was ultimately used for the asymmetry determination.  This is to
+avoid loss of statistics and due to the fact that the systematic error is
+already small with no cut in $\phi_{S}$.  The integrated systematic error due to
+left-right event migration was determined to be 9\%.
+
+
 \subsubsection{False Asymmetries}
 \subsubsection{Acceptance From False Asymmetries}
 As was pointed out in Sec.~\ref{sec::GeoMean} and
 Sec.~\ref{sec::TwoTargGeoMean}, the asymmetry measurement assumes the acceptance
-does not change with time and therefore the acceptance ratios
-Eq.~\ref{equ::accGeoMean} and Eq.~\ref{equ::acc4TargGeoMean} are unitary.  Any
-deviation from a unitary acceptance ratio is estimated with a false asymmetry
-and is taken as a systematic error.  To determine if acceptance
+does not change with time and therefore the acceptance ratio, $\kappa$ is
+unitary.  Any deviation from a unitary acceptance ratio is estimated with a
+false asymmetry and is taken as a systematic error.  To determine if acceptance
 does change with time, a false asymmetry is calculated where the only way the
 false asymmetry could be non-zero is if acceptance changes with time.  This
-false asymmetry for the two target geometric mean is
+false asymmetry for the two-target geometric mean is
 
-\begin{equation}
+\begin{align}
   \label{equ::falseAcc}
-  \begin{split}
-    A_{\mathrm{N,False}} &= 
+  A_{lr,False} &= 
     \frac{1}{|S_T|}
     \frac{
       \sqrt[4]{
-        N_{\mathrm{1,R}}^{\uparrow}N_{\mathrm{1, L}}^{\downarrow}
-        N_{\mathrm{2,L}}^{\uparrow}N_{\mathrm{2, R}}^{\downarrow}
-      } -
-      \sqrt[4]{
-        N_{\mathrm{1,L}}^{\uparrow}N_{\mathrm{1, R}}^{\downarrow}
-        N_{\mathrm{2,R}}^{\uparrow}N_{\mathrm{2, L}}^{\downarrow}
+        N_{1,r}^\uparrow N_{1, l}^\downarrow
+        N_{2,l}^\uparrow N_{2, r}^\downarrow
+      } 
+      -\sqrt[4]{
+        N_{1,l}^\uparrow N_{1, r}^\downarrow
+        N_{2,r}^\uparrow N_{2, l}^\downarrow
       }
     }{
       \sqrt[4]{
-        N_{\mathrm{1,R}}^{\uparrow}N_{\mathrm{1, L}}^{\downarrow}
-        N_{\mathrm{2,L}}^{\uparrow}N_{\mathrm{2, R}}^{\downarrow}
+        N_{1,r}^\uparrow N_{1, l}^\downarrow
+        N_{2,l}^\uparrow N_{2, r}^\downarrow
       } +
       \sqrt[4]{
-        N_{\mathrm{1,L}}^{\uparrow}N_{\mathrm{1, R}}^{\downarrow}
-        N_{\mathrm{2,R}}^{\uparrow}N_{\mathrm{2, L}}^{\downarrow}
+        N_{1,l}^\uparrow N_{1, r}^\downarrow
+        N_{2,r}^\uparrow N_{2, l}^\downarrow
       }
-    }\\
+    } \\ \nonumber
     & =
     \frac{1}{|S_T|}
     \frac{
-      \alpha \sqrt[4]{\sigma_r\sigma_l\sigma_l\sigma_r} -
+      \alpha_{2Targ} \sqrt[4]{\sigma_r\sigma_l\sigma_l\sigma_r} -
       \sqrt[4]{\sigma_l\sigma_r\sigma_r\sigma_l}
     }{
-      \alpha \sqrt[4]{\sigma_r\sigma_l\sigma_l\sigma_r} +
+      \alpha_{2Targ} \sqrt[4]{\sigma_r\sigma_l\sigma_l\sigma_r} +
       \sqrt[4]{\sigma_l\sigma_r\sigma_r\sigma_l}
     }
-  \end{split}
-\end{equation}
-
-\begin{equation}
-  \label{equ::alphaAsym}
- = \frac{1}{|S_T|}
-  \frac{
-    \alpha - 1     
-  }{
-    \alpha + 1
-  },
-\end{equation}
+    = \frac{1}{|S_T|}
+    \frac{
+      \alpha_{2Targ} - 1     
+    }{
+      \alpha_{2Targ} + 1
+    },
+\end{align}
 
 \noindent
-where $\alpha$ is an acceptance ratio and is defined as
+where $\alpha_{2Targ}$ is an acceptance ratio and is defined as
 
 \begin{equation} \label{equ::alphaAcc}
-  \alpha = \frac{ \sqrt[4]{ \mathrm{a}^{\uparrow}_{\mathrm{1,Saleve}}
-      \mathrm{a}^{\downarrow}_{\mathrm{1,Saleve}}
-      \mathrm{a}^{\uparrow}_{\mathrm{2,Jura}}
-      \mathrm{a}^{\downarrow}_{\mathrm{2,Jura}}} }{ \sqrt[4]{
-      \mathrm{a}^{\uparrow}_{\mathrm{1,Jura}}
-      \mathrm{a}^{\downarrow}_{\mathrm{1,Jura}}
-      \mathrm{a}^{\uparrow}_{\mathrm{2,Saleve}}
-      \mathrm{a}^{\downarrow}_{\mathrm{2,Saleve}}} }.
+  \alpha_{2Targ} =
+  \frac{ \sqrt[4]{ a^\uparrow_{1,S}a^\downarrow_{1,S}
+      a^\uparrow_{2,J}a^\downarrow_{2,J}}
+  }{
+    \sqrt[4]{
+      a^\uparrow_{1,J} a^\downarrow_{1,J}
+      a^\uparrow_{2,S} a^\downarrow_{2,S}
+    }
+  }.
 \end{equation}
 
 \noindent
 The false asymmetry, Eq.~\ref{equ::falseAcc}, can be simplified as
 
 \begin{equation}
-  A_{\mathrm{N,False}} = 
+  A_{lr,False} = 
   \frac{1}{|S_T|}
   \frac{
-    \sqrt[4]{
-      N_{\mathrm{1, Saleve}}
-      N_{\mathrm{2, Jura}}
-    } -
-    \sqrt[4]{
-      N_{\mathrm{1, Jura}}
-      N_{\mathrm{2, Saleve}}
-    }
+    \sqrt[4]{ N_{1, S} N_{2, J} }
+    - \sqrt[4]{ N_{1, J} N_{2, S} }
   }{
-    \sqrt[4]{
-      N_{\mathrm{1, Saleve}}
-      N_{\mathrm{2, Jura}}
-    } +
-    \sqrt[4]{
-      N_{\mathrm{1, Jura}}
-      N_{\mathrm{2, Saleve}}
-    }
+    \sqrt[4]{ N_{1, S} N_{2, J} }
+    + \sqrt[4]{ N_{1, J} N_{2, S} }
   }.
 \end{equation}
 
 \noindent
-That is A$_{\mathrm{N,false}}$ is the normalized difference of counts from each
+That is $A_{lr,False}$ is the normalized difference of counts from each
 target cell assuming the upstream target is always polarized down and the
 downstream target is always polarized up.  Given that the polarization flips for
-both upstream and downstream target cells, A$_{\mathrm{N,false}}$ is an
+both upstream and downstream target cells, $A_{lr,False}$ is an
 asymmetry where physical effects cancel out.  The kinematic dependencies of the
 false asymmetry are shown in Fig.~\ref{fig::falseAacc} and the kinematic
-dependencies of the acceptance ratio, $\alpha$, are shown in
+dependencies of the acceptance ratio, $\alpha_{2Targ}$, are shown in
 Fig.~\ref{fig::alpha}.
 
 \begin{figure}[h!t]
   \begin{center}
     \includegraphics[width=\textwidth, trim=0cm 6.5cm 0cm 6.5cm,
       clip]{falseAacc}
-    \caption{False asymmetry to estimate fluctuations in acceptance in time}
+    \caption{False asymmetry, $A_{lr,False}$, to estimate fluctuations in
+      acceptance in time}
     \label{fig::falseAacc}
   \end{center}
 \end{figure}
@@ -1438,22 +1529,25 @@ Fig.~\ref{fig::alpha}.
   \begin{center}
     \includegraphics[width=\textwidth, trim=0cm 6cm 0cm 6cm,
       clip]{alpha4Targ}
-    \caption{Acceptance ratio, Eq.~\ref{equ::alphaAcc}, used to determine the
-      systematic effects from acceptance changes in time}
+    \caption{Acceptance ratio $alpha_{2Targ}$, Eq.~\ref{equ::alphaAcc}, used to
+      determine the systematic effects from acceptance changes in time}
     \label{fig::alpha}
   \end{center}
 \end{figure}
 
-While $\alpha$ is an acceptance ratio it is not the same as the acceptance ratio
-in the true asymmetry.  However $\alpha$ is similar to the true acceptance
-ratio, $\kappa$, in that $\alpha$ will only be different from unity as a result
-of time changes in the spectrometer.  Therefore it is assumed $\alpha$ can be
-used as a good estimate of the true acceptance ratio fluctuations.  The
-systematic error due to acceptance fluctuations is determined as
+While $\alpha_{2Targ}$ is an acceptance ratio it is not the same as,
+$\kappa_{2Targ}$ the acceptance ratio in the true asymmetry.  However
+$\alpha_{2Targ}$ is similar to $\kappa_{2Targ}$ in that $\alpha_{2Targ}$ will
+only be different from unity as a result of time changes in the spectrometer.
+Therefore it is assumed $\alpha_{2Targ}$ can be used as a good estimate of the
+true acceptance ratio fluctuations.  The systematic error due to acceptance
+fluctuations is determined as
 
 \begin{equation}
-  \delta\mathrm{A}_{\mathrm{N,systematic}} =
-  \frac{1}{P} \Big(\frac{|\alpha-1|}{2} + \delta_{\frac{|\alpha-1|}{2}} \Big),
+  \delta A_{lr,systematic} =
+  \frac{1}{|S_T|}
+  \Big(\frac{|\alpha_{2Targ}-1|}{2}
+  + \delta_{\frac{|\alpha_{2Targ}-1|}{2}} \Big),
 \end{equation}
 
 \noindent
@@ -1495,64 +1589,52 @@ following enumerated list.
   
   \begin{equation}
     \label{equ::additionalfalseAsym}
-    \frac{1}{|S_T|}
+    A_{lr, F1} = \frac{1}{|S_T|}
     \frac{
       \sqrt[4]{
-        N_{\mathrm{1,L}}^{\uparrow}N_{\mathrm{1,R}}^{\downarrow}
-        N_{\mathrm{2,L}}^{\uparrow}N_{\mathrm{2,R}}^{\downarrow}
-      } -
-      \sqrt[4]{
-        N_{\mathrm{1,R}}^{\uparrow}N_{\mathrm{1,L}}^{\downarrow}
-        N_{\mathrm{2,R}}^{\uparrow}N_{\mathrm{2, L}}^{\downarrow}
+        N_{1,l}^\uparrow N_{1,r}^\downarrow N_{2,l}^\uparrow N_{2,r}^\downarrow
       }
-    }{
+      - \sqrt[4]{ N_{1,r}^\uparrow N_{1,l}^\downarrow
+        N_{2,r}^\uparrow N_{2, l}^\downarrow }
+      }{
       \sqrt[4]{
-        N_{\mathrm{1,L}}^{\uparrow}N_{\mathrm{1,R}}^{\downarrow}
-        N_{\mathrm{2,L}}^{\uparrow}N_{\mathrm{2, R}}^{\downarrow}
-      } +
-      \sqrt[4]{
-        N_{\mathrm{1,R}}^{\uparrow}N_{\mathrm{1,L}}^{\downarrow}
-        N_{\mathrm{2,R}}^{\uparrow}N_{\mathrm{2, L}}^{\downarrow}
+        N_{1,l}^\uparrow N_{1,r}^\downarrow
+        N_{2,l}^\uparrow N_{2, r}^\downarrow
+      } + \sqrt[4]{ N_{1,r}^\uparrow N_{1,l}^\downarrow
+        N_{2,r}^\uparrow N_{2, l}^\downarrow
       }
     }.
   \end{equation}
   This false asymmetry can be thought of as measuring the normalized counts on
   the Jura side minus the Saleve side.  The period weighted average results of
-  this false asymmetry are shown in Fig.~\ref{fig::fa2TargJuraSaleve} and as can
-  be seen there is the asymmetry is systematically less than zero by more than a
-  standard deviation.  The uncorrelated pull distributions from this false
-  asymmetry are shown in Fig.~\ref{fig::fa2TargJSPulls} and the corresponding
-  Gaussian fit results are shown in Fig.~\ref{fig::fa2TargJSPulls_fit}.  Due to
-  the fact that there are less entries in these pull distributions the Gaussian
-  fit results are not necessarily that good.  In an attempt to correct for this
-  and to take into account the fit errors, a weighted average of the mean and
-  standard deviation are made, as in Eq.~\ref{equ::wAvg}, using weights as the
-  inverse fit variances.  The resulting systematic error is again determined as
-  in Eq.~\ref{equ::sysErrorPull} using the weighted mean and weighted standard
+  this false asymmetry are shown in Fig.~\ref{fig::fa2TargJuraSaleve}.  As
+  Fig.~\ref{fig::fa2TargJuraSaleve} shows, the asymmetry is systematically less
+  than zero by more than a standard deviation resulting from acceptance effects.
+  The uncorrelated pull distributions from this false asymmetry are shown in
+  Fig.~\ref{fig::fa2TargJSPulls} along with the corresponding Gaussian fit
+  results.  Due to the fact that there are less entries in these pull
+  distributions the Gaussian fit results are not necessarily that good.  In an
+  attempt to correct for this and to take into account the fit errors, a
+  weighted average of the mean and standard deviation are made, as in
+  Eq.~\ref{equ::wAvg}, using weights as the inverse fit variances.  The
+  resulting systematic error is again determined as in
+  Eq.~\ref{equ::sysErrorPull} using the weighted mean and weighted standard
   deviation.
 
   \begin{figure}[h!t]
-    \centering
-    \includegraphics[width=\textwidth]{fa2TargJuraSaleve}
-    \caption{Two target geomean false asymmetry.  This is non-zero due to
+    \centering \includegraphics[width=0.9\textwidth, trim=1.5cm 4.5cm 1.5cm
+      4.5cm, clip]{fa2TargJuraSaleve}
+    \caption{Two-target geomean false asymmetry.  This is non-zero due to
       acceptance effects}
     \label{fig::fa2TargJuraSaleve}
   \end{figure}
   
   \begin{figure}[h!t]
-    \centering
-    \includegraphics[width=\textwidth]{fa2TargJSPulls}
-    \caption{Uncorrelated pulls of the two target geomean false asymmetry}
+    \centering \includegraphics[width=0.9\textwidth, trim=1.5cm 2.5cm 1.5cm
+      2.5cm, clip]{fa2TargJSPulls}
+    \caption{Uncorrelated pulls of the two-target geomean false asymmetry and
+      Gaussian fit results}
     \label{fig::fa2TargJSPulls}
-  \end{figure}
-  
-  \begin{figure}[h!t]
-    \centering
-    \includegraphics[width=\textwidth, trim=0cm 2.15cm 0cm 0cm, clip]
-                    {fa2TargJSPulls_fit}
-                    \caption{Gaussian git results for the uncorrelated two
-                      target false geomean pulls}
-                    \label{fig::fa2TargJSPulls_fit}
   \end{figure}
 
 \item A false asymmetries using only the information from the upstream or the
@@ -1560,33 +1642,39 @@ following enumerated list.
 
   \begin{equation}
     \label{equ::falseANgeomean}
-    \frac{1}{|S_T|} \frac{\sqrt{N_{\mathrm{1(2),
-            L}}^{\uparrow}N_{\mathrm{1(2), R}}^{\downarrow}} -
-      \sqrt{N_{\mathrm{1(2),
-            R}}^{\uparrow}N_{\mathrm{1(2), L}}^{\downarrow}}
-    }{\sqrt{N_{\mathrm{1(2),
-            L}}^{\uparrow}N_{\mathrm{1(2), R}}^{\downarrow}} +
-      \sqrt{N_{\mathrm{1(2),
-            R}}^{\uparrow}N_{\mathrm{1(2), L}}^{\downarrow}} }.
+    A_{lr, F2} =
+    \frac{1}{|S_T|}
+    \frac{\sqrt{N_l^\uparrow N_r^\downarrow}
+      - \sqrt{N_r^\uparrow N_l^\downarrow}
+    }{
+      \sqrt{N_l^\uparrow N_r^\downarrow}
+      + \sqrt{N_r^\uparrow N_l^\downarrow}
+    }.
   \end{equation}
   This false asymmetry can also be thought of as measuring the normalized counts
   on the Jura side minus the Saleve side but for each target individually.  Both
-  this false asymmetry and the previous false asymmetry can be written as
-  Eq.~\ref{equ::alphaAsym} where $\alpha$ will be an acceptance ratio of
-  Jura/Saleve.  As the Jura/Saleve acceptance ratio is expected to be the same
-  for the upstream and downstream targets, any difference between the two false
-  asymmetries must be due to other reasons.  A by period comparison between the
-  upstream and downstream target is shown in Fig.~\ref{fig::alphaAsymPeriod} and
-  as can be seen there are difference by period between the upstream and
-  downstream asymmetries.  A combined pull distribution is made using the
-  information from both upstream and downstream asymmetries and is shown in
-  Fig.~\ref{fig::alphaAsymPull}.  As with the previous false asymmetry, lack of
-  data leads to the same problems with fit and therefore the same weighting
-  method is used to determine a systematic error.
+  this false asymmetry and the previous false asymmetry,
+  Eq.~\ref{equ::additionalfalseAsym}, can be written as
+  \begin{equation}
+    A_{lr,F1/2} =
+    \frac{1}{|S_T|}
+    \frac{\alpha - 1}{\alpha + 1}
+  \end{equation}
+  where $\alpha$ will be an acceptance ratio of Jura/Saleve.  As the Jura/Saleve
+  acceptance ratio is expected to be the same for the upstream and downstream
+  targets, any difference between the two false asymmetries must be due to other
+  reasons.  A by period comparison between the upstream and downstream target is
+  shown in Fig.~\ref{fig::alphaAsymPeriod} and as can be seen there are
+  difference by period between the upstream and downstream asymmetries.  A
+  combined pull distribution is made using the information from both upstream
+  and downstream asymmetries and is shown in Fig.~\ref{fig::alphaAsymPull}.  As
+  with the previous false asymmetry, lack of data leads to the same problems
+  with fit and therefore the same weighting method is used to determine a
+  systematic error.
 
   \begin{figure}[h!t]
-    \centering
-    \includegraphics[width=\textwidth]{alphaAsymPeriod}
+    \centering \includegraphics[width=\textwidth, trim=2cm 4cm 2cm 4cm,
+      clip]{alphaAsymPeriod}
     \caption{One target false asymmetries for the upstream target (red) and the
       downstream target (blue), as a function of x$_{\mathrm{N}}$.  Each graph
       is from a different period in time.}
@@ -1596,7 +1684,7 @@ following enumerated list.
   \begin{figure}[h!t]
     \centering
     \includegraphics[width=\textwidth]{alphaAsymPull}
-    \caption{Pull values from one target geomean false asymmetries.  Both
+    \caption{Pull values from one-target geomean false asymmetries.  Both
       upstream and downstream values are used to make this pull}
     \label{fig::alphaAsymPull}
   \end{figure}
@@ -1604,24 +1692,15 @@ following enumerated list.
 \item Finally the same false asymmetry used to determine the acceptance
   fluctuations, Eq.~\ref{equ::falseAcc}, is also checked for compatibility and a
   systematic error is determined in the same way as the previous false
-  asymmetries.  The pulls are shown in Fig.~\ref{fig::fa2TargPulls} and the
-  corresponding fit parameters are shown in Fig.~\ref{fig::fa2TargPulls_fit}.
+  asymmetries.  The pulls are shown in Fig.~\ref{fig::fa2TargPulls} along with
+  the corresponding fit parameters and errors.
 
   \begin{figure}[h!t]
-    \centering
-    \includegraphics[width=\textwidth]{fa2TargPulls}
-    \caption{Pull distribution for a nearly acceptance free two target false
+    \centering \includegraphics[width=\textwidth, trim=2.5cm 6cm 2.5cm 6cm,
+      clip]{fa2TargPulls}
+    \caption{Pull distribution for a nearly acceptance free two-target false
       geomean asymmetry}
     \label{fig::fa2TargPulls}
-  \end{figure}
-  
-  \begin{figure}[h!t]
-    \centering
-    \includegraphics[width=\textwidth,
-      trim=0cm 1.65cm 0cm 0cm, clip]{fa2TargPulls_fit}
-    \caption{Gaussian fit results for the previous pull
-      distributions}
-    \label{fig::fa2TargPulls_fit}
   \end{figure}
   
 \end{enumerate}
@@ -1648,160 +1727,50 @@ Tab.~\ref{tab::faSys}
   \label{tab::faSys}
 \end{table}
 
-
-\subsubsection{Left/Right Event Migration}
-The spectrometer has finite resolution for any measured quantity and for this
-reason events measured as left outgoing could really be events that are right
-outgoing and vise versa for measured left outgoing events.  This left-right
-miss-identification has the result of diluting spin-dependent effects by
-effectively having a sample from an unpolarized target along with the sample
-from the polarized target.  Therefore the asymmetry $A_{lr}$ reduces
-from left-right miss-identification and this effect is included as a systematic
-effect. \par
-
-For this thesis five Monte-Carlo processes were generated corresponding to three
-background processes and a spin-independent signal process.  The generator used
-was PHTHYIA8 and the data was generated and reconstruction at Blue Waters.  The
-background processes simulated were JPsi production, Psi' production and open
-charm (OC) production.  Each of these backgrounds can decay into two muons which
-results in a background contamination to the Drell-Yan signal.
-Table~\ref{tab::MCproduction} gives the parameters used for the Monte-Carlo
-studied.
-
-\begin{table}[h!t]
-  \centering
-  \label{tab::MCproduction}
-  \caption{Monte-Carlo settings produced on Blue Waters}
-  \begin{tabular}{ |c|c| }
-    \hline
-    Event generator& PYTHIA8\\
-    \hline
-
-    Pion pdf& GRVPI1\\
-    \hline
-
-    Proton pdf& NNPDF23\\
-    \hline
-    
-    proton/neutron mixing ratio& 1.96\\
-    \hline
-
-    Initial state radiation& on\\
-    \hline
-    
-    Final state radiation& on\\
-    \hline
-    
-    Multiple parton interactions& on\\
-    \hline
-
-    Simulated detector efficiencies& uniform\\
-    \hline
-    
-  \end{tabular}
-\end{table}
-
-Miss-identification was estimated from the simulated Monte-Carlo data sample
-described in Table~\ref{tab::MCproduction} where the sample was made from the
-respond of the COMPASS spectrometer to input Drell-Yan events in a similar mass
-range.  The same analysis performed on real data was performed on this
-Monte-Carlo data to get the angles of interest.  Fig.~\ref{fig::lrMigration}
-shows the rate of events identified correctly and incorrectly as a function of
-the $\phi_{\mathrm{S}}$.  This plot is made by determining which outgoing
-direction the generated events emerged with the outgoing direction the
-reconstructed events emerged.
-
-\begin{figure}[h!t]
-  \centering
-  \includegraphics[width=\textwidth,trim=2cm 3cm 2cm 6cm, clip]{lrMigration}
-  \caption{The rate of identified correctly and incorrectly left-right events as
-    a function of $\phi_{\mathrm{S}}$.  This is determined by comparing the
-    generated outgoing direction with the reconstructed outgoing direction.  The
-    left-right boundary is clearing visible at $\phi_{\mathrm{S}}$ = 0$^{\circ}$
-    and $\phi_{\mathrm{S}}$ = -$\pi^{\circ}$ and $\phi_{\mathrm{S}}$ =
-    $\pi^{\circ}$}.
-  \label{fig::lrMigration}
-\end{figure}
-
-\noindent
-As is clearly visible there is a band of higher miss-identification rate at the
-border between left and right.  For this reason a cut in the $\phi_{\mathrm{S}}$
-variable symmetric about the left-right border was tested to determine the
-percent of miss-identification as a function of the amount of
-$\phi_{\mathrm{S}}$ cut.  These results are shown in
-Fig.~\ref{fig::percentLRmiss}.
-
-\begin{figure}[h!t]
-  \centering
-  \includegraphics[width=0.8\textwidth]{percentLRmiss}
-  \caption{Percent left-right migration as a function of the amount of
-    $\phi_{\mathrm{S}}$ cut.}
-    \label{fig::percentLRmiss}
-\end{figure}
-
-The systematic error for left-right migration is calculated as
-
-\begin{equation}
-  \delta \mathrm{A}_{\mathrm{N,systematic}} = \gamma *\mathrm{A}_{\mathrm{N}} +
-  \gamma *\delta \mathrm{A}_{\mathrm{N}},
-\end{equation}
-
-\noindent
-where this expression is derived in Appendix~\ref{app::sysLRmiss}.\par
-
-No cut on $\phi_{\mathrm{S}}$ was used for the asymmetry due to the fact
-that the systematic error is already small with no cut in $\phi_{\mathrm{S}}$
-and to avoid loss of statistics.  The integrated systematic error due to
-left-right event migration was determined to be 9\%.
-
 \subsubsection{Total Systematics}
 The total systematic error is determined by adding all non-zero systematic
 effects in quadrature as
 
 \begin{equation}
-  \Big \langle
-  \frac{
-    \sigma_{\mathrm{systematics}}}{\sigma_{\mathrm{statistical}}}
-  \Big \rangle =
-  \sqrt{
-    \sum_i^{\mathrm{all \; systematics}}
-    \Big \langle
-    \frac{\sigma^2_{\mathrm{systematics,
-          i}}}{\sigma^2_{\mathrm{statistical}}}
-    \Big \rangle
-  } \;,
+  \Big \langle \frac{
+    \sigma_{\mathrm{systematic}}}{\sigma_{\mathrm{statistical}}} \Big \rangle =
+  \sqrt{ \sum_i^{\mathrm{all \; systematic}} \Big \langle
+    \frac{\sigma^2_{\mathrm{systematic, i}}}{\sigma^2_{\mathrm{statistical}}}
+    \Big \rangle } \;,
 \end{equation}
 where all the systematic effects considered are summarized in
-Tab.~\ref{tab::sysError}.
+Tab.~\ref{tab::sysError}.  For reference the total statistical error is $\langle
+\sigma_{\mathrm{statistical}} \rangle$ = 0.039.
 
 \begin{table}[h!t]
   \centering
-  \begin{tabular}{|c|c|c|c|}
+  \begin{tabular}{|c|c|c|}
     \hline
     \multirow{2}{*}{Systematic error}&
     \multirow{2}{*}{
       $\langle \sigma_{\mathrm{systematic}}/\sigma_{\mathrm{statistical}}
       \rangle$} &
-    \multirow{2}{*}{$\langle \sigma_{\mathrm{systematic}} \rangle$} &
-    \multirow{2}{*}{$\langle \sigma_{\mathrm{statistical}} \rangle$} \\
-    
-    & & & \\ \hline
+    \multirow{2}{*}{$\langle \sigma_{\mathrm{systematic}} \rangle$}\\
+    & & \\ \hline \hline
 
-    Period compatibility& 0.0 & 0.0 & 0.039\\ \hline
+    Period compatibility& 0.0 & 0.0\\ \hline
 
-    Acceptance fluctuation& 0.2 & 0.008 & 0.039\\ \hline
+    Left-Right migration& 0.09 & 0.004\\ \hline
 
-    False asymmetry& 0.5 & 0.020 & 0.039\\ \hline
+    Target Polarization& 0.05& 0.003\\ \hline
 
-    Left-Right migration& 0.09 & 0.004 & 0.039\\ \hline
+    Dilution Factor& 0.05 & 0.003\\ \hline
 
-    Total& 0.55 & 0.021 & 0.039\\\hline
+    Acceptance fluctuation& 0.2 & 0.008\\ \hline
+
+    False asymmetry& 0.5 & 0.020\\ \hline
+
+    Total& 0.55 & 0.022\\\hline
     
   \end{tabular}
   \caption{Summary of systematic error impacts to the integrated asymmetry}
   \label{tab::sysError}
 \end{table}
-Need to include target polarization(~5\%) and dilution (~8\%)
 
 \subsection{Results} \label{sec::lr_results}
 (need to explain way polarization is corrected by period)
@@ -1809,7 +1778,7 @@ weighed as~\ref{equ::wAvg}
 
 \noindent
 The results for the basic geometric mean are shown in Fig.~\ref{fig::ANgeom} and
-the results for the two target geometric mean are shown in
+the results for the two-target geometric mean are shown in
 Fig.~\ref{fig::AN4TargGeom}.  The numerical values for the two-target geometric
 mean with statistical and systematic error bars are summarized in
 Table~\ref{tab::AN4TargGeom}.  The systematic error bars are discussed in
