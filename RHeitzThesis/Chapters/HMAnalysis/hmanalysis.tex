@@ -1,5 +1,5 @@
 \chapter{Analysis of High Mass Drell-Yan Transverse Spin Phenomena}
-\label{ch::leftright}
+\label{ch::hmanalysis}
 \ifpdf
 \graphicspath{{Chapters/HMAnalysis/Figs/}}
 \fi
@@ -22,7 +22,7 @@ will be the same for all analyses in this chapter unless stated otherwise.
 \subsection{Data Collection} \label{sec::datacollection}
 
 The data sample is from the 2015 COMPASS Drell-Yan measurement.  In this
-measurement a 190 GeV/c $\pi^-$ beam impinged on a transversely polarized NH$_3$
+measurement a 190~GeV/c $\pi^-$ beam impinged on a transversely polarized NH$_3$
 target and two oppositely charged muons were detected in the spectrometer.
 Fig.~\ref{fig::dy_2015_targ_setup} gives a visual of the basic setup and
 chapter~\ref{ch::compass} goes over the spectrometer setup and beam in more
@@ -168,9 +168,10 @@ the limited statistics in just a single run.
 The distributions are compared with an unbinned-Kolmogorov test (UKT) and the
 averages over a distribution are compared based on their deviations from each
 other.  The unbinned-Kolmogorov test is made between all the runs in a given
-period.  A run is marked bad if it is incompatible with most of the runs in
-a period.  Additionally, the mean for each distribution in a run is
-is compared with the average from a given period.  When an average kinematical variables from a run is more than five standard deviations from the average within a
+period.  A run is marked bad if it is incompatible with most of the runs in a
+period.  Additionally, the mean for each distribution in a run is is compared
+with the average from a given period.  When an average kinematical variables
+from a run is more than five standard deviations from the average within a
 period, the run is rejected.  The results of the bad spill rejection after
 having already applied the bad spill rejection are shown in
 Table~\ref{tab::badspillpercent}.
@@ -275,7 +276,7 @@ Table~\ref{tab::EventTable}.
   1.9~cm.
 \end{enumerate}
 
-\begin{figure}[h!t]
+\begin{table}[h!t]
   \begin{adjustwidth}{-2cm}{}
     \begin{tabular}{ |c|c|c|c|c|c|c|c|c|c|c|c| }
       \hline \textbf{Cuts}& \textbf{W07}& \textbf{W08}& \textbf{W09}&
@@ -306,14 +307,14 @@ Table~\ref{tab::EventTable}.
       data}
     \label{tab::EventTable}
   \end{adjustwidth}
-\end{figure}
+\end{table}
 
 \subsection{Binning}
-The asymmetries are measured in bins of x$_N$, x$_{\pi}$, x$_{\mathrm{F}}$,
-q$_{\mathrm{T}}$, and M$_{\mu\mu}$. x$_N$ and x$_{\pi}$ are the momentum
-fractions of the target nucleon and beam pion respectively, x$_{\mathrm{F}}$ =
-x$_{\pi}$ - x$_N$, q$_{\mathrm{T}}$ is the transverse momentum of the virtual
-photon and M$_{\mu\mu}$ is the invariant mass of the di-muon.  The binning was
+The asymmetries are measured in bins of $x_N$, $x_{\pi}$, $x_F$,
+$q_T$, and $M_{\mu\mu}$. $x_N$ and $x_{\pi}$ are the momentum
+fractions of the target nucleon and beam pion respectively, $x_F$ =
+$x_{\pi} - x_N$, $q_T$ is the transverse momentum of the virtual
+photon and $M_{\mu\mu}$ is the invariant mass of the di-muon.  The binning was
 determined by requiring equal statistical population in each kinematic bin.  In
 addition, the asymmetries are determined in an integrated bin using all the
 analysis data.  The analyzes binning limits are summarized in
@@ -325,9 +326,9 @@ Table~\ref{tab::binning}.
     \hline \textbf{Kinematics}& \textbf{Lowest limit}& \textbf{Upper limit bin
       1}& \textbf{Upper limit bin 2}& \textbf{Upper limit bin 3}\\ \hline
     
-    x$_N$& 0.0& 0.13& 0.19& 1.0\\ \hline x$_{\pi}$& 0.0& 0.40& 0.56&
-    1.0\\ \hline x$_F$& -1.0& 0.22& 0.41& 1.0\\ \hline q$_T$ (GeV/c)& 0.4& 0.86&
-    1.36& 5.0\\ \hline M$_{\mu\mu}$ (GeV/c$^2$)& 4.3& 4.73& 5.50& 8.5 \\ \hline
+    $x_N$& 0.0& 0.13& 0.19& 1.0\\ \hline $x_{\pi}$& 0.0& 0.40& 0.56&
+    1.0\\ \hline $x_F$& -1.0& 0.22& 0.41& 1.0\\ \hline $q_T$ (GeV/c)& 0.4& 0.86&
+    1.36& 5.0\\ \hline $M_{\mu\mu}$ (GeV/c$^2$)& 4.3& 4.73& 5.50& 8.5 \\ \hline
     
   \end{tabular}
   \caption{Analysis binning limits}
@@ -654,8 +655,10 @@ The results of the asymmetry amplitudes are determined in each of the nine
 periods and then combined as a weighted average.  The asymmetries are calculated
 this way to minimize the effects of acceptance changes between periods as the
 spectrometer was kept stable within each period but had the options for detector
-changes and repairs between periods.  This resulting asymmetry amplitudes are
-determined from a weighted average as
+changes and repairs between periods.  As well this weighted average method
+allows for future measurements to be combined as a weighted average with the
+final overall results without the need to know individual period results.  This
+resulting asymmetry amplitudes are determined from a weighted average as
 \begin{equation}
   \label{equ::wAvg}
   A = \frac{
@@ -676,11 +679,8 @@ actually determines the quantity
   A^w_T \langle D_{[\theta]} \rangle \langle |S_T|\rangle.
 \end{equation}
 \noindent
-
-
-The asymmetry amplitude is finally
-determined by dividing the fit results by the average polarization and
-depolarization values per period.
+The asymmetry amplitude is ultimately determined by dividing the fit results by
+the average polarization and depolarization values per period.
 
 To determine the asymmetry amplitude, the double ratio is binned in eight bins
 in $\Phi$.  Eight bins are chosen due to the low statistics from Drell-Yan data.
@@ -704,7 +704,7 @@ $A^{\sin(2\phi+\phi_S)}_T$, and 3 sigma below zero for transversity,
 $A^{\sin(2\phi-\phi_S)}_T$.
 
 \begin{figure}[h!t]
-  \centering \includegraphics[width=\textwidth,trim=0cm 2.5cm 0cm 3cm,
+  \centering \includegraphics[width=\textwidth,trim=0cm 2.5cm 0cm 2.5cm,
     clip]{dr_final_results}
   \caption{The results and statistical error bars for the transverse
     spin-dependent asymmetry amplitudes $A^{\sin\phi_S}_T$ (top),
@@ -1151,6 +1151,7 @@ two-target geometric mean asymmetry can be written as
   \frac{1}{|S_T|}
   \frac{\kappa_{2Targ}\sigma_l - \sigma_r}{
     \kappa_{2Targ}\sigma_l + \sigma_r},
+  \label{equ::AN2targAcceptCancel}
 \end{equation},
 
 \noindent
@@ -1763,9 +1764,8 @@ Tab.~\ref{tab::sysError}.  For reference the total statistical error is $\langle
 
     Acceptance fluctuation& 0.2 & 0.008\\ \hline
 
-    False asymmetry& 0.5 & 0.020\\ \hline
-
-    Total& 0.55 & 0.022\\\hline
+    False asymmetry& 0.5 & 0.020\\ \hline \hline
+    \textbf{Total}& \textbf{0.55} & \textbf{0.022}\\\hline
     
   \end{tabular}
   \caption{Summary of systematic error impacts to the integrated asymmetry}
@@ -1773,22 +1773,21 @@ Tab.~\ref{tab::sysError}.  For reference the total statistical error is $\langle
 \end{table}
 
 \subsection{Results} \label{sec::lr_results}
-(need to explain way polarization is corrected by period)
-weighed as~\ref{equ::wAvg}
+The left-right asymmetry is extracted per period, corrected for the target
+polarization and ultimately combined as a weighed average, Eq.~\ref{equ::wAvg},
+to get an overall result as in Sec~\ref{sec::doubleratio_results}.
 
-\noindent
-The results for the basic geometric mean are shown in Fig.~\ref{fig::ANgeom} and
-the results for the two-target geometric mean are shown in
+The results for the geometric mean are shown in Fig.~\ref{fig::ANgeom} and the
+results for the two-target geometric mean are shown in
 Fig.~\ref{fig::AN4TargGeom}.  The numerical values for the two-target geometric
-mean with statistical and systematic error bars are summarized in
-Table~\ref{tab::AN4TargGeom}.  The systematic error bars are discussed in
-Sec.~\ref{sec::systematics}.
+mean systematic errors are summarized in Table~\ref{tab::sysError}.
 
 \begin{figure}[h!t]
   \begin{center}
-    \includegraphics[width=\textwidth, trim=0.3cm 0cm 0.25cm 0cm, clip]{ANgeom} 
-    \caption{$A_{lr}$ determined from the geometric mean method for the
-      upstream target (red) and the downstream target (blue) for all kinematic
+    \includegraphics[width=\textwidth, trim=3cm 5.5cm 3cm 5.5cm,
+      clip]{ANgeom}
+    \caption{$A_{lr}$ determined from the geometric mean method for the upstream
+      target cell (red) and the downstream target cell (blue) for all kinematic
       binnings}
     \label{fig::ANgeom}
   \end{center}
@@ -1796,27 +1795,68 @@ Sec.~\ref{sec::systematics}.
 
 \begin{figure}[h!t]
   \begin{center}
-    \includegraphics[width=\textwidth]{AN4TargGeom}
+    \includegraphics[width=\textwidth, trim=2cm 5cm 2cm 5cm,
+      clip]{AN4TargGeom}
     \caption{$A_{lr}$ determined by the two-target geometric mean method
       for all kinematic binnings}
     \label{fig::AN4TargGeom}
   \end{center}
 \end{figure}
 
-\begin{table}[h!t]
-  \centering
-  \label{tab::AN4TargGeom}
-  \caption{Two-target geometric mean numerical values and error bars for each
-    kinematic bin}
-  \begin{tabular}{ |c|c|c|c|c| }
-    \hline \textbf{Binning variable}& \textbf{Bin Range}&
-    \textbf{A}$_{\mathrm{\textbf{N}}}$&
-    \textbf{$\delta$}\textbf{A}$^{\mathrm{\textbf{stat}}}_{\mathrm{\textbf{N}}}$&
-    \textbf{$\delta$}\textbf{A}$^{\mathrm{\textbf{sys}}}_{\mathrm{\textbf{N}}}$
-    \\ \hline \hline
+It was shown in Sec~\ref{sec::lr_theory} that the left-right asymmetry is
+related to the Sivers amplitude as
 
-    $\langle$ {\xn} $\rangle$& & & & \\
-  \end{tabular}
-\end{table}
+\begin{equation}
+  \label{equ::all_an_convert}
+  A_{lr} = \frac{2A^{\sin(\phi_S)}}{\pi} = \frac{2A_N}{\pi},
+\end{equation}
 
-\subsection{Comparison of results}
+\noindent
+where $A_N$ is the analyzing power.  The Sivers amplitude was measured to be
+approximately 1 sigma above zero from the unbinned maximum likelihood method,
+Fig.~\ref{fig::DY_Siv_signFlip}, the double ratio method,
+Fig.~\ref{fig::dr_final_results}, and the left-right asymmetry.  Adjusting the
+left-right asymmetry, as in Eq.~\ref{equ::all_an_convert}, shows the amplitude
+determined from the left-right asymmetry is statistically consistent with the
+Sivers amplitude determined from the double ratio method,
+Fig.~\ref{fig::AN_DR_comp}.  Therefore all methods to determine the Siver
+amplitude in this chapter are consistent with the sign flip hypothesis between
+the Drell-Yan and SIDIS processes.  On the other hand, the statistical error
+bars are too large to definitively conclude the sign flip is true.  There are
+also no clear trends in the physics kinematic binning due to the large
+statistical error bars.
+
+It is interesting to note that Eq.~\ref{equ::all_an_convert} was derived with
+the assumption that the leading order Drell-Yan cross-section,
+Eq.~\ref{equ::DY_MostusefulXsect}, is sufficient.  It is not theoretically ruled
+out however, that the left-right asymmetry results from higher order amplitudes
+in addition to the Sivers amplitude.  As Fig.~\ref{fig::AN_DR_comp} shows, the
+left-right asymmetry is slightly less significant about zero than the Sivers
+amplitude determined from the double ratio method.  This could indicate the need
+to include higher order terms in the Drell-Yan cross-section.
+
+\begin{figure}[h!t]
+  \centering \includegraphics[width=0.2\textwidth, trim=7.5cm 7.5cm 7.5cm
+    7.5cm, clip]{AN_DR_comp}
+  \caption{The left-right asymmetry adjusted (analyzing power, blue) to be
+    compared with Sivers amplitude determined from the double ratio method
+    (red).}
+  \label{fig::AN_DR_comp}
+\end{figure}
+
+
+%\begin{table}[h!t]
+%  \centering
+%  \label{tab::AN4TargGeom}
+%  \caption{Two-target geometric mean numerical values and error bars for each
+%    kinematic bin}
+%  \begin{tabular}{ |c|c|c|c|c| }
+%    \hline \textbf{Binning variable}& \textbf{Bin Range}&
+%    \textbf{A}$_{\mathrm{\textbf{N}}}$&
+%    \textbf{$\delta$}\textbf{A}$^{\mathrm{\textbf{stat}}}_{\mathrm{\textbf{N}}}$&
+%    \textbf{$\delta$}\textbf{A}$^{\mathrm{\textbf{sys}}}_{\mathrm{\textbf{N}}}$
+%    \\ \hline \hline
+%
+%    $\langle$ {\xn} $\rangle$& & & & \\
+%  \end{tabular}
+%\end{table}

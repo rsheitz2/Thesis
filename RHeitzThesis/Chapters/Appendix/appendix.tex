@@ -1,16 +1,15 @@
 \chapter{Systematic Error Derivations}
 \ifpdf
-\graphicspath{{Chapters/Appendix/Figs/Raster/}{Chapters/Appendix/Figs/PDF/}{Chapters/Appendix/Figs/}}
-\else \graphicspath{{Chapters/Appendix/Figs/Vector/}{Chapters/Appendix/Figs/}}
+\graphicspath{Chapters/Appendix/Figs/PDF/}
 \fi
 
 \section{Systematic Error From Acceptance} \label{app::sysAcc}
 
 For an asymmetry defined as
 \begin{equation}
-  \mathrm{A}_{\alpha} =
-  \frac{1}{\mathrm{P}}
-  \frac{\alpha\sigma_L - \sigma_R}{\alpha\sigma_L + \sigma_R} 
+  A_{\alpha} =
+  \frac{1}{|S_T|}
+  \frac{\alpha\sigma_l - \sigma_r}{\alpha\sigma_l + \sigma_r} 
 \end{equation}
 
 \noindent
@@ -18,7 +17,7 @@ where $\alpha$ is an acceptance ratio.  $\alpha$ is assumed to be close to unity
 therefore let
 
 \begin{equation}
-  \alpha = 1 \pm 2*\epsilon,
+  \alpha = 1 \pm 2\epsilon,
 \end{equation}
 
 \noindent
@@ -26,57 +25,54 @@ where $\epsilon$ is a small positive number.  The asymmetry can
 therefore be written
 
 \begin{equation}
-  \frac{1}{\mathrm{P}}
-  \frac{(1\pm2*\epsilon)\sigma_L -
-    \sigma_R}{(1\pm2*\epsilon)\sigma_L + \sigma_R} = \frac{1}{P} \frac{\sigma_L
-    - \sigma_R \pm 2*\epsilon * \sigma_L}{ (\sigma_L +
-    \sigma_R)(1\pm\frac{2*\epsilon *\sigma_L}{\sigma_L + \sigma_R}) }.
+  A_\alpha = \frac{1}{|S_T|}
+  \frac{(1\pm2\epsilon)\sigma_l -
+    \sigma_r}{(1\pm2\epsilon)\sigma_l + \sigma_r} = \frac{1}{|S_T|} \frac{\sigma_l
+    - \sigma_r \pm 2\epsilon  \sigma_l}{ (\sigma_l +
+    \sigma_r)(1\pm\frac{2\epsilon \sigma_l}{\sigma_l + \sigma_r}) }.
 \end{equation}
 
 \noindent
 From there Taylor expand the denominator to get
-\begin{equation}
-  \mathrm{A}_{\alpha} \approx
-  \frac{1}{\mathrm{P}}
-  \frac{\sigma_L - \sigma_R \pm
-    2*\epsilon * \sigma_L}{ (\sigma_L + \sigma_R)} *(1\mp\frac{2*\epsilon
-    *\sigma_L}{\sigma_L + \sigma_R})
-\end{equation}
-
-\begin{equation*}
-  = 
-  \mathrm{A}_{\mathrm{N}}
-  \pm \frac{1}{\mathrm{P}} \frac{2*\epsilon *\sigma_L}{\sigma_L + \sigma_R}
-  \mp \mathrm{A}_{\mathrm{N}}* \frac{2*\epsilon *\sigma_L}{\sigma_L + \sigma_R}
-  \mp \frac{1}{\mathrm{P}}
-  \Big( \frac{2*\epsilon *\sigma_L}{\sigma_L + \sigma_R} \Big )^2.
-\end{equation*}
+\begin{align}
+  A_{\alpha} &\approx
+  \frac{1}{|S_T|}
+  \frac{\sigma_l - \sigma_r \pm
+    2\epsilon  \sigma_l}{ (\sigma_l + \sigma_r)} (1\mp\frac{2\epsilon
+    \sigma_l}{\sigma_l + \sigma_r})
+  \\ \nonumber
+  &= 
+  A_{lr}
+  \pm \frac{1}{|S_T|} \frac{2\epsilon \sigma_l}{\sigma_l + \sigma_r}
+  \mp A_{lr} \frac{2\epsilon \sigma_l}{\sigma_l + \sigma_r}
+  \mp \frac{1}{|S_T|}
+  \Big( \frac{2\epsilon \sigma_l}{\sigma_l + \sigma_r} \Big )^2.
+\end{align}
 
 \noindent
-Assuming A$_{\mathrm{N}}$ is small and $\sigma_{\mathrm{L}} \approx
-\sigma_{\mathrm{R}}$
+Assuming $A_{lr}$ is small and $\sigma_l \approx \sigma_r$
 
 \begin{equation}
-\mathrm{A}_{\alpha}\approx 
-\mathrm{A}_{\mathrm{N}} \pm \frac{\epsilon}{P}.
+A_{\alpha}\approx 
+A_{lr} \pm \frac{\epsilon}{|S_T|}.
 \end{equation}
 
 \noindent
 The true asymmetry can now be written
 
 \begin{equation}
-  \mathrm{A}_{\mathrm{N,systematic}} \approx
-  \mathrm{A}_{\alpha} \mp \frac{\epsilon}{P}.
+  A_{lr,systematic} \approx
+  A_{\alpha} \mp \frac{\epsilon}{|S_T|}.
 \end{equation}
 
 \noindent
-Including the $\frac{\epsilon}{P}$ term as an additive error and using standard
-error propagation the systematic error can be approximated as
+Including the $\frac{\epsilon}{|S_T|}$ term as an additive error and using
+standard error propagation the systematic error can be approximated as
 
 \begin{equation}
-  \delta \mathrm{A}_{\mathrm{N,systematic}} = \frac{ \mid\alpha - 1
-    \mid}{2}\frac{1}{\mathrm{P}} + \frac{\delta_{\frac{\mid \alpha -1
-        \mid}{2}}}{\mathrm{P}}.
+  \delta A_{lr,systematic} = \frac{ \mid\alpha - 1
+    \mid}{2}\frac{1}{|S_T|} + \frac{\delta_{\frac{\mid \alpha -1
+        \mid}{2}}}{|S_T|}.
 \end{equation}
 
 
@@ -88,40 +84,102 @@ of miss-identified events reconstructed left equals the amount of outgoing
 events reconstructed right
 
 \begin{equation}
-  \mathrm{A}_{\mathrm{N,measure}} =
-  \frac{1}{\mathrm{P}} \frac{(\mathrm{L}+ \frac{\gamma}{2}
-    \mathrm{N}_{\mathrm{total}}) - (\mathrm{R} + \frac{\gamma}{2}
-    \mathrm{N}_{\mathrm{total}})} {(\mathrm{L}+ \frac{\gamma}{2}
-    \mathrm{N}_{\mathrm{total}})+(\mathrm{R}+ \frac{\gamma}{2}
-    \mathrm{N}_{\mathrm{total}})}
-  = \frac{1}{\mathrm{P}} \frac{\mathrm{L} - \mathrm{R}}
-         {(\mathrm{L}+\mathrm{R})*(1+ \gamma
-           *\frac{\mathrm{N}_{\mathrm{total}}}{\mathrm{L}+\mathrm{R}})},
+  A_{lr,measure} =
+  \frac{1}{|S_T|} \frac{(l+ \frac{\gamma}{2}
+    N_{total}) - (r + \frac{\gamma}{2}
+    N_{total})} {(l+ \frac{\gamma}{2}
+    N_{total})+(r+ \frac{\gamma}{2}
+    N_{total})}
+  = \frac{1}{|S_T|} \frac{l - r}
+         {(l+r)(1+ \gamma
+           \frac{N_{total}}{l+r})},
 \end{equation}
 
 \noindent
-where N$_{\mathrm{total}}$ is the total events measure, L is the true events
-measured to the left that should be measured left and R is the number of events
-measure to the right that should be measured to the right.\par
+where $N_{total}$ is the total events measure, $l$ is the true events
+measured to the left that should be measured left and $r$ is the number of
+events measure to the right that should be measured to the right.\par
 
 Assuming $\gamma$ is a small percentage, the denominator can be Taylor expanded
 to give
 
 \begin{equation}
-  \mathrm{A}_{\mathrm{N,measure}} \approx
-  \mathrm{A}_{\mathrm{N}}
-  \Big (1-\gamma*\frac{\mathrm{N}_{\mathrm{total}}}{\mathrm{L}+\mathrm{R}}\Big).
+  A_{lr,measure} \approx
+  A_{lr}
+  \Big (1-\gamma\frac{N_{total}}{l+r}\Big).
 \end{equation}
 
 \noindent
-Including $\gamma$A$_{\mathrm{N,measure}}$ as an additive error and using
+Including $\gamma A_{lr,measure}$ as an additive error and using
 standard error propagation the systematic error can be approximated as
 
 \begin{equation}
-  \delta \mathrm{A}_{\mathrm{N,systematic}} =
-  \gamma *\mathrm{A}_{\mathrm{N,measure}} +
-  \gamma *\delta \mathrm{A}_{\mathrm{N,measure}}.
+  \delta A_{lr,systematic} =
+  \gamma A_{lr,measure} +
+  \gamma \delta A_{lr,measure}.
 \end{equation}
 
 
+\section{Systematic Error From Event Contamination} \label{app::sysEventContam}
+Often times the measured counts come from multiple sources where only a
+measurement from a single source is of interest.  As long as the source of
+interest is dominates the total counts, a left-right asymmetry can still be
+determined for the source of interest.  In this derivation there will be an
+assumed a signal source with counts $N_S$ and a background source with counts
+$N_{bg}$, where the background takes into account all processes that are not of
+interest.  Defining the purity of the signal as
 
+\begin{equation}
+  p = \frac{N_S}{N_S + N_{bg}},
+\end{equation}
+\noindent
+then the left-right asymmetry can be determined as
+
+\begin{align}
+  A_{lr} &= \frac{1}{|S_T|}
+  \frac{N_{l,S} + N_{l,bg} - \Big(N_{r,S} + N_{r,bg}\Big)
+  }{N_{l,S} + N_{l,bg} + \Big(N_{r,S} + N_{r,bg} \Big)}
+  \\ \nonumber
+  &= \frac{1}{|S_T|}\Big\{
+  \frac{N_{l,S} - N_{r,S}}{N_{l,S} + N_{r,S} + N_{l,bg} + N_{r,bg}} 
+  + \frac{N_{l,bg} - N_{r,bg}}{N_{l,bg} + N_{r,bg} + N_{l,S} + N_{r,S} }
+  \Big\}
+  \\ \nonumber
+  &= \frac{1}{|S_T|}\Big\{
+  \frac{N_{l,S} - N_{r,S}}{
+    \Big(N_{l,S} + N_{r,S}\Big)\Big(1+ \frac{N_{l,bg} + N_{r,bg}}{N_{l,S} + N_{r,S}}\Big)}
+  + \frac{N_{l,bg} - N_{r,bg}}{\Big(N_{l,bg} + N_{r,bg}\Big)\Big(1+ \frac{N_{l,S} + N_{r,S}}{N_{l,bg} + N_{r,bg}}\Big) }
+  \Big\}
+  \\ \nonumber
+  &= \frac{1}{|S_T|}\Big\{
+  \frac{N_{l,S} - N_{r,S}}{
+    \Big(N_{l,S} + N_{r,S}\Big)\Big(\frac{1}{p}\Big)}
+  + \frac{N_{l,bg} - N_{r,bg}}{\Big(N_{l,bg} + N_{r,bg}\Big)\Big(\frac{p}{1-p}\Big) }
+  \Big\}
+  \\ \nonumber
+  &= pA_{lr,S} + \frac{1-p}{p}A_{lr,bg}.
+\end{align}
+\noindent
+This means that by measuring the purity, $p$, and the left-right asymmetry,
+$A_{lr}$, the left-right asymmetry from the signal, $A_{lr,S}$, can be
+determined as
+
+\begin{equation}
+  A_{lr,S} = \frac{1}{p} A_{lr} - \frac{1-p}{p^2} A_{lr,bg}.
+\end{equation}
+\noindent
+Assuming a purity above 90\% and a background left-right asymmetry, $A_{lr,bg}$,
+of 5\%
+\begin{equation}
+  A_{lr,S} = 1.11 A_{lr} - 0.123(0.05) = 1.11 A_{lr} - 0.006\approx 1.11 A_{lr}.
+\end{equation}
+
+The systematic error from a purity less than 1 can be determined as
+
+\begin{align}
+  A_{lr,S} &= \frac{1}{p}A_{lr} = A_{lr} + \frac{1-p}{p}A_{lr}
+  \\ \nonumber
+  \Rightarrow \sigma^2_{A_{lr,S}} &= \sigma^2_{A_{lr}} + \frac{(1-p)^2}{p^2} \sigma^2_{A_{lr}}
+  \\ \nonumber
+  \Rightarrow \sigma^2_{systematic}/\sigma^2_{statistic} &= \frac{(1-p)^2}{p^2}.
+\end{align}
