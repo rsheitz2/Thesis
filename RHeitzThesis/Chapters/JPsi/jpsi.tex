@@ -59,7 +59,7 @@ invariant mass range should be where {\jp} signal to background is highest.
 This is in contrast to the Drell-Yan analyses which require the invariant mass
 to be above 4.3~{\gvcw}.
 
-\subsubsection{{\jp} Invariant Mass Range}
+\subsubsection{{\jp} Invariant Mass Range}\label{sec::jpMassRange}
 The COMPASS spectrometer has a finite mass resolution which therefore means the
 events resulting from {\jp} production have an invariant mass spread larger than
 the nominal {\jp} width.  For this reason the cut on invariant mass should be a
@@ -390,7 +390,381 @@ statistical uncertainty for the two-target geometric mean reduces to
 $\frac{1}{|S_T|}\frac{1}{\sqrt{N}}$, where $N$ is the sum of all counts.
 
 \subsection{Systematic Studies}
+Similar tests as were performed for the high mass left-right asymmetry to
+determine the systematic error are also performed for the intermediate mass
+left-right asymmetry.  For the full details on the previous tests see
+Sec~\ref{sec::systematics}.  This section will give the results for systematic
+errors in the intermediate mass range and describe in detail the tests specific
+to this analysis.  The overall systematic errors are determined by adding all
+non-zero systematic uncertainties in quadrature.  The impact from each source of
+systematic error is summarized in Tab.~\ref{tab::sysErrorJPsi}.
 
-\subsection{Interpretation}
+\subsubsection{Period Compatibility (Time Dependence)}
+It is expected that the asymmetry calculation will vary in time due to
+statistical fluctuations.  Fig.~\ref{fig::JPsi_AlrPeriod} shows the left-right
+asymmetry calculated for each period in time and Fig.~\ref{fig::JPsi_AlrXn}
+shows the left-right asymmetry time fluctuations for each bin in $x_N$.  To
+quantify if the time fluctuations are greater than what is expected from random
+statistical fluctuations, the pull distribution is checked for a larger width
+than one or a non-zero mean.  More details on the pull distribution are given in
+Sec~\ref{sec::sysPulls}.
 
-Doesn't fit anseminos plot...
+\begin{figure}[h!t]
+  \centering \includegraphics[width=0.65\textwidth,trim=0.5cm 6cm 0.5cm
+    6cm,clip]{JPsi_AlrPeriod}
+  \caption{The left-right asymmetry in the JPsi mass region as a function of
+    time.  The red line is a constant fit and therefore shows the weighted
+    averaged of the periods.}
+  \label{fig::JPsi_AlrPeriod}
+\end{figure}
+
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.65\textwidth,trim=1cm 8cm 1cm 8cm,clip]{JPsi_AlrXn}
+  \caption{The left-right asymmetry time fluctuations in each bin of $x_N$.}
+  \label{fig::JPsi_AlrXn}
+\end{figure}
+
+The pull value is defined as
+\begin{equation}
+  \label{eq::pullJPsi}
+  \Delta\mathrm{A}_i =
+  \frac{
+    \mathrm{A}_i - \langle \mathrm{A} \rangle
+  }{
+    \sqrt{
+      \sigma^2_{\mathrm{A}_i} - \sigma^2_{\langle \mathrm{A} \rangle}
+    }
+  }.
+\end{equation}
+\noindent
+The pull distribution is form for each kinematic variable in
+Fig.~\ref{fig::JPsi_Pulls}.  For this analysis there are therefore 4 (number of
+bins) x 9 (number of periods) = 36 entries per pull distribution.  The
+systematic error from period incompatibility is determined as
+
+\begin{equation}
+  \label{equ::sysErrorPullJPsi}
+  \frac{\sigma_{systematic}}{\sigma_{statistical}} =
+  \sqrt{|\sigma^2_{pull} - 1|} + \frac{\mu_{pull}}{2},
+\end{equation}
+\noindent
+where in this analysis the $\sigma_{pull}^2$ and $\mu_{pull}$ are determined as
+a weighted average from the pull distributions in each kinematic variable
+including the distribution for the integrated values.  The fit values from each
+pull distribution give somewhat different estimates due to the errors associated
+with the fit.  For this reason a weighted average is perform to give the best
+estimate for the pull mean and standard deviation and therefore the best
+systematic error calculation.  The systematic error due to time incompatibility
+is determined to be 16\% of the statistical error.
+
+\begin{figure}[h!t]
+  \centering \includegraphics[width=\textwidth,trim=2.2cm 1.7cm 2.2cm
+    1.7cm,clip]{JPsi_Pulls}
+  \caption{}
+  \label{fig::JPsi_Pulls}
+\end{figure}
+
+
+\subsubsection{Left/Right Event Migration}
+The left-right event migration systematic error is calculation the same as in
+Sec~\ref{sec::syslrEventMigration}.  The Monte-Carlo data used to determine the
+left-right event migration is described in Table~\ref{tab::MCproduction}.  The
+effect of misidentify events as left when the event should be counted as a right
+event and vise-versa is to dilute the left-right asymmetry.  It is as if there
+is an additional unpolarized contribution that dilutes the event sample.
+
+The systematic error for left-right migration is derived in
+Appendix~\ref{app::sysLRmiss} to be
+
+\begin{equation}
+  \delta A_{lr,systematic} = \gamma *A_{lr} + \gamma *\delta A_{lr},
+\end{equation}
+\noindent
+where $\gamma$ is the fraction of misidentified left and right events.  
+
+As is clearly visible in Fig.~\ref{fig::JPsilrMigration}, there is a band of
+higher misidentification rate at the border between left and right.  For the
+{\jp} mass region only about 3\% of events were misidentified resulting in a
+systematic error of 4.4\% of the statistical error.
+
+\begin{figure}[h!t]
+  \centering \includegraphics[width=0.4\textwidth,trim=2cm 7cm 2cm
+    7cm,clip]{JPsilrMigration}
+  \caption{The left-right migration as a function of the generated $\phi_S$
+    angle.}
+  \label{fig::JPsilrMigration}
+\end{figure}
+
+\subsection{J/$\Psi$ Purity}
+
+The systematic error due to a {\jp} purity less than unity was discussed in
+Sec~\ref{sec::jpMassRange}.  The invariant mass range was chosen such that the
+{\jp} purity was 90\% or higher to reduce the systematic error associated with
+impurities.  The systematic error is derived in
+Appendix~\ref{app::sysEventContam} as
+
+\begin{equation}
+  \frac{\sigma_{systematic}}{\sigma_{statistical}} = \frac{(1-p)}{p}.
+\end{equation}
+\noindent
+Table~\ref{tab::JPsiPurity} summarized the impurity as a function of the
+analysis mass range and the impurity in this analysis mass range is 91.3\%.
+This corresponds to a systematic error of 9.5\% of the statistical error.
+
+\subsubsection{False Asymmetries}
+\subsubsection{Acceptance From False Asymmetries}
+The acceptance fluctuations are determined from the false asymmetry defined as
+\begin{equation}
+  A_{lr,False} = 
+    \frac{1}{|S_T|}
+    \frac{
+      \sqrt[4]{
+        N_{1,r}^\uparrow N_{1, l}^\downarrow
+        N_{2,l}^\uparrow N_{2, r}^\downarrow
+      } 
+      -\sqrt[4]{
+        N_{1,l}^\uparrow N_{1, r}^\downarrow
+        N_{2,r}^\uparrow N_{2, l}^\downarrow
+      }
+    }{
+      \sqrt[4]{
+        N_{1,r}^\uparrow N_{1, l}^\downarrow
+        N_{2,l}^\uparrow N_{2, r}^\downarrow
+      } +
+      \sqrt[4]{
+        N_{1,l}^\uparrow N_{1, r}^\downarrow
+        N_{2,r}^\uparrow N_{2, l}^\downarrow
+      }
+    } 
+    = \frac{1}{|S_T|}
+    \frac{
+      \alpha_{2Targ} - 1     
+    }{
+      \alpha_{2Targ} + 1
+    }.
+    \label{equ::falseAccJPsi}
+\end{equation}
+\noindent
+More details for acceptance fluctuations are discussed in
+Sec.~\ref{sec::GeoMean} and Sec.~\ref{sec::TwoTargGeoMean}.  The kinematic
+dependencies of the acceptance ratio, $\alpha_{2Targ}$, are shown in
+Fig.~\ref{fig::alphaJPsi}.  The systematic error associated with acceptance
+fluctuations is defined as
+
+\begin{equation}
+  \delta A_{lr,systematic} =
+  \frac{1}{|S_T|}
+  \Big(\frac{|\alpha_{2Targ}-1|}{2}
+  + \delta_{\frac{|\alpha_{2Targ}-1|}{2}} \Big).
+\end{equation}
+
+\noindent
+This expression is derived in Appendix~\ref{app::sysAcc}.  The normalized
+kinematic dependence of the systematic error to the statistical error is shown
+in Fig.~\ref{fig::accSysStatJPsi}.  The average systematic error due to
+acceptance is 23\% of the statistical error.
+
+\begin{figure}[h!t]
+  \begin{center}
+    \includegraphics[width=\textwidth, trim=0cm 5cm 0cm 5cm,
+      clip]{alphaJPsi}
+    \caption{Acceptance fluctuations in each bin of the kinematic variables.}
+    \label{fig::alphaJPsi}
+  \end{center}
+\end{figure}
+
+\begin{figure}[h!t]
+  \begin{center}
+    \includegraphics[width=\textwidth, trim=0cm 5cm 0cm 5cm,
+      clip]{accSysStatJPsi}
+    \caption{Systematic error due to acceptance effects}
+    \label{fig::accSysStatJPsi}
+  \end{center}
+\end{figure}
+
+\subsubsection{Further False Asymmetry Effects}
+Additional false asymmetries are analyzed to account for systematic errors which
+were not addressed directly.  The false asymmetries are constructed in such a
+way that the cross-section and that luminosity.  Therefore these false
+asymmetries can only change in time due to acceptance effects or for some
+unknown reason.  The false asymmetries constructed to study the intermediate
+mass analysis are described in the following enumerated list.
+
+\begin{enumerate}
+  \label{tab::additionalFAJPsi}
+
+\item The false asymmetry used to determine the acceptance fluctuations,
+  Eq.~\ref{equ::falseAccJPsi}, is checked for compatibility and the
+  uncorrelated pulls are shown in Fig.~\ref{fig::fa2TargPullsJPsi} along with
+  the corresponding fit parameters and errors.
+
+  \begin{figure}[h!t]
+    \centering \includegraphics[width=\textwidth, trim=0cm 3cm 0cm 3cm,
+      clip]{fa2TargPullsJPsi}
+    \caption{Pull distribution for a nearly acceptance free two-target false
+      geomean asymmetry}
+    \label{fig::fa2TargPullsJPsi}
+  \end{figure}
+
+  \item A false asymmetries using only the information from the upstream or the
+  downstream target cell defined as
+
+  \begin{equation}
+    \label{equ::falseANgeomeanJPsi}
+    A_{lr, FA} =
+    \frac{1}{|S_T|}
+    \frac{\sqrt{N_l^\uparrow N_r^\downarrow}
+      - \sqrt{N_r^\uparrow N_l^\downarrow}
+    }{
+      \sqrt{N_l^\uparrow N_r^\downarrow}
+      + \sqrt{N_r^\uparrow N_l^\downarrow}
+    }.
+  \end{equation}
+  The pulls for the upstream target cell shown in Fig.~\ref{fig::faPullsUpSJPsi}
+  and the pulls for the downstream target cell are shown in
+  Fig.~\ref{fig::faPullsDownSJPsi}.
+
+  \begin{figure}[h!t]
+  \centering \includegraphics[width=\textwidth, trim=0cm 3cm 0cm 3cm,
+    clip]{faPullsUpSJPsi}
+  \caption{Pull distribution for the downstream target}
+  \label{fig::faPullsUpSJPsi}
+  \end{figure}
+
+\begin{figure}[h!t]
+  \centering \includegraphics[width=\textwidth, trim=0cm 3cm 0cm 3cm,
+    clip]{faPullsDownSJPsi}
+  \caption{Pull distribution for the downstream target}
+  \label{fig::faPullsDownSJPsi}
+\end{figure}
+
+\end{enumerate}
+
+The systematic error from each false asymmetry is determined using the
+Eq.~\ref{equ::sysErrorPullJPsi}.  The uncorrelated pulls have only 4 (number of
+bins) $\times$ 9 (number of periods) = 36 entries which results in large errors
+on the Gaussian fit results.  In an attempt to correct for this and to take into
+account the fit errors, a weighted average of the mean and standard deviation is
+made using the fit parameters and fit errors as weights from the uncrrelated
+pull distributions.  The resulting weighted mean and weighted standard deviation
+are the used to calculate the systematic error.  A summary of the systematic
+error from each false asymmetry is shown in Table~\ref{tab::faSysJPsi}.  The
+systematic error due to additional factors is chosen as the largest systematic
+error from Table~\ref{tab::faSysJPsi}.
+
+\begin{table}[h!t]
+  \centering
+  \begin{tabular}{|c|c|}
+    \hline Systematic error& \multirow{2}{9em}{$\langle
+      \sigma_{\mathrm{systematic}}/\sigma_{\mathrm{statistical}}
+      \rangle$}\\ & \\ \hline
+
+    Two target acceptance estimation& 0.19\\ \hline
+    
+    Target Cell 1& 1.20\\ \hline
+
+    Target Cell 2& 1.11\\ \hline
+    
+  \end{tabular}
+  \caption{Summary of systematic error impacts from false asymmetries.  The
+    maximum systematic error is chosen as the systematic error.}
+  \label{tab::faSysJPsi}
+\end{table}
+
+\subsubsection{Total Systematics}
+The total systematic error is determined by adding all non-zero systematic
+effects in quadrature as
+
+\begin{equation}
+  \Big \langle \frac{
+    \sigma_{\mathrm{systematic}}}{\sigma_{\mathrm{statistical}}} \Big \rangle =
+  \sqrt{ \sum_i^{\mathrm{all \; systematic}} \Big \langle
+    \frac{\sigma^2_{\mathrm{systematic, i}}}{\sigma^2_{\mathrm{statistical}}}
+    \Big \rangle } \;,
+\end{equation}
+where all the systematic effects considered are summarized in
+Tab.~\ref{tab::sysErrorJPsi}.  For reference the total statistical error is
+$\langle \sigma_{\mathrm{statistical}} \rangle$ = 0.006.
+
+\begin{table}[h!t]
+  \centering
+  \begin{tabular}{|c|c|c|}
+    \hline
+    \multirow{2}{*}{Systematic error}&
+    \multirow{2}{*}{
+      $\langle \sigma_{\mathrm{systematic}}/\sigma_{\mathrm{statistical}}
+      \rangle$} &
+    \multirow{2}{*}{$\langle \sigma_{\mathrm{systematic}} \rangle$}\\
+    & & \\ \hline \hline
+
+    Period compatibility& 0.16& 0.001\\ \hline
+
+    Left-Right migration& 0.044& 0.0003\\ \hline
+
+    J/$\Psi$ purity& 0.095& 0.0006\\ \hline
+
+    Target Polarization& 0.05& 0.0003\\ \hline
+
+    Dilution Factor& 0.05& 0.0003\\ \hline
+
+    Acceptance fluctuation& 0.23 & 0.001\\ \hline
+
+    False asymmetry& 1.2 & 0.008\\ \hline \hline
+    \textbf{Total}& \textbf{1.24} & \textbf{0.008}\\\hline
+    
+  \end{tabular}
+  \caption{Summary of systematic error impacts to the integrated asymmetry}
+  \label{tab::sysErrorJPsi}
+\end{table}
+
+The left-right asymmetry results and systematic error bands is shown in
+Fig.~\ref{fig::Alr_JPsi} and the kinematic dependencies are shown in
+Fig.~\ref{fig::AlrBinned_JPsi}.  The integrated left-right asymmetry is 1 sigma
+above zero.  This is similar to the left-right asymmetry for the high mass
+Drell-Yan analysis.  The asymmetry shows a weak inverse dependence on $x_F$
+indicating asymmetry could be related proton target.  This can also be seen in
+the $x_N$ dependence which is most significant in the highest $x_N$ bin.
+Although the left-right asymmetry is model independent, it is was discussed that
+the Sivers function could be the cause of for a non-zero left-right asymmetry.
+A positive left-right asymmetry would be consistent with the sign change
+hypothesis.
+
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.3\textwidth,trim=6cm 6cm 6cm 6cm,clip]{Alr_JPsi}
+  \caption{}
+  \label{fig::Alr_JPsi}
+\end{figure}
+
+\begin{figure}[h!t]
+  \centering \includegraphics[width=\textwidth,trim=1cm 4cm 1cm
+    4cm,clip]{AlrBinned_JPsi}
+  \caption{}
+  \label{fig::AlrBinned_JPsi}
+\end{figure}
+
+The Anselmino group 
+\begin{figure}[h!t]
+  \centering \includegraphics[width=0.6\textwidth,trim=2cm 4cm 2cm
+    4cm,clip]{AN_JPsiPredict}
+  \caption{This image was taken from~\cite{Anselmino:2016fhz}.}
+  \label{fig::AN_JPsiPredict}
+\end{figure}
+
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.6\textwidth,trim=2cm 4cm 2cm 4cm,clip]{AN_JPsi}
+  \caption{}
+  \label{fig::AN_JPsi}
+\end{figure}
+
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.6\textwidth,trim=2cm 4cm 2cm 4cm,clip]{ggQQbarXsection}
+  \caption{}
+  \label{fig::ggQQbarXsection}
+\end{figure}
+
+
+

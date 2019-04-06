@@ -1230,7 +1230,7 @@ left-right asymmetry.  The systematic errors are determined by adding all
 non-zero systematic uncertainties in quadrature.  The impact from each source of
 systematic error is summarized in Tab.~\ref{tab::sysError}.
 
-\subsubsection{Period Compatibility (Time Dependence)}
+\subsubsection{Period Compatibility (Time Dependence)}\label{sec::sysPulls}
 The asymmetries calculated for each time period in each kinematic bin are shown
 in Fig.~\ref{fig::allPhysBinned4Targ}.
 
@@ -1311,7 +1311,7 @@ parameters are well compatible with a standard Gaussian within the errors of the
 fit.  Therefore no systematic error was assigned due to incompatibility of the
 periods.
 
-\subsubsection{Left/Right Event Migration}
+\subsubsection{Left/Right Event Migration} \label{sec::syslrEventMigration}
 The spectrometer has finite resolution for any measured quantity.  For this
 reason events measured as left outgoing could really be events that are right
 outgoing and vise versa.  This left-right misidentification has the result of
@@ -1413,8 +1413,7 @@ $\phi_{S}$ cut.  These results are shown in Fig.~\ref{fig::percentLRmiss}.
 The systematic error for left-right migration is calculated as
 
 \begin{equation}
-  \delta \mathrm{A}_{\mathrm{N,systematic}} = \gamma *\mathrm{A}_{\mathrm{N}} +
-  \gamma *\delta \mathrm{A}_{\mathrm{N}},
+  \delta A_{lr,systematic} = \gamma *A_{lr} + \gamma *\delta A_{lr},
 \end{equation}
 
 \noindent
@@ -1422,7 +1421,7 @@ where this expression is derived in Appendix~\ref{app::sysLRmiss}.  No cut on
 $\phi_{S}$ was ultimately used for the asymmetry determination.  This is to
 avoid loss of statistics and due to the fact that the systematic error is
 already small with no cut in $\phi_{S}$.  The integrated systematic error due to
-left-right event migration was determined to be 9\%.
+left-right event migration was determined to be 9\% of the statistical error.
 
 
 \subsubsection{False Asymmetries}
