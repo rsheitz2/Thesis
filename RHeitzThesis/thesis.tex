@@ -32,10 +32,94 @@
 % ******************************** Front Matter ********************************
 \begin{document}
 
-% *********************** Adding TOC and List of Figures ***********************
-%\tableofcontents
+\title{Transverse Spin Effects From Pions Impinged on a Transversely Polarized
+  Proton Target}
 
-\clearpage
+\author{Robert Shannon Heitz}
+\department{Physics}
+%\schools{B.A., University of Columbia, 1981\\ A.M., University of
+%  Illinois at Urbana-Champaign, 1986}
+\phdthesis
+\advisor{Java Jack}
+\degreeyear{2019}
+\committee{Professor Liang Yang, Chair\\
+  Professor Matthias Grosse Perdekamp, Co-Director of Research\\
+  Research Assistant Professor Caroline Riedl, Co-Director of Research\\
+  Professor John Stack\\
+  Professor Alexey Bezryadin}
+  
+\maketitle
+
+\frontmatter
+
+%% Create an abstract that can also be used for the ProQuest abstract.
+%% Note that ProQuest truncates their abstracts at 350 words.
+\begin{abstract}
+The transverse momentum structure of the nucleon generalizes the 1-dimensional
+parton distribution functions (PDFs) to the a 3-dimensional description.  The
+extended distributions are called transverse momentum dependent (TMD) parton
+distribution functions.  TMDs functions include transverse quark and gluon
+momentum to parameterize the non-perturbative description of a nucleon.  Eight
+TMDs parameterize a nucleon at leading order and the Sivers TMD is unique in
+that it is spin-dependent and theorized to change signs between the Drell-Yan
+process and Semi-Inclusive Deep Inelastic Scattering (SIDIS).
+
+The COMPASS spectrometer is unique in that it has the ability to study the
+products from a polarized target and the beam can be modified to measure the
+SIDIS and Drell-Yan processes.  The COMPASS collaboration collected transverse
+spin-dependent data to measure the Sivers function from SIDIS and in 2016
+COMPASS published the results of a Sivers asymmetry amplitude from the SIDIS
+process.  In 2015 COMPASS collected data to study the Drell-Yan process from a
+transversely polarized proton target and a 190~{\gvcw} $\pi^-$ beam.  Therefore
+COMPASS has the unique ability conclude on the non-universality of the Sivers
+TMD between the SIDIS and Drell-Yan processes.
+
+This thesis presents analysis of the 2015 COMPASS Drell-Yan data taking.  The
+analysis focuses on the Sivers TMD but also provides results on the tranvsersity
+and pretzelosity TMD functions which are expected to be universal.  The Sivers
+results presented in this thesis are consistent with a sign flip between
+Drell-Yan and SIDIS.
+\end{abstract}
+
+%% Create a dedication in italics with no heading, centered vertically
+%% on the page.
+\begin{dedication}
+To my parents for always supporting me.
+\end{dedication}
+
+\chapter*{Acknowledgments}
+I would like to thank my co-advisors Caroline Riedl and Matthias Grosse
+Perdekamp for giving me the opportunity to learn about new and interesting
+physical phenomena and as well for giving me the opportunity to learn about
+different cultures.  I would like to thank Vincent Andrieux for many interesting
+discussions both about physics and life in France.
+
+I would like to think the funding agencies for make this research possible.
+This work was supported by the Nation Science Foundation through the NSF PRAC
+award \#1713684 and the NSF grant \#1506416.  This research was also supported
+by the Blue Waters sustained-petascale computing project, which is supported by
+the National Science Foundation (awards OCI-0725070 and ACI-1238993) and the
+state of Illinois. Blue Waters is a joint effort of the University of Illinois
+at Urbana-Champaign and its National Center for Supercomputing Applications.
+
+Lastly I would like to acknowledge my cat Fox Trot for being both a source
+stress and an anxiety reliever.
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.6\textwidth,trim=2cm 4cm 2cm 4cm,clip]{fox}
+  \caption{Fox Trot}
+  \label{fig::fox}
+\end{figure}
+
+
+% *********************** Adding TOC and List of Figures ***********************
+\tableofcontents
+\listoftables
+\listoffigures
+
+
+%\clearpage
+\mainmatter
 \renewcommand{\thepage}{\arabic{page}}
 % ******************************** Main Matter *********************************
 \include{Chapters/Introduction/introduction}
@@ -46,9 +130,6 @@
 \include{Chapters/HMAnalysis/hmanalysis}
 \include{Chapters/JPsi/jpsi}
 \include{Chapters/Conclusion/conclusion}
-
-%\listoffigures
-%\listoftables
 
 % ********************************** Appendices ********************************
 \begin{appendices}
