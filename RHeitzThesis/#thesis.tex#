@@ -1,0 +1,67 @@
+\documentclass[edeposit,fullpage]{Classes/uiucthesis2009}
+\usepackage{booktabs}
+\usepackage{multirow} \usepackage{mathtools} \usepackage{tabularx}
+\usepackage{bm} \usepackage{setspace} \usepackage{amsmath} \usepackage{hyperref}
+\usepackage{pbox,multirow} \usepackage[thinlines]{easytable} \usepackage{lineno}
+\usepackage{bigstrut} \usepackage{enumitem}
+\usepackage[titletoc]{appendix}
+\usepackage{cite}
+\usepackage{changepage}
+\usepackage{breqn}
+\usepackage{subcaption}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{mathrsfs}
+\usepackage{multicol}
+\usepackage{slashed}
+\usepackage[numbers,sort&compress]{natbib}
+
+\singlespacing
+%Newcommands --> define here your alias 
+\newcommand{\gvc}{GeV/$c$} \newcommand{\gvcs}{(GeV/$c$)$^2$}
+\newcommand{\gvcw}{GeV/$c^2$} \newcommand{\mvcw}{MeV/$c^2$}
+\newcommand{\mvc}{MeV/$c$} \newcommand{\diff}{\text{d}}
+\newcommand{\siv}{$f_{1,T}^{\, q\perp}(x,\mathbf{k_T})$}
+\newcommand{\xn}{$x_{\mathrm{N}}$} \newcommand{\xpi}{x$_{\pi}$}
+\newcommand{\xf}{x$_{\mathrm{F}}$}
+\newcommand{\qt}{q$_{\mathrm{T}}$} \newcommand{\Mmumu}{M$_{\mu\mu}$}
+\newcommand{\atrack}{$\alpha_{\mathrm{T}}$}
+\newcommand{\adet}{$\alpha_{\mathrm{D}}$}
+\newcommand{\jp}{J/$\Psi$}
+
+% ******************************** Front Matter ********************************
+\begin{document}
+
+% *********************** Adding TOC and List of Figures ***********************
+%\tableofcontents
+
+\clearpage
+\renewcommand{\thepage}{\arabic{page}}
+% ******************************** Main Matter *********************************
+%\include{Chapters/Introduction/introduction}
+%\include{Chapters/Theory/theory}
+%\include{Chapters/COMPASS/compass}
+%\include{Chapters/DC5/dc5}
+%\include{Chapters/Alignment/alignment}
+%\include{Chapters/HMAnalysis/hmanalysis}
+\include{Chapters/JPsi/jpsi}
+\include{Chapters/Conclusion/conclusion}
+
+%\listoffigures
+%\listoftables
+
+% ********************************** Appendices ********************************
+\begin{appendices}
+\include{Chapters/Appendix/appendix} 
+\end{appendices}
+
+% ********************************** Bibliography ******************************
+\renewcommand{\chaptername}{}
+\renewcommand{\thechapter}{} 
+%\bibliographystyle{plain}
+\bibliographystyle{unsrtnat}
+%\bibliographystyle{ieeetr}
+\bibliography{References/bibliography}{}
+
+
+\end{document}

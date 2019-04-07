@@ -407,12 +407,12 @@ below 4\% in this mass range.
 Fig.~\ref{fig::DY_qT} shows the transverse virtual photon momentum, $q_T$,
 distribution.  With the cut on $q_T$ between [0.4-5({\gvc})], the average $q_T$
 is 1.2~{\gvc} while on the other hand the average $M_{\mu\mu}$ is 5.3~{\gvcw}.
-As stated in chapter~\ref{ch::theory}, the regime where TMD functions are the
-theoretical model for parton distributions is when $q_T << M_{\mu\mu}$.  While
-the average $q_T$ is less than the average $M_{\mu\mu}$, it is not excluded that
-the results in this chapter are outside of the TMD regime.  Nevertheless all the
-results presented in this chapter are determined assuming the TMD description is
-valid.
+As stated in chapter~\ref{ch::theory_exp}, the regime where TMD functions are
+the theoretical model for parton distributions is when $q_T << M_{\mu\mu}$.
+While the average $q_T$ is less than the average $M_{\mu\mu}$, it is not
+excluded that the results in this chapter are outside of the TMD regime.
+Nevertheless all the results presented in this chapter are determined assuming
+the TMD description is valid.
 
 \begin{figure}[h!t]
   \centering
@@ -427,7 +427,7 @@ valid.
   \end{subfigure}
   \begin{subfigure}{.02\textwidth}
     \includegraphics[width=\linewidth]{tmp3}
-    \label{fig::tmp2}%
+    \label{fig::tmp3}%
   \end{subfigure}
     \begin{subfigure}{0.48\textwidth}
     \centering \includegraphics[width=\textwidth,trim=3.1cm 3.8cm 3.1cm
@@ -538,7 +538,7 @@ Eq.~\ref{equ::DYDepolarizationFactorDef}.  It can be thought of as the
 probability for the virtual photon to decay and produce such an asymmetry
 amplitude to that for a transversely polarized photon decay.  The target
 polarization percentage, $|S_T|$ is defined as $fP$, where $f$ is the dilution
-factor, Eq.~\ref{equ::dilution_f}, and $P$ is the target polarization
+factor, Eq.~\ref{equ::dilution}, and $P$ is the target polarization
 percentage.  Therefore the double ratio can be written
 \begin{align}
   R_D(\Phi) &= \frac{ a_1^{\uparrow}(\Phi)L_1^{\uparrow}\sigma_U\Big(1 +
@@ -1207,18 +1207,18 @@ Finally the statistical uncertainty of the two target geometric mean is
   \sqrt{
     \sum_{c,p}
     \Big(
-    \frac{1}{N_L^{p}}
-    + \frac{1}{N_R^p}
+    \frac{1}{N_{c,l}^{p}}
+    + \frac{1}{N_{c,r}^p}
     \Big)
   } \quad,
 \end{equation}
 
 \noindent
 where $L$ can be thought of as the left counts and equals to
-$\sqrt[4]{N_{1,L}^\uparrow N_{1,L}^\downarrow N_{2,L}^\uparrow
-  N_{2,L}^\downarrow}$ and $R$ can be thought of as the right counts and equals
-$\sqrt[4]{N_{1,R}^\uparrow N_{1,R}^\downarrow N_{2,R}^\uparrow
-  N_{2,R}^\downarrow}$.  As with the geometric mean asymmetry, in the case of
+$\sqrt[4]{N_{1,l}^\uparrow N_{1,l}^\downarrow N_{2,l}^\uparrow
+  N_{2,l}^\downarrow}$ and $R$ can be thought of as the right counts and equals
+$\sqrt[4]{N_{1,r}^\uparrow N_{1,r}^\downarrow N_{2,r}^\uparrow
+  N_{2,r}^\downarrow}$.  As with the geometric mean asymmetry, in the case of
 equal statistic populations in each direction and target polarization, the
 statistical uncertainty for the two-target geometric mean also reduces to
 $\frac{1}{|S_T|}\frac{1}{\sqrt{N}}$, where $N$ is the sum of all counts.
@@ -1228,7 +1228,7 @@ $\frac{1}{|S_T|}\frac{1}{\sqrt{N}}$, where $N$ is the sum of all counts.
 Several tests were performed to estimate the systematic uncertainty of the
 left-right asymmetry.  The systematic errors are determined by adding all
 non-zero systematic uncertainties in quadrature.  The impact from each source of
-systematic error is summarized in Tab.~\ref{tab::sysError}.
+systematic error is summarized in Table.~\ref{tab::sysError}.
 
 \subsubsection{Period Compatibility (Time Dependence)}\label{sec::sysPulls}
 The asymmetries calculated for each time period in each kinematic bin are shown
@@ -1624,7 +1624,7 @@ following enumerated list.
   \begin{figure}[h!t]
     \centering \includegraphics[width=0.9\textwidth, trim=1.5cm 4.5cm 1.5cm
       4.5cm, clip]{fa2TargJuraSaleve}
-    \caption{Two-target geomean false asymmetry.  This is non-zero due to
+    \caption{Two-target geometric mean false asymmetry.  This is non-zero due to
       acceptance effects}
     \label{fig::fa2TargJuraSaleve}
   \end{figure}
@@ -1632,8 +1632,8 @@ following enumerated list.
   \begin{figure}[h!t]
     \centering \includegraphics[width=0.9\textwidth, trim=1.5cm 2.5cm 1.5cm
       2.5cm, clip]{fa2TargJSPulls}
-    \caption{Uncorrelated pulls of the two-target geomean false asymmetry and
-      Gaussian fit results}
+    \caption{Uncorrelated pulls of the two-target geometric mean false asymmetry
+      and Gaussian fit results}
     \label{fig::fa2TargJSPulls}
   \end{figure}
 
@@ -1684,7 +1684,7 @@ following enumerated list.
   \begin{figure}[h!t]
     \centering
     \includegraphics[width=\textwidth]{alphaAsymPull}
-    \caption{Pull values from one-target geomean false asymmetries.  Both
+    \caption{Pull values from one-target geometric mean false asymmetries.  Both
       upstream and downstream values are used to make this pull}
     \label{fig::alphaAsymPull}
   \end{figure}
@@ -1699,14 +1699,14 @@ following enumerated list.
     \centering \includegraphics[width=\textwidth, trim=2.5cm 6cm 2.5cm 6cm,
       clip]{fa2TargPulls}
     \caption{Pull distribution for a nearly acceptance free two-target false
-      geomean asymmetry}
+      geometric mean asymmetry}
     \label{fig::fa2TargPulls}
   \end{figure}
   
 \end{enumerate}
 
 A summary of the systematic error from each false asymmetry is shown in
-Tab.~\ref{tab::faSys}
+Table.~\ref{tab::faSys}
 
 \begin{table}[h!t]
   \centering
@@ -1739,8 +1739,8 @@ effects in quadrature as
     \Big \rangle } \;,
 \end{equation}
 where all the systematic effects considered are summarized in
-Tab.~\ref{tab::sysError}.  For reference the total statistical error is $\langle
-\sigma_{\mathrm{statistical}} \rangle$ = 0.039.
+Table.~\ref{tab::sysError}.  For reference the total statistical error is
+$\langle \sigma_{\mathrm{statistical}} \rangle$ = 0.039.
 
 \begin{table}[h!t]
   \centering

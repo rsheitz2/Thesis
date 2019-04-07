@@ -6,15 +6,17 @@
 
 This chapter describes the analysis performed in the intermediate invariant mass
 range at COMPASS.  The biggest advantage about the intermediate mass range is an
-increase in statistics.  The intermediate mass range contains 1.6 times more
-data than the high mass range about 4.3~{\gvcw}.  On the other hand, the
-intermediate mass range results from several reactions.  By far the most
-dominate reaction is {\jp} production.  A theoretical introduction related to
-transverse {\jp} spin asymmetries is provided in Sec~\ref{sec::theory_jpsi}.  As
-of yet however, the exact mechanism for J/$\Psi$ production is unknown and
-therefore the exact {\jp} vertex coupling is unknown.  Never the less, the
-analysis techniques in this chapter contributes to the transverse spin knowledge
-from J/$\Psi$ production.  The reaction of interest is
+increase in statistics.  The intermediate mass range contains approximately 1.6
+times more events than the high mass range above 4.3~{\gvcw}.  On the other
+hand, the intermediate mass range results from several reactions.  Never the
+less, {\jp} production is by far the most dominate reaction and therefore the
+this chapter assumes the results are from the {\jp} reaction.  A theoretical
+introduction related to transverse {\jp} spin asymmetries is provided in
+Sec~\ref{sec::theory_jpsi}.  As of yet, the exact mechanism for J/$\Psi$
+production is unknown and therefore the exact {\jp} vertex coupling is unknown.
+Never the less, the analysis techniques in this chapter contribute to the
+transverse spin knowledge resulting from J/$\Psi$ production.  The reaction of
+interest is
 \begin{equation}
   \pi^-(P_a) + P(P_b, S_T) \rightarrow J/\Psi + X \rightarrow \mu^-(\ell) +
   \mu^+(\ell') + X,
@@ -24,7 +26,7 @@ where the proton target, $P$, is transversely polarized with spin $S_T$.
 
 The dimuon final state from {\jp} production is indistinguishable from the
 Drell-Yan dimuon final state described the previous analyses in
-chapter~\ref{ch:hmanalysis}.  For this reason, similar event selection and data
+chapter~\ref{ch::hmanalysis}.  For this reason, similar event selection and data
 quality are used to study the dimuon production resulting from {\jp} decays.  On
 the other hand, the {\jp} production has a higher background percentage from
 Drell-Yan and other components to be taken into account.  The results presented
@@ -38,8 +40,8 @@ Sec~\ref{sec::leftrightasym}, where again the left-right asymmetry is defined as
 \end{equation}
 
 \subsection{Data Collection and Event Selection}
-The data collection is described in Sec~\ref{sec:datacollection} and the data
-stability tests are described in Sec~\ref{stability}.  Both the Drell-Yan
+The data collection is described in Sec~\ref{sec::datacollection} and the data
+stability tests are described in Sec~\ref{sec::stability}.  Both the Drell-Yan
 analysis and the {\jp} production analysis study dimuon final states so the
 spectrometer data taking conditions are the same.  In particular the measurement
 in this chapter results from a 190~{\gvc} $\pi^-$ beam impinged on a
@@ -55,8 +57,8 @@ difference, from Table~\ref{tab::cutdescrip}, is the selected invariant mass.
 The nominal {\jp} invariant mass and width are 3.096~{\gvcw} and
 92.9$\times10^{-6}$~{\gvcw} respectively~\cite{Tanabashi:2018oca}.  Therefore to
 ensure the events for this analysis result from {\jp} production, the analysis
-invariant mass range should be where {\jp} signal to background is highest.
-This is in contrast to the Drell-Yan analyses which require the invariant mass
+invariant mass range should be where the {\jp} signal to background is highest.
+This is in contrast to the Drell-Yan analyses which required the invariant mass
 to be above 4.3~{\gvcw}.
 
 \subsubsection{{\jp} Invariant Mass Range}\label{sec::jpMassRange}
@@ -73,8 +75,9 @@ mass.
     clip]{DY_InvariantMassJPsi}
   \caption{The 2015 COMPASS invariant dimuon mass distribution and a fit to this
     data.  The data fit is from Monte-Carlo and combinatorial background
-    analysis and is provided to show the background processes.  This image is
-    taken from~\cite{compassDYpaper}.}
+    analysis and is provided to show the background processes.  The shaded blue
+    region shows the analysis mass range for the analysis in this chapter.  This
+    image is taken from~\cite{compassDYpaper}.}
   \label{fig::DY_InvariantMassJPsi}
 \end{figure}
 
@@ -97,7 +100,7 @@ where $p$ is the {\jp} purity.  Therefore the analysis invariant mass range
 should have a {\jp} purity as high as possible to reduce the systematic error
 while still including as much data as possible to reduce the statistical error.
 The total error however, is dominated by statistical error for any purity larger
-than 50\%.  That being stated, Eq.~\ref{equ::JPerrorTot} is derived assuming
+than 50\%.  That being the case, Eq.~\ref{equ::JPerrorTot} is derived assuming
 $(1-p)$ is small and therefore a desired purity of 90\% or greater was chosen to
 safely ensure Eq.~\ref{equ::JPerrorTot} is valid.
 
@@ -110,16 +113,17 @@ data which determines the counts from each process.  The Monte-Carlo fit is
 accomplished by normalizing the invariant mass distribution from each
 Monte-Carlo sample and then fitting using the sum of the four normalized
 distributions to fit the real data.  The fit function is defined as
-
-\begin{equation}
-  F_{J/\Psi \;Fit}(x) = N_{J/\Psi}h_{J/\Psi}(x) + N_{Drell-Yan}h_{Drell-Yan}(x)
-  + N_{Open\;Charm}h_{Open\;Charm}(x)+N_{\Psi'}h_{\Psi'}(x),
-\end{equation}
+\begin{align}
+  F_{J/\Psi \;Fit}(x) = &N_{J/\Psi}h_{J/\Psi}(x) + N_{Drell-Yan}h_{Drell-Yan}(x)
+  \\ \nonumber
+  &+ N_{Open\;Charm}h_{Open\;Charm}(x)+N_{\Psi'}h_{\Psi'}(x),
+\end{align}
 \noindent
-where $h(x)$ is the number of counts from the normalized histogram distribution.
-Fig.~\ref{fig::MC_NormInvM} shows the four normalized Monte-Carlo invariant mass
-distributions and Fig.~\ref{fig::MC_fitQt} shows the Monte-Carlo fit to the real
-data in one $q_T$ bin.
+where $h(x)$ represents the number of counts from the normalized histogram
+distribution and the $N$'s are the fit parameters.  Fig.~\ref{fig::MC_NormInvM}
+shows the four normalized Monte-Carlo invariant mass distributions and
+Fig.~\ref{fig::MC_fitQt} shows the Monte-Carlo fit to the real data in one $q_T$
+bin.
 
 \begin{figure}[h!t]
   \centering
@@ -132,7 +136,9 @@ data in one $q_T$ bin.
 \begin{figure}[h!t]
   \centering
   \includegraphics[width=0.8\textwidth, trim=1cm 10cm 1cm 10cm, clip]{MC_fitQt}
-  \caption{}
+  \caption{An example of the Monte-Carlo fit to real data in one $q_T$ bin of
+    the real data.  This fit is used to determine the distribution of {\jp}
+    purity.}
   \label{fig::MC_fitQt}
 \end{figure}
 
@@ -140,8 +146,7 @@ Once the fits are performed, the {\jp} purity in each invariant bin is
 determined as
 
 \begin{equation}
-  p = \frac{N_{J/\Psi}}{N_{J/\Psi} + N_{Drell-Yan} + N_{Open\;Charm} +
-    N_{\Psi'}}.
+  p(x) = \frac{N_{J/\Psi}h_{J/\Psi}(x)}{N_{J/\Psi}h_{J/\Psi}(x) + N_{Drell-Yan}h_{Drell-Yan}(x) N_{Open\;Charm}h_{Open\;Charm}(x)+N_{\Psi'}h_{\Psi'}(x)}.
 \end{equation}
 \noindent
 Table~\ref{tab::JPsiPurity} summarizes the {\jp} purity as a function of the
@@ -154,16 +159,16 @@ events remaining after each cut.
   \centering
   \begin{tabular}{ |c|c| }
     \hline
-    \textbf{Mass range GeV/c$^2$}& \textbf{JPsi Purity \%}
+    \textbf{Mass range GeV/c$^2$}& \textbf{{\jp} Purity \%}
     \\ \hline \hline
     2.5-4.3& 79.7 $\pm$ 2.9 \\ \hline
     2.78-3.46& 88.9 $\pm$ 2.0 \\ \hline
-    2.87-3.38& 91.3 $\pm$ 1.5 \\ \hline
+    \textbf{2.87-3.38}& \textbf{91.3 $\pm$ 1.5} \\ \hline
     2.95-3.29& 92.9 $\pm$ 1.0 \\ \hline
     3.08-3.17& 94.0 $\pm$ 1.0 \\ \hline
     
   \end{tabular}
-  \caption{{\jp} purity}
+  \caption{{\jp} purity as a function of the invariant mass range}
   \label{tab::JPsiPurity}
 \end{table}
 
@@ -245,8 +250,8 @@ $x_F$, $q_T$ and $M_{\mu\mu}$.  These are the same variables used to bin the
 high mass Drell-Yan analysis.  The left-right asymmetry analysis is binned in
 each of the kinematic variables by requiring an equal amount of data per
 kinematic bin.  The bin limits are also required to have a width of at least
-three times the resolution per variable.  For this analysis there is enough
-statistics and the resolution per variable is good enough to have four kinematic
+three times the resolution per variable.  For this analysis there are enough
+events and the resolution per variable is good enough to have four kinematic
 bins.  The bin limits are provided in Table~\ref{tab::JPsi_binning} and the
 spectrometer resolutions are provided in Table~\ref{tab::JPsiRes}.
 
@@ -255,8 +260,8 @@ resolution is determined from the difference between the Monte-Carlo generated
 value and the reconstruction Monte-Carlo value.  An example of this distribution
 is shown in Fig.~\ref{fig::JPsiXPiRes} for the $x_\pi$ variable.  The
 distribution has a longer tail than a Gaussian distribution and for this reason
-a two Gaussian fit function is used to determine the distributions width.  The
-resolution is then determined as the width of the Gaussian with a larger
+a two Gaussian fit function is used to determine the distribution's width.  The
+resolution is then determined as the width of the Gaussian with the larger
 amplitude, so-called leading order Gaussian.  The actual spectrometer resolution
 is between the width of the leading order Gaussian and the RMS of the
 distribution.  However the leading order Gaussian width is closer to the true
@@ -285,7 +290,8 @@ resolution.
 
     $q_T$& 0.143& 0.022 \\ \hline
   \end{tabular}
-  \caption{The resolution in the intermediate mass range}
+  \caption{COMPASS spectrometer resolutions in the intermediate mass range
+    2.5-4.3{\gvcw}}
   \label{tab::JPsiRes}
 \end{table}
 
@@ -308,16 +314,16 @@ resolution.
     $M_{\mu\mu}$ (GeV/c$^2$)& 2.87& 3.03& 3.13& 3.22& 3.38 \\ \hline
     
   \end{tabular}
-  \caption{{\jp} analysis bin limits}
+  \caption{The {\jp} analysis bin limits for the four analysis bins}
   \label{tab::JPsi_binning}
   \end{adjustwidth}
 \end{table}
 
-The distributions for the binning variable shown in
+The distributions for the binning variables are shown in
 Fig.~\ref{fig::JPsi_Kinematics}.  This analysis is performed in the valence
 region for both the beam pion and target proton as the average $x_\pi$ is about
 0.09 and the average $x_N$ is about 0.3.  This means the dominate contribution
-to {\jp} production is from quark-quark interactions.  The average $q_T$ values
+to {\jp} production is from quark-quark interactions.  The average $q_T$ value
 is below the minimum mass range of 2.87~{\gvcw} for this analysis and therefore
 the interpretation of this analysis assumes the TMD regime is valid.
 
@@ -327,7 +333,7 @@ the interpretation of this analysis assumes the TMD regime is valid.
   \caption{The binning variable distributions. The longitudinal momentum
     fractions $x_N$ (top left) and $x_\pi$ (top right) and the $x_F$ (bottom
     left) and the virtual photon transverse momentum $q_T$ (bottom right).
-    These distributions are in the mass range 2.87-3.38~{\gvcw}.}
+    These distributions are plotted from in the mass range 2.87-3.38~{\gvcw}.}
   \label{fig::JPsi_Kinematics}
 \end{figure}
 
@@ -359,8 +365,8 @@ direction.  The definitions of left and right are defined relative to the target
 spin as
 \begin{equation}
   \begin{aligned}
-    &\text{Left}: \hat{q}_T \cdot (\hat{S}_T \times \hat{P}_{\pi}) > 0 \\
-    &\text{Right}: \hat{q}_T \cdot (\hat{S}_T \times \hat{P}_{\pi}) < 0, 
+    \text{Left} &: \hat{q}_T \cdot (\hat{S}_T \times \hat{P}_{\pi}) > 0 \\
+    \text{Right} &: \hat{q}_T \cdot (\hat{S}_T \times \hat{P}_{\pi}) < 0, 
   \end{aligned}
 \end{equation}
 \noindent
@@ -377,14 +383,14 @@ uncertainty for this asymmetry method can be written as
   \sqrt{
     \sum_{c,p}
     \Big(
-    \frac{1}{N_L^{p}}
-    + \frac{1}{N_R^p}
+    \frac{1}{N_{c,l}^{p}}
+    + \frac{1}{N_{c,r}^p}
     \Big)
   } \quad,
 \end{equation}
-where $L =\sqrt[4]{N_{1,L}^\uparrow N_{1,L}^\downarrow N_{2,L}^\uparrow
-  N_{2,L}^\downarrow}$ and $R =\sqrt[4]{N_{1,R}^\uparrow N_{1,R}^\downarrow
-  N_{2,R}^\uparrow N_{2,R}^\downarrow}$.  In the approximate case of equal
+where $L =\sqrt[4]{N_{1,l}^\uparrow N_{1,l}^\downarrow N_{2,l}^\uparrow
+  N_{2,l}^\downarrow}$ and $R =\sqrt[4]{N_{1,r}^\uparrow N_{1,r}^\downarrow
+  N_{2,r}^\uparrow N_{2,r}^\downarrow}$.  In the approximate case of equal
 statistical populations in each left-right direction and each target cell, the
 statistical uncertainty for the two-target geometric mean reduces to
 $\frac{1}{|S_T|}\frac{1}{\sqrt{N}}$, where $N$ is the sum of all counts.
@@ -397,7 +403,7 @@ Sec~\ref{sec::systematics}.  This section will give the results for systematic
 errors in the intermediate mass range and describe in detail the tests specific
 to this analysis.  The overall systematic errors are determined by adding all
 non-zero systematic uncertainties in quadrature.  The impact from each source of
-systematic error is summarized in Tab.~\ref{tab::sysErrorJPsi}.
+systematic error is summarized in Table.~\ref{tab::sysErrorJPsi}.
 
 \subsubsection{Period Compatibility (Time Dependence)}
 It is expected that the asymmetry calculation will vary in time due to
@@ -412,7 +418,7 @@ Sec~\ref{sec::sysPulls}.
 \begin{figure}[h!t]
   \centering \includegraphics[width=0.65\textwidth,trim=0.5cm 6cm 0.5cm
     6cm,clip]{JPsi_AlrPeriod}
-  \caption{The left-right asymmetry in the JPsi mass region as a function of
+  \caption{The left-right asymmetry in the {\jp} mass region as a function of
     time.  The red line is a constant fit and therefore shows the weighted
     averaged of the periods.}
   \label{fig::JPsi_AlrPeriod}
@@ -438,7 +444,7 @@ The pull value is defined as
   }.
 \end{equation}
 \noindent
-The pull distribution is form for each kinematic variable in
+The pull distribution is formed for each kinematic variable in
 Fig.~\ref{fig::JPsi_Pulls}.  For this analysis there are therefore 4 (number of
 bins) x 9 (number of periods) = 36 entries per pull distribution.  The
 systematic error from period incompatibility is determined as
@@ -450,18 +456,21 @@ systematic error from period incompatibility is determined as
 \end{equation}
 \noindent
 where in this analysis the $\sigma_{pull}^2$ and $\mu_{pull}$ are determined as
-a weighted average from the pull distributions in each kinematic variable
-including the distribution for the integrated values.  The fit values from each
-pull distribution give somewhat different estimates due to the errors associated
-with the fit.  For this reason a weighted average is perform to give the best
-estimate for the pull mean and standard deviation and therefore the best
-systematic error calculation.  The systematic error due to time incompatibility
-is determined to be 16\% of the statistical error.
+a weighted average of the mean and variance from the pull distribution for each
+kinematic variable including the parameters from integrated pull distribution.
+The fit values from each pull distribution give somewhat different estimates due
+to the errors associated with the fit.  This is the reason the weighted average
+is perform to give the best estimate for the pull mean and standard deviation
+and therefore the most accurate systematic error calculation.  The systematic
+error due to time incompatibility is determined to be 16\% of the statistical
+error.
 
 \begin{figure}[h!t]
   \centering \includegraphics[width=\textwidth,trim=2.2cm 1.7cm 2.2cm
     1.7cm,clip]{JPsi_Pulls}
-  \caption{}
+  \caption{The uncorrelated pull distributions for each of the kinematical
+    variables and a pull distribution from the integrated asymmetry from each
+    time period.}
   \label{fig::JPsi_Pulls}
 \end{figure}
 
@@ -475,7 +484,7 @@ event and vise-versa is to dilute the left-right asymmetry.  It is as if there
 is an additional unpolarized contribution that dilutes the event sample.
 
 The systematic error for left-right migration is derived in
-Appendix~\ref{app::sysLRmiss} to be
+Appendix~\ref{app::sysLRmiss} as
 
 \begin{equation}
   \delta A_{lr,systematic} = \gamma *A_{lr} + \gamma *\delta A_{lr},
@@ -492,16 +501,16 @@ systematic error of 4.4\% of the statistical error.
   \centering \includegraphics[width=0.4\textwidth,trim=2cm 7cm 2cm
     7cm,clip]{JPsilrMigration}
   \caption{The left-right migration as a function of the generated $\phi_S$
-    angle.}
+    angle in the mass range 2.87-3.38.}
   \label{fig::JPsilrMigration}
 \end{figure}
 
-\subsection{J/$\Psi$ Purity}
+\subsubsection{J/$\Psi$ Purity}
 
 The systematic error due to a {\jp} purity less than unity was discussed in
-Sec~\ref{sec::jpMassRange}.  The invariant mass range was chosen such that the
-{\jp} purity was 90\% or higher to reduce the systematic error associated with
-impurities.  The systematic error is derived in
+Sec~\ref{sec::jpMassRange}.  The invariant mass range was chosen specifically
+such that the {\jp} purity is 90\% or higher to reduce the systematic error
+associated with impurities.  The systematic error is derived in
 Appendix~\ref{app::sysEventContam} as
 
 \begin{equation}
@@ -549,19 +558,21 @@ The acceptance fluctuations are determined from the false asymmetry defined as
 More details for acceptance fluctuations are discussed in
 Sec.~\ref{sec::GeoMean} and Sec.~\ref{sec::TwoTargGeoMean}.  The kinematic
 dependencies of the acceptance ratio, $\alpha_{2Targ}$, are shown in
-Fig.~\ref{fig::alphaJPsi}.  The systematic error associated with acceptance
-fluctuations is defined as
+Fig.~\ref{fig::alphaJPsi}.  As Fig.~\ref{fig::alphaJPsi} shows the acceptance is
+only slightly greater than unity even though it can be above 1 by more than a
+sigma.  The systematic error associated with acceptance fluctuations is defined
+as
 
 \begin{equation}
   \delta A_{lr,systematic} =
   \frac{1}{|S_T|}
   \Big(\frac{|\alpha_{2Targ}-1|}{2}
-  + \delta_{\frac{|\alpha_{2Targ}-1|}{2}} \Big).
+  + \delta_{\frac{|\alpha_{2Targ}-1|}{2}} \Big),
 \end{equation}
 
 \noindent
-This expression is derived in Appendix~\ref{app::sysAcc}.  The normalized
-kinematic dependence of the systematic error to the statistical error is shown
+where this expression is derived in Appendix~\ref{app::sysAcc}.  The normalized
+kinematic dependence of the systematic error to the statistical error are shown
 in Fig.~\ref{fig::accSysStatJPsi}.  The average systematic error due to
 acceptance is 23\% of the statistical error.
 
@@ -578,7 +589,7 @@ acceptance is 23\% of the statistical error.
   \begin{center}
     \includegraphics[width=\textwidth, trim=0cm 5cm 0cm 5cm,
       clip]{accSysStatJPsi}
-    \caption{Systematic error due to acceptance effects}
+    \caption{Systematic error divided by statistical error due to acceptance}
     \label{fig::accSysStatJPsi}
   \end{center}
 \end{figure}
@@ -586,10 +597,11 @@ acceptance is 23\% of the statistical error.
 \subsubsection{Further False Asymmetry Effects}
 Additional false asymmetries are analyzed to account for systematic errors which
 were not addressed directly.  The false asymmetries are constructed in such a
-way that the cross-section and that luminosity.  Therefore these false
-asymmetries can only change in time due to acceptance effects or for some
-unknown reason.  The false asymmetries constructed to study the intermediate
-mass analysis are described in the following enumerated list.
+way that the cross-section and luminosity cancel out in the numerator and the
+denominator.  Therefore these false asymmetries can only change in time due to
+acceptance effects or for some unknown reason.  The false asymmetries
+constructed to study the intermediate mass analysis are described in the
+following enumerated list.
 
 \begin{enumerate}
   \label{tab::additionalFAJPsi}
@@ -603,7 +615,7 @@ mass analysis are described in the following enumerated list.
     \centering \includegraphics[width=\textwidth, trim=0cm 3cm 0cm 3cm,
       clip]{fa2TargPullsJPsi}
     \caption{Pull distribution for a nearly acceptance free two-target false
-      geomean asymmetry}
+      geometric mean asymmetry}
     \label{fig::fa2TargPullsJPsi}
   \end{figure}
 
@@ -621,21 +633,23 @@ mass analysis are described in the following enumerated list.
       + \sqrt{N_r^\uparrow N_l^\downarrow}
     }.
   \end{equation}
-  The pulls for the upstream target cell shown in Fig.~\ref{fig::faPullsUpSJPsi}
-  and the pulls for the downstream target cell are shown in
-  Fig.~\ref{fig::faPullsDownSJPsi}.
+  The pulls for the upstream target cell are shown in
+  Fig.~\ref{fig::faPullsUpSJPsi} and the pulls for the downstream target cell
+  are shown in Fig.~\ref{fig::faPullsDownSJPsi}.
 
   \begin{figure}[h!t]
   \centering \includegraphics[width=\textwidth, trim=0cm 3cm 0cm 3cm,
     clip]{faPullsUpSJPsi}
-  \caption{Pull distribution for the downstream target}
+  \caption{Pull distributions from the false asymmetry in the upstream target
+    cell}
   \label{fig::faPullsUpSJPsi}
   \end{figure}
 
 \begin{figure}[h!t]
   \centering \includegraphics[width=\textwidth, trim=0cm 3cm 0cm 3cm,
     clip]{faPullsDownSJPsi}
-  \caption{Pull distribution for the downstream target}
+  \caption{Pull distributions from the false asymmetry in the downstream target
+    cell}
   \label{fig::faPullsDownSJPsi}
 \end{figure}
 
@@ -647,11 +661,12 @@ bins) $\times$ 9 (number of periods) = 36 entries which results in large errors
 on the Gaussian fit results.  In an attempt to correct for this and to take into
 account the fit errors, a weighted average of the mean and standard deviation is
 made using the fit parameters and fit errors as weights from the uncrrelated
-pull distributions.  The resulting weighted mean and weighted standard deviation
-are the used to calculate the systematic error.  A summary of the systematic
-error from each false asymmetry is shown in Table~\ref{tab::faSysJPsi}.  The
-systematic error due to additional factors is chosen as the largest systematic
-error from Table~\ref{tab::faSysJPsi}.
+pull distributions.  This is the same technique as was used to determine the
+systematic error from fluctuations in time.  The resulting weighted mean and
+weighted standard deviation are then used to calculate the systematic error.  A
+summary of the systematic error from each false asymmetry is shown in
+Table~\ref{tab::faSysJPsi}.  The systematic error due to additional factors is
+chosen as the largest systematic error from Table~\ref{tab::faSysJPsi}.
 
 \begin{table}[h!t]
   \centering
@@ -667,14 +682,14 @@ error from Table~\ref{tab::faSysJPsi}.
     Target Cell 2& 1.11\\ \hline
     
   \end{tabular}
-  \caption{Summary of systematic error impacts from false asymmetries.  The
-    maximum systematic error is chosen as the systematic error.}
+  \caption{Summary of systematic error impacts from false asymmetries changes in
+    time.  The maximum systematic error is chosen as the systematic error.}
   \label{tab::faSysJPsi}
 \end{table}
 
 \subsubsection{Total Systematics}
-The total systematic error is determined by adding all non-zero systematic
-effects in quadrature as
+The total systematic error is determined by adding all systematic errors in
+quadrature as
 
 \begin{equation}
   \Big \langle \frac{
@@ -684,7 +699,7 @@ effects in quadrature as
     \Big \rangle } \;,
 \end{equation}
 where all the systematic effects considered are summarized in
-Tab.~\ref{tab::sysErrorJPsi}.  For reference the total statistical error is
+Table.~\ref{tab::sysErrorJPsi}.  For reference the total statistical error is
 $\langle \sigma_{\mathrm{statistical}} \rangle$ = 0.006.
 
 \begin{table}[h!t]
@@ -718,53 +733,92 @@ $\langle \sigma_{\mathrm{statistical}} \rangle$ = 0.006.
   \label{tab::sysErrorJPsi}
 \end{table}
 
-The left-right asymmetry results and systematic error bands is shown in
+The integrated left-right asymmetry result and systematic error band is shown in
 Fig.~\ref{fig::Alr_JPsi} and the kinematic dependencies are shown in
-Fig.~\ref{fig::AlrBinned_JPsi}.  The integrated left-right asymmetry is 1 sigma
-above zero.  This is similar to the left-right asymmetry for the high mass
-Drell-Yan analysis.  The asymmetry shows a weak inverse dependence on $x_F$
-indicating asymmetry could be related proton target.  This can also be seen in
-the $x_N$ dependence which is most significant in the highest $x_N$ bin.
-Although the left-right asymmetry is model independent, it is was discussed that
-the Sivers function could be the cause of for a non-zero left-right asymmetry.
-A positive left-right asymmetry would be consistent with the sign change
-hypothesis.
+Fig.~\ref{fig::AlrBinned_JPsi}.  Similarly to the left-right asymmetry for the
+high mass Drell-Yan analysis, the integrated left-right asymmetry is 1 sigma
+above zero.  The asymmetry shows a weak inverse dependence on $x_F$ indicating
+the asymmetry could be related to quark distributions in the proton target.
+This can also be seen in the $x_N$ dependence which is most significant in the
+highest $x_N$ bin.  Although the left-right asymmetry is model independent, it
+is was discussed that the Sivers function could be the cause of for a non-zero
+left-right asymmetry.  A positive left-right asymmetry would be consistent with
+the sign change hypothesis.
 
 \begin{figure}[h!t]
   \centering
-  \includegraphics[width=0.3\textwidth,trim=6cm 6cm 6cm 6cm,clip]{Alr_JPsi}
-  \caption{}
+  \includegraphics[width=0.2\textwidth,trim=6cm 6cm 6cm 6cm,clip]{Alr_JPsi}
+  \caption{The integrated left-right asymmetry from the mass range
+    2.87-3.38~{\gvcw}.  The systematic error bands are shown in red at the
+    bottom of the plot.}
   \label{fig::Alr_JPsi}
 \end{figure}
 
 \begin{figure}[h!t]
   \centering \includegraphics[width=\textwidth,trim=1cm 4cm 1cm
     4cm,clip]{AlrBinned_JPsi}
-  \caption{}
+  \caption{The kinematic dependencies of the left-right asymmetry from the mass
+    range 2.87-3.38~{\gvcw}.}
   \label{fig::AlrBinned_JPsi}
 \end{figure}
 
-The Anselmino group 
+The Anselmino group derived an expression for the $A_N$ asymmetry from {\jp}
+production as~\cite{Anselmino:2016fhz}
+
+\begin{equation}
+  A^{J\Psi}_{N} \propto f_{\bar{q}/H_a}(x_a, k_{aT})
+  \frac{k_{bT}}{M_b} \otimes f_{1T}^{\perp q}(x_b, k_{bT}),
+\end{equation}
+\noindent
+and a made predictions for the $A_N$ asymmetry as a function of $x_N$ and
+$q_T$ shown in Fig.~\ref{fig::AN_JPsiPredict}.  More details are given in
+Sec~\ref{sec::theory_jpsi}, but their calculation assumed the dominate
+production of {\jp} production is from quark-quark annihilation.
+Fig.~\ref{fig::AN_JPsi} shows the results determined at COMPASS for the $A_N$
+asymmetry determined by modifying the left-right results in
+Fig.~\ref{fig::AlrBinned_JPsi}.  The maximum $A_N$ asymmetry, determined at
+COMPASS, is less than 0.05 which when comparing to the prediction in
+Fig.~\ref{fig::AN_JPsiPredict} is 2 sigma less than the prediction.  
+
 \begin{figure}[h!t]
-  \centering \includegraphics[width=0.6\textwidth,trim=2cm 4cm 2cm
-    4cm,clip]{AN_JPsiPredict}
-  \caption{This image was taken from~\cite{Anselmino:2016fhz}.}
+  \centering \includegraphics[width=0.6\textwidth,trim=2cm 7cm 2cm
+    7cm,clip]{AN_JPsiPredict}
+  \caption{Predictions for the analyzing power, $A_N$, from {\jp} production at
+    COMPASS as a function of $x_N$ and $q_T$.  This image was taken
+    from~\cite{Anselmino:2016fhz}.}
   \label{fig::AN_JPsiPredict}
 \end{figure}
 
 \begin{figure}[h!t]
-  \centering
-  \includegraphics[width=0.6\textwidth,trim=2cm 4cm 2cm 4cm,clip]{AN_JPsi}
-  \caption{}
+  \centering \includegraphics[width=0.3\textwidth,trim=3cm 5.5cm 3cm
+    5.5cm,clip]{AN_JPsi}
+  \caption{The analyzing power at COMPASS determined by modifying the left-right
+    asymmetry as a function of $x_N$ and $q_T$ to be compared with the
+    predictions in Fig.~\ref{fig::AN_JPsiPredict}. }
   \label{fig::AN_JPsi}
 \end{figure}
 
+The incompatibility of the theory prediction, Fig.~\ref{fig::AN_JPsiPredict},
+and the results determined at COMPASS, Fig.~\ref{fig::AN_JPsi}, can be due to
+either a Siver function much lower than expected or gluon-gluon fusion
+contamination.  At the present moment, the Siver's function from gluon-gluon
+fusion is not well known and therefore could be small or negative.
+Fig.~\ref{fig::ggQQbarXsection} shows results for {\jp} production from
+quark-quark annihilation and gluon-gluon fusion using the color evaporation
+model~\cite{VOGT1999197}.  To determine the expected {\jp} contribution from
+gluon-gluon fusion and quark-quark annihilation at COMPASS the results in
+Fig.~\ref{fig::ggQQbarXsection} are weighted with the COMPASS $x_F$ distribution
+in the intermediate mass range.  The determine ratio of {\jp} production from
+quark-quark annihilation to gluon-gluon fusion at COMPASS is 0.8.  It is
+therefore not ruled out that the results in Fig.~\ref{fig::AN_JPsi} are reduced
+compared to the predictions in Fig.~\ref{fig::AN_JPsiPredict} due to gluon-gluon
+fusion.
+
 \begin{figure}[h!t]
-  \centering
-  \includegraphics[width=0.6\textwidth,trim=2cm 4cm 2cm 4cm,clip]{ggQQbarXsection}
-  \caption{}
+  \centering \includegraphics[width=0.55\textwidth,trim=2.5cm 9.5cm 2.5cm
+    9.5cm,clip]{ggQQbarXsection}
+  \caption{{\jp} production cross-section from gluon-gluon fusion (blue) and
+    quark-quark annihilation (red) and the sum (black) as a function of $x_F$.
+    This plot is made assuming the color evaporation model~\cite{VOGT1999197}. }
   \label{fig::ggQQbarXsection}
 \end{figure}
-
-
-
