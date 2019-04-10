@@ -5,9 +5,9 @@
 
 \section{Deep Inelastic Scattering}
 To understand the structure of the nucleon it is useful to first introduce the
-original process which described the nucleon as having a sub-structure.  This
-process is the Deep Inelastic Scattering (DIS) process where a lepton impinges
-on a nucleon denoted as
+original process that describes the nucleon as having a sub-structure.  This
+process is the Deep Inelastic Scattering (DIS) process where a point-like lepton
+impinges on a nucleon denoted as
 
 \begin{equation}
 l(\ell) + N(P) \rightarrow l(\ell') + X(P_X),
@@ -27,7 +27,7 @@ Fig.~\ref{fig::DIS_LO}.
   \label{fig::DIS_LO}
 \end{figure}
 
-DIS is traditionally studied with a high energy lepton beam and a fixed nuclear
+DIS was initially studied with a high energy lepton beam and a fixed nuclear
 target.  The initial state kinematics are described by
 
 \begin{equation}
@@ -41,22 +41,22 @@ The detected reaction kinematics in the lab frame are described by
   \noindent
   \begin{equation}
     \label{equ::DIS_Q2}
-    Q^2 = -q^2 = -(\ell - \ell')^2 \approx EE'(1-\cos\theta )
+    Q^2 = -q^2 = -(\ell - \ell')^2 \approx EE'(1-\cos\theta ),
   \end{equation}
   \begin{equation}
       \label{equ::BjorkenX}
-      x = \frac{Q^2}{2P \cdot q} = \frac{Q^2}{2M\nu}
+      x = \frac{Q^2}{2P \cdot q} = \frac{Q^2}{2M\nu},
   \end{equation}
 \end{multicols}
 
 \begin{multicols}{2}
   \noindent
   \begin{equation}
-    \nu = E - E'
+    \nu = E - E',
   \end{equation} 
   \begin{equation}
     \label{equ::inelasticity}
-    y = \frac{P \cdot q}{P \cdot \ell} = \frac{E - E'}{E} = \frac{\nu}{E}
+    y = \frac{P \cdot q}{P \cdot \ell} = \frac{E - E'}{E} = \frac{\nu}{E},
   \end{equation} 
 \end{multicols}
 
@@ -64,7 +64,7 @@ The detected reaction kinematics in the lab frame are described by
   \noindent
   \begin{equation}
     \label{equ::DIS_W}
-    W^2 = (P+q)^2
+    W^2 = (P+q)^2,
   \end{equation}
 \end{multicols}
 
@@ -81,8 +81,8 @@ Eq.~\ref{equ::BjorkenX}, $M$ is the nucleon mass.
 In the parton model, section~\ref{sec::parton_model}, $x$ has the interpretation
 as being the longitudinal momentum fraction of the struck parton with respect to
 its parent hadron and therefore $x$ ranges between 0 and 1.  The inelasticity,
-$y$, measures the proportional energy reduction of the lepton and therefore it's
-value ranges between 0 and 1.
+$y$, measures the proportional energy reduction of the lepton and therefore it
+also ranges between 0 and 1.
 
 The process is called deep if $Q^2 >> M^2$ and inelastic if $y < 1$.  For
 practical purposes, in experiments, the deep inelastic criteria corresponds to a
@@ -102,7 +102,7 @@ The differential cross-section for DIS is defined as~\cite{Barone:2001sp}
 \noindent
 where $L_{\mu\nu}$ is the leptonic tensor and $W^{\mu\nu}$ is the hadronic
 tensor.  The leptonic tensor describes free leptons and can therefore be
-calculated in perturbation theory.  It can be decomposed into a systematic
+calculated in perturbation theory.  It can be decomposed into a symmetric
 spin-independent tensor and an anti-symmetric spin-dependent tensor.  Summing
 over all the possible spins of the lepton beam, the leptonic tensor is
 
@@ -129,7 +129,8 @@ technique for calculating the hadronic tensor in a perturbation theory or
 otherwise.  Instead the hadronic tensor can be written in the most general
 Lorentz invariant form using structure functions to parameterize the
 non-perturbative nature of the tensor.  With the use of these structure
-functions, the differential DIS cross-section can be written
+functions, the differential DIS cross-section for a spin 1/2 target can be
+written
 \begin{equation}
   \label{equ::DIS_diffxsection}
   \frac{\mathrm{d}\sigma}{\mathrm{d}x\mathrm{d}y} =
@@ -141,20 +142,21 @@ functions, the differential DIS cross-section can be written
 \end{equation}
 \noindent
 where $\alpha$ is the electromagnetic coupling constant; $F_1$, $F_2$, $g_1$,
-$g_2$ are structure functions; and $c_1$ and $c_2$ are functions which depend on
-the polarization of the target.  The SLAC collaboration measured the structure
-functions, $F_1$ and $F_2$, and found mild variations as a function of
-$Q^2$~\cite{Bloom:1969kc,Breidenbach:1969kd}.  This phenomenon now known as
-Bjorken scaling lead to the theory of the parton model where the DIS reaction no
-longer depends on $Q^2$~\cite{Bjorken:1969ja}.  Fig.~\ref{fig::F2} shows the
-$F_2$ structure function which is approximately constant as a function of $Q^2$.
+$g_2$ are structure functions of the proton; and $c_1$ and $c_2$ are functions
+which depend on the polarization of the target.  The SLAC collaboration measured
+the structure functions, $F_1$ and $F_2$, and found mild variations as a
+function of $Q^2$~\cite{Bloom:1969kc,Breidenbach:1969kd}.  This phenomenon now
+known as Bjorken scaling lead to the theory of the parton model where the DIS
+reaction no longer depends on $Q^2$~\cite{Bjorken:1969ja}.  Fig.~\ref{fig::F2}
+shows the $F_2$ structure function which is approximately constant as a function
+of $Q^2$.
 
 \begin{figure}[h!t]
   \centering
   \includegraphics[width=0.5\textwidth, trim=3cm 4cm 3cm 4cm, clip]{F2}
-  \caption{The $F_2$ structure function measured by several experiments.  Note
-    that the data is shifted up by a factor $2^{i_x}$ to see the $x$ dependence.
-    Image taken from~\cite{Tanabashi:2018oca}}
+  \caption{The $F_2$ structure function of the proton measured by several
+    experiments.  Note that the data is shifted up by a factor $2^{i_x}$ to see
+    the $x$ dependence.  Image taken from~\cite{Tanabashi:2018oca}.}
   \label{fig::F2}
 \end{figure}
 
@@ -162,10 +164,10 @@ $F_2$ structure function which is approximately constant as a function of $Q^2$.
 \section{The Parton Model} \label{sec::parton_model}
 The parton model is described in an infinite momentum frame which for practical
 measurements is defined as the frame where the nucleon is moving with momentum
-larger than it's invariant mass.  In the parton model the nucleon, in high
+larger than its invariant mass.  In the parton model the nucleon, in high
 energy scattering processes, is considered to be composed of point like
 constituent mass-less particles called partons.  At high energy scattering the
-QCD strong force, binding the partons together, becomes asymptotic small and
+QCD strong force, binding the partons together, becomes asymptotically small and
 therefore the partons appear to be free.  The cross-section in DIS can then be
 described as a lepton scattering incoherently off a free parton in the nucleon.
 In the parton model the hadron tensor for scattering off a quark can be written
@@ -181,9 +183,10 @@ as~\cite{Barone:2001sp}
        \times (2\pi)^4\delta^{(4)}(P-k-P_X)(2\pi)^4\delta^{(4)}(k+q-k'),
 \end{dmath}
 \noindent
-where $e_q$ is the electric charge of quark flavor $q$ and $u(\bar{u})$
-is a free Dirac spinor.  This hadronic tensor can be simplified by introducing
-the quark-quark correlation matrix as
+where $e_q$ is the electric charge of quark flavor $q$, $u(\bar{u})$ is a free
+Dirac spinor and $k(k')$ are the four momentum of the scattering quarks.  This
+hadronic tensor can be simplified by introducing the quark-quark correlation
+matrix as
 
 \begin{equation}
   \Theta_{ij}(k, P, S) =
@@ -201,8 +204,8 @@ quark-quark correlation matrix, the hadronic tensor can be written as
   [ \Theta \gamma^{\mu}\slashed{k'}\gamma^{\nu} ].
 \end{equation}
 \noindent
-In the cases of unpolarized or longitudinally polarized DIS the lead order
-contributing terms from the quark-quark correlator
+In the cases of spin-independent or longitudinal polarization dependent DIS the
+leading order contributing terms from the quark-quark correlator
 are~\cite{Mulders:1995dh,Boer:1997nt,Bacchetta:2006tn}
 
 \begin{equation}
@@ -210,7 +213,7 @@ are~\cite{Mulders:1995dh,Boer:1997nt,Bacchetta:2006tn}
   \Theta = \frac{1}{2}
   \Big(
   f_1(x)\slashed{P} +
-  g_{1L}(x)\lambda\gamma_5\slashed{P}
+  g_{1L}(x)\lambda\gamma_5\slashed{P},
   \Big)
 \end{equation}
 \noindent
@@ -255,16 +258,16 @@ between the two functions, Eq.~\ref{equ::g1_g1l_relation}, the parton
 distribution $g_{1L}$ is not the same as the structure function $g_1$.
 
 The unpolarized quark number density, $f_1$, has been extracted from global
-analysis of several experiments~\cite{Rojo_2015}.  Fig.~\ref{fig::NNPDF_10GeV}
-shows the current $xf_1$ values and confidence intervals for different quarks
-and gluons in the proton.
+analysis of several DIS experiments~\cite{Rojo_2015}.
+Fig.~\ref{fig::NNPDF_10GeV} shows the current $xf_1$ values and confidence
+intervals for different quarks and gluons in the proton.
 
 \begin{figure}[h!t]
   \centering \includegraphics[width=0.5\textwidth,trim=6cm 9cm 6cm 8cm,
     clip]{NNPDF_10GeV}
-  \caption{The unpolarized parton distribution functions times the momentum
+  \caption{The spin-independent parton distribution functions times the momentum
     fraction.  The different colors correspond to different quarks or gluons.
-    Image taken from~\cite{Tanabashi:2018oca}}
+    Image taken from~\cite{Tanabashi:2018oca}.}
   \label{fig::NNPDF_10GeV}
 \end{figure}
 
@@ -283,10 +286,10 @@ LSS2010~\cite{Harland-Lang:2016yfn,Abt:2016vjh,Nocera:2014gqa,Hirai:2008aj}.
   \label{fig::Proton_g1L}
 \end{figure}
 
-In the parton model the structure function $F_1$ and $F_2$ are related to each
+In the parton model the structure functions $F_1$ and $F_2$ are related to each
 other and to the unpolarized quark number as
 \begin{equation}
-  F_2(x) = 2xF_1(x) = \sum_q e_q^2x\Big(f^q_1 + f^{\bar{q}}_1 \Big)
+  F_2(x) = 2xF_1(x) = \sum_q e_q^2x\Big(f^q_1 + f^{\bar{q}}_1 \Big),
 \end{equation}
 which is known as the Callan-Gross relation~\cite{PhysRevLett.22.156}.  As well
 the structure function $g_1$ is related to the helicity distribution, $g_{1L}$,
@@ -298,16 +301,19 @@ as
 
 
 \section{Transverse Momentum Dependence}
-In deep inelastic scattering the detected final state lepton is not sensitive to
-the parton's transverse momentum.  That is when measuring the DIS
-cross-section, all transverse parton momentums are possible which therefore
-means the scattered parton's transverse momentum is integrated over.  As a
-result, DIS cannot be used to study parton's transverse momentum dependence.
-The Drell-Yan process~\ref{sec::DY} and the SIDIS process~\ref{sec::SIDIS}
-however are sensitive to the internal transverse momentum of the partons.  In
-the limit of small transverse momentum compared to the virtual photon momentum,
-the most generic leading order quark-quark correlator including the transverse
-parton momentum can be
+In inclusive deep inelastic scattering the detected final state lepton is not
+sensitive to the parton's transverse momentum.  That is when measuring the
+inclusive DIS cross-section, all transverse parton momentums are possible which
+therefore means the scattered parton's transverse momentum is integrated over.
+As a result, inclusive DIS cannot be used to study parton's transverse momentum
+dependence.  In general inclusive measurements have less information because
+fewer variables are measured.  On the other hand semi-inclusive measurements
+collect additional information from a reaction and therefore are sensitive to
+more variables.  The Drell-Yan process, Sec~\ref{sec::DY}, and the SIDIS
+process, Sec~\ref{sec::SIDIS}, are sensitive to the internal transverse momentum
+of the partons.  In the limit of small transverse momentum compared to the
+virtual photon momentum, the most generic leading order quark-quark correlator
+including the transverse parton momentum can be
 written~\cite{Mulders:1995dh,Boer:1997nt,Bacchetta:2006tn}
 
 \begin{dmath}
@@ -332,12 +338,12 @@ transverse momentum dependent (TMD) PDFs which are functions of $x$ and
 $k_{\bot}$.
 
 The notation used to depict the TMD functions is the so-called Amsterdam
-notation.  The letters represent the different quark polarizations where
+notation.  The letters represent the different quark polarizations, where
 $f,\;g,\;h$ stand for unpolarized, longitudinally polarized and transversely
 polarized respectively.  The subscript 1 denotes leading order and the
 subscripts $T$ and $L$ denote a transversely polarized hadron and a
 longitudinally polarized hadron respectively.  Finally the superscript $\bot$
-denotes that the distribution is the coefficient of a term where the in which
+denotes that the distribution is the coefficient of a term in which
 the parton's transverse momentum Lorentz indices are not contracted.
 Fig.~\ref{fig::TMDs} organizes the TMDs by nucleon and quark polarizations and
 gives a visual of each TMD's interpretation.
@@ -348,7 +354,8 @@ gives a visual of each TMD's interpretation.
   \caption{The eight TMDs needed to describe a spin 1/2 nucleon at leading
     order.  The columns represent the different nucleon polarizations and the
     rows represent the different quark polarizations.  The individual figures
-    give a visual representation of the TMD's interpretation.}
+    give a visual representation of the TMD's interpretation.  This image taken
+    from~\cite{heitzDYhep}.}
   \label{fig::TMDs}
 \end{figure}
 
@@ -359,10 +366,10 @@ pretzelosity function.
 
 \subsection{Sivers and Boer-Mulders Distributions}
 The Sivers TMD, {\siv}, was first purposed to explain large nucleon
-spin-dependent asymmetries~\cite{Sivers}.  The interpretation of the Sivers,
-{\siv}, TMD is that it gives a correlation between transverse spin of the parent
+spin-dependent asymmetries~\cite{Sivers}.  The interpretation of the Sivers TMD,
+{\siv}, is that it gives a correlation between transverse spin of the parent
 hadron and transverse momentum of the scattered parton.  When viewing the hadron
-in the direction opposite to it's momentum and using the sign conventions in
+in the direction opposite to its momentum and using the sign conventions in
 this thesis, if {\siv} is positive then it is expected that there are more
 partons with momentum pointing left than pointing to the right.  A non-zero
 {\siv} then implies that the bound partons in a transversely polarized hadron
@@ -383,7 +390,7 @@ chiral odd function as is the case when the Boer-Mulders function appears in
 either the SIDIS or Drell-Yan cross-section.
 
 The most surprising fact about the Sivers and Boer-Mulders functions is that
-they both changes sign under naive time reversal.  Naive time reversal is
+they both change sign under naive time reversal.  Naive time reversal is
 defined as reversing time but not swapping initial and final
 states~\cite{Bacchetta:2006tn}.  The Sivers and Boer-Mulders functions are
 therefore said to be T-odd functions, and as a result, were originally believe
@@ -417,7 +424,7 @@ convoluted with another chiral odd function.
 \section{Semi-Inclusive Deep Inelastic Scattering} \label{sec::SIDIS}
 Semi-Inclusive Deep Inelastic Scattering (SIDIS) is the process where a lepton
 scatters electromagnetically off a nucleon and subsequently the scattered lepton
-and at least one scattered hadron are detected.  As the name implies, SIDIS is
+and at least one fragmenting hadron are detected.  As the name implies, SIDIS is
 related to the DIS reaction only SIDIS includes the addition of a detected
 hadron.  SIDIS is denoted as
 
@@ -519,23 +526,22 @@ frame and the relevant azimuthal angles.
 \begin{figure}[h!t]
   \centering \includegraphics[width=0.6\textwidth,trim=3cm 9cm 3cm 8cm,
     clip]{gammaNucleonFrame}
-  \caption{The $\gamma$-nucleon lab frame where the target nucleon is at rest
-    and the virtual photon is along the z-axis.  The lepton scattering plane
-    defines the xz-plane where the outgoing lepton defines the positive
-    x-direction.  This image was taken from~\cite{Bacchetta:2006tn}.}
+  \caption{The $\gamma$-nucleon lab frame, where the target nucleon is at rest
+    and the virtual photon momentum is pointing along the z-axis.  The lepton
+    scattering plane defines the xz-plane where the outgoing lepton defines the
+    positive x-direction.  This image was taken from~\cite{Bacchetta:2006tn}.}
   \label{fig::gammaNucleonFrame}
 \end{figure}
 
-The 14 structure functions in Eq.~\ref{equ::SIDISxsect} are coefficients to the
-azimuthal angles from the $\gamma$-nucleon reference frame.  The structure
-functions are label as $F$ where the superscript denotes which azimuthal angle
-coefficient they correspond to and the three subscripts represent the beam,
-target and virtual photon polarization from left to right respectively.  The
-subscript polarizations are $U$ for unpolarized, $L$ for longitudinally
-polarized and $T$ for transversely polarized.  The cross-section,
-Eq.~\ref{equ::SIDISxsect}, is determined similarly to the DIS
-cross-section, Eq.~\ref{equ::DIS_diffxsection}, in that structure functions are
-used to generically parameterize the hadronic tensor.
+The 14 structure functions, labeled $F$, in Eq.~\ref{equ::SIDISxsect} are
+coefficients to the azimuthal angles from the $\gamma$-nucleon reference frame.
+The superscript denotes which azimuthal angle coefficient they correspond to and
+the three subscripts represent the beam, target and virtual photon polarization
+from left to right respectively.  The subscript polarizations are $U$ for
+unpolarized, $L$ for longitudinally polarized and $T$ for transversely
+polarized.  The cross-section, Eq.~\ref{equ::SIDISxsect}, is determined
+similarly to the DIS cross-section, Eq.~\ref{equ::DIS_diffxsection}, in that
+structure functions are used to generically parameterize the hadronic tensor.
 
 In the TMD regime the structure functions are related to TMD functions and
 fragmentation functions (FF).  For SIDIS, the TMD regime is defined as the
@@ -617,22 +623,23 @@ asymmetries.  These asymmetries are defined as
 where $w_i(\phi_h, \phi_S)$ is the azimuthal angle associated with this
 asymmetry and $Beam$ and $Target$ represent the polarization of the beam and
 target.  The asymmetry amplitude, Eq.~\ref{equ::asymAmpSIDIS}, is a structure
-function divide by the unpolarized structure functions.  This asymmetry
-amplitude definition is defined because it is easier to measure experimentally.
-In order to determine an asymmetry amplitudes, the number of counts
+function divided by the spin-independent structure functions.  This asymmetry
+amplitude is defined because it is easier to measure experimentally.
+In order to determine an asymmetry amplitude, the number of counts
 experimentally measured are fit using a function in the form of
 Eq.~\ref{equ::SIDISxsect}.  The parameters of this fit are the coefficients to
-each azimuthal amplitude.  The results of the fit can then determine the
+each azimuthal amplitude.  The results of the fit then determine the
 spin-dependent asymmetry amplitudes without needing to determine luminosity and
-therefore have reduced systematic errors.
+therefore have reduced systematic uncertainties.
 
 \subsection{SIDIS TMD Results}
-COMPASS and HERMES measuremented the asymmetry $A_{UT ,T}^{\sin\left(\phi_h
-  -\phi_S\right)}$ from the SIDIS reaction from a transversely polarized proton
-target~\cite{Alekseev:2008aa,Airapetian:2009ae}.  The comparison of the results
-between these two collaborations is shown in Fig.~\ref{fig::SiversFromSIDIS}.
-The asymmetry amplitude $A_{UT ,T}^{\sin\left(\phi_h-\phi_S\right)}$ is related
-to the Sivers function and was measured to be non-zero at a level up to 5\%.
+COMPASS and HERMES measuremented the asymmetry amplitude $A_{UT
+  ,T}^{\sin\left(\phi_h -\phi_S\right)}$ in SIDIS from a transversely polarized
+proton target~\cite{Alekseev:2008aa,Airapetian:2009ae}.  The comparison of the
+results between these two collaborations is shown in
+Fig.~\ref{fig::SiversFromSIDIS}.  The asymmetry amplitude $A_{UT
+  ,T}^{\sin\left(\phi_h-\phi_S\right)}$ is related to the Sivers function and
+was measured to be non-zero at a level up to 5\%.
 
 \begin{figure}[h!t]
   \centering \includegraphics[width=0.6\textwidth, trim=2cm 2cm 2cm
@@ -642,18 +649,18 @@ to the Sivers function and was measured to be non-zero at a level up to 5\%.
   \label{fig::SiversFromSIDIS}
 \end{figure}
 
-The top plot in Fig.~\ref{fig::SiversFromSIDIS} is the asymmetry for a positive
-detected hadron.  A positively detected final state hadron is dominated by
-u-quark scattering and therefore by the u-quark Sivers function.  This is the
+The top plot in Fig.~\ref{fig::SiversFromSIDIS} is the Sivers amplitude for a
+$\pi^+$ detected hadron.  A positively charged final state hadron is dominated
+by u-quark scattering and therefore by the u-quark Sivers function.  This is the
 case for three reasons.  Firstly because the SIDIS reaction is weighted by
 $e_q^2$ which therefore makes the u-quark scattering four times more likely.
-Secondly the so-called favored FF, where the detected hadron is the same charge
+Secondly the so-called favored FF, where the detected hadron has the same charge
 as the quark which fragmented, is larger than the unfavored FF.  Therefore a
-positively detected hadron most likely resulted from a positively fragmenting
-quark.  Thirdly the proton target is composed of twice as many u-quarks as
-d-quarks in this scattering kinematic region.  For these three reasons the
-results in Fig.~\ref{fig::SiversFromSIDIS} imply that the u-quark Sivers
-function from the SIDIS reaction is positive.
+detected $\pi^+$ most likely resulted from a positive fragmenting quark.
+Thirdly the proton target is composed of twice as many u-quarks as d-quarks in
+this scattering kinematic region.  For these three reasons the results in
+Fig.~\ref{fig::SiversFromSIDIS} imply that the u-quark Sivers function from the
+SIDIS reaction is positive.
 
 The bottom plots in Fig.~\ref{fig::SiversFromSIDIS} suggest that the d-quark
 Sivers function in the SIDIS reaction is negative.  The bottom results in
@@ -661,14 +668,14 @@ Fig.~\ref{fig::SiversFromSIDIS} are from the combination of u-quark scattering
 and fragmenting unfavoredly and d-quark scattering and fragmenting favoredly.
 As was mentioned the charge weighting in the SIDIS reaction and the proton quark
 composition results in the u-quark scattering with a higher probability.  On the
-other hand the previous effect is canceled out by the fact that the favor FF for
-the d-quark fragmenting is larger than the unfavored FF for the u-quark
+other hand the previous effect is canceled out by the fact that the favored FF
+for the d-quark fragmenting is larger than the unfavored FF for the u-quark
 fragmenting.  Therefore the results in the bottom of
 Fig.~\ref{fig::SiversFromSIDIS} are for an approximately equal combination from
 u-quark scattering and d-quark scattering.  As the u-quark asymmetry amplitude
 is positive, the d-quark asymmetry amplitude must therefore be negative and so
 also must the d-quark Sivers function.  Anselmino et. al. extracted the Sivers
-function using both HERMES and COMPASS data and additional data for
+function using both HERMES and COMPASS data and BELLE data for
 fragmentation functions~\cite{PhysRevD.86.014028}.  These results are shown in
 Fig.~\ref{fig::SiversExtractedFromSIDIS}.
 
@@ -677,7 +684,7 @@ Fig.~\ref{fig::SiversExtractedFromSIDIS}.
     clip]{SiversExtractedFromSIDIS}
   \caption{The valence quark distributions for the first moment of the Sivers
     function.  The left plots are using TMD evolution and the right plots are
-    using DGLAP evolution to globally include all measured data.  This image was
+    using $Q^2$ evolution to globally include all measured data.  This image was
     taken from~\cite{PhysRevD.86.014028}}
   \label{fig::SiversExtractedFromSIDIS}
 \end{figure}
@@ -711,7 +718,8 @@ COMPASS~\cite{Ageev:2006da,Alekseev:2008aa,Alekseev:2010rw,Adolph:2012sn,Adolph:
 and JLab HALL A~\cite{PhysRevLett.107.072003}.  The FF data to determine
 $H_1^{\perp }$ from the structure function, $F_{UT}^{\sin(\phi_h +\phi_S)}$,
 comes from BELLE~\cite{Abe:2005zx,Seidl:2008xc} and
-BABAR~\cite{TheBABAR:2013yha} data in $e^+e^-$ annihilation data.  Anselmino et. al. extracted the transversity distribution~\cite{PhysRevD.87.094019} from
+BABAR~\cite{TheBABAR:2013yha} data in $e^+e^-$ annihilation data.  Anselmino
+et. al. extracted the transversity distribution~\cite{PhysRevD.87.094019} from
 all this data and their results are shown in
 Fig.~\ref{fig::transversityExtractedFromSIDIS}.
 
@@ -727,8 +735,8 @@ Fig.~\ref{fig::transversityExtractedFromSIDIS}.
 
 \section{Drell-Yan} \label{sec::DY}
 The Drell-Yan process is the reaction where a quark and an anti-quark annihilate
-and the end product results in two detected leptons.  The Drell-Yan process is
-denoted as
+and the end product results in the detection of two oppositely charged leptons.
+The Drell-Yan process is denoted as
 
 \begin{equation}
   H_a(P_a) + H_b(P_b, S) \rightarrow \gamma^* + X \rightarrow l(\ell) +
@@ -822,13 +830,14 @@ polarized target is~\cite{DYxSection,AKotzininaNote}
    \Big \},
 \end{align}
 \noindent
-where $F = 4\sqrt{(P_a \cdot P_b)^2 - M_a^2M_b^2}$ is the flux and $\Omega$ is
-the solid angle of the outgoing negatively charged muon.  The twelve model
-independent structure functions in Eq.~\ref{equ::DY_ang_dist} are labeled as
-$F_{Target \; polarization}^{azimuthal \;angle\;coefficient}$.  The phase space
-when the TMD regime is valid in DY scattering is when $q_T << q$.  In this
-regime the structure functions are equal to a convolution of a beam and a target
-TMD function where convolution is defined similarly to the SIDIS case,
+where $F = 4\sqrt{(P_a \cdot P_b)^2 - M_a^2M_b^2}$ is the flux, $S_L$ is the
+longitudinal spin, $|S_T|$ is the transverse spin and $\Omega$ is the solid
+angle of the outgoing negatively charged muon.  The twelve model independent
+structure functions in Eq.~\ref{equ::DY_ang_dist} are labeled as $F_{Target \;
+  polarization}^{azimuthal \;angle\;coefficient}$.  The phase space when the TMD
+regime is valid in DY scattering is when $q_T << q$.  In this regime the
+structure functions are equal to a convolution of a beam and a target TMD
+function, where the convolution is defined similarly to the SIDIS case,
 Eq.~\ref{equ::SIDIS_conv}, as
 
 \begin{align}
@@ -962,19 +971,20 @@ verify the sign change between Drell-Yan and SIDIS, came from hadron-hadron
 collisions at Star~\cite{PhysRevLett.116.132301}.  Their result measured the
 Sivers amplitude from $pp^{\uparrow} \rightarrow Z^0X$ and $pp^{\uparrow}
 \rightarrow W^{\pm}X$ and are shown in Fig.~\ref{fig::StarSivers}.  The
-statistical error bars are too high and the $Q^2$ scale is very different from
-that used to measure a Sivers function in SIDIS however.  As of the data of this
-thesis it is impossible to conclude on a sign change of the Sivers function
-between Drell-Yan and SIDIS.
+statistical significance is poor and the $Q^2$ scale is very different from that
+used to measure a Sivers function in SIDIS however.  As of the date of this
+thesis it has not been concluded on a sign change of the Sivers function between
+Drell-Yan and SIDIS.
 
 \begin{figure}[h!t]
   \centering
   \includegraphics[width=0.7\textwidth, trim=1cm 5cm 1cm 5cm]{StarSivers}
-  \caption{All plots show a left-right asymmetry which is related to the Sivers
-    function.  The top right plot is for $Z^0$ production while the other three
-    plots are for $W^\pm$ production.  $Q^2$ evolution and resulting error bars
-    from EIKV~\cite{PhysRevD.89.074013} and KQ~\cite{PhysRevLett.103.172001}.
-    Image taken from~\cite{PhysRevLett.116.132301}.}
+  \caption{All plots show a left-right asymmetry from STAR data which is related
+    to the Sivers function.  The top right plot is for $Z^0$ production while
+    the other three plots are for $W^\pm$ production.  $Q^2$ evolution and
+    resulting error bars from EIKV~\cite{PhysRevD.89.074013} and
+    KQ~\cite{PhysRevLett.103.172001}.  Image taken
+    from~\cite{PhysRevLett.116.132301}.}
   \label{fig::StarSivers}
 \end{figure}
 
@@ -1014,7 +1024,7 @@ integrating over all angle except $\phi_S$ and where the polarization $S$ is
 assumed to be transverse.  Therefore the analyzing power, $A_N$, is the same as
 the Sivers asymmetry amplitude, $A_{T}^{\sin \phi_S}$, for Drell-Yan scattering.
 
-An analysis technique for measuring $A_N$ is by making a left-right asymmetry.
+An analysis technique for measuring $A_N$ is by forming a left-right asymmetry.
 The left-right asymmetry is defined as 
 \begin{equation}
   A_{lr} = \frac{1}{|S_T|}\frac{\sigma_l - \sigma_r}{\sigma_l + \sigma_r},
@@ -1263,7 +1273,7 @@ hadrons.
 
 One of the most popular J/$\Psi$ production models, is the color evaporation
 model~\cite{VOGT1999197}.  In this model the J/$\Psi$ production results from
-gluon-gluon fusion and quark and ant-quark annihilation.  This is depicted as
+gluon-gluon fusion and quark and anti-quark annihilation.  This is depicted as
 
 \begin{equation}
   \sigma \Big |_{H_aH_b\rightarrow J/\Psi X \rightarrow l^+l^- X}

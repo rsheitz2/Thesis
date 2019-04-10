@@ -28,23 +28,24 @@ Fig.~\ref{fig::dy_2015_targ_setup} gives a visual of the basic setup and
 chapter~\ref{ch::compass} goes over the spectrometer setup and beam in more
 details.  The COMPASS spectrometer began taking commissioning data in April of
 2015.  The data collected for this analysis, after the commissioning phase, is
-from July 8 through November 12 of 2015.  The data is split into 9 periods
-lasting approximated 2 weeks each and labeled W07-W15.  During each data period
-the spectrometer conditions were frozen so no detector changes could effect the
+from July 8 through November 12 of 2015.  After November 12, the SPS stopped
+providing beam for a winter shut down.  The data is split into 9 periods lasting
+approximated 2 weeks each and labeled W07-W15.  During each data period the
+spectrometer conditions were frozen so no detector changes could affect the
 spectrometer acceptance.  Sec~\ref{sec::polTarget} describes the polarized
-target in more details but in short, the NH$_3$ target was split into two
+target in more details.  In summaray, the NH$_3$ target was split into two
 oppositely polarized cells separated by 20~cm with one cell polarized vertically
 up and one cell polarized vertically down in the lab frame.  Each data period is
-split into two sub-periods where to reduce systematic effects of acceptance and
-luminosity dependencies, the polarization of both cells was flipped between
+split into two sub-periods to reduce systematic effects of acceptance and
+luminosity dependencies.  The polarization of both cells was flipped between
 sub-periods.  A summary of the analysis data taking from each period is shown in
 Table~\ref{tab::datataking}.
 
 \begin{figure}[h!t]
   \centering \includegraphics[width=0.6\textwidth, trim=4cm 7cm 4cm 7cm,
     clip]{dy_2015_targ_setup}
-  \caption{Basic pictorial setup of the 2015 COMPASS Drell-Yan data
-    collection.}
+  \caption{Basic pictorial setup of the target region in 2015 COMPASS Drell-Yan
+    data collection.}
   \label{fig::dy_2015_targ_setup}
 \end{figure}
 
@@ -106,12 +107,11 @@ per run.  One spill can have several thousand events.
 unstable several macro variables were averaged over per spill and compared to
 neighboring spill averages.  These macro variables were chosen specifically to
 be sensitive to the general stability conditions of the data collection and are
-listed in Table~\ref{tab::badspillmacros}.  The analysis criteria for an bad
+listed in the following itemized list.  The analysis criteria for an bad
 spill events was two oppositely charged muons.  A muon is defined as having
 crossed 15 radiation lengths of material.
 
 \begin{itemize}
-  \label{tab::badspillmacros}
 \item number of beam particles divided by the number of events
 \item number of beam particles divided by the number of primary vertices
 \item number of hits per beam track divided by the number of beam particles
@@ -138,20 +138,20 @@ crossed 15 radiation lengths of material.
 \item Trigger rates (LASxLAS, OTxLAS, LASxMT)
 \end{itemize}
 
-If the data collect was stable during a spill the average values from the macro
-variables in Table~\ref{tab::badspillmacros} are expected to be constant from
-one spill to the next.  To determine if a spill was recorded in unstable
+If the data collected was stable during a spill the average values from the
+macro variables in the above itemized list are expected to be constant
+from one spill to the next.  To determine if a spill was recorded in unstable
 conditions the spill of interest is compared with its neighboring 2500 spills
 occurring before and after in time.  If the spill of interest is over a
 specified sigma deviation from any of the neighboring spills too many times, the
 spill is mark as a bad spill.  If a spill fails this bad spill criteria for any
-of the macro variables in Table~\ref{tab::badspillmacros} the spill is deemed
+of the macro variables in the above itemized list, the spill is deemed
 bad and not included in the analysis.  The criteria for the sigma distance and
 number of times a spill crosses this distance to be deemed a bad are different
 for each data taking period.  In addition to checking the nearest neighbor
-spills, an entire run is marked bad if the run has less than 10
-spills or greater than 70\% bad spills.  Table~\ref{tab::badspillpercent}
-describes the bad spill impact on each period. \par
+spills, an entire run is marked bad if the run has less than 10 spills or
+greater than 70\% bad spills.  Table~\ref{tab::badspillpercent} describes the
+bad spill impact on each period. \par
 
 \subsubsection{Bad Run Analysis}
 The stability of the spectrometer is also verified by a run-by-run check in
@@ -165,7 +165,7 @@ analysis are expected to influence the asymmetries measured, however their
 distributions and averages are not expected to have spin-influenced effects from
 the limited statistics in just a single run.
 
-The distributions are compared with an unbinned-Kolmogorov test (UKT) and the
+The distributions are compared with an unbinned-Kolmogorov test and the
 averages over a distribution are compared based on their deviations from each
 other.  The unbinned-Kolmogorov test is made between all the runs in a given
 period.  A run is marked bad if it is incompatible with most of the runs in a
@@ -202,25 +202,23 @@ The cuts in the event selection were chosen to ensure the event consisted of two
 oppositely charged muons resulting from a pion collision in the transversely
 polarized target.  The event selection was initial filtered from miniDSTs to
 $\mu$DSTs where only events with at least two muons detected were kept in the
-$\mu$DSTs.  The cuts used in this analysis are described in
-Table~\ref{tab::cutdescrip} where the event selection is performed on the
-$\mu$DSTs and the events used are from the slot1 reconstruction.  A summary of
-the number of events remaining after the last cuts is shown in
-Table~\ref{tab::EventTable}.
+$\mu$DSTs.  The cuts used in this analysis are described in the following
+enumerated list, where the event selection is performed on the $\mu$DSTs and the
+events used are from the slot1 reconstruction.  A summary of the number of
+events remaining after the last cuts is shown in Table~\ref{tab::EventTable}.
 
 \begin{enumerate}
-  \label{tab::cutdescrip}
 \item Two oppositely charged particles from a common best primary vertex having
   an invariant mass between 4.3~{\gvcw} and 8.5~{\gvcw}.  A primary vertex is
   defined as any vertex with an associated beam particle.  In case of multiple
-  common primary vertices the best primary vertex was determined by CORAL
-  tagging the vertex as best primary (PHAST method PaVertex::IsBestPrimary()).
-  In the case that CORAL did not tag any of the common vertices as the best
-  primary the vertex with the smallest spatial $\chi^2$ value was used as the
-  best primary vertex.  The mass range of 4.3~{\gvcw} through 8.5~{\gvcw} is
-  deemed the high mass range.  As is shown in Fig.~\ref{fig::DY_InvariantMass}
-  this mass range corresponds over 96~\% Drell-Yan events.
-
+  common primary vertices the best primary vertex is determined by CORAL tagging
+  the vertex as best primary (PHAST method PaVertex::IsBestPrimary()).  In the
+  case that CORAL did not tag any of the common vertices as the best primary the
+  vertex with the smallest spatial $\chi^2$ value is used as the best primary
+  vertex.  The mass range of 4.3~{\gvcw} through 8.5~{\gvcw} is deemed the high
+  mass range.  Fig.~\ref{fig::DY_InvariantMass} shows the mass invariant mass
+  distribution and the background components.  The mass range between 4.3 and
+  8.5~{\gvcw} corresponds to over 96~\% Drell-Yan events.
 \item A dimuon trigger fired.  A dimuon trigger firing means there are at least
   two particles in coincidence in this event. The dimuon triggers used were a
   coincidence between two particles in the large angle spectrometer, LAS-LAS
@@ -360,12 +358,12 @@ asymmetry analysis definitions and derivations used throughout this chapter.
 \end{table}
 
 \section{Transverse Spin-Dependent Asymmetries} \label{sec::standTSA}
-This section describes the standard TSA analysis for which the results are
-published in reference~\cite{compassDYpaper}.  The main motivation for this
-analysis was to conclude on the sign flip of the Sivers function flip between
-the Drell-Yan and SIDIS processes using data from the same experimental setup
-for both processes.  The results shown are those determined by the COMPASS
-Drell-Yan analysis subgroup.
+This section describes the standard TSA analysis, in Drell-Yan, for which the
+results of 2015 data are published in reference~\cite{compassDYpaper}.  The main
+motivation for this analysis was to conclude on the sign flip of the Sivers
+function flip between the Drell-Yan and SIDIS processes using data from the same
+experimental setup for both processes.  The results shown are those determined
+by the COMPASS Drell-Yan analysis group.
 
 The kinematical distributions shown for this analysis are the same as for the
 remaining analyses in this chapter.  This results from the fact that all the
@@ -374,25 +372,26 @@ exception to this is for the $q_T$-weighted analysis, Sec~\ref{sec::qtweighted},
 which cannot cut on $q_T$ and therefore has a different $q_T$ distribution as is
 explained in Sec~\ref{sec::high_qt}.
 
-As was noted in the event selection~\ref{tab::cutdescrip}, the data considered
-are in the invariant mass range [4.3-8.5~{\gvcw}].
+As was noted in the event selection~\ref{sec::dy_eventselection}, the data
+considered are in the invariant mass range [4.3-8.5~{\gvcw}].
 Fig.~\ref{fig::DY_InvariantMass} shows the invariant mass range from the 2015
-COMPASS data.  All cuts except a cut on invariant mass are include in
+COMPASS data.  All cuts except a cut on invariant mass are included in
 Fig.~\ref{fig::DY_InvariantMass} and as well a fit to show the background
 processes is included.
 
-The fit is determine from Monte-Carlo data and combinatorial background
-analysis.  The Monte-Carlo data simulated all hard processes which decay to two
-oppositely charged muons and can be reconstructed in the COMPASS spectrometer.
+The fit is determined from Monte-Carlo data, described in
+Table~\ref{tab::MCproduction}, and combinatorial background analysis.  The
+Monte-Carlo data simulated all hard processes with a decay to two oppositely
+charged muons and can be reconstructed in the COMPASS spectrometer.
 Combinatorial background analysis estimates the background as $N_{combinatorial}
-= 2\sqrt{N_{\mu^+\mu^+}N_{\mu^-\mu^-}}$.  As can be seen in
-Fig.~\ref{fig::DY_InvariantMass}, there are two distinguishable background
-peaks.  The lower mass peak at about 3~{\gvcw} corresponds to J/$\Psi$
-production and the higher mass peak at around 3.6~{\gvcw} corresponds to $\Psi$'
-production.  All the analyses in this chapter use the mass range between 4.3 and
-8.5~{\gvcw} and as Fig.~\ref{fig::DY_InvariantMass} shows, the Drell-Yan process
-dominates in this mass range.  The background percentage was estimated to be
-below 4\% in this mass range.
+= 2\sqrt{N_{\mu^+\mu^+}N_{\mu^-\mu^-}}$.  As can be seen from the Monte-Carlo
+curves in Fig.~\ref{fig::DY_InvariantMass}, there are two distinguishable
+background peaks.  The lower mass peak at about 3~{\gvcw} corresponds to
+J/$\Psi$ production and the higher mass peak at around 3.6~{\gvcw} corresponds
+to $\Psi$' production.  All the analyses in this chapter use the mass range
+between 4.3 and 8.5~{\gvcw} and as Fig.~\ref{fig::DY_InvariantMass} shows, the
+Drell-Yan process dominates in this mass range.  The background percentage was
+estimated to be below 4\% in this mass range.
 
 \begin{figure}[h!t]
   \centering \includegraphics[width=0.6\textwidth,trim=1cm 7cm 1cm 7cm,
@@ -406,13 +405,12 @@ below 4\% in this mass range.
 
 Fig.~\ref{fig::DY_qT} shows the transverse virtual photon momentum, $q_T$,
 distribution.  With the cut on $q_T$ between [0.4-5({\gvc})], the average $q_T$
-is 1.2~{\gvc} while on the other hand the average $M_{\mu\mu}$ is 5.3~{\gvcw}.
-As stated in chapter~\ref{ch::theory_exp}, the regime where TMD functions are
-the theoretical model for parton distributions is when $q_T << M_{\mu\mu}$.
-While the average $q_T$ is less than the average $M_{\mu\mu}$, it is not
-excluded that the results in this chapter are outside of the TMD regime.
-Nevertheless all the results presented in this chapter are determined assuming
-the TMD description is valid.
+is 1.2~{\gvc} while the average $M_{\mu\mu}$ is 5.3~{\gvcw}.  As stated in
+chapter~\ref{ch::theory_exp}, the regime where TMD functions are the theoretical
+model for parton distributions is when $q_T << M_{\mu\mu}$.  While the average
+$q_T$ is less than the average $M_{\mu\mu}$, it is not excluded that the results
+in this chapter are outside of the TMD regime.  Nevertheless all the results
+presented in this chapter are determined assuming the TMD description is valid.
 
 \begin{figure}[h!t]
   \centering
@@ -441,27 +439,27 @@ the TMD description is valid.
 
 The distribution of $x_{\pi}$ versus $x_N$ is shown in
 Fig.~\ref{fig::DY_xPivxN}.  The Bjorken-x of the proton, $x_N$, is almost
-exclusively above 0.1 and as well Bjorken-x for the pion, $x_{\pi}$ is in it's
+exclusively above 0.1 and as well Bjorken-x for the pion, $x_{\pi}$ is in its
 valence region.  For these reasons it is safe to say that the Drell-Yan reaction
 studied in the following analyses is the result of the pion's anti-u-quark
 annihilating with the proton's u-quark.
 
 The results from TSA analysis are determined from an extended unbinned maximum
-likelihood fit to the data.  The dilution and depolarization values are
+likelihood fit to the data.  The virtual photon depolarization values are
 determined on an event by event basis unlike the other analyses in this chapter.
-The released integrated results for the leading order and sub-leading order TSAs
-are shown in Fig.~\ref{fig::DY_intAsymAmps}.  The leading order TSAs are
-non-zero with approximates significances of: 1 sigma for the Sivers TSA,
-$A_T^{\sin(\phi_S)}$, 1.2 sigma for the Pretzelosity TSA,
+The published integrated results of the 2015 data for the leading order and
+sub-leading order TSAs are shown in Fig.~\ref{fig::DY_intAsymAmps}.  The leading
+order TSAs are non-zero with approximate significance of: 1 sigma for the
+Sivers TSA, $A_T^{\sin(\phi_S)}$, 1.2 sigma for the pretzelosity TSA,
 $A_T^{\sin(2\phi_{CS}+\phi_S)}$ and 2 sigma for the transversity TSA,
 $A_T^{\sin(2\phi_{CS}-\phi_S)}$.
 
 \begin{figure}[h!t]
   \centering \includegraphics[width=0.43\textwidth,trim=3cm 7cm 3cm 6cm,
     clip]{DY_intAsymAmps}
-  \caption{The integrated TSAs with statistical and systematic error bars.
-    $A_T^{\sin(\phi_S)}$, $A_T^{\sin(2\phi_{CS}+\phi_S)}$, and
-    $A_T^{\sin(2\phi_{CS}-\phi_S)}$ are leading order TSAs and
+  \caption{The integrated TSAs with statistical error bars and systematic
+    uncertainty bands.  $A_T^{\sin(\phi_S)}$, $A_T^{\sin(2\phi_{CS}+\phi_S)}$,
+    and $A_T^{\sin(2\phi_{CS}-\phi_S)}$ are leading order TSAs and
     $A_T^{\sin(\phi_{CS}+\phi_S)}$ and $A_T^{\sin(\phi_{CS}-\phi_S)}$ are
     sub-leading order TSAs.}
   \label{fig::DY_intAsymAmps}
@@ -474,7 +472,7 @@ between Drell-Yan and SIDIS.  The main difference in these three theory curves
 is the $Q^2$ evolution which is also the main uncertainty in each prediction.
 As can be seen the Sivers TSA is compatible with the expected sign change.
 However, the error bars on the Sivers asymmetry amplitude are too large to
-conclusively distinguish between the three theory curves or even to conclusively
+conclusively distinguish between the three theory curves or even to definitively
 conclude on the sign change between Drell-Yan and SIDIS.  That being said, the
 amplitude $A_T^{\sin(\phi_S)}$ is 2 sigma away from being incompatible with a
 sign flip.
@@ -492,7 +490,7 @@ sign flip.
 
 
 \section{Double Ratio Analysis} \label{sec::doubleratio}
-The double ratio method is used to determine spin-dependent asymmetry
+The double ratio method is used to determined spin-dependent asymmetry
 amplitudes.  This means the asymmetry amplitudes $A^{\sin\phi_S}_T$,
 $A^{\sin(2\phi+\phi_S)}_T$ and $A^{\sin(2\phi-\phi_S)}_T$ can be determined from
 the 2015 transversely polarized Drell-Yan data.  The benefit of this method is
@@ -531,15 +529,15 @@ written
   N(\Phi) = a(\Phi)L\sigma_U\Big(1 \pm D_{[\theta]}|S_T|A^w_T\sin(\Phi)\Big).
 \end{equation}
 \noindent
-where +(-) is for target polarized up(down), $D_{[\theta]}$ is the
-depolarization factor and $|S_T|$ is the target polarization percentage.  The
-depolarization factor, $D_{[\theta]}$ is defined in
+where +(-) is for target polarized up(down), $D_{[\theta]}$ is the virtual
+photon depolarization factor and $|S_T|$ is the target polarization percentage.
+The depolarization factor, $D_{[\theta]}$ is defined in
 Eq.~\ref{equ::DYDepolarizationFactorDef}.  It can be thought of as the
 probability for the virtual photon to decay and produce such an asymmetry
 amplitude to that for a transversely polarized photon decay.  The target
 polarization percentage, $|S_T|$ is defined as $fP$, where $f$ is the dilution
-factor, Eq.~\ref{equ::dilution}, and $P$ is the target polarization
-percentage.  Therefore the double ratio can be written
+factor, Eq.~\ref{equ::dilution}, and $P$ is the target polarization percentage.
+Therefore the double ratio can be written
 \begin{align}
   R_D(\Phi) &= \frac{ a_1^{\uparrow}(\Phi)L_1^{\uparrow}\sigma_U\Big(1 +
     D_{[\theta]1}^{\uparrow}|S_{T1}^{\uparrow}|A^w_T\sin(\Phi)\Big)
@@ -600,10 +598,10 @@ small so the double ratio can be simplified to
   \Big[D_{[\theta]1}^{\uparrow}|S_{T1}^{\uparrow}|+D_{[\theta]2}^{\uparrow}|S_{T2}^{\uparrow}|+D_{[\theta]1}^{\downarrow}|S_{T1}^{\downarrow}|+D_{[\theta]2}^{\downarrow}|S_{T2}^{\downarrow}|\Big]A^w_T\sin(\Phi)\Big).
 \end{align}
 \noindent
-Then making the assumption that the polarizations, $S_T$, and depolarization
-factors, $D_{\Phi}$ are approximately constant throughout a data period, the
-asymmetry amplitude of interest can be determined by fitting the double ratio
-with the function
+Then making the assumption that the polarizations, $S_T$, and the virtual photon
+depolarization factors, $D_{\Phi}$ are approximately constant throughout a data
+period, the asymmetry amplitude of interest can be determined by fitting the
+double ratio with the function
 \begin{equation}
   \label{equ::dr_fit_formula}
   f(\Phi) = [p0](1+4[p1]\sin(\Phi),
@@ -611,9 +609,9 @@ with the function
 \noindent
 where $[p0]$ and $[p1]$ are fit parameters and $[p1]$ represents the asymmetry
 amplitude of interest.  The $[p1]$ parameter is later corrected for average
-polarization and depolarization factors.
+polarization and virtual photon depolarization factors.
 
-The double ratio, $R_D$, is determine as a function of $\Phi$ where the angle
+The double ratio, $R_D$, is determine as a function of $\Phi$, where the angle
 $\Phi$ depends on which asymmetry amplitude is being determined.  The assumption
 made in the measured counts formula, Eq.~\ref{equ::spindependentCounts}, is that
 all angles except the spin-dependent $\Phi$ angle are integrated over.  When
@@ -634,7 +632,7 @@ which spin-dependent asymmetry amplitude.
     $A^{\sin(2\phi-\phi_S)}_T$& Transversity& $2\phi-\phi_S$& [-3$\pi$, 3$\pi$]
     \\ \hline
 
-    $A^{\sin(2\phi+\phi_S)}_T$& Preztelosity& $2\phi+\phi_S$& [-3$\pi$, 3$\pi$]
+    $A^{\sin(2\phi+\phi_S)}_T$& Pretzelosity& $2\phi+\phi_S$& [-3$\pi$, 3$\pi$]
     \\ \hline
   \end{tabular}
     \label{tab::ratio_phiAngles}
@@ -680,7 +678,8 @@ actually determines the quantity
 \end{equation}
 \noindent
 The asymmetry amplitude is ultimately determined by dividing the fit results by
-the average polarization and depolarization values per period.
+the average polarization and average virtual photon depolarization values per
+period.
 
 To determine the asymmetry amplitude, the double ratio is binned in eight bins
 in $\Phi$.  Eight bins are chosen due to the low statistics from Drell-Yan data.
@@ -715,7 +714,7 @@ $A^{\sin(2\phi-\phi_S)}_T$.
 
 
 \section{$q_T$-Weighted Asymmetries} \label{sec::qtweighted}
-The $q_T$ weighting asymmetries analysis is used to determine three asymmetry
+The $q_T$ weighted asymmetries analysis is used to determine three asymmetry
 amplitudes related to TMD functions.  This analysis determined the three
 amplitudes: $A_T^{\sin(\phi_S) q_T/M_N}$, $A_T^{\sin(2\phi+\phi_S)
   q^3_T/(2M_{\pi}M_N^2)}$ and $A_T^{\sin(2\phi-\phi_S) q_T/M_{\pi}}$ which are
@@ -734,12 +733,12 @@ $q_T$-weighted asymmetries the results depend on the full range of the $q_T$
 distribution.  In the other analyses in this chapter however, a cut was placed
 on high and low $q_T$ values to ensure better azimuthal angular resolution and
 quality reconstructed events.  This cut cannot be applied for $q_T$-weighted
-analysis because it will effect the weighting used to determine the asymmetry.
-On the other hand the combinatorial background and badly reconstructed events
-from the high $q_T$ phase space should be cut.  The next section goes into the
-details and the remedy for a $q_T$ related cut. All of the other cuts from
-Sec~\ref{sec::dy_eventselection} are the same except for this $q_T$
-cut. Table~\ref{tab::qt_EventTable} provides the final cut order and the
+analysis because it will effect the weighting used to determine the asymmetry
+amplitudes.  On the other hand the combinatorial background and badly
+reconstructed events from the high $q_T$ phase space should be cut.  The next
+section goes into the details and the remedy for a $q_T$ related cut. All of the
+other cuts from Sec~\ref{sec::dy_eventselection} are the same except for this
+$q_T$ cut. Figure~\ref{tab::qt_EventTable} provides the final cut order and the
 remaining statistics after each cut for this $q_T$-weighted analysis.
 
 \subsubsection{High $q_T$} \label{sec::high_qt}
@@ -753,7 +752,7 @@ achieved by demanding that the momentum sum of the detected muons is physically
 possible, $\ell^+ \; + \; \ell^- \; < \; 190$~GeV/c.  Note that this cut does
 not take into account the momentum spread of the beam due to the fact that the
 beam momentum spread is expected to be small.  Fig.~\ref{fig::qT_PconserveCut}
-shows how this cut effects the $q_T$ distribution.  As can be seen, $q_T$ still
+shows how this cut affects the $q_T$ distribution.  As can be seen, $q_T$ still
 reaches values much higher than the 5~GeV/c cut from the other TMD analyses.
 The remaining high $q_T$ events still have the potential to be poorly
 reconstructed events or combinatorial background and for this reason an
@@ -766,8 +765,8 @@ $\ell_T^{\pm} \; <$ 7~GeV/c.
     \centering \includegraphics[width=\linewidth, trim=6cm 8.7cm 6cm 8cm,
       clip]{qT_noCuts}
     \caption{$q_T$ distribution without cuts on $q_T$.  All other cuts expect
-      the $q_T$ cut from table~\ref{tab::cutdescrip} are applied.  This image is
-      from~\cite{janthesis}}
+      the $q_T$ cut from Sec~\ref{sec::dy_eventselection} are applied.  This
+      image is from~\cite{janthesis}}
     \label{fig::qT_noCuts}
   \end{subfigure}%
   \begin{subfigure}{.02\textwidth}
@@ -780,8 +779,8 @@ $\ell_T^{\pm} \; <$ 7~GeV/c.
       clip]{qT_PconserveCut}
     \caption{$q_T$ distribution after the momentum conservation cut is added,
       $\ell^+ \; + \; \ell^- \; < \; 190$ GeV/c.  All other cuts expect the
-      $q_T$ cut from table~\ref{tab::cutdescrip} are applied.  This image is
-      from~\cite{janthesis}}
+      $q_T$ cut from Sec~\ref{sec::dy_eventselection} are applied.  This image
+      is from~\cite{janthesis}}
     \label{fig::qT_PconserveCut}
   \end{subfigure}
 \end{figure}
@@ -827,15 +826,15 @@ $\ell_T^{\pm} \; <$ 7~GeV/c.
 
 \subsection{Binning}
 As with the other analyses in this chapter, the asymmetry is determined in bins
-of the Drell-Yan physical kinematic variables: $x_N$, $x_\pi$, $x_F$ and
+of the Drell-Yan physical kinematic variables: $x_N$, $x_\pi$, $x_F$,
 $M_{\mu\mu}$ and an overall integrated value.  No $q_T$ binning is used however,
-because a full integrating of the $q_T$ variable needs to be taken into account
-to form the weighted asymmetry.  
+because a full integration of the $q_T$ variable needs to be taken into account
+to form the weighted asymmetry.
 
 \subsection{Asymmetry Method}
 The weighted asymmetry amplitudes $A_T^{\sin(\phi_S) q_T/M_N}$,
 $A_T^{\sin(2\phi+\phi_S) q^3_T/(2M_{\pi}M_N^2)}$ and $A_T^{\sin(2\phi-\phi_S)
-  q_T/M_{\pi}}$ are all determined using a modified double ratio.  As with the
+  q_T/M_{\pi}}$ are determined using a modified double ratio.  As with the
 double ratio method from Sec~\ref{sec::doubleratio}, the modified double ratio
 does not depend on the spectrometer acceptance.  The modified double ratio is
 defined as
@@ -868,7 +867,8 @@ assumption, the modified double ratio reduces to
   A_T^{\sin(\Phi)W} \sin\Phi,
 \end{equation}
 \noindent
-where $\tilde{D}_{\sin\Phi}$ is an integrated depolarization factor defined as
+where $\tilde{D}_{\sin\Phi}$ is an integrated virtual photon depolarization
+factor defined as
 
 \begin{equation}
   \tilde{D}_{\sin\phi_S} = 1, \quad\quad \tilde{D}_{\sin(2\phi\pm\phi_S)} =
@@ -925,14 +925,15 @@ asymmetry amplitudes) = 81 modified double ratios.
 
 \subsection{Results}
 As explained in Sec~\ref{sec::doubleratio_results}, the asymmetry amplitudes are
-determine for each period and the final asymmetry is determined as a period
+determined for each period and the final asymmetry is determined as a period
 weighted average as in Eq.~\ref{equ::wAvg}.  For the same reason as the previous
 analyses and explained in Sec~\ref{sec::doubleratio_results}, the polarization
-and depolarization factors from each period are used to correct the asymmetry
-amplitude determined in each period.  The final results are shown in
-Fig.~\ref{fig::wA_results} along with the results from the release values.  As
-can be seen the results agree with those results obtained for the release which
-was a requirement before the results could be release to the public.
+and virtual photon depolarization factors from each period are used to correct
+the asymmetry amplitude determined in each period.  The final results are shown
+in Fig.~\ref{fig::wA_results} along with the results from the release values.
+As can be seen the results agree with those results obtained for the release
+which was a requirement before the results could be released to the
+public~\cite{Matousek:2018qqd}.
 
 \begin{figure}[h!t]
   \centering \includegraphics[width=\textwidth,trim=0.2cm 1.5cm 0.2cm 1.5cm,
@@ -983,14 +984,14 @@ The most basic method to determine the left-right asymmetry is
 
 \noindent
 where $N_l = \int_{\phi_S=0}^{\phi_S=\pi}N(\phi_S)d\phi_S$ denotes the counts
-measure left and $N_r = \int_{\phi_S=\pi}^{\phi_S=2\pi}N(\phi_S)d\phi_S$ denotes
-the counts measured right.  Eq.~\ref{equ::simpleAN} can be used to determine the
-left-right asymmetry per target cell.  An intuitive picture of left and right
-defined in the target frame is shown in Fig.~\ref{fig::leftright}.  This simple
-method to determine the left-right asymmetry is intuitive and can be helpful for
-visualizing the forthcoming methods to determine $A_{lr}$.  Left and right in
-all definitions in this section are determined relative to the target spin
-direction as
+measured left and $N_r = \int_{\phi_S=\pi}^{\phi_S=2\pi}N(\phi_S)d\phi_S$
+denotes the counts measured right.  Eq.~\ref{equ::simpleAN} can be used to
+determine the left-right asymmetry per target cell.  An intuitive picture of
+left and right defined in the target frame is shown in
+Fig.~\ref{fig::leftright}.  This simple method to determine the left-right
+asymmetry is intuitive and can be helpful for visualizing the forthcoming
+methods to determine $A_{lr}$.  Left and right in all definitions in this
+section are determined relative to the target spin direction as
 
 \begin{equation}
   \label{equ::Defleftright}
@@ -1073,13 +1074,13 @@ acceptances blend into each other and Eq.~\ref{equ::accGeoMean} is no longer the
 correct notation for the acceptance ratio.  The assumption is violated when the
 beam particle and the target polarization do not make a right angle in the
 laboratory frame, in which case the target will no longer be polarized
-vertically in the target frame.  However the target will be assumption to be
+vertically in the target frame.  However the target will be assumed to be
 vertically polarized in the target frame strictly for ease of notation.
 
 Relation~\ref{equ::ANgeomean_expand} is equal to $A_{lr}$ if $\kappa_{geo} = 1$.
 However as stated previously, time effects can vary $\kappa_{geo}$ from
 unity. These effects are estimated through false asymmetry analysis and included
-in the systematic error bars described in Sec~\ref{sec::systematics}.
+in the systematic uncertainties described in Sec~\ref{sec::systematics}.
 Equation~\ref{equ::ANgeomean} is therefore to a good approximation an acceptance
 free method to determine $A_{lr}$.  It is also defined for the upstream and
 downstream cells independently and therefore can be used as a consistency check
@@ -1091,7 +1092,7 @@ The statistical uncertainty of the geometry mean is
   \frac{
     \sqrt{
       N_{l}^{\uparrow}N_{l}^{\downarrow}
-      N_{\mathrm{ R}}^{\uparrow}N_{r}^{\downarrow}
+      N_{\mathrm{r}}^{\uparrow}N_{r}^{\downarrow}
     }
   }{
     \Big( \sqrt{N_{l}^{\uparrow}N_{l}^{\downarrow}} +
@@ -1109,7 +1110,7 @@ The statistical uncertainty of the geometry mean is
 which reduces to $\frac{1}{|S_T|}\frac{1}{\sqrt{N}}$, where $N = N^\uparrow_l +
 N^\downarrow_l + N^\uparrow_r + N^\downarrow_r$, in the case of equal statistics
 per target cell meaning $N^\uparrow_l = N^\downarrow_l = N^\uparrow_r =
-N^\downarrow_r = N/4$
+N^\downarrow_r = N/4$.
 
 \subsubsection{Two-Target Geometric Mean} \label{sec::TwoTargGeoMean}
 The previous geometric mean asymmetry determined an $A_{lr}$ per target cell.
@@ -1117,7 +1118,7 @@ As described in Sec~\ref{sec::datasample} however, COMPASS had two oppositely
 polarized target cells in 2015.  It is desirable from a statistical point of
 view and for comparison purposes to determine one $A_{lr}$ from the 2015 COMPASS
 setup.  This can be accomplished by modifying the geometric mean to add both
-target cells as follows
+target cells as follows:
 
 \begin{equation}
   \label{equ::AN4TargGeomean}
@@ -1181,7 +1182,7 @@ therefore be closer to unity than the normal geometric mean acceptance ratio,
 Eq.~\ref{equ::accGeoMean}.  This is a consequence of having the different target
 cells oppositely polarized.  Rewriting Eq.~\ref{equ::acc4TargGeoMean} with
 sub-period superscripts instead of target polarization superscripts results in
-the equation
+the relation
 
 \begin{equation}
   \label{equ::acc4TargGeoMean_subperiod}
@@ -1226,7 +1227,7 @@ $\frac{1}{|S_T|}\frac{1}{\sqrt{N}}$, where $N$ is the sum of all counts.
 
 \subsection{Systematic Studies} \label{sec::systematics}
 Several tests were performed to estimate the systematic uncertainty of the
-left-right asymmetry.  The systematic errors are determined by adding all
+left-right asymmetry.  The systematic uncertainties are determined by adding all
 non-zero systematic uncertainties in quadrature.  The impact from each source of
 systematic error is summarized in Table.~\ref{tab::sysError}.
 
@@ -1323,12 +1324,12 @@ effect is included as a systematic effect.
 A Monte-Carlo data set was analyzed to determine the left-right
 misidentification percentage.  Four Monte-Carlo processes were generated
 corresponding to three background processes and a spin-independent signal
-process.  The generator used was PHTHYIA8 and the data was generated and
+process.  The generator used was PYTHIA8 and the data was generated and
 reconstruction at Blue Waters.  The background processes simulated were JPsi
 production, Psi' production and open charm (OC) production.  Each of these
-backgrounds can decay into two muons which results in a background contamination
-to the Drell-Yan signal.  Table~\ref{tab::MCproduction} gives the parameters
-used for the Monte-Carlo generated.
+backgrounds can decay into two final state muons which results in a background
+contamination to the Drell-Yan signal.  Table~\ref{tab::MCproduction} gives the
+parameters used for the Monte-Carlo generated.
 
 \begin{table}[h!t]
   \centering
@@ -1350,7 +1351,7 @@ used for the Monte-Carlo generated.
     Proton/Neutron mixing ratio& 1.96\\
     \hline
 
-    Initial tate radiation& on\\
+    Initial state radiation& on\\
     \hline
     
     Final state radiation& on\\
@@ -1560,7 +1561,8 @@ acceptance is 20\% of the statistical error.
   \begin{center}
     \includegraphics[width=\textwidth, trim=0cm 5cm 0cm 5cm,
       clip]{accSysStat}
-    \caption{Systematic error due to acceptance effects}
+    \caption{Systematic uncertainty due to acceptance effects normalized to the
+      statistical error.}
     \label{fig::accSysStat}
   \end{center}
 \end{figure}
@@ -1569,7 +1571,7 @@ acceptance is 20\% of the statistical error.
 Although the list of systematic effects specifically studied is quite exhaustive
 there is always the potential for other systematic effects not considered.
 Studies of the changes in time from additional false asymmetries were performed
-in an attempt to taken into account all other systematic effects.  All false
+in an attempt to take into account all other systematic effects.  All false
 asymmetries considered must be constructed in such a way that the physical
 process of interest cancels out.  A false asymmetry could therefore only be
 non-zero from acceptance effects, luminosity or some other reason not
@@ -1658,14 +1660,14 @@ following enumerated list.
   \begin{equation}
     A_{lr,F1/2} =
     \frac{1}{|S_T|}
-    \frac{\alpha - 1}{\alpha + 1}
+    \frac{\alpha - 1}{\alpha + 1},
   \end{equation}
   where $\alpha$ will be an acceptance ratio of Jura/Saleve.  As the Jura/Saleve
   acceptance ratio is expected to be the same for the upstream and downstream
   targets, any difference between the two false asymmetries must be due to other
-  reasons.  A by period comparison between the upstream and downstream target is
+  reasons.  A by-period comparison between the upstream and downstream target is
   shown in Fig.~\ref{fig::alphaAsymPeriod} and as can be seen there are
-  difference by period between the upstream and downstream asymmetries.  A
+  difference by-period between the upstream and downstream asymmetries.  A
   combined pull distribution is made using the information from both upstream
   and downstream asymmetries and is shown in Fig.~\ref{fig::alphaAsymPull}.  As
   with the previous false asymmetry, lack of data leads to the same problems
@@ -1728,7 +1730,7 @@ Table.~\ref{tab::faSys}
 \end{table}
 
 \subsubsection{Total Systematics}
-The total systematic error is determined by adding all non-zero systematic
+The total systematic uncertainty is determined by adding all non-zero systematic
 effects in quadrature as
 
 \begin{equation}
@@ -1746,7 +1748,7 @@ $\langle \sigma_{\mathrm{statistical}} \rangle$ = 0.039.
   \centering
   \begin{tabular}{|c|c|c|}
     \hline
-    \multirow{2}{*}{Systematic error}&
+    \multirow{2}{*}{Systematic Uncertainty}&
     \multirow{2}{*}{
       $\langle \sigma_{\mathrm{systematic}}/\sigma_{\mathrm{statistical}}
       \rangle$} &
@@ -1767,7 +1769,8 @@ $\langle \sigma_{\mathrm{statistical}} \rangle$ = 0.039.
     \textbf{Total}& \textbf{0.55} & \textbf{0.022}\\\hline
     
   \end{tabular}
-  \caption{Summary of systematic error impacts to the integrated asymmetry}
+  \caption{Summary of systematic uncertainty impacts to the integrated
+    asymmetry}
   \label{tab::sysError}
 \end{table}
 
@@ -1779,7 +1782,11 @@ to get an overall result as in Sec~\ref{sec::doubleratio_results}.
 The results for the geometric mean are shown in Fig.~\ref{fig::ANgeom} and the
 results for the two-target geometric mean are shown in
 Fig.~\ref{fig::AN4TargGeom}.  The numerical values for the two-target geometric
-mean systematic errors are summarized in Table~\ref{tab::sysError}.
+mean systematic uncertainty are summarized in Table~\ref{tab::sysError}.  To
+verify the results in this section are correct, an independent cross-check was
+performed by a member from the University of Turin and no discrepancies were
+found.  The results of the cross-check are provided in
+Appendix~\ref{app::xcheckAlr}.
 
 \begin{figure}[h!t]
   \begin{center}
@@ -1821,9 +1828,9 @@ Sivers amplitude determined from the double ratio method,
 Fig.~\ref{fig::AN_DR_comp}.  Therefore all methods to determine the Siver
 amplitude in this chapter are consistent with the sign flip hypothesis between
 the Drell-Yan and SIDIS processes.  On the other hand, the statistical error
-bars are too large to definitively conclude the sign flip is true.  There are
-also no clear trends in the physics kinematic binning due to the large
-statistical error bars.
+bars are too large to definitively conclude the sign flip assumption holds.
+There are also no clear trends in the kinematic variable binning due to the
+large statistical error bars.
 
 It is interesting to note that Eq.~\ref{equ::all_an_convert} was derived with
 the assumption that the leading order Drell-Yan cross-section,

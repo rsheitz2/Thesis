@@ -1,4 +1,4 @@
-\chapter{J/$\Psi$ Transverse Spin Dependent Analysis}
+\chapter{J/$\Psi$ Transverse Spin Dependent Phenomena}
 \label{ch::jpsi}
 \ifpdf
 \graphicspath{{Chapters/JPsi/Figs/}}
@@ -6,16 +6,17 @@
 
 This chapter describes the analysis performed in the intermediate invariant mass
 range at COMPASS.  The biggest advantage about the intermediate mass range is an
-increase in statistics.  The intermediate mass range contains approximately 1.6
+increase in statistics.  The intermediate mass range for this thesis is defined
+as 2.5-4.3~{\gvcw}.  The intermediate mass range contains approximately 1.6
 times more events than the high mass range above 4.3~{\gvcw}.  On the other
-hand, the intermediate mass range results from several reactions.  Never the
-less, {\jp} production is by far the most dominate reaction and therefore the
-this chapter assumes the results are from the {\jp} reaction.  A theoretical
+hand, the intermediate mass range results from several reactions.  Nevertheless,
+{\jp} production is by far the most dominant reaction and therefore the this
+chapter assumes the results are from the {\jp} reaction.  A theoretical
 introduction related to transverse {\jp} spin asymmetries is provided in
 Sec~\ref{sec::theory_jpsi}.  As of yet, the exact mechanism for J/$\Psi$
 production is unknown and therefore the exact {\jp} vertex coupling is unknown.
-Never the less, the analysis techniques in this chapter contribute to the
-transverse spin knowledge resulting from J/$\Psi$ production.  The reaction of
+Nevertheless, the analysis techniques in this chapter contribute to the
+transverse spin knowledge of J/$\Psi$ production.  The reaction of
 interest is
 \begin{equation}
   \pi^-(P_a) + P(P_b, S_T) \rightarrow J/\Psi + X \rightarrow \mu^-(\ell) +
@@ -51,15 +52,15 @@ taking conditions.
 The event selection in this chapter is similar to the event selection in the
 previous chapter, Sec~\ref{sec::dy_eventselection}.  The cuts are chosen to
 ensure two oppositely polarized muons are detected with a vertex in the
-transversely polarized NH$_3$ target.  Table~\ref{tab::cutdescrip} describes the
-cut selection and the reason from each cut.  The only event selection
-difference, from Table~\ref{tab::cutdescrip}, is the selected invariant mass.
-The nominal {\jp} invariant mass and width are 3.096~{\gvcw} and
-92.9$\times10^{-6}$~{\gvcw} respectively~\cite{Tanabashi:2018oca}.  Therefore to
-ensure the events for this analysis result from {\jp} production, the analysis
-invariant mass range should be where the {\jp} signal to background is highest.
-This is in contrast to the Drell-Yan analyses which required the invariant mass
-to be above 4.3~{\gvcw}.
+transversely polarized NH$_3$ target.  Sec~\ref{sec::dy_eventselection}
+describes the cut selection and the reason for each cut.  The only event
+selection difference, from Sec~\ref{sec::dy_eventselection}, is the selected
+invariant mass.  The nominal {\jp} invariant mass and width are 3.096~{\gvcw}
+and 92.9$\times10^{-6}$~{\gvcw} respectively~\cite{Tanabashi:2018oca}.
+Therefore to ensure the events for this analysis result from {\jp} production,
+the analysis invariant mass range should be where the {\jp} signal to background
+is highest.  This is in contrast to the Drell-Yan analyses which required the
+invariant mass to be above 4.3~{\gvcw}.
 
 \subsubsection{{\jp} Invariant Mass Range}\label{sec::jpMassRange}
 The COMPASS spectrometer has a finite mass resolution which therefore means the
@@ -322,7 +323,7 @@ resolution.
 The distributions for the binning variables are shown in
 Fig.~\ref{fig::JPsi_Kinematics}.  This analysis is performed in the valence
 region for both the beam pion and target proton as the average $x_\pi$ is about
-0.09 and the average $x_N$ is about 0.3.  This means the dominate contribution
+0.09 and the average $x_N$ is about 0.3.  This means the dominant contribution
 to {\jp} production is from quark-quark interactions.  The average $q_T$ value
 is below the minimum mass range of 2.87~{\gvcw} for this analysis and therefore
 the interpretation of this analysis assumes the TMD regime is valid.
@@ -372,7 +373,7 @@ spin as
 \noindent
 where $\hat{q}_T$, $\hat{S}_T$ and $\hat{P}_{\pi}$ are unit vectors in the
 target reference frame for the virtual photon transverse momentum, the target
-spin and the beam pion momentum respectively.  The advantage to this asymmetry
+spin and the beam pion momentum respectively.  The advantage of this asymmetry
 method is that the acceptance from the upstream and downstream target cells
 cancel as was shown in Eq.~\ref{equ::AN2targAcceptCancel}.  The statistical
 uncertainty for this asymmetry method can be written as
@@ -441,10 +442,11 @@ The pull value is defined as
     \sqrt{
       \sigma^2_{\mathrm{A}_i} - \sigma^2_{\langle \mathrm{A} \rangle}
     }
-  }.
+  },
 \end{equation}
 \noindent
-The pull distribution is formed for each kinematic variable in
+where $\langle \mathrm{A} \rangle$ is the average asymmetry amplitude for the
+data set.  The pull distribution is formed for each kinematic variable in
 Fig.~\ref{fig::JPsi_Pulls}.  For this analysis there are therefore 4 (number of
 bins) x 9 (number of periods) = 36 entries per pull distribution.  The
 systematic error from period incompatibility is determined as
@@ -456,14 +458,14 @@ systematic error from period incompatibility is determined as
 \end{equation}
 \noindent
 where in this analysis the $\sigma_{pull}^2$ and $\mu_{pull}$ are determined as
-a weighted average of the mean and variance from the pull distribution for each
-kinematic variable including the parameters from integrated pull distribution.
-The fit values from each pull distribution give somewhat different estimates due
-to the errors associated with the fit.  This is the reason the weighted average
-is perform to give the best estimate for the pull mean and standard deviation
-and therefore the most accurate systematic error calculation.  The systematic
-error due to time incompatibility is determined to be 16\% of the statistical
-error.
+a weighted average of the mean and variance respectively from the pull
+distribution for each kinematic variable including the parameters from the
+integrated pull distribution.  The fit values from each pull distribution give
+somewhat different estimates due to the errors associated with the fit.  This is
+the reason the weighted average is performed to give the best estimate for the
+pull mean and standard deviation and therefore the most accurate systematic
+error calculation.  The systematic error due to time incompatibility is
+determined to be 16\% of the statistical error.
 
 \begin{figure}[h!t]
   \centering \includegraphics[width=\textwidth,trim=2.2cm 1.7cm 2.2cm
@@ -476,12 +478,12 @@ error.
 
 
 \subsubsection{Left/Right Event Migration}
-The left-right event migration systematic error is calculation the same as in
+The left-right event migration systematic error is calculated the same as in
 Sec~\ref{sec::syslrEventMigration}.  The Monte-Carlo data used to determine the
 left-right event migration is described in Table~\ref{tab::MCproduction}.  The
-effect of misidentify events as left when the event should be counted as a right
-event and vise-versa is to dilute the left-right asymmetry.  It is as if there
-is an additional unpolarized contribution that dilutes the event sample.
+effect of misidentified events as left when the event should be counted as a
+right event and vise-versa, dilutes the left-right asymmetry.  It is as if
+there is an additional unpolarized contribution that dilutes the event sample.
 
 The systematic error for left-right migration is derived in
 Appendix~\ref{app::sysLRmiss} as
@@ -770,15 +772,16 @@ production as~\cite{Anselmino:2016fhz}
   \frac{k_{bT}}{M_b} \otimes f_{1T}^{\perp q}(x_b, k_{bT}),
 \end{equation}
 \noindent
-and a made predictions for the $A_N$ asymmetry as a function of $x_N$ and
-$q_T$ shown in Fig.~\ref{fig::AN_JPsiPredict}.  More details are given in
-Sec~\ref{sec::theory_jpsi}, but their calculation assumed the dominate
-production of {\jp} production is from quark-quark annihilation.
+and a made predictions for the $A_N$ asymmetry as a function of $x_N$ and $q_T$
+shown in Fig.~\ref{fig::AN_JPsiPredict}.  As derived in
+Sec~\ref{sec::lr_theory}, $A_{N} = \frac{\pi A_{lr}}{2}$.  More details are
+given in Sec~\ref{sec::theory_jpsi}, but their calculation assumed the dominant
+contribution to {\jp} production is from quark-quark annihilation.
 Fig.~\ref{fig::AN_JPsi} shows the results determined at COMPASS for the $A_N$
 asymmetry determined by modifying the left-right results in
 Fig.~\ref{fig::AlrBinned_JPsi}.  The maximum $A_N$ asymmetry, determined at
 COMPASS, is less than 0.05 which when comparing to the prediction in
-Fig.~\ref{fig::AN_JPsiPredict} is 2 sigma less than the prediction.  
+Fig.~\ref{fig::AN_JPsiPredict} is 2 sigma less than the prediction.
 
 \begin{figure}[h!t]
   \centering \includegraphics[width=0.6\textwidth,trim=2cm 7cm 2cm
@@ -808,7 +811,7 @@ quark-quark annihilation and gluon-gluon fusion using the color evaporation
 model~\cite{VOGT1999197}.  To determine the expected {\jp} contribution from
 gluon-gluon fusion and quark-quark annihilation at COMPASS the results in
 Fig.~\ref{fig::ggQQbarXsection} are weighted with the COMPASS $x_F$ distribution
-in the intermediate mass range.  The determine ratio of {\jp} production from
+in the intermediate mass range.  The determined ratio of {\jp} production from
 quark-quark annihilation to gluon-gluon fusion at COMPASS is 0.8.  It is
 therefore not ruled out that the results in Fig.~\ref{fig::AN_JPsi} are reduced
 compared to the predictions in Fig.~\ref{fig::AN_JPsiPredict} due to gluon-gluon

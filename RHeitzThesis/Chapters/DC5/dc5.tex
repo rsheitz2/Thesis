@@ -1,7 +1,6 @@
 \chapter{Drift Chamber 05} \label{ch::dc05}
 \ifpdf
-\graphicspath{{Chapters/DC5/Figs/Raster/}{Chapters/DC5/Figs/PDF/}{Chapters/DC5/Figs/}}
-\else \graphicspath{{Chapters/DC5/Figs/Vector/}{Chapters/DC5/Figs/}}
+\graphicspath{{Chapters/DC5/Figs/}}
 \fi
 
 Drift Chamber 05 (DC05) is a large-area planar drift chamber.  It was
@@ -11,9 +10,10 @@ to the large angle spectrometer of COMPASS during the spring of 2015.
 
 The DC5 detector is an import tracking detector, which successfully collected
 data from 2015 through 2018 and will continue to be an important component for
-track reconstruction in future measurements.  The author of this thesis helped
-with the construction at Illinois and the assembly at CERN and as well for
-performing calibrations and maintaining DC5.
+track reconstruction in future measurements.  The author of this thesis
+significantly contributed to the prototyping and construction at Illinois and
+the assembly at CERN and as well for performing calibrations and maintaining
+DC5.
 
 
 \section{Motivation for Drift Chamber 05}
@@ -23,16 +23,17 @@ that 96\% of all events include a track in the large angle
 spectrometer~\cite{proposal}.  For this reason the Drell-Yan trigger system was
 designed only to record events with at least one track in LAS.  As DC5 was
 installed in LAS it is therefore very important in track reconstruction for
-Drell-Yan measurements.  Additional simulations with the Drell-Yan setup and
-this corresponding COMPASS Drell-Yan trigger showed that the global
-reconstruction efficiency drops below 30\% without DC5 and half of another large
-area tracker in LAS~\cite{quintans_rec_march12}.  That is to say the
-spectrometer reconstruction efficiency is very poor without DC05 and half of
-another LAS large area trackers which has unstable performance.
-Fig.~\ref{fig::standardRec} and Fig.~\ref{fig::withLARec} show the nominal
-global reconstruction efficiency and the worst case scenario for Drell-Yan
-measurements respectively.  For these reasons it was very important to have DC05
-installed and working reliably.
+Drell-Yan measurements.  In fact it was so essential to have the LAS operating
+optimally that DC5 replaced an aging straw detector.  Additional
+simulations with the Drell-Yan setup and this corresponding COMPASS Drell-Yan
+trigger showed that the global reconstruction efficiency drops below 30\%
+without DC5 and half of another large area tracker in
+LAS~\cite{quintans_rec_march12}.  That is to say the spectrometer reconstruction
+efficiency is very poor without DC05 and half of another LAS large area tracker
+with unstable performance.  Fig.~\ref{fig::standardRec} and
+Fig.~\ref{fig::withLARec} show the nominal global reconstruction efficiency and
+the worst case scenario for Drell-Yan measurements respectively.  For these
+reasons it was very important to have DC05 installed and working reliably.
 
 \begin{figure}[h!t]
   \centering
@@ -56,16 +57,16 @@ installed and working reliably.
 
 \section{Operating Principle}
 
-Drift chambers are tracking detectors which can detect the location of where a
-high energy charge particle passes through them.  A drift chamber is
-built up of an array of drift cells where at the center of each drift cell is an
-anode signal wire (also called a sense wire).  Surrounding the signal wire are
-cathodes which close off the drift cell.  The cathodes are set at a higher high
-voltage than the anode and therefore there are electric field lines from the
+Drift chambers are tracking detectors which can detect the location of a high
+energy charge particle passing through them.  A drift chamber is built up of an
+array of drift cells where at the center of each drift cell is an anode signal
+wire (also called a sense wire).  Surrounding the signal wire are cathodes which
+close off the drift cell.  The cathodes are set at a higher high voltage than
+the anode and therefore there is an electric potential difference between the
 cathode to the anode.  Fig.~\ref{fig::dcCellFieldLines} shows an example of a
-drift chamber cell and the equipotential voltages within the cell.  In DC05 the
-there are two cathode planes on top and bottom of the drift cell and a cathode
-field wire adjacent to either side of the sense wire.
+drift chamber cell and the equipotential lines within the cell.  In DC05 there
+are two cathode planes on top and bottom of the drift cell and a cathode field
+wire adjacent to either side of the sense wire.
 
 \begin{figure}[h!t]
   \centering
@@ -95,13 +96,13 @@ near the field wire.
 An important factor for a drift chamber is that the location of the primary
 ionized electrons can be determined within a drift cell.  This knowledge allows
 for a better position determination of the passing track as compared to a
-multi-wire proportional chamber.  Each sense wire records the time a signal was
-detected from a track.  For the same track, the trigger records the time the
-track enter the drift chamber and therefore the difference in time between the
-sense wire time and the trigger time is the drift time.  For a drift chamber it
-is possible to produce a calibration curve which determines the position within
-a drift cell for a given drift time.  This calibration curve is so-called the RT
-relation.
+multi-wire proportional chamber as multi-wire proportional chambers cannot
+measure an RT relation.  Each sense wire records the time a signal was detected
+from a track.  For the same track, the trigger records the time the track enter
+the drift chamber and therefore the difference in time between the sense wire
+time and the trigger time is the drift time.  For a drift chamber it is possible
+to produce a calibration curve which determines the position within a drift cell
+for a given drift time.  This calibration curve is so-called the RT relation.
 
 Even with a properly calibrated RT relation the track location is ambiguous from
 only one drift cell.  This is because a single drift cell can only determine a
@@ -111,7 +112,7 @@ left or right of the sense wire.  For this reason drift chambers are built with
 several planes in series.  A drift cell with the same orientation but shifted
 with respect to the first drift cell is used to distinguish left and right
 ambiguity and another cell with an orientation at an angle with respect to the
-first is used to determined where along the wire the track passed.
+first is used to determine where along the wire the track passed.
 
 
 \section{Preparation for DC05}
@@ -142,7 +143,7 @@ threshold was accordingly one of the design goals for the front-end electronics.
                   {PosResVnumElec}
   \caption{A simulation of the position resolution as a function of the number
     of primary electrons needed to record a signal.  This image is taken
-    from~\cite{ran_bi}}
+    from~\cite{ran_bi}.}
   \label{fig::PosResVnumElec}
 \end{figure}
 
@@ -152,7 +153,7 @@ threshold was accordingly one of the design goals for the front-end electronics.
                   {currentVtimeFifthElec}
   \caption{Garfield simulation of the induced signal current versus the arrival
     time.  The green line corresponds to the arrival time of the fifth election.
-    This image is taken from~\cite{ran_bi}}
+    This image is taken from~\cite{ran_bi}.}
   \label{fig::currentVtimeFifthElec}
 \end{figure}
 
@@ -172,7 +173,7 @@ having a diameter of 20~$\mu$m.
 \begin{figure}[h!t]
   \centering \includegraphics[width=0.6\textwidth, trim=2.5cm 8cm 2.5cm 8cm,
     clip]{protoTypeA}
-  \caption{Inside view of prototype A.  This image was taken from~\cite{choi} }
+  \caption{Inside view of prototype A.  This image was taken from~\cite{choi}. }
   \label{fig::protoTypeA}
 \end{figure}
 
@@ -214,7 +215,8 @@ region.
 \begin{figure}[h!t]
   \centering \includegraphics[width=0.7\textwidth, trim=0.2cm 7cm 0.2cm 2cm,
     clip]{DC05_layers}
-  \caption{A side view sketch of the layers in DC05}
+  \caption{A side view sketch of the layers in DC05.  This image taken
+    from~\cite{heitzDC05DNP}.}
   \label{fig::DC05_layers}
 \end{figure}
 
@@ -227,7 +229,8 @@ the sense wires were at 0~V.  The nominal gain of DC05 is approximately 10$^4$.
 \begin{figure}
   \centering \includegraphics[width=0.5\textwidth, trim=2.5cm 10cm 3cm 10cm,
     clip]{DriftCell}
-  \caption{}{The drift cell dimensions of one plane in DC05}
+  \caption{}{The drift cell dimensions of one plane in DC05.  This image taken
+    from~\cite{heitzDC05DNP}.}
   \label{fig:driftcell}%
 \end{figure}
 
@@ -237,24 +240,35 @@ while ethane is used as a quencher and CF$_4$ is used to reduce aging effects.
 The quencher, ethane, absorbs photons from the electron avalanche which could
 pair produce and therefore make more electrons which would distort the electric
 field in a drift cell.  The quencher therefore is used to reduce the avalanche
-and ensure the drift cell electric field lines are closer to their design values.  
+and ensure the drift cell electric field lines are closer to their design
+values.
 
 
 \section{Construction}
 
 The construction of DC05 was carried out as precisely as possible starting with
-the precision from the stainless steel stiffening frames.  The stiffening frames
-where cut with the highest relative accuracy by cutting the two frames on top of
-each other to a precision of 50~$\mu$m everywhere in their plane.  The precision
-from the stiffening frames was transferred to the anode and cathode frames
-through 40 positioning pins.  The G-10 frames were milled from strips at the NPL
-using a precision milling machine.  Each four strips were then epoxied together
-on top of one of the stiffening frames.
+the precision from the stainless steel stiffening frames.  The overall flatness
+of the detector was designed to be flat within +50~$\mu$m -0$\mu$m.  To achieve
+this the stiffening frames where cut with the highest relative accuracy by
+cutting the two frames on top of each other to a precision of 50~$\mu$m
+everywhere in their plane.  The precision from the stiffening frames was
+transferred to the anode and cathode frames through 40 positioning pins.  The
+G-10 frames were milled from strips at the NPL using a precision milling
+machine.  Each four strips were then epoxied together on top of one of the
+stiffening frames to best transfer the precision of the stiffening frame.
+
+The Atlas Tool and Die Works company machined the stiffening frames out of
+stainless steel.  It was very import to construct the detector from stainless
+steel as DC05 resides in a strong fringe field the first spectrometer magnet.
+The gluing procedure was carried out in teams at the NPL.  The epoxy used was
+STYCAST 1266 which is a two component and has low viscosity.  The epoxy was
+applied to both G-10 frames glued together at a lap joint and allowed to dry for
+24 hours.
 
 The cathodes had mylar stretched and epoxied to them using a custom built
 stretching machine at CERN.  Fig.~\ref{fig::mylarStretching} shows the process
-of stretching mylar on a cathode.  An external company then spray painted carbon
-on them which was then polished till the resistance was approximately
+of stretching mylar on a cathode.  An external Swiss company then spray painted
+carbon on them which was then polished till the resistance was approximately
 30~k$\Omega /m$.  All the sense and field wires were hand soldered as shown in
 Fig.~\ref{fig::wireSoldering}, and sequentially verified for position using a
 microscope.  It was estimated the position placement of each sense wire was at
@@ -307,13 +321,14 @@ electronics board increased below the radioactive source.
 \section{2015 Performance}
 
 The overall performance of DC05 was checked using the COMPASS reconstruction
-software CORAL.  In all cases the view of study was excluded from the
-reconstruction algorithm and the individual hit information for the view of
-interest was saved to get an unbiased measurement.  The performance of DC05 is
-determined by judging its response to real tracks.  In other words tracks that
-are not falsely reconstructed, so-called ghost tracks.  To ensure these real
-tracks with higher quality for performance evaluation, only tracks with a
-primary vertex near the polarized target are considered.
+software CORAL (discussed in sec~\ref{sec::dataReconstruction}).  In all cases
+the view of study was excluded from the reconstruction algorithm and the
+individual hit information for the view of interest was saved to get an unbiased
+measurement.  The performance of DC05 is determined by judging its response to
+real tracks.  In other words tracks that are not falsely reconstructed,
+so-called ghost tracks.  To ensure these real tracks with higher quality for
+performance evaluation, only tracks with a primary vertex near the polarized
+target are considered.
 
 The efficiency was found to be between 85\% and 90\% depending on the plane.
 The efficiency was determined by searching for a hit in the DC05 plane of
@@ -326,18 +341,20 @@ RT relation is tuned as a calibration to minimize the track residuals.  The RT
 relation also varies depending on the beam type, intensity and the trigger type.
 
 \begin{figure}[h!t]
-  \centering \includegraphics[width=0.6\textwidth, trim=2cm 9cm 2cm 7cm,
+  \centering \includegraphics[width=0.6\textwidth, trim=3cm 9cm 3cm 9cm,
     clip]{DC05Yeff}
   \caption{}{Two dimensional efficiency on the DC05Y1 plane.  The center region
-    with zero efficiency is a result of the beam killer.}
+    with zero efficiency is a result of the beam killer.  This image taken
+    from~\cite{heitzDC05Spin}.}
   \label{fig::DC05Yeff}%
 \end{figure}
 
 \begin{figure}[h!t]
-  \centering \includegraphics[width=0.6\textwidth, trim=3cm 9cm 3cm 8cm,
+  \centering \includegraphics[width=0.6\textwidth, trim=3cm 8cm 3cm 8cm,
     clip]{RT_DC05Y2}
   \caption{}{Time versus position relation, or RT relation, after calibrating.
-    The red fit shows the calibration determined.}
+    The red fit shows the calibration determined.  This image taken
+    from~\cite{heitzDC05Spin}}
   \label{fig:RT_DC05Y2}%
 \end{figure}
 
@@ -357,7 +374,7 @@ where u$_{\mathrm{plane \; 1(2)}}$ is the hit position on plane 1(2) determined
 from the detector of interested and u$_{\mathrm{track}}$ is the hit position
 determined from reconstruction.  As can be seen in Eq.~\ref{equ::doubleRes}, the
 double layer residual is independent of the track resolution and only depends on
-the difference between detector hit positions.  As the detector was construction
+the difference between detector hit positions.  As the detector was constructed
 with a known difference between these two cell hit positions, the double
 residual distribution is expected to be a constant value.  Therefore the
 variance of the double residual distribution is the addition of the variance of
@@ -379,15 +396,22 @@ therefore
 \end{equation}
 
 \noindent
-For the 2015 Drell-Yan physics taking the resolution achieved was
-approximately 430~$\mu$m. This was determined by fitting the double residual
-with a Gaussian to extract the variance and assuming equal variance per plane in
-a view as is shown in Fig.~\ref{fig::DC05doubleRes}.
+For the 2015 Drell-Yan physics taking the resolution achieved was approximately
+430~$\mu$m. This was determined by fitting the double residual with a Gaussian
+to extract the variance and assuming equal variance per plane in a view as is
+shown in Fig.~\ref{fig::DC05doubleRes}.  The difference between the position
+resolution for the full detector and that of the prototypes is attributed to be
+due to the large area of the detector and the high beam flux in the data taking.
+It is not ruled out that software improvement can be made in the future to
+improve the position resolution.  One possible solution would be to include a
+different RT calibration curve for each section of the detector depending on the
+particle flux.
 
 \begin{figure}[h!t]
-  \centering \includegraphics[width=0.6\textwidth, trim=2cm 9cm 2cm 8cm,
+  \centering \includegraphics[width=0.6\textwidth, trim=3cm 9cm 3cm 9cm,
     clip]{DC05doubleRes}
-  \caption{The double residual distribution for the V plane together with a
-    Gaussian fit in red to determine the variance of the distribution}
+  \caption{The double residual distribution for the U plane together with a
+    Gaussian fit in red to determine the variance of the distribution.  This
+    image taken from~\cite{heitzDC05Spin}.}
   \label{fig::DC05doubleRes}
 \end{figure}
