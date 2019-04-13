@@ -1,0 +1,6 @@
+%%How to compile
+pdflatex RHeitzThesisTalk.tex  %1st time
+pdflatex RHeitzThesisTalk.tex  %2nd time to get reference correct
+
+%%All sections in /Chapters
+%%Other talks/papers in /References
