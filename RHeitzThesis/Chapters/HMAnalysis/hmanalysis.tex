@@ -29,7 +29,7 @@ chapter~\ref{ch::compass} goes over the spectrometer setup and beam in more
 details.  The COMPASS spectrometer began taking commissioning data in April of
 2015.  The data collected for this analysis, after the commissioning phase, is
 from July 8 through November 12 of 2015.  After November 12, the SPS stopped
-providing beam for a winter shut down.  The data is split into 9 periods lasting
+providing beam to COMPASS.  The data is split into 9 periods lasting
 approximated 2 weeks each and labeled W07-W15.  During each data period the
 spectrometer conditions were frozen so no detector changes could affect the
 spectrometer acceptance.  Sec~\ref{sec::polTarget} describes the polarized
@@ -139,19 +139,19 @@ crossed 15 radiation lengths of material.
 \end{itemize}
 
 If the data collected was stable during a spill the average values from the
-macro variables in the above itemized list are expected to be constant
-from one spill to the next.  To determine if a spill was recorded in unstable
-conditions the spill of interest is compared with its neighboring 2500 spills
-occurring before and after in time.  If the spill of interest is over a
-specified sigma deviation from any of the neighboring spills too many times, the
-spill is mark as a bad spill.  If a spill fails this bad spill criteria for any
-of the macro variables in the above itemized list, the spill is deemed
-bad and not included in the analysis.  The criteria for the sigma distance and
-number of times a spill crosses this distance to be deemed a bad are different
-for each data taking period.  In addition to checking the nearest neighbor
-spills, an entire run is marked bad if the run has less than 10 spills or
-greater than 70\% bad spills.  Table~\ref{tab::badspillpercent} describes the
-bad spill impact on each period. \par
+macro variables in the above itemized list are expected to be constant from one
+spill to the next.  To determine if a spill was recorded in unstable conditions
+the spill of interest is compared with its neighboring 2500 spills occurring
+before and after in time.  If the spill of interest is over a specified sigma
+deviation from any of the neighboring spills too many times, the spill is marked
+as a bad spill.  If a spill fails this bad spill criteria for any of the macro
+variables in the above itemized list, the spill is deemed bad and not included
+in the analysis.  The criteria for the sigma distance and number of times a
+spill crosses this distance to be deemed a bad are different for each data
+taking period.  In addition to checking the nearest neighbor spills, an entire
+run is marked bad if the run has less than 10 spills or greater than 70\% bad
+spills.  Table~\ref{tab::badspillpercent} describes the bad spill impact on each
+period. \par
 
 \subsubsection{Bad Run Analysis}
 The stability of the spectrometer is also verified by a run-by-run check in
@@ -200,7 +200,7 @@ Table~\ref{tab::badspillpercent}.
 \subsection{Event Selection} \label{sec::dy_eventselection}
 The cuts in the event selection were chosen to ensure the event consisted of two
 oppositely charged muons resulting from a pion collision in the transversely
-polarized target.  The event selection was initial filtered from miniDSTs to
+polarized target.  The event selection was initially filtered from miniDSTs to
 $\mu$DSTs where only events with at least two muons detected were kept in the
 $\mu$DSTs.  The cuts used in this analysis are described in the following
 enumerated list, where the event selection is performed on the $\mu$DSTs and the
@@ -315,7 +315,7 @@ $x_{\pi} - x_N$, $q_T$ is the transverse momentum of the virtual
 photon and $M_{\mu\mu}$ is the invariant mass of the di-muon.  The binning was
 determined by requiring equal statistical population in each kinematic bin.  In
 addition, the asymmetries are determined in an integrated bin using all the
-analysis data.  The analyzes binning limits are summarized in
+analysis data.  The binning limits of the analysis are summarized in
 Table~\ref{tab::binning}.
 
 \begin{table}[h!t]
@@ -490,11 +490,11 @@ sign flip.
 
 
 \section{Double Ratio Analysis} \label{sec::doubleratio}
-The double ratio method is used to determined spin-dependent asymmetry
+The double ratio method is used to determine spin-dependent asymmetry
 amplitudes.  This means the asymmetry amplitudes $A^{\sin\phi_S}_T$,
 $A^{\sin(2\phi+\phi_S)}_T$ and $A^{\sin(2\phi-\phi_S)}_T$ can be determined from
 the 2015 transversely polarized Drell-Yan data.  The benefit of this method is
-that the spectrometer acceptance does not effect the determination of the
+that the spectrometer acceptance does not affect the determination of the
 asymmetry amplitudes.  The author of this thesis performed the analysis in this
 section and found results consistent with those determined from TSA analysis.
 
@@ -611,7 +611,7 @@ where $[p0]$ and $[p1]$ are fit parameters and $[p1]$ represents the asymmetry
 amplitude of interest.  The $[p1]$ parameter is later corrected for average
 polarization and virtual photon depolarization factors.
 
-The double ratio, $R_D$, is determine as a function of $\Phi$, where the angle
+The double ratio, $R_D$, is determined as a function of $\Phi$, where the angle
 $\Phi$ depends on which asymmetry amplitude is being determined.  The assumption
 made in the measured counts formula, Eq.~\ref{equ::spindependentCounts}, is that
 all angles except the spin-dependent $\Phi$ angle are integrated over.  When
@@ -698,7 +698,7 @@ fit results.
 The results for all the spin-dependent asymmetry amplitudes are shown in
 Fig.~\ref{fig::dr_final_results}.  As can be seen, the significance of the
 integrated asymmetry amplitudes is: over 1 sigma above zero for the Sivers,
-$A^{\sin\phi_S}_T$, over 3 sigma above zero for Preztelosity,
+$A^{\sin\phi_S}_T$, over 3 sigma above zero for preztelosity,
 $A^{\sin(2\phi+\phi_S)}_T$, and 3 sigma below zero for transversity,
 $A^{\sin(2\phi-\phi_S)}_T$.
 
@@ -718,7 +718,7 @@ The $q_T$ weighted asymmetries analysis is used to determine three asymmetry
 amplitudes related to TMD functions.  This analysis determined the three
 amplitudes: $A_T^{\sin(\phi_S) q_T/M_N}$, $A_T^{\sin(2\phi+\phi_S)
   q^3_T/(2M_{\pi}M_N^2)}$ and $A_T^{\sin(2\phi-\phi_S) q_T/M_{\pi}}$ which are
-related to the Sivers, Preztelosity and transversity TMD PDFs respectively.
+related to the Sivers, preztelosity and transversity TMD PDFs respectively.
 
 The theoretical introduction and motivation for measuring $q_T$-weighted
 asymmetries is provided in Sec~\ref{sec::qt_w_theory}.  The author of this
@@ -733,7 +733,7 @@ $q_T$-weighted asymmetries the results depend on the full range of the $q_T$
 distribution.  In the other analyses in this chapter however, a cut was placed
 on high and low $q_T$ values to ensure better azimuthal angular resolution and
 quality reconstructed events.  This cut cannot be applied for $q_T$-weighted
-analysis because it will effect the weighting used to determine the asymmetry
+analysis because it will affect the weighting used to determine the asymmetry
 amplitudes.  On the other hand the combinatorial background and badly
 reconstructed events from the high $q_T$ phase space should be cut.  The next
 section goes into the details and the remedy for a $q_T$ related cut. All of the
@@ -890,9 +890,9 @@ The statistical error for the modified double ratio is
 where $\sigma^2_{N_c^{pW}} = \sum (W^p_c)^2$ is the sum of event weights, $c$ is
 cell 1 or cell 2 and $p$ is polarization $\uparrow$ or $\downarrow$.
 
-The weighted asymmetry amplitude are determined by forming the modified double
+The weighted asymmetry amplitudes are determined by forming the modified double
 ratio in eight bins in the appropriate $\Phi$ angle and fitting this
-distribution.  If an infinite number of bins where used and there was sufficient
+distribution.  If an infinite number of bins were used and there was sufficient
 data, the modified double ratio would be the function form of
 Eq.~\ref{equ::dr_fit_form}.  Due to the limited statistics however, $R^W_{DM}$
 must be binned in a finite number of bins.  Therefore to account for the fact
@@ -1069,13 +1069,13 @@ where $J$ stands for the Jura spectrometer side and $S$ stands for Saleve
 spectrometer side which are the west and east sides respectively.  The
 assumption made for the notation in Eq.~\ref{equ::accGeoMean}, which will be
 made throughout this section, is that the target is polarized exactly vertical
-in the target frame.  If this assumption violated, the Jura and Saleve
+in the target frame.  If this assumption is violated, the Jura and Saleve
 acceptances blend into each other and Eq.~\ref{equ::accGeoMean} is no longer the
 correct notation for the acceptance ratio.  The assumption is violated when the
-beam particle and the target polarization do not make a right angle in the
-laboratory frame, in which case the target will no longer be polarized
-vertically in the target frame.  However the target will be assumed to be
-vertically polarized in the target frame strictly for ease of notation.
+trajectories of the beam particle and the target polarization do not make a
+right angle in the laboratory frame, in which case the target will no longer be
+polarized vertically in the target frame.  However the target will be assumed to
+be vertically polarized in the target frame strictly for ease of notation.
 
 Relation~\ref{equ::ANgeomean_expand} is equal to $A_{lr}$ if $\kappa_{geo} = 1$.
 However as stated previously, time effects can vary $\kappa_{geo}$ from
@@ -1325,11 +1325,12 @@ A Monte-Carlo data set was analyzed to determine the left-right
 misidentification percentage.  Four Monte-Carlo processes were generated
 corresponding to three background processes and a spin-independent signal
 process.  The generator used was PYTHIA8 and the data was generated and
-reconstruction at Blue Waters.  The background processes simulated were JPsi
-production, Psi' production and open charm (OC) production.  Each of these
-backgrounds can decay into two final state muons which results in a background
-contamination to the Drell-Yan signal.  Table~\ref{tab::MCproduction} gives the
-parameters used for the Monte-Carlo generated.
+reconstructed on NCSA's Blue Waters at Urbana-Champaign.  The background
+processes simulated were JPsi production, Psi' production and open charm (OC)
+production.  Each of these backgrounds can decay into two final state muons
+which results in a background contamination to the Drell-Yan signal.
+Table~\ref{tab::MCproduction} gives the parameters used for the Monte-Carlo
+generated.
 
 \begin{table}[h!t]
   \centering
@@ -1671,7 +1672,7 @@ following enumerated list.
   combined pull distribution is made using the information from both upstream
   and downstream asymmetries and is shown in Fig.~\ref{fig::alphaAsymPull}.  As
   with the previous false asymmetry, lack of data leads to the same problems
-  with fit and therefore the same weighting method is used to determine a
+  with the fit and therefore the same weighting method is used to determine a
   systematic error.
 
   \begin{figure}[h!t]
@@ -1708,7 +1709,7 @@ following enumerated list.
 \end{enumerate}
 
 A summary of the systematic error from each false asymmetry is shown in
-Table.~\ref{tab::faSys}
+Table.~\ref{tab::faSys}.
 
 \begin{table}[h!t]
   \centering
@@ -1838,7 +1839,7 @@ the assumption that the leading order Drell-Yan cross-section,
 Eq.~\ref{equ::DY_MostusefulXsect}, is sufficient.  It is not theoretically ruled
 out however, that the left-right asymmetry results from higher order amplitudes
 in addition to the Sivers amplitude.  As Fig.~\ref{fig::AN_DR_comp} shows, the
-left-right asymmetry is slightly less significant about zero than the Sivers
+left-right asymmetry is slightly less significant above zero than the Sivers
 amplitude determined from the double ratio method.  This could indicate the need
 to include higher order terms in the Drell-Yan cross-section.
 
@@ -1851,19 +1852,15 @@ to include higher order terms in the Drell-Yan cross-section.
   \label{fig::AN_DR_comp}
 \end{figure}
 
+In regards to the sign flip, Fig.~\ref{fig::AN_sign_flip} shows that the Sivers
+amplitude determined from the left-right asymmetry is compatible with the
+results published from 2015 COMPASS data and is compatible with the sign flip
+between Drell-Yan and SIDIS.
 
-%\begin{table}[h!t]
-%  \centering
-%  \label{tab::AN4TargGeom}
-%  \caption{Two-target geometric mean numerical values and error bars for each
-%    kinematic bin}
-%  \begin{tabular}{ |c|c|c|c|c| }
-%    \hline \textbf{Binning variable}& \textbf{Bin Range}&
-%    \textbf{A}$_{\mathrm{\textbf{N}}}$&
-%    \textbf{$\delta$}\textbf{A}$^{\mathrm{\textbf{stat}}}_{\mathrm{\textbf{N}}}$&
-%    \textbf{$\delta$}\textbf{A}$^{\mathrm{\textbf{sys}}}_{\mathrm{\textbf{N}}}$
-%    \\ \hline \hline
-%
-%    $\langle$ {\xn} $\rangle$& & & & \\
-%  \end{tabular}
-%\end{table}
+\begin{figure}[h!t]
+  \centering
+  \includegraphics[width=0.6\textwidth,trim=1cm 7cm 0cm 7cm,clip]{AN_sign_flip}
+  \caption{Including the left-right asymmetry to show it's compatibility with
+    the sign flip.}
+  \label{fig::AN_sign_flip}
+\end{figure}

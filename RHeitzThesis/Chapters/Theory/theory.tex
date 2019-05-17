@@ -14,7 +14,7 @@ l(\ell) + N(P) \rightarrow l(\ell') + X(P_X),
 \end{equation}
 \noindent
 where $l$ denotes a lepton, $N$ denotes a nucleon, $X$ represents all products
-not detected and $\ell$, $\ell'$, $P$ and $P_X$ are the four momentum for their
+not detected and $\ell$, $\ell'$, $P$ and $P_X$ are the four momenta for their
 respective lepton or nucleon.  This process is an electromagnetic reaction where
 a lepton is scattered via virtual photon exchange with the nucleon.  The
 leading order Feynman diagram for this reaction is shown in
@@ -184,7 +184,7 @@ as~\cite{Barone:2001sp}
 \end{dmath}
 \noindent
 where $e_q$ is the electric charge of quark flavor $q$, $u(\bar{u})$ is a free
-Dirac spinor and $k(k')$ are the four momentum of the scattering quarks.  This
+Dirac spinor and $k(k')$ are the four momenta of the scattering quarks.  This
 hadronic tensor can be simplified by introducing the quark-quark correlation
 matrix as
 
@@ -213,8 +213,8 @@ are~\cite{Mulders:1995dh,Boer:1997nt,Bacchetta:2006tn}
   \Theta = \frac{1}{2}
   \Big(
   f_1(x)\slashed{P} +
-  g_{1L}(x)\lambda\gamma_5\slashed{P},
-  \Big)
+  g_{1L}(x)\lambda\gamma_5\slashed{P}
+  \Big),
 \end{equation}
 \noindent
 where $\lambda$ is the longitudinal polarization of the hadron.  In this case,
@@ -229,7 +229,7 @@ contribution as~\cite{Barone:2001sp}
 \end{equation}
 \begin{equation}
   W^{\mathrm{anti-symmetric}}_{\mu\nu} =
-  \lambda\epsilon_{\mu\nu\rho\sigma}(k_{\nu}+q_{\nu})P^{\rho}\sum_q e^2_q
+  \lambda\epsilon_{\mu\nu\rho\sigma}(k^{\sigma}+q^{\sigma})P^{\rho}\sum_q e^2_q
   g^q_{1L}(x),
   \label{equ::Wantisymmetric}
 \end{equation}
@@ -253,9 +253,10 @@ hadron.  To make this explicit, $f_1$ and $g_{1L}$ can be written
   \end{equation}
 \end{multicols}
 \noindent
-where +(-) denotes the helicity.  To be clear while there is a relationship
-between the two functions, Eq.~\ref{equ::g1_g1l_relation}, the parton
-distribution $g_{1L}$ is not the same as the structure function $g_1$.
+where +(-) denotes the helicity of the parton is in the same(opposite) direction
+as its parent hadron.  To be clear while there is a relationship between the two
+functions, Eq.~\ref{equ::g1_g1l_relation}, the parton distribution $g_{1L}$ is
+not the same as the structure function $g_1$.
 
 The unpolarized quark number density, $f_1$, has been extracted from global
 analysis of several DIS experiments~\cite{Rojo_2015}.
@@ -365,7 +366,7 @@ Sivers function, the Boer-Mulders function, the transversity function and the
 pretzelosity function.
 
 \subsection{Sivers and Boer-Mulders Distributions}
-The Sivers TMD, {\siv}, was first purposed to explain large nucleon
+The Sivers TMD, {\siv}, was first proposed to explain large nucleon
 spin-dependent asymmetries~\cite{Sivers}.  The interpretation of the Sivers TMD,
 {\siv}, is that it gives a correlation between transverse spin of the parent
 hadron and transverse momentum of the scattered parton.  When viewing the hadron
@@ -382,7 +383,7 @@ between the transverse momentum and the transverse spin of a parton inside an
 unpolarized hadron~\cite{Boer:1997nt}.  The Boer-Mulders function is interpreted
 as a difference between quarks with transverse momentum and transverse spin up
 and quarks with transverse momentum and transverse spin down in an unpolarized
-hadron.  It is not hard to realized that changing the chirality of transversely
+hadron.  It is not hard to realize that changing the chirality of transversely
 polarized quarks in an unpolarized hadron would flip the sign of the
 Boer-Mulders function which therefore means the Boer-Mulders function is chiral
 odd.  Chiral odd functions can only be non-zero when convoluted with another
@@ -633,7 +634,7 @@ spin-dependent asymmetry amplitudes without needing to determine luminosity and
 therefore have reduced systematic uncertainties.
 
 \subsection{SIDIS TMD Results}
-COMPASS and HERMES measuremented the asymmetry amplitude $A_{UT
+COMPASS and HERMES measured the asymmetry amplitude $A_{UT
   ,T}^{\sin\left(\phi_h -\phi_S\right)}$ in SIDIS from a transversely polarized
 proton target~\cite{Alekseev:2008aa,Airapetian:2009ae}.  The comparison of the
 results between these two collaborations is shown in
@@ -644,7 +645,7 @@ was measured to be non-zero at a level up to 5\%.
 \begin{figure}[h!t]
   \centering \includegraphics[width=0.6\textwidth, trim=2cm 2cm 2cm
     3cm,clip]{SiversFromSIDIS}
-  \caption{The asymmetry amplitude related to the Sivers function measure by
+  \caption{The asymmetry amplitude related to the Sivers function measured by
     COMPASS~\cite{Alekseev:2008aa} and HERMES~\cite{Airapetian:2009ae}}
   \label{fig::SiversFromSIDIS}
 \end{figure}
@@ -735,8 +736,8 @@ Fig.~\ref{fig::transversityExtractedFromSIDIS}.
 
 \section{Drell-Yan} \label{sec::DY}
 The Drell-Yan process is the reaction where a quark and an anti-quark annihilate
-and the end product results in the detection of two oppositely charged leptons.
-The Drell-Yan process is denoted as
+and the end product results in two oppositely charged leptons which can be
+detected.  The Drell-Yan process is denoted as
 
 \begin{equation}
   H_a(P_a) + H_b(P_b, S) \rightarrow \gamma^* + X \rightarrow l(\ell) +
@@ -904,7 +905,7 @@ u-quark.  The additional leading order structure functions are zero
   F_{T}^{\sin(\phi + \phi_S)} \quad = 0.
 \end{equation}
 
-The differential cross-seciton, Eq.~\ref{equ::DY_ang_dist}, can be rewritten in
+The differential cross-section, Eq.~\ref{equ::DY_ang_dist}, can be rewritten in
 terms of asymmetry amplitudes and depolarization factors.  The asymmetry
 amplitudes are defined similarly to the case in SIDIS,
 Eq.~\ref{equ::asymAmpSIDIS}, and again for the reason that asymmetries can be
@@ -968,7 +969,7 @@ cross-section.  For the data taking conditions in 2015 it is assumed that the ta
 \subsection{Drell-Yan Sivers Result}
 The first Drell-Yan results for the Sivers asymmetry amplitude, in an attempt to
 verify the sign change between Drell-Yan and SIDIS, came from hadron-hadron
-collisions at Star~\cite{PhysRevLett.116.132301}.  Their result measured the
+collisions at STAR~\cite{PhysRevLett.116.132301}.  Their result measured the
 Sivers amplitude from $pp^{\uparrow} \rightarrow Z^0X$ and $pp^{\uparrow}
 \rightarrow W^{\pm}X$ and are shown in Fig.~\ref{fig::StarSivers}.  The
 statistical significance is poor and the $Q^2$ scale is very different from that
@@ -1179,6 +1180,8 @@ follows
     f_{1,a}^{\bar{q}}(x_a,k_{aT}^2)f_{1T,b}^{q\perp}(x_b,k_{bT}^2) \Big]
   \\ \nonumber
   &= - \frac{1}{N_c} \sum_q e_q^2 \int d^2 k_{aT} d^2 k_{bT} 
+  \\ \nonumber
+  & \quad\quad\quad
   \times \frac{(\vec{k}_{aT} + \vec{k}_{bT}) \cdot \vec{k}_{bT}} {M^2_{b}}
   \Big[ f_{1,a}^q(x_a,k_{aT}^2)f_{1T,b}^{\bar{q}\perp}(x_b,k_{bT}^2) +
     f_{1,a}^{\bar{q}}(x_a,k_{aT}^2)f_{1T,b}^{q\perp}(x_b,k_{bT}^2) \Big].
