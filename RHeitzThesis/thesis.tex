@@ -4,7 +4,7 @@
 \usepackage{bm} \usepackage{setspace} \usepackage{amsmath} \usepackage{hyperref}
 \usepackage{pbox,multirow} \usepackage[thinlines]{easytable} \usepackage{lineno}
 \usepackage{bigstrut} \usepackage{enumitem}
-\usepackage[titletoc]{appendix}
+\usepackage{appendix}
 \usepackage{cite}
 \usepackage{changepage}
 \usepackage{breqn}
@@ -109,7 +109,7 @@ stress and an anxiety reliever.
 \begin{figure}[h!t]
   \centering
   \includegraphics[width=0.6\textwidth,trim=2cm 4cm 2cm 4cm,clip]{fox}
-  \caption{Fox Trot}
+  \caption*{Fox Trot}
   \label{fig::fox}
 \end{figure}
 
@@ -133,11 +133,6 @@ stress and an anxiety reliever.
 \include{Chapters/JPsi/jpsi}
 \include{Chapters/Conclusion/conclusion}
 
-% ********************************** Appendices ********************************
-\begin{appendices}
-\include{Chapters/Appendix/appendix} 
-\end{appendices}
-
 % ********************************** Bibliography ******************************
 \renewcommand{\chaptername}{}
 \renewcommand{\thechapter}{} 
@@ -145,6 +140,11 @@ stress and an anxiety reliever.
 \bibliographystyle{unsrtnat}
 %\bibliographystyle{ieeetr}
 \bibliography{References/bibliography}{}
+
+% ********************************** Appendices ********************************
+\begin{appendices}
+\input{Chapters/Appendix/appendix}
+\end{appendices}
 
 
 \end{document}
